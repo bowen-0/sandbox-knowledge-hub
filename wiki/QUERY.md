@@ -151,7 +151,8 @@ The default audience to assume is **"a non-technical administrator planning thei
 Different runtimes give you different leverage:
 
 - **Claude Code / Claude Agent SDK** — this file auto-loads as a skill from `.claude/skills/query/SKILL.md`. You have `Read`, `Glob`, `Grep` against the wiki folder. Walk pages live; don't try to pre-load everything.
-- **Claude.ai Projects / custom GPT / saved system prompt** — paste this file as the project system prompt; paste `wiki/_BUNDLE.md` (when it exists) as a project file or initial context. You can't walk pages live, so synthesis happens within whatever was loaded.
+- **Claude.ai Projects / custom GPT / saved system prompt** — paste this file as the project system prompt; attach the relevant pages (start with `index.md` plus the pages its routing table names for your topic). You can't walk pages live, so synthesis happens within whatever was loaded.
+- **Any MCP-capable assistant** — connect the server in `mcp-server/` and you get all of this as tools: the procedure ships as the `wiki://query-procedure` resource, retrieval as `wiki_search` / `wiki_connections`, and citation-following as `wiki_resolve_citation`.
 - **Raw API call (single-shot)** — concatenate this file with the relevant pages identified from `index.md`. Quality is capped by what you pre-select.
 - **Internal RAG / embedding-based retrieval** — use frontmatter as a rerank signal in addition to embedding similarity. `priority: high` and `cross_cutting: true` are the strongest boost candidates.
 
