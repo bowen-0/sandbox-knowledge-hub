@@ -86,14 +86,16 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 - [[model-agnostic-architecture]] — swappable-model design pattern.
 - [[data-minimisation]] — privacy-by-design lexicon.
 
-### Regulations (8)
+### Regulations (10)
 
 #### Swiss
 - [[dsg-fadp]] — Federal Act on Data Protection.
 - [[idg-zh]] — Cantonal Information and Data Protection Act, Zurich.
 - [[fadp-art-21]] — Automated individual decisions; right to human review.
+- [[bv-art-29]] — Federal Constitution Art. 29; procedural guarantees in administrative decisions.
 - [[ai-convention-ch-implementation]] — Swiss implementation of the Council of Europe AI Convention.
 - [[embag]] — Federal Act on the Use of Electronic Means; open-source default for administrative software.
+- [[postulate-ai-building-permits]] — the cantonal postulate that initiated the building-permits project.
 
 #### EU
 - [[eu-ai-act]] — Risk-based EU AI regulation.
@@ -102,11 +104,11 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 #### Standards
 - [[iso-iec-42001]] — International AI management-system standard.
 
-### Stakeholders (13)
+### Stakeholders (20)
 
 #### People — Canton of Zurich sandbox programme
 - [[raphael-von-thiessen]] — Programme Lead AI, Canton of Zurich. Constant institutional anchor.
-- [[lukas-willi]] — Project Lead AI, Canton of Zurich. **Challenge owner at the hackathon.**
+- [[lukas-willi]] — Project Lead AI, Canton of Zurich.
 - [[stephanie-volz]] — Managing Director ITSL, UZH. Legal author/co-author on every sandbox project.
 
 #### Organisations — Canton + academic
@@ -121,9 +123,16 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 - [[irmos-technologies]] — sensor-based monitoring vendor (Phase II).
 - [[sob]] — Schweizerische Südostbahn; bridge-monitoring test partner.
 - [[stadt-kloten]] — building-permits test partner.
+- [[stadt-frauenfeld]] — smart-parking test partner (Phase I).
+- [[nokema]] — building-permits implementation partner.
+- [[byte-studio]] — building-permits implementation partner.
+- [[gossweiler-ingenieure]] — building-permits partner.
+- [[li-digital-innovation]] — Liechtenstein digital-innovation office; cross-border collaboration.
 
-#### Supervisory authorities
+#### Supervisory authorities + roles
 - [[swissmedic]] — Swiss medical-products supervisor.
+- [[bundesnetzagentur-de]] — German federal network agency; cross-border inspection-robots collaboration.
+- [[data-protection-officer]] — the DPO function as it appears across pilots.
 
 ### Lessons (14 cross-cutting + 7 case-study-specific)
 
@@ -222,9 +231,9 @@ This is a heuristic for AI consumers, not a constraint on browsing — users nav
 These are deliberate stubs — known places where the wiki can grow. Contributions welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 - **Concepts** — `edge-computing`, `bias-audit`, additional sector-specific concepts from individual reports.
-- **Stakeholders** — remaining named test/implementation partners + specialist support people: spross-stiftung, stadtspital-zuerich-augenklinik, nokema, byte-studio, gossweiler-ingenieure, gogymi, bundesnetzagentur-de, li-digital-innovation, plus the FHNW/HSG specialist support people from [[building-permits]] (Walzer, Meyer, Klingler, Jost, Hüppin, Baldwin, Louis, Späti, Schneider, Arnold, Polach).
+- **Stakeholders** — remaining named partners + specialist support people: spross-stiftung, stadtspital-zuerich-augenklinik, gogymi, plus the FHNW/HSG specialist support people from [[building-permits]] (Walzer, Meyer, Klingler, Jost, Hüppin, Baldwin, Louis, Späti, Schneider, Arnold, Polach).
 - **Lessons** — case-study-specific lessons not yet extracted: e.g. cost-per-application economics from Building Permits, regulatory-roundtable-as-format details from Medical Documentation, intrapreneurship-as-procurement-path from Digital Eye Clinic.
-- **Regulations** — sector-specific instruments: MDR, IVDR, ÖREB cadastre framework, sectoral healthcare law, federal admin-law principles (BV Art. 29).
+- **Regulations** — sector-specific instruments: MDR, IVDR, ÖREB cadastre framework, sectoral healthcare law.
 - **Synthesis** — additional themes: `healthcare-pilot-scoping`, `real-world-testing-vs-analysis-only` (sandbox outcome class chooser), `intrapreneurship-as-public-sector-procurement`.
 
 If you pick up one of these, link your PR to issue tag `wiki:expansion`.
