@@ -1,0 +1,23 @@
+// Cloudflare Workers config for the hosted MCP endpoint.
+// Deploy: (from mcp-server/) npm run bundle && npx wrangler deploy -c worker/wrangler.jsonc
+// Runs on the Workers free tier (Durable Objects with SQLite storage).
+{
+  "name": "sandbox-knowledge-hub-mcp",
+  "main": "index.ts",
+  "compatibility_date": "2026-01-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MCP_OBJECT",
+        "class_name": "KnowledgeHubMCP"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["KnowledgeHubMCP"]
+    }
+  ]
+}

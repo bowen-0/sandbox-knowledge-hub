@@ -1,0 +1,15 @@
+{
+  "name": "sandbox-knowledge-hub-mcp-worker",
+  "private": true,
+  "description": "Cloudflare Workers deployment of the Knowledge Hub MCP server",
+  "scripts": {
+    "deploy": "cd .. && npm run bundle && npx wrangler deploy -c worker/wrangler.jsonc",
+    "dev": "cd .. && npm run bundle && npx wrangler dev -c worker/wrangler.jsonc"
+  },
+  "dependencies": {
+    "agents": "^0.2.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sandbox-knowledge-hub-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing the Zurich AI Innovation Sandbox Knowledge Hub wiki to any MCP-capable AI assistant",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "sandbox-hub-mcp": "dist/stdio.js"
+  },
+  "main": "dist/server.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsx scripts/build-bundle.ts",
+    "bundle": "tsx scripts/build-bundle.ts",
+    "dev": "tsx src/stdio.ts",
+    "start": "node dist/stdio.js",
+    "start:http": "tsx src/http.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "gray-matter": "^4.0.3",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
