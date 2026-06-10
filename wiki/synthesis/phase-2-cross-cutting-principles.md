@@ -2,6 +2,7 @@
 title: Phase II cross-cutting principles — the booklet's 17 general lessons
 type: synthesis
 slug: phase-2-cross-cutting-principles
+insight_domain: ai-deployment
 priority: high
 question: "What are the general principles the sandbox has learned across all its pilots?"
 audience: [administrative-staff-scoping-a-pilot, ai-providers-pre-rfp, policymakers, anyone-querying-the-wiki-for-general-guidance]
@@ -25,29 +26,16 @@ connects:
   - probabilistic-ai-vs-administrative-reproducibility
   - data-reuse-multiplies-pilot-impact
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Phase II cross-cutting principles
 
 > **The booklet's 17 general lessons**, organised by Technology / Legal / Organisation as the booklet presents them ([[00-overview-phase2-build-and-share]] §04, pp. 17–19).
 >
-> **Why this page exists:** these are the principles the challenge owner himself synthesised across all 10 sandbox pilots. They generalise beyond any single case study — which is precisely what makes them useful for *new* projects asking *new* questions. For retrieval purposes, this page should be returned first for general guidance queries, *before* case-study-specific findings.
-
----
-
-## Why this page should rank high for retrieval
-
-When a user asks the wiki / chatbot something like:
-
-- *"What are the key lessons from the sandbox?"*
-- *"How do I scope a new AI pilot?"*
-- *"What do experienced public-sector AI practitioners know that I don't?"*
-- *"What's the general advice for [some kind of AI project]?"*
-
-…the answer should not be a single case study's findings. It should be these 17 general principles, mapped to the user's specific context. This page is the consolidated entry point.
-
-For specific case-study findings, the project pages ([[smart-parking]], [[building-permits]], etc.) and individual lesson pages remain the granular layer. **General queries → this page first; specific queries → projects + lessons directly.**
+> **Why this page exists:** these are the principles the sandbox programme itself synthesised across all 10 pilots. They generalise beyond any single case study — which is precisely what makes them useful for *new* projects asking *new* questions. Start here for general guidance; the case-study-specific findings live one layer deeper, in the project pages ([[smart-parking]], [[building-permits]], etc.) and the individual lesson pages.
+>
+> The principles are deployment-facing (`insight_domain: ai-deployment`): they advise teams deploying, procuring, or regulating an AI system. Where a principle also carries programme-operating experience, the entry says so.
 
 ---
 
@@ -93,6 +81,9 @@ These come from cross-analysing the 10 pilots' organisational layer.
 
 1. **[[strong-stakeholder-engagement-is-decisive]]** — *"Successful projects are characterised by committed implementation partners who contribute time, resources, networks, and domain expertise."*
 
+   > [!sandbox-operations] This principle reads in both domains.
+   > For a deployment team it means: secure committed partners before you start. The lesson page also carries the *programme-side* reading — how a sandbox selects and manages partner commitment across a portfolio — fenced separately there (`insight_domain: both`).
+
 2. **[[value-must-be-clearly-articulated]]** — *"The benefits of AI are not always immediately apparent to domain experts… AI should be deployed where it creates tangible value, not merely because it is technologically feasible."*
 
 3. **[[domain-expertise-tech-interface-is-critical]]** — *"The greatest value emerges where domain knowledge and technical expertise are closely integrated. Without this translation layer, AI systems remain either technically sound but operationally irrelevant or vice versa."*
@@ -109,7 +100,7 @@ These come from cross-analysing the 10 pilots' organisational layer.
 
 The booklet's later sections add three further principles relevant to **scaling impact**:
 
-- **[[data-reuse-multiplies-pilot-impact]]** — published derived datasets compound a pilot's value beyond its own engagement. (§01, anchored in [[infrastructure-maintenance]].)
+- **[[data-reuse-multiplies-pilot-impact]]** — published derived datasets compound a pilot's value beyond its own engagement. (§01, anchored in [[infrastructure-maintenance]].) *Dual-domain:* the deployment-side reading (publish what your pilot derives) and the programme-side reading (design intake to ask what dataset an engagement will leave behind) are fenced on the lesson page (`insight_domain: both`).
 - **[[probabilistic-ai-vs-administrative-reproducibility]]** — a tension specific to public administration that the corpus repeatedly surfaces.
 - **The 4-pillar Phase III strategy** — see [[zh-ai-ecosystem-strategy-2026-2029]] for the macro context these principles now sit within.
 

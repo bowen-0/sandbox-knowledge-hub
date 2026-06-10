@@ -16,6 +16,25 @@ The principles themselves are split across the 14 lessons tagged `cross_cutting:
 
 ---
 
+## The two insight domains — read this before generalising
+
+The corpus carries insights for **two different audiences whose advice often sounds alike**. Every `lessons/` and `synthesis/` page declares which one it serves via `insight_domain:` frontmatter (CONVENTIONS §4):
+
+- **`ai-deployment`** (material level) — deploying, procuring, or regulating an AI system. For startups, SMEs, innovation labs, government units deploying AI, and policymakers. *Most of the corpus.*
+- **`sandbox-operations`** (meta level) — running an innovation-sandbox-style programme: pilot intake, partner management, pivots, convening formats, programme strategy. For government units — Swiss or abroad — designing their own sandbox.
+- **`both`** — genuinely dual pages; the `> [!sandbox-operations]` / `> [!ai-deployment]` callouts fence the audiences inside the body.
+
+**By insight domain:**
+
+- `sandbox-operations` lessons: [[partner-pivot-is-normal]] · [[regulatory-roundtable-is-high-leverage]]
+- `sandbox-operations` synthesis: [[zh-ai-ecosystem-strategy-2026-2029]]
+- `both` (fenced): [[strong-stakeholder-engagement-is-decisive]] · [[cross-border-collab-unlocks-eu-access]] · [[data-reuse-multiplies-pilot-impact]] · [[partner-roles-around-a-pilot]]
+- everything else in `lessons/` and `synthesis/` is `ai-deployment`
+
+Consumers: never quote a `sandbox-operations` insight as deployment advice or vice versa — see [`QUERY.md`](QUERY.md), *The contract*.
+
+---
+
 ## Themes — guided synthesis pages for specific user questions
 
 Six synthesis pages organised as persona-questions, each with a reading path:
@@ -183,25 +202,26 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 
 ---
 
-## Retrieval-priority quick reference (for the future chatbot)
+## Retrieval-priority quick reference (for AI consumers)
 
 When a query lands, prefer in this order:
 
-1. **General / scoping queries** → [[phase-2-cross-cutting-principles]] + relevant theme synthesis pages → cross-cutting lessons.
+1. **General / scoping queries** → [[phase-2-cross-cutting-principles]] + relevant theme synthesis pages → cross-cutting lessons (`insight_domain: ai-deployment`).
 2. **Specific case-study queries** → the relevant project page → that project's source + case-study-specific lessons.
 3. **Legal queries** → the relevant regulation page → relevant cross-cutting lesson(s) → specific project examples.
 4. **Partner / process queries** → [[partner-roles-around-a-pilot]] + relevant stakeholder pages.
 5. **Outcome / strategy queries** → [[zh-ai-ecosystem-strategy-2026-2029]] + [[phase-2-cross-cutting-principles]].
+6. **Sandbox-programme queries** ("how do we run one of these") → `insight_domain: sandbox-operations` lessons + synthesis → the two phase-overview sources.
 
-This is a heuristic for the *generator*, not a constraint on browsing — users navigating the wiki freely should find paths from anywhere to anywhere via wikilinks.
+This is a heuristic for AI consumers, not a constraint on browsing — users navigating the wiki freely should find paths from anywhere to anywhere via wikilinks.
 
 ---
 
 ## Open areas (gaps the wiki currently doesn't cover)
 
-These are deliberate stubs — places where the team could extend during the hackathon.
+These are deliberate stubs — known places where the wiki can grow. Contributions welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-- **Concepts** — `edge-computing`, `bias-audit`, `auftragsdatenbearbeitung` (✓ now exists), additional sector-specific concepts from individual reports.
+- **Concepts** — `edge-computing`, `bias-audit`, additional sector-specific concepts from individual reports.
 - **Stakeholders** — remaining named test/implementation partners + specialist support people: spross-stiftung, stadtspital-zuerich-augenklinik, nokema, byte-studio, gossweiler-ingenieure, gogymi, bundesnetzagentur-de, li-digital-innovation, plus the FHNW/HSG specialist support people from [[building-permits]] (Walzer, Meyer, Klingler, Jost, Hüppin, Baldwin, Louis, Späti, Schneider, Arnold, Polach).
 - **Lessons** — case-study-specific lessons not yet extracted: e.g. cost-per-application economics from Building Permits, regulatory-roundtable-as-format details from Medical Documentation, intrapreneurship-as-procurement-path from Digital Eye Clinic.
 - **Regulations** — sector-specific instruments: MDR, IVDR, ÖREB cadastre framework, sectoral healthcare law, federal admin-law principles (BV Art. 29).

@@ -2,7 +2,7 @@
 
 > The structured knowledge layer for the *AI Innovation Sandbox Knowledge Hub* (GovTech Hackathon Switzerland 2026 · challenge by Canton Zürich).
 
-This folder is the **substrate**. Each markdown file is one entity. The folder it lives in determines its type. The YAML frontmatter is the graph. Every claim cites a paragraph in a source PDF.
+This folder is the **substrate**. Each markdown file is one entity. The folder it lives in determines its type. The YAML frontmatter is the graph. Every claim cites a page in a source PDF.
 
 If you only read one other file: [`CONVENTIONS.md`](CONVENTIONS.md). It defines the schema. If you only read two: also skim [`index.md`](index.md) — the auto-navigation across the whole wiki.
 
@@ -13,6 +13,8 @@ If you only read one other file: [`CONVENTIONS.md`](CONVENTIONS.md). It defines 
 The Canton of Zürich runs the *Innovation Sandbox for Artificial Intelligence* — a regulatory + technical playground where public administration, businesses, and researchers pilot AI applications under real conditions. Across two phases (2022–2026) it produced ~13 detailed PDF reports. Those reports hold hard-won knowledge (legal frameworks, data access, organisational prerequisites, technical learnings) that today is locked inside static documents. **This wiki restructures that corpus as a navigable, citable, extensible knowledge base** so a non-technical administrator planning a new AI pilot can find what they need and trust where it came from.
 
 The corpus is bounded but **the wiki is not**. New sources — papers, web pages, transcripts, news articles, future sandbox reports — can be added as first-class citizens. See `sources/` below.
+
+The corpus serves **two audiences**, and every lesson and synthesis page declares which via `insight_domain:` frontmatter: **`ai-deployment`** (deploying, procuring, or regulating an AI system) and **`sandbox-operations`** (running an innovation-sandbox-style programme). The advice often sounds alike across the two; the field exists so no reader — human or AI — generalises one as the other. See `CONVENTIONS.md` §4 and `index.md`, *The two insight domains*.
 
 ---
 
