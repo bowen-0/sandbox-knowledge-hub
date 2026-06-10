@@ -3,7 +3,7 @@ name: ingest
 description: >
   Ingest a new source into the Sandbox Knowledge Hub wiki — read it, discuss
   key takeaways with the user, create/update wiki pages, and maintain the
-  paragraph-anchored citation backbone. Trigger when the user says "ingest",
+  page-anchored citation backbone. Trigger when the user says "ingest",
   "process this", "add this to the wiki", "compile this report", "what should
   we take from this", or provides a raw source (sandbox PDF, paper, URL,
   transcript, dataset) and wants it incorporated into the wiki. Also trigger
@@ -26,10 +26,10 @@ Summary of the procedure (for quick orientation; the full version is in `INGEST.
 
 1. **READ** — read the source, read `wiki/index.md` for what already exists, read `wiki/CONVENTIONS.md` for the schema, present 3–5 takeaways to the user, wait for discussion.
 2. **PLAN** — propose a structured plan: source page, project page, lessons to create, existing pages to update, cross-references. Wait for approval.
-3. **EXECUTE** — write the pages per CONVENTIONS. Highest-value outputs are **lessons** (`wiki/lessons/<slug>.md`) — atomic transferable claims with paragraph-anchored citations.
-4. **BOOKKEEP** — update `wiki/index.md`, verify no orphans, verify no broken `[[wikilinks]]`, verify every claim is paragraph-anchored.
+3. **EXECUTE** — write the pages per CONVENTIONS. Highest-value outputs are **lessons** (`wiki/lessons/<slug>.md`) — atomic transferable claims with page-anchored citations and a declared `insight_domain`.
+4. **BOOKKEEP** — update `wiki/index.md`, verify no orphans, verify no broken `[[wikilinks]]`, verify every claim is page-anchored, then run `node scripts/lint.mjs` from the repo root.
 
-**Citation backbone.** Every claim added to the wiki traces to a `<source-slug>#para-N` paragraph anchor. Anchors come from the Docling extraction pipeline, not from your reading of the PDF. If anchors aren't available for this source yet, fall back to page-level citation (`p.17`) and flag the source page's `paragraphs: []` for backfill. **Never invent an anchor.** Full rule in `INGEST.md`'s contract section and `CONVENTIONS.md` §6.
+**Citation backbone.** Every claim added to the wiki traces to a `<source-slug>#page-N` page anchor, verified by reading the German PDF page. **Never invent an anchor, and never write `#para-N`** — the paragraph pipeline is a dormant spec. Every new lesson/synthesis page declares `insight_domain: ai-deployment | sandbox-operations | both` (CONVENTIONS §4). Full rules in `INGEST.md`'s contract section and `CONVENTIONS.md` §6.
 
 **German verbatim quotes are preserved exactly.** Never machine-translate a source quote. Pattern and rationale in `CONVENTIONS.md` §5.
 

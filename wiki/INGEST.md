@@ -4,19 +4,20 @@
 
 This wiki is designed to be substrate-portable. The ingest procedure travels with it. It is auto-loaded as a Claude Code / Cowork / Claude Agent SDK skill from [`.claude/skills/ingest/SKILL.md`](.claude/skills/ingest/SKILL.md) when this folder is the working directory. For any other runtime — Claude.ai Projects with a GitHub connector, a custom GPT, a raw API call — paste this file as system instructions plus [`CONVENTIONS.md`](CONVENTIONS.md) and [`index.md`](index.md) as context. The procedure is identical across runtimes; only the file-I/O and tooling mechanism differs.
 
-**Recommended runtime for ingest: Cowork or local Claude Code.** Other runtimes work for *editorial* operations on already-ingested sources, but the paragraph-anchoring step (see the contract below) needs a real execution environment.
+**Recommended runtime for ingest: Cowork or local Claude Code.** Other runtimes work for *editorial* operations on already-ingested sources, but reading source PDFs page-by-page and running the lint pass need a real execution environment.
 
 ---
 
 ## The contract
 
-The wiki is the source of truth, and the citation backbone is paragraph-anchored to source PDFs. **Every substantive claim added to the wiki must trace to a paragraph in a source.** If you can't cite, you can't add it.
+The wiki is the source of truth, and the citation backbone is page-anchored to source PDFs (CONVENTIONS §6). **Every substantive claim added to the wiki must trace to a page in a source.** If you can't cite, you can't add it.
 
-Three rules follow from that:
+Four rules follow from that:
 
-1. **Never invent a paragraph anchor.** Anchors come from the Docling extraction pipeline, not from your reading of the PDF. If anchors aren't available for this source yet, fall back to page-level citation (`p.17`) and flag the source page's `paragraphs: []` for backfill.
-2. **Never machine-translate a German verbatim quote.** Source PDFs are German; quotes stay exact. Translate in the surrounding prose. See [`CONVENTIONS.md`](CONVENTIONS.md) §5.
-3. **Ingest is collaborative, not automated.** The procedure has four phases and requires user approval at the end of phases 1 and 2. The discussion shapes the output.
+1. **Cite the page you actually verified.** Read the PDF page and confirm the claim is on it before writing `slug#page-N`. The German PDF is citation-authoritative (§5). Never write a `#para-N` anchor — the paragraph-anchor pipeline is a dormant spec (CONVENTIONS §6) and nothing resolves those anchors.
+2. **Never machine-translate a German verbatim quote.** Source PDFs are German; quotes stay exact, copied character-for-character. Translate in the surrounding prose. See [`CONVENTIONS.md`](CONVENTIONS.md) §5.
+3. **Declare the insight domain.** Every new lesson and synthesis page carries `insight_domain: ai-deployment | sandbox-operations | both` (CONVENTIONS §4). Ask of every candidate lesson: is this advice for someone *deploying an AI system*, or for someone *running a sandbox programme*? If genuinely both, the body must fence the two audiences with the §3 domain callouts.
+4. **Ingest is collaborative, not automated.** The procedure has four phases and requires user approval at the end of phases 1 and 2. The discussion shapes the output.
 
 [`CONVENTIONS.md`](CONVENTIONS.md) is the schema spec — frontmatter, taxonomies, callout syntax, citation anchor syntax. Read it before executing. This file is the *procedure*; CONVENTIONS is the *contract*.
 
@@ -39,7 +40,8 @@ Three rules follow from that:
    - **Regulations engaged** — Swiss federal/cantonal + EU + standards
    - **Concepts used** — especially ones not yet in `concepts/`
    - **Atomic transferable lessons** — the highest-value extractions. See [`lessons/integrate-regulation-early.md`](lessons/integrate-regulation-early.md) for the shape: one sentence stating the claim, one verbatim quote establishing it, one bullet per supporting project
-   - **Paragraph anchors** — if the source page's `paragraphs:` index already exists (from a prior Docling run), use those IDs. If not, note paragraphs by page + opening words for later backfill
+   - **The insight domain of each candidate lesson** — deployment advice, programme-operating advice, or genuinely both (the contract, rule 3)
+   - **Page anchors** — note the printed page number (German PDF) for every claim and quote you expect to cite
 5. **Present 3–5 key takeaways to the user.** Frame as: what's *new* here, what does this *reinforce* across the existing corpus, what does this *challenge*?
 
 **Wait for the user before proceeding.** This is the first approval gate.
@@ -53,7 +55,7 @@ Source page:    sources/<slug>.md                       (type: source)
 Project page:   projects/<slug>.md                      (type: project)
                 — or update if it already exists
 Lessons to CREATE (highest-value output):
-  - lessons/<slug>.md                                   (cross_cutting: ?)
+  - lessons/<slug>.md                                   (insight_domain: ?, cross_cutting: ?)
   - lessons/<slug>.md
 Pages to UPDATE (highest-value integration):
   - concepts/data-access.md           — add project to appears_in[]; weave a subsection
@@ -71,6 +73,7 @@ New stakeholders / regulations / concepts to CREATE:
 Present the plan and wait for approval. The user may:
 
 - Skip a proposed lesson ("not transferable — that's a single-project quirk")
+- Reassign a lesson's `insight_domain:` ("that's programme advice, not deployment advice")
 - Promote or demote `cross_cutting:` on a lesson
 - Flag an existing page that needs updating but you missed
 - Override the proposed taxonomy values (sector, partner_role, instrument)
@@ -88,20 +91,22 @@ Write the pages per the approved plan. Page formats are defined in [`CONVENTIONS
 - Frontmatter per CONVENTIONS §2 `sources/`. Include `path` (file) *or* `url` (web), `language`, `year`, `publisher`, `authors[]` (as stakeholder slugs)
 - Body shape: H1 (repeats the title), one framing paragraph, **Provenance**, **Use as citation**, **See also** with `[[wikilinks]]`
 - Canonical example to model: [`sources/p2-building-permits.md`](sources/p2-building-permits.md)
-- **Populate `paragraphs:`** if a Docling-produced index exists. Otherwise leave `paragraphs: []` and note in the body that the anchor index is pending. Never fabricate paragraph IDs
+- Omit the `paragraphs:` field entirely — it exists only once the dormant anchor pipeline (CONVENTIONS §6) populates it. Never fabricate paragraph IDs
+- If you produced a working digest of the report (methodology, page-numbered quotes), keep it at `sources/digests/<slug>.md` as ingest provenance
 
 **Project page** (`projects/<slug>.md`):
 
 - Filename drops the `p<phase>-` prefix; phase lives in frontmatter (`phase: I | II`)
 - Frontmatter per CONVENTIONS §2 `projects/`. Use `status: analysis-only` for projects without real-world deployment
-- Body uses paragraph-anchored citations: `[(p2-building-permits#para-25)](../sources/p2-building-permits.md#para-25)`
+- Body uses page-anchored citations: `[(p2-building-permits p. 25)](../sources/p2-building-permits.md)`
 - Preserve German verbatim quotes; translate in surrounding prose
 - Cross-link to all relevant existing entities — stakeholders, regulations, concepts, related projects — using `[[wikilinks]]`
 
 **Lessons** (`lessons/<slug>.md`) — the highest-value output type:
 
 - One lesson = one **atomic, transferable** claim. If a candidate takes more than a paragraph to state, it's two lessons or it's a synthesis page
-- Frontmatter per CONVENTIONS §2 `lessons/`. Required: `phase`, `project[]`, `sources[]` (paragraph-anchored), `confidence`, `freshness`
+- Frontmatter per CONVENTIONS §2 `lessons/`. Required: `phase`, `insight_domain`, `project[]`, `sources[]` (page-anchored), `confidence`, `freshness`
+- `insight_domain: both` requires the body to fence the two audiences with `> [!ai-deployment]` / `> [!sandbox-operations]` callouts (CONVENTIONS §3)
 - Set `cross_cutting: true` *only* when the lesson is stated as a general principle in `00-overview-phase2-build-and-share` §04 Technology/Legal/Organisation (or the Phase I equivalent). This flag is a retrieval-priority boost; don't apply it loosely
 - Body shape: H1 = the full lesson statement (one sentence), then a verbatim quote from the source establishing it, then **Evidence base** with one bullet per supporting project, then **How to apply** with concrete steps, then **See also**
 - Canonical example to model: [`lessons/integrate-regulation-early.md`](lessons/integrate-regulation-early.md)
@@ -122,9 +127,9 @@ Write the pages per the approved plan. Page formats are defined in [`CONVENTIONS
 
 **German verbatim quote pattern** (CONVENTIONS §3):
 
-> *«AI can support building authorities, but the justification and responsibility for decisions remain with humans.»* [(p2-building-permits#para-25)](sources/p2-building-permits.md#para-25)
+> *«<exact German sentence, copied character-for-character from the PDF>»* [(p2-building-permits p. 25)](sources/p2-building-permits.md)
 
-The German stays exact. The English translation is the surrounding sentence, not a replacement for the quote.
+The German stays exact. The English translation is the surrounding sentence, not a replacement for the quote. If you cannot access the German text, quote in English and attribute it to the EN version.
 
 ### Phase 4 — BOOKKEEP
 
@@ -142,14 +147,15 @@ The German stays exact. The English translation is the surrounding sentence, not
    - Every new page is listed in `index.md` in the right section
 
 3. **Verify no broken `[[wikilinks]]`**:
-   - Quick grep: `grep -oE '\[\[[a-z0-9-]+\]\]' <new-files>` then check each slug resolves to a real file under any of the seven folders. Either create the missing page or remove the link. Broken wikilinks will be caught by the future lint pass — don't leave them for it
+   - Quick grep: `grep -oE '\[\[[a-z0-9-]+\]\]' <new-files>` then check each slug resolves to a real file under any of the seven folders. Either create the missing page or remove the link. The lint pass catches broken wikilinks — don't leave them for it
 
 4. **Verify the citation backbone**:
-   - Every substantive claim in every new page traces to either `<source-slug>#para-N` (preferred) or `p.<N>` page-level (fallback)
-   - If anchors weren't available, the source page's `paragraphs: []` is empty and the body notes "anchor index pending"
-   - No invented anchors
+   - Every substantive claim in every new page traces to `<source-slug>#page-N` (frontmatter) / `p. N` (inline), page numbers verified against the German PDF
+   - No `#para-N` anchors anywhere — the paragraph pipeline is dormant (CONVENTIONS §6)
 
-5. **Suggest a commit**. Per CLAUDE.md, commits are deliberate — `git add` specific paths, not `-A`. List the new and updated files; let the user pick the boundary. A typical sandbox-report ingest is one commit; a multi-source synthesis run is often two.
+5. **Run the lint pass** — `node scripts/lint.mjs` from the repo root (see [`CONTRIBUTING.md`](CONTRIBUTING.md) for one-time setup). It checks broken wikilinks, orphans, missing required frontmatter, hand-written `#para-N` anchors, unfenced `both` pages, and index coverage. Fix what it flags before committing.
+
+6. **Suggest a commit**. Per CLAUDE.md, commits are deliberate — `git add` specific paths, not `-A`. List the new and updated files; let the user pick the boundary. A typical sandbox-report ingest is one commit; a multi-source synthesis run is often two.
 
 ---
 
@@ -166,7 +172,8 @@ The German stays exact. The English translation is the surrounding sentence, not
 
 - Contain the cross-cutting principles (§04 Technology / Legal / Organisation in the Phase II booklet)
 - Lessons extracted from these are nearly always `cross_cutting: true`
-- The booklet's glossary (Phase II: `#para-26-glossary`) is the canonical source for concept definitions. When creating a concept from the glossary, set `canonical_source:` per CONVENTIONS §2 `concepts/`
+- Check each principle's insight domain: most are `ai-deployment`, but programme-side principles belong to `sandbox-operations` (the contract, rule 3)
+- The booklet's glossary is the canonical source for concept definitions. When creating a concept from the glossary, set `canonical_source:` to the glossary's page (`00-overview-phase2-build-and-share#page-N`) per CONVENTIONS §2 `concepts/`
 
 **External papers, web sources, videos, transcripts, datasets.**
 
@@ -183,7 +190,8 @@ The German stays exact. The English translation is the surrounding sentence, not
 
 ## Anti-patterns
 
-- **Never invent paragraph anchors.** Use page-level fallback (`p.17`) and flag for backfill
+- **Never write a `#para-N` anchor.** The paragraph pipeline is dormant; cite the page you verified (`#page-N`)
+- **Never assign `insight_domain` by vibe.** Ask who acts on the advice: a team deploying AI, or a team running a programme. When genuinely both, fence the audiences; don't average them
 - **Never machine-translate German verbatim quotes.** Preserve exact; translate in surrounding prose
 - **Never create orphan pages.** Every new page is linked from at least one other + listed in `index.md`
 - **Never modify source PDFs in `pdfs/`.** Immutable
@@ -201,11 +209,11 @@ The German stays exact. The English translation is the surrounding sentence, not
 
 Different runtimes give the ingest procedure different leverage:
 
-- **Cowork / local Claude Code / Claude Agent SDK** — this file auto-loads as a skill from `.claude/skills/ingest/SKILL.md`. You have `Read`, `Write`, `Edit`, `Glob`, `Grep`, `Bash` against the repo. Run the Docling pipeline for paragraph anchors before writing source pages. **This is the recommended runtime for ingest.**
-- **Claude.ai Projects with GitHub connector** — paste this file as the project system prompt, attach [`CONVENTIONS.md`](CONVENTIONS.md) and [`index.md`](index.md), enable the GitHub connector pointed at this repo. The connector can read and write files via the GitHub API, but the Docling pipeline does **not** run in this environment. Use claude.ai for *editorial* operations on already-ingested sources — drafting a new lesson from an existing source, cross-references, prose tightening, fixing a citation — not for ingesting new PDFs that need paragraph anchoring
-- **Raw API call (single-shot)** — concatenate this file with CONVENTIONS, index, and the source content. Anchor-aware ingest is not feasible here; treat output as a draft for review
+- **Cowork / local Claude Code / Claude Agent SDK** — this file auto-loads as a skill from `.claude/skills/ingest/SKILL.md`. You have `Read`, `Write`, `Edit`, `Glob`, `Grep`, `Bash` against the repo: read the German PDF page-by-page to verify citations, and run the lint pass before committing. **This is the recommended runtime for ingest.**
+- **Claude.ai Projects with GitHub connector** — paste this file as the project system prompt, attach [`CONVENTIONS.md`](CONVENTIONS.md) and [`index.md`](index.md), enable the GitHub connector pointed at this repo. The connector can read and write files via the GitHub API, but it cannot page through large PDFs reliably or run lint. Use claude.ai for *editorial* operations on already-ingested sources — drafting a new lesson from an existing source, cross-references, prose tightening, fixing a citation — not for ingesting new PDFs
+- **Raw API call (single-shot)** — concatenate this file with CONVENTIONS, index, and the source content. Page-verified ingest is not feasible here; treat output as a draft for review
 
-The procedure is identical across all three. What differs is whether the Docling pipeline can run, and whether files can be written directly vs. proposed for human commit.
+The procedure is identical across all three. What differs is whether PDFs can be read and lint run, and whether files can be written directly vs. proposed for human commit.
 
 ---
 
@@ -213,5 +221,5 @@ The procedure is identical across all three. What differs is whether the Docling
 
 - **Not the schema spec.** [`CONVENTIONS.md`](CONVENTIONS.md) is. This file is the procedure; CONVENTIONS is the contract
 - **Not a UI spec.** The wiki is the substrate; UIs sit on top
-- **Not enforcement.** The future lint pass enforces structural conventions; voice and discipline are upheld by the human reviewer at PR time
+- **Not enforcement.** The lint pass checks structural conventions; voice and discipline are upheld by the human reviewer at PR time
 - **Not exhaustive.** New failure modes — when they recur — should be added to *Anti-patterns*. New page-type specifics should be added to CONVENTIONS §2 first, then mirrored here

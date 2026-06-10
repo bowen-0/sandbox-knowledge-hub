@@ -2,7 +2,7 @@
 
 > **Handover doc for new contributors** — SMEs, challenge owners, or anyone granted access who wants to add a source, draft a lesson, or correct a page. Assumes you are starting from scratch.
 
-This wiki is a folder of plain markdown files in a GitHub repo. Every claim cites a paragraph in a source PDF. You can contribute from three runtimes — pick the one that matches your access and what you want to do.
+This wiki is a folder of plain markdown files in a GitHub repo. Every claim cites a page in a source PDF. You can contribute from three runtimes — pick the one that matches your access and what you want to do.
 
 If you only read one other file: [`INGEST.md`](INGEST.md). It is the procedure. This file is the *operator's manual* — how to drive each runtime correctly. INGEST is the contract — what the output must look like, regardless of runtime.
 
@@ -10,13 +10,13 @@ If you only read one other file: [`INGEST.md`](INGEST.md). It is the procedure. 
 
 ## Who can do what
 
-| Runtime                                | Add a new PDF (with anchors)        | Edit existing pages | Commit directly | Account needed                                  |
-| -------------------------------------- | ----------------------------------- | ------------------- | --------------- | ----------------------------------------------- |
-| **Cowork** (or local Claude Code)      | ✅ — full ingest with Docling        | ✅                   | ✅ via PR        | Claude.ai plan with Cowork + GitHub repo access |
-| **Claude.ai Projects + GitHub**        | ⚠️ draft only (no Docling here)      | ✅                   | ✅ via connector | Claude.ai Pro + GitHub OAuth                    |
-| **ChatGPT** (or any other web LLM)     | ⚠️ draft only                        | ⚠️ draft only        | ❌ — hand off    | Account on that LLM                             |
+| Runtime                                | Add a new PDF (page-verified citations) | Edit existing pages | Commit directly | Account needed                                  |
+| -------------------------------------- | --------------------------------------- | ------------------- | --------------- | ----------------------------------------------- |
+| **Cowork** (or local Claude Code)      | ✅ — full ingest, reads the PDF itself   | ✅                   | ✅ via PR        | Claude.ai plan with Cowork + GitHub repo access |
+| **Claude.ai Projects + GitHub**        | ⚠️ draft only (can't page through PDFs)  | ✅                   | ✅ via connector | Claude.ai Pro + GitHub OAuth                    |
+| **ChatGPT** (or any other web LLM)     | ⚠️ draft only                            | ⚠️ draft only        | ❌ — hand off    | Account on that LLM                             |
 
-**Read this before picking:** new PDFs need paragraph anchors before the wiki will accept citations. That anchoring runs in a Python + Docling pipeline that only executes in Cowork or local Claude Code. If you draft against a new PDF in ChatGPT, the citations will be page-level (`p.17`) and a maintainer will backfill `#para-N` later. That is fine — but know it's a two-step process.
+**Read this before picking:** citations are page-level against the German PDF (`slug#page-N`, CONVENTIONS §6), and the page number must be *verified* — someone has to read the PDF page and confirm the claim is on it. That verification works in Cowork or local Claude Code, where the assistant can read the PDF page by page and run the lint pass. If you draft in ChatGPT or the GitHub connector, mark citations as unverified in the PR and a maintainer closes that loop.
 
 For editing what's already in the wiki (a new lesson from an existing source, a prose fix, a translation tweak), all three runtimes work fully.
 
@@ -36,7 +36,7 @@ The skill is auto-loaded. You type `ingest`, the wiki tells you what to do.
 8. **BOOKKEEP.** Cowork updates `index.md` and verifies no orphans, no broken `[[wikilinks]]`, every claim anchored. Read the diff.
 9. **Commit and PR.** Per `CLAUDE.md`, commit specific paths, never `-A`. Open a PR. A maintainer reviews and merges.
 
-If the source is a new PDF and `paragraphs: []` is empty on the source page, Cowork should run the Docling extraction before writing citations. If it doesn't, tell it to. The wiki contract says: **never invent an anchor.** Page-level fallback (`p.17`) is acceptable until anchors backfill.
+The wiki contract says: **never invent an anchor.** Citations are page-level (`slug#page-N`) and verified against the German PDF; `#para-N` paragraph anchors are a dormant spec (CONVENTIONS §6) — never write one. Before the PR, run the lint pass: `node scripts/lint.mjs` from the repo root (one-time setup: `cd mcp-server && npm install && npm run build`).
 
 ---
 
@@ -70,9 +70,9 @@ No GitHub access required. Output is a draft for handoff.
 4. **Prompt:** *"Follow the INGEST.md procedure. Start with phase 1: present 3–5 takeaways. Wait for me before proceeding to phase 2."*
 5. **Walk through the four phases manually.** READ → discuss → PLAN → discuss → EXECUTE → BOOKKEEP. ChatGPT will produce markdown blobs for each new and updated page.
 6. **Save the output.** Copy each markdown blob into a draft file locally, or paste them into a single handoff document.
-7. **Send the drafts to a maintainer.** Either email/share with Bowen, or open a GitHub PR manually if you have web access to the repo. The maintainer reviews, runs the Docling pipeline if a new PDF was involved, and commits.
+7. **Send the drafts to a maintainer.** Either email/share with the maintainer, or open a GitHub PR manually if you have web access to the repo. The maintainer reviews, verifies the page numbers against the German PDF, and commits.
 
-**Honest about the limits:** ChatGPT will guess at paragraph anchors if you don't watch carefully. The contract says *never invent an anchor*. Insist on page-level citations (`p.17`) when in doubt — the maintainer backfills. Also: ChatGPT will not check `index.md` orphans or `[[wikilink]]` resolution automatically. The maintainer handles bookkeeping on commit.
+**Honest about the limits:** ChatGPT will guess at page numbers and anchors if you don't watch carefully. The contract says *never invent an anchor* — and never write `#para-N` at all. Insist on page-level citations marked unverified when in doubt — the maintainer verifies. Also: ChatGPT will not check `index.md` orphans or `[[wikilink]]` resolution automatically. The maintainer runs the lint pass on commit.
 
 ---
 
@@ -80,9 +80,9 @@ No GitHub access required. Output is a draft for handoff.
 
 Regardless of runtime, every contribution honours:
 
-1. **Every substantive claim cites a source.** `[(source-slug#para-N)](sources/source-slug.md#para-N)` is the preferred form. `p.<N>` is the fallback. **Never invent a paragraph anchor.**
-2. **German verbatim quotes stay German.** Translate in the surrounding prose, not in the quote itself. (See [`CONVENTIONS.md`](CONVENTIONS.md) §5.)
-3. **Lessons are atomic.** One sentence stating the claim. If it needs two paragraphs, it's two lessons or it belongs in `synthesis/`.
+1. **Every substantive claim cites a source.** `[(source-slug p. N)](sources/source-slug.md)` inline, `source-slug#page-N` in frontmatter, page number verified against the German PDF. **Never write a `#para-N` anchor** — that spec is dormant (CONVENTIONS §6).
+2. **German verbatim quotes stay German.** Copied character-for-character; translate in the surrounding prose, not in the quote itself. (See [`CONVENTIONS.md`](CONVENTIONS.md) §5.)
+3. **Lessons are atomic and declare their audience.** One sentence stating the claim, plus `insight_domain: ai-deployment | sandbox-operations | both` (CONVENTIONS §4). If it needs two paragraphs, it's two lessons or it belongs in `synthesis/`.
 4. **No orphan pages.** Every new page is linked from at least one other and listed in [`index.md`](index.md).
 5. **Update existing pages too.** The highest-value integration is weaving the new source into existing concepts, stakeholders, regulations, and lessons. Don't just append.
 
@@ -92,14 +92,14 @@ A maintainer will spot violations on review. But spotting them yourself saves a 
 
 ## Where things live, in one paragraph
 
-Source PDFs sit in [`wiki/pdfs/{de,en}/`](pdfs/). Each PDF gets a page in [`wiki/sources/`](sources/) describing it and listing its paragraph anchors. Each sandbox pilot gets a page in [`wiki/projects/`](projects/). The transferable claims extracted from a project become pages in [`wiki/lessons/`](lessons/) — these are the unit the future generative UI will surface. Reusable ideas go in [`wiki/concepts/`](concepts/), people and orgs in [`wiki/stakeholders/`](stakeholders/), laws and standards in [`wiki/regulations/`](regulations/), cross-cutting patterns in [`wiki/synthesis/`](synthesis/). The graph is the YAML frontmatter at the top of each file; the prose is the body. Both are plain markdown.
+Source PDFs sit in [`wiki/pdfs/{de,en}/`](pdfs/). Each PDF gets a page in [`wiki/sources/`](sources/) describing it, its methodology, and its notable quotes. Each sandbox pilot gets a page in [`wiki/projects/`](projects/). The transferable claims extracted from a project become pages in [`wiki/lessons/`](lessons/) — these are the unit the future generative UI will surface. Reusable ideas go in [`wiki/concepts/`](concepts/), people and orgs in [`wiki/stakeholders/`](stakeholders/), laws and standards in [`wiki/regulations/`](regulations/), cross-cutting patterns in [`wiki/synthesis/`](synthesis/). The graph is the YAML frontmatter at the top of each file; the prose is the body. Both are plain markdown.
 
 ---
 
 ## If you get stuck
 
 - **The skill isn't triggering in Cowork.** Paste [`INGEST.md`](INGEST.md) into the chat and say "follow this procedure". Same outcome.
-- **You don't have Docling and the source is a new PDF.** Draft with page-level citations. Flag in the PR description: *"paragraph anchors pending — `paragraphs: []` empty"*. A maintainer with Cowork backfills.
+- **You can't verify page numbers and the source is a new PDF.** Draft with page-level citations and flag in the PR description: *"page numbers unverified"*. A maintainer with Cowork or Claude Code verifies against the German PDF.
 - **You're not sure if an existing page exists.** Read [`index.md`](index.md). If it's not there, it doesn't exist (or `index.md` is stale — flag that too).
 - **A claim spans two projects and you can't tell if it's cross-cutting.** It's `cross_cutting: true` only if it's stated as a general principle in `00-overview-phase2-build-and-share` §04 (or the Phase I equivalent). Otherwise, it's case-specific. When in doubt, default to false; the maintainer can promote.
 - **You hit a tension between two sources.** Don't smooth it over. Add a `> [!tension]` callout per [`CONVENTIONS.md`](CONVENTIONS.md). Tensions are signal.

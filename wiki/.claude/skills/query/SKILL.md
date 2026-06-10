@@ -15,7 +15,7 @@ allowed-tools: Read, Glob, Grep
 
 # Query
 
-Answer questions by reading the wiki, following cross-references, and synthesising across pages with paragraph-anchored citations.
+Answer questions by reading the wiki, following cross-references, and synthesising across pages with page-anchored citations.
 
 **The canonical procedure lives in [`wiki/QUERY.md`](../../../QUERY.md).** Read that file before answering any query. It contains the four-step procedure, voice rules, citation patterns, and don'ts.
 
@@ -30,7 +30,7 @@ The wiki is the source of truth. Answer from compiled wiki pages, not from train
 
 Default voice is neutral knowledge-transfer (explaining what the corpus shows), not sandbox-recruitment ("you should engage the sandbox"). Default audience is a non-technical administrator planning their own AI pilot, learning from the case studies — adapt to other personas only when the query makes one obvious.
 
-Citation pattern (per `CONVENTIONS.md` §6): `[(<source-slug>#para-N)](sources/<source-slug>.md#para-N)`. Use Obsidian-style `> [!tension]` / `> [!gap]` callouts where they apply.
+Citation pattern (per `CONVENTIONS.md` §6): `[(<source-slug> p. N)](sources/<source-slug>.md)` — page number from the German PDF; never write `#para-N` (dormant spec). Respect `insight_domain:` on lessons and synthesis pages: never present a sandbox-operations insight as ai-deployment advice or vice versa (full rule in `QUERY.md`, The contract). Use Obsidian-style `> [!tension]` / `> [!gap]` callouts where they apply.
 
 **Readability rule — wikilink discipline.** Wikilink named entities (projects, people, organisations, regulations, sources) inline — the slug reads as a noun. *Do not* wikilink principle or lesson slugs inline — they read as YAML filenames. Italicise the principle in prose; put the wikilink in parentheses on first mention only, and drop it on subsequent references. Soft cap: ≤3 wikilinks per paragraph in narrative prose; link-density is acceptable only in closing reading lists or `> [!see-also]` callouts. Full rule and examples in `QUERY.md`.
 
