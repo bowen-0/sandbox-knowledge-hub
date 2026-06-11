@@ -3,27 +3,30 @@ title: Combine frontier models and open-source solutions strategically
 type: lesson
 slug: combine-frontier-and-open-source-strategically
 phase: II
+insight_domain: ai-deployment
 project: [digital-eye-clinic, building-permits, medical-documentation]
 concept: [frontier-models, model-agnostic-architecture]
 regulation: []
 stakeholder: []
 sources:
-  - 00-overview-phase2-build-and-share#para-04-technology
+  - 00-overview-phase2-build-and-share#page-17
 confidence: high
 freshness: 2026-05
 applies_to_lifecycle_stage: [scoping, procurement]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Combine frontier models and open-source solutions strategically
 
-From [[00-overview-phase2-build-and-share]] §04 Technology, p. 17:
+From [[00-overview-phase2-build-and-share]], section 04 Technology [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md):
 
-> *"Requirements relating to data protection, performance, cost, and scalability vary significantly across use cases. Organisations can combine commercial frontier models from the cloud with locally deployed open-source models and should select the most appropriate configuration based on specific requirements (e.g. in healthcare contexts)."*
+> *«Frontier-Modelle vs. Open Source gezielt kombinieren: Anforderungen an Datenschutz, Performance, Kosten und Skalierbarkeit unterscheiden sich je nach Anwendungsfall stark. Organisationen können kommerzielle Frontier-Modelle aus der Cloud mit lokal betriebenen Open-Source-Modellen kombinieren und wählen idealerweise je nach Anforderung das passende Set-up (z. B. im Gesundheitskontext).»*
 
-## What this looks like in practice
+In the English edition (also p. 17) this reads: "Combine frontier models and open-source solutions strategically: requirements relating to data protection, performance, cost, and scalability vary significantly across use cases. Organisations can combine commercial frontier models from the cloud with locally deployed open-source models and should select the most appropriate configuration based on specific requirements (e.g. in healthcare contexts)."
+
+## Evidence base
 
 The booklet does **not** prescribe one-or-the-other. It prescribes *deliberate combination*:
 

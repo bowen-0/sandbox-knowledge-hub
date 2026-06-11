@@ -3,27 +3,30 @@ title: Continuous regulatory learning beats rigid approval mechanisms
 type: lesson
 slug: continuous-regulatory-learning-beats-rigid-approval
 phase: II
+insight_domain: ai-deployment
 project: [inspection-robots, medical-documentation]
 concept: [regulatory-roundtable]
 regulation: [eu-ai-act, ai-convention-ch-implementation]
 stakeholder: []
 sources:
-  - 00-overview-phase2-build-and-share#para-04-legal
+  - 00-overview-phase2-build-and-share#page-18
 confidence: high
 freshness: 2026-05
 applies_to_lifecycle_stage: [scoping, procurement]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Continuous regulatory learning beats rigid approval mechanisms
 
-From [[00-overview-phase2-build-and-share]] §04 Legal, p. 18:
+The Phase II booklet [[00-overview-phase2-build-and-share]] states the principle in its §04 legal insights [(00-overview-phase2-build-and-share p. 18)](../sources/00-overview-phase2-build-and-share.md):
 
-> *"Continuous regulatory learning becomes critical: traditional regulatory approaches reach their limits with dynamic, adaptive systems. New formats for exchange and feedback between authorities and providers are gaining importance beyond rigid approval mechanisms."*
+> *«Kontinuierliches regulatorisches Lernen wird zentral: Klassische Regulierungslogiken stossen bei dynamischen, lernenden Systemen an Grenzen. Neue Formate für Austausch und Feedback zwischen Behörden und Anbietern gewinnen jenseits von rigider Zulassungslogik an Bedeutung.»*
 
-## What it means
+In the booklet's English version (p. 18): "Continuous regulatory learning becomes critical: traditional regulatory approaches reach their limits with dynamic, adaptive systems. New formats for exchange and feedback between authorities and providers are gaining importance beyond rigid approval mechanisms."
+
+## Evidence base
 
 Classical product regulation assumes a *finite snapshot*: a product is approved at version 1.0; deviations require new approval. AI systems break this assumption — models are continuously retrained, prompts change, integrations evolve. A regulator who can only react to *applications for approval* loses oversight.
 
