@@ -17,7 +17,7 @@ freshness: 2026-05
 applies_to_lifecycle_stage: [scoping, procurement]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # Data access is the most powerful lever
@@ -26,7 +26,7 @@ The clearest single-sentence cross-cutting lesson from Phase II, stated explicit
 
 > *«Zugang zu Daten schafft den grössten Hebel: Auch vermeintlich triviale Datensätze haben einen hohen Mehrwert für die Entwicklung und Optimierung von KI-Systemen. Werden sie zugänglich gemacht, ermöglichen sie einer breiten Zahl von Anbietern, ihre Modelle zu trainieren, zu validieren und zu verbessern (z. B. hochaufgelöste Drohnenaufnahmen einer Landepiste).»* [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)
 
-The English edition renders this as: "Data access is the most powerful lever: even seemingly simple datasets can generate substantial value for the development and optimisation of AI systems. When made accessible, they enable a wide range of providers to train, validate, and improve their models (e.g. high-resolution drone imagery of a runway)."
+The English edition (EN version, p. 17) renders this as: "Data access is the most powerful lever: even seemingly simple datasets can generate substantial value for the development and optimisation of AI systems. When made accessible, they enable a wide range of providers to train, validate, and improve their models (e.g. high-resolution drone imagery of a runway)."
 
 ## Evidence base
 

@@ -34,7 +34,7 @@ The Phase II booklet ([[00-overview-phase2-build-and-share]]) opens its Technolo
 
 In the booklet's English version: "In many cases, the deployed AI technologies are already available and mature (e.g. computer vision in smart parking or speech recognition for medical transcription). The more significant challenges lie in infrastructure, data access, integration, governance, and adoption in day-to-day operations." [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)
 
-## Evidence
+## Evidence base
 
 The model rarely fails. The surrounding system does:
 

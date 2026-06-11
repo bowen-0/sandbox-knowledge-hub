@@ -2,6 +2,7 @@
 title: Is AI even the right approach? — Scoping guide
 type: synthesis
 slug: scoping-is-ai-the-right-approach
+insight_domain: ai-deployment
 question: "Is AI the right approach for this problem?"
 audience: [administrative-staff-scoping-a-pilot, ai-providers-pre-rfp]
 connects:
@@ -14,7 +15,7 @@ connects:
   - data-access
   - 00-overview-phase2-build-and-share
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Is AI even the right approach?
@@ -27,11 +28,13 @@ updated: 2026-05-28
 
 ## What the booklet itself says
 
-The Phase II booklet opens its insights with the same caveat ([[00-overview-phase2-build-and-share]] §04 Technology, p. 17):
+The Phase II booklet opens its insights with the same caveat ([[00-overview-phase2-build-and-share]] §04 Technology):
 
-> *"AI is rarely the primary challenge: in many cases, the deployed AI technologies are already available and mature (e.g. computer vision in smart parking or speech recognition for medical transcription). The more significant challenges lie in infrastructure, data access, integration, governance, and adoption in day-to-day operations."*
+> *«KI ist selten die grösste Herausforderung: Die eingesetzten KI-Technologien sind in vielen Fällen bereits verfügbar und leistungsfähig (z. B. Bilderkennung bei Smart Parking oder Spracherkennung für medizinische Transkription). Die grösseren Herausforderungen liegen in Infrastruktur, Datenzugang, Integration, Governance und Nutzung im Arbeitsalltag.»* [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)
 
-In other words: the **default position from the challenge owner's own publication** is that AI scoping conversations starting with model choice are starting in the wrong place.
+The English edition renders this as: *"AI is rarely the primary challenge: in many cases, the deployed AI technologies are already available and mature (e.g. computer vision in smart parking or speech recognition for medical transcription). The more significant challenges lie in infrastructure, data access, integration, governance, and adoption in day-to-day operations."* (EN version, p. 17)
+
+In other words: the **default position in the sandbox programme's own publication** is that AI scoping conversations starting with model choice are starting in the wrong place.
 
 ---
 
@@ -47,7 +50,7 @@ The canonical case: [[building-permits]] — procedure determination uses pure r
 
 ### 2. Do you have data access?
 
-Data access is the most-cited blocker in the corpus. Per the booklet: *"data access is the most powerful lever."* See [[data-access-is-the-most-powerful-lever]] and the [[data-access-patterns-and-unblocking]] theme.
+Data access is the most-cited blocker in the corpus. The booklet's own heading for the principle is *«Zugang zu Daten schafft den grössten Hebel»*, access to data creates the greatest lever [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md). See [[data-access-is-the-most-powerful-lever]] and the [[data-access-patterns-and-unblocking]] theme.
 
 **Signal data access is your real bottleneck:** you keep finding "promising approaches" that you can't execute because no one will give you the data. Don't keep iterating on model choice. Invest in unblocking access — pseudonymisation, [[auftragsdatenbearbeitung]] contracts, partner negotiation. The data is what unlocks the AI, not the other way around.
 
@@ -59,7 +62,10 @@ Data access is the most-cited blocker in the corpus. Per the booklet: *"data acc
 
 ### 4. What outcome class can you realistically aim for?
 
-The sandbox treats both **real-world testing** and **regulatory analysis only** as legitimate outcomes ([[real-world-testing]]). 3 of 5 Phase II projects achieved operational testing; 2 ([[medical-documentation]], [[inspection-robots]]) pivoted to pure regulatory analysis after partner constraints. Both contributed real value.
+> [!sandbox-operations] "Real-world testing" and "regulatory analysis only" are programme constructs.
+> These outcome classes are the sandbox programme's own portfolio vocabulary, the categories it uses to classify its projects, not general deployment categories. The sandbox treats both **real-world testing** and **regulatory analysis only** as legitimate outcomes ([[real-world-testing]]). 3 of 5 Phase II projects achieved operational testing; 2 ([[medical-documentation]], [[inspection-robots]]) pivoted to pure regulatory analysis after partner constraints [(00-overview-phase2-build-and-share p. 9)](../sources/00-overview-phase2-build-and-share.md). Both contributed real value: *«Beide Projekte lieferten dennoch substanzielle Mehrwerte, indem sie regulatorische Klarheit schufen, Best Practices ableiteten und die Skalierbarkeit der Ergebnisse über den konkreten Anwendungsfall hinaus ermöglichten.»* In the booklet's words, both projects nevertheless delivered substantial value by creating regulatory clarity, deriving best practices, and enabling the results to scale beyond the specific use case [(00-overview-phase2-build-and-share p. 9)](../sources/00-overview-phase2-build-and-share.md).
+
+For a deployment reader the takeaway translates directly: scope honestly, and treat analysis-only as a valid outcome rather than a failed pilot, because clarifying the regulatory and feasibility picture is real value even without operational testing.
 
 **Signal you should pre-plan an analysis-only fallback:** the partner-access risk is high (healthcare data, military access, EU certification), or the regulatory question is itself the point.
 

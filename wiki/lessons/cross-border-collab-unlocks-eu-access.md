@@ -21,7 +21,7 @@ updated: 2026-06-10
 
 Switzerland is not in the EU, but Swiss AI vendors often need EU market access. The Phase II [[inspection-robots]] project established the canonical pattern: a Swiss-led sandbox engaging supervisory authorities in **Germany** ([[bundesnetzagentur-de]]) and **Liechtenstein** ([[li-digital-innovation]]) to clarify EU AI Act + Machinery Regulation classification for a Swiss-built product.
 
-From [[00-overview-phase2-build-and-share]], section 03 («Autonome Inspektionsroboter», p. 14):
+From [[00-overview-phase2-build-and-share]], section 03 «Umsetzung der Sandbox-Projekte», item 5 «Autonome Inspektionsroboter» (p. 14):
 
 > *«Erstmals arbeitete das Sandbox-Projekt zudem grenzüberschreitend mit zuständigen Aufsichtsbehörden zusammen – der Bundesnetzagentur in Deutschland und der Stabsstelle für Digitale Innovation des Fürstentums Liechtenstein.»* [(00-overview-phase2-build-and-share p. 14)](../sources/00-overview-phase2-build-and-share.md)
 
