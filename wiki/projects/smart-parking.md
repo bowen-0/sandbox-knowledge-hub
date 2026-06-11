@@ -7,11 +7,11 @@ year: 2024
 status: completed
 sector: mobility
 sources: [p1-smart-parking]
-stakeholder: [raphael-von-thiessen, stephanie-volz]
+stakeholder: [raphael-von-thiessen, stephanie-volz, stadt-frauenfeld]
 regulation: [dsg-fadp, idg-zh]
 concept: [computer-vision, pseudonymisation, data-minimisation, partner-bottleneck]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Smart Parking
@@ -30,7 +30,7 @@ Productive deployment in **Frauenfeld**, with subsequent roll-out to additional 
 
 ## Stakeholders
 
-[[raphael-von-thiessen]] (programme lead), [[stephanie-volz]] (legal). Test partner: Stadt Frauenfeld.
+[[raphael-von-thiessen]] (programme lead), [[stephanie-volz]] (legal). Test partner: [[stadt-frauenfeld]].
 
 ## See also
 

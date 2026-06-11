@@ -3,32 +3,37 @@ title: Data access is the most powerful lever
 type: lesson
 slug: data-access-is-the-most-powerful-lever
 phase: I-and-II
+insight_domain: ai-deployment
 project: [smart-parking, infrastructure-maintenance, digital-eye-clinic, medical-documentation, building-permits]
 concept: [data-access, partner-bottleneck, pseudonymisation]
 regulation: [dsg-fadp, idg-zh]
 stakeholder: []
 sources:
-  - 00-overview-phase2-build-and-share#para-04-technology
+  - 00-overview-phase2-build-and-share#page-17
+  - 00-overview-phase2-build-and-share#page-5
+  - 00-overview-phase2-build-and-share#page-10
 confidence: high
 freshness: 2026-05
 applies_to_lifecycle_stage: [scoping, procurement]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Data access is the most powerful lever
 
 The clearest single-sentence cross-cutting lesson from Phase II, stated explicitly in [[00-overview-phase2-build-and-share]] §04 Technology:
 
-> *"Data access is the most powerful lever: even seemingly simple datasets can generate substantial value for the development and optimisation of AI systems. When made accessible, they enable a wide range of providers to train, validate, and improve their models (e.g. high-resolution drone imagery of a runway)."*
+> *«Zugang zu Daten schafft den grössten Hebel: Auch vermeintlich triviale Datensätze haben einen hohen Mehrwert für die Entwicklung und Optimierung von KI-Systemen. Werden sie zugänglich gemacht, ermöglichen sie einer breiten Zahl von Anbietern, ihre Modelle zu trainieren, zu validieren und zu verbessern (z. B. hochaufgelöste Drohnenaufnahmen einer Landepiste).»* [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)
+
+The English edition renders this as: "Data access is the most powerful lever: even seemingly simple datasets can generate substantial value for the development and optimisation of AI systems. When made accessible, they enable a wide range of providers to train, validate, and improve their models (e.g. high-resolution drone imagery of a runway)."
 
 ## Evidence base
 
 Data access — or its absence — drove the outcome of nearly every project in the corpus. See [[data-access]] for the project-by-project chokepoint table.
 
-- **Positive evidence**: [[infrastructure-maintenance]] → the IBM Research dataset published on Hugging Face is the corpus's canonical case of a sandbox project generating reusable data infrastructure beyond its own engagement.
-- **Negative evidence**: [[medical-documentation]] could not proceed to real-world testing because patient-data protection requirements blocked operational use in a public hospital.
+- **Positive evidence**: [[infrastructure-maintenance]] → the IBM Research dataset published on Hugging Face is the corpus's canonical case of a sandbox project generating reusable data infrastructure beyond its own engagement [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md).
+- **Negative evidence**: [[medical-documentation]] could not proceed to real-world testing because patient-data protection requirements blocked operational use in a public hospital [(00-overview-phase2-build-and-share p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
 ## How to apply
 

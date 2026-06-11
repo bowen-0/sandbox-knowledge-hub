@@ -3,25 +3,32 @@ title: AI value must be clearly articulated, not assumed from technical feasibil
 type: lesson
 slug: value-must-be-clearly-articulated
 phase: II
+insight_domain: ai-deployment
 project: [bridge-monitoring, digital-eye-clinic, building-permits]
 concept: []
 regulation: []
 stakeholder: []
 sources:
-  - 00-overview-phase2-build-and-share#para-04-organisation
+  - 00-overview-phase2-build-and-share#page-19
+  - p2-bridge-monitoring#page-6
+  - p2-digital-eye-clinic#page-2
+  - p2-building-permits#page-7
+  - p2-building-permits#page-13
 confidence: high
 freshness: 2026-05
 applies_to_lifecycle_stage: [scoping]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # AI value must be clearly articulated
 
-From [[00-overview-phase2-build-and-share]] §04 Organisation, p. 19:
+From [[00-overview-phase2-build-and-share]], §04 Organisation, under the heading «Mehrwert muss klar sein» [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md):
 
-> *"The benefits of AI are not always immediately apparent to domain experts (e.g. sensor-based monitoring of bridge vibration behaviour as a complement to visual inspections). The key is a clear link to concrete decisions and operational value in day-to-day activities. AI should be deployed where it creates tangible value, not merely because it is technologically feasible."*
+> *«Der Nutzen von KI ist für Fachbereiche nicht immer unmittelbar ersichtlich (z. B. sensorbasierte Überwachung des Schwingungsverhaltens von Brücken als Ergänzung zu visuellen Inspektionen). Entscheidend ist die klare Verknüpfung zu konkreten Entscheidungen und operativem Mehrwert im Alltag. KI sollte dabei gezielt dort eingesetzt werden, wo sie echten Mehrwert schafft – nicht allein, weil sie technologisch möglich ist.»*
+
+In English: the benefits of AI are not always immediately apparent to domain experts (e.g. sensor-based monitoring of bridge vibration behaviour as a complement to visual inspections). The key is a clear link to concrete decisions and operational value in day-to-day activities. AI should be deployed where it creates tangible value, not merely because it is technologically feasible.
 
 ## What "clearly articulated" means
 
@@ -33,9 +40,9 @@ A clear AI value articulation has three properties:
 
 ## Evidence base
 
-- **[[bridge-monitoring]]** — the booklet's named example: sensor-based monitoring complements (rather than replaces) visual structural inspection. Value = earlier signal on deteriorating components, not "replacing" engineers.
-- **[[digital-eye-clinic]]** — value = throughput against rising patient volumes + shortages of skilled professionals, not "AI replaces ophthalmologists."
-- **[[building-permits]]** — value = preliminary check costing under CHF 2/application + catching formal deficiencies before formal proceedings, not "AI decides the permit."
+- **[[bridge-monitoring]]** — the booklet's named example: sensor-based monitoring complements (rather than replaces) visual structural inspection [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md). Value = earlier signal on deteriorating components, not "replacing" engineers [(p2-bridge-monitoring p. 6)](../sources/p2-bridge-monitoring.md).
+- **[[digital-eye-clinic]]** — value = throughput against rising patient volumes + shortages of skilled professionals, not "AI replaces ophthalmologists" [(p2-digital-eye-clinic p. 2)](../sources/p2-digital-eye-clinic.md).
+- **[[building-permits]]** — value = preliminary check costing under CHF 2/application [(p2-building-permits p. 13)](../sources/p2-building-permits.md) + catching formal deficiencies before formal proceedings, not "AI decides the permit" [(p2-building-permits p. 7)](../sources/p2-building-permits.md).
 
 Each of these articulations names a concrete operational benefit. None of them claims AI is *replacing* the human work.
 
