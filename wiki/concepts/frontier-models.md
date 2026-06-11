@@ -2,7 +2,7 @@
 title: Frontier Models
 type: concept
 slug: frontier-models
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: [large-language-models, generative-ai, llm-benchmarks]
 appears_in: [building-permits, inspection-robots]
 created: 2026-05-28

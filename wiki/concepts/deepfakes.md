@@ -2,7 +2,7 @@
 title: Deepfakes
 type: concept
 slug: deepfakes
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: [generative-ai, large-language-models]
 appears_in: []
 created: 2026-05-28

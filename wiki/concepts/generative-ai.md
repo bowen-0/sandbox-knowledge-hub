@@ -2,7 +2,7 @@
 title: Generative AI
 type: concept
 slug: generative-ai
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: [large-language-models, frontier-models, computer-vision]
 appears_in: [medical-documentation, building-permits, digital-eye-clinic]
 created: 2026-05-28
