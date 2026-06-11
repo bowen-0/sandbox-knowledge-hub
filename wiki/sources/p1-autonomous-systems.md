@@ -21,7 +21,7 @@ Phase I regulatory guide for autonomous machinery (drones, agricultural systems)
 
 ## Methodology
 
-The guide is the output of the sandbox's regulatory-consulting track, not a product test. Two start-ups submitted project proposals to the sandbox in spring 2022 with similar regulatory questions: Lonomy (autonomous tractors for fruit-growing and viticulture) and Ronovatec (autonomous lawnmowers for professional green-space management). The sandbox bundled the two cases and developed the guide's content between July 2022 and June 2023 from the companies' practical applications [(p1-autonomous-systems p. 25)](../sources/p1-autonomous-systems.md). Ronovatec went bankrupt during the collaboration; the guide was finalised on the Lonomy case plus expert input [(p1-autonomous-systems p. 25)](../sources/p1-autonomous-systems.md).
+The guide is the output of the sandbox's regulatory-consulting track, not a product test. Two start-ups submitted project proposals to the sandbox in spring 2022 with similar regulatory questions: Lonomy (autonomous tractors for fruit-growing and viticulture) and Ronovatec (autonomous lawnmowers for professional green-space management). The sandbox bundled the two cases and developed the guide's content between July 2022 and June 2023 from the companies' practical applications [(p1-autonomous-systems p. 25)](../sources/p1-autonomous-systems.md). Ronovatec went bankrupt during the collaboration; the guide was finalised on the Lonomy case plus expert input [(00-overview-phase1-play-and-learn p. 18)](../sources/00-overview-phase1-play-and-learn.md).
 
 Scope was fixed up front: commercially used autonomous systems with ground contact that potentially move in public space. Systems moving in the air, on rails or on water, purely private or research use, and the transport of goods or people on public roads are excluded [(p1-autonomous-systems p. 3)](../sources/p1-autonomous-systems.md). The output is a Q&A reference guide for manufacturers in Switzerland, written as a first entry point for deeper, manufacturer-specific legal analysis and published online [(p1-autonomous-systems p. 2)](../sources/p1-autonomous-systems.md).
 
@@ -48,3 +48,7 @@ Authoritative source for:
 - [[autonomous-systems]] — project page.
 - [[inspection-robots]] — Phase II successor; the EU-regulation-heavy version of this same domain.
 - [[machinery-regulation]] — the regulation that came into force after this report.
+- [[integrate-regulation-early]] – the lesson this report anchors.
+- [[00-overview-phase1-play-and-learn]] – Phase I overview; documents the project's course, including the Ronovatec bankruptcy (p. 18).
+- [[smart-parking]] – shares the privacy-by-design vocabulary (low resolution, masking, edge computing), applied to fixed cameras.
+- [[infrastructure-maintenance]] – airborne autonomous system, outside this guide's ground-contact scope.

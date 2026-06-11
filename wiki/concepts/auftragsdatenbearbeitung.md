@@ -6,10 +6,10 @@ canonical_source: null
 related: [data-access, pseudonymisation]
 appears_in: [machine-translation, smart-parking, ai-in-education, building-permits]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
-# Auftragsdatenbearbeitung — Commissioned Data Processing
+# Auftragsdatenbearbeitung (Commissioned Data Processing)
 
 The Swiss legal-technical pattern for letting a third-party AI service touch protected data on behalf of a data controller. A contractually-bound processor handles the data under the controller's authority and remains subject to the controller's data-protection obligations.
 
