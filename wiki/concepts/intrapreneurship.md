@@ -2,7 +2,7 @@
 title: Intrapreneurship
 type: concept
 slug: intrapreneurship
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: []
 appears_in: [digital-eye-clinic]
 created: 2026-05-28

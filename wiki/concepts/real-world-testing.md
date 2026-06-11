@@ -2,7 +2,7 @@
 title: Real-World Testing
 type: concept
 slug: real-world-testing
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: []
 appears_in: [bridge-monitoring, digital-eye-clinic, building-permits]
 created: 2026-05-28

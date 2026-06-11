@@ -2,7 +2,7 @@
 title: LLM Benchmarks
 type: concept
 slug: llm-benchmarks
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: [large-language-models, frontier-models, llm-as-a-judge]
 appears_in: [building-permits]
 created: 2026-05-28

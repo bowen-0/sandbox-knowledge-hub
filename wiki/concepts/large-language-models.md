@@ -2,7 +2,7 @@
 title: Large Language Models (LLMs)
 type: concept
 slug: large-language-models
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: [frontier-models, generative-ai, llm-benchmarks]
 appears_in: [medical-documentation, building-permits]
 created: 2026-05-28

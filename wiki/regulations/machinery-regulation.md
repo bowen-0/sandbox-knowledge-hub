@@ -9,7 +9,7 @@ year: 2023
 project: [inspection-robots]
 created: 2026-05-28
 updated: 2026-05-28
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 ---
 
 # EU Machinery Regulation (2023/1230)

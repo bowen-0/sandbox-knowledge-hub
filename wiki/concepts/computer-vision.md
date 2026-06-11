@@ -2,7 +2,7 @@
 title: Computer Vision
 type: concept
 slug: computer-vision
-canonical_source: 00-overview-phase2-build-and-share#para-glossary
+canonical_source: 00-overview-phase2-build-and-share#page-26
 related: [generative-ai, frontier-models]
 appears_in: [smart-parking, infrastructure-maintenance, bridge-monitoring]
 created: 2026-05-28
