@@ -7,7 +7,7 @@ role: Sensor-based structural-monitoring vendor
 partner_role: [technical-implementation]
 project: [bridge-monitoring]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # irmos technologies
@@ -16,11 +16,9 @@ Swiss vendor of sensor-based structural-monitoring systems. Project-submission p
 
 ## Role in the sandbox
 
-Per [[00-overview-phase2-build-and-share]] §03, p. 13:
+The Phase II overview booklet, [[00-overview-phase2-build-and-share]], describes the submission: *«Dieses von irmos technologies eingereichte Sandbox-Projekt untersuchte, wie eine datenbasierte Überwachung mittels KI bessere Entscheidungsgrundlagen für Betrieb, Unterhalt und Investitionen schaffen kann.»* This sandbox project, submitted by irmos technologies, examined how data-based monitoring using AI can create better decision-making foundations for operations, maintenance, and investment [(00-overview-phase2-build-and-share p. 13)](../sources/00-overview-phase2-build-and-share.md).
 
-> *"This sandbox project, submitted by irmos technologies, examined how data-driven monitoring using AI can provide improved decision-making foundations for operations, maintenance, and investment."*
-
-After the originally planned municipal-footbridge implementation partner withdrew, the project was carried out at the **Reidholz railway bridge in Wädenswil** in collaboration with [[sob]] (Schweizerische Südostbahn AG).
+After the originally planned municipal-footbridge implementation partner withdrew, the project was carried out at the **Reidholz railway bridge in Wädenswil** in collaboration with [[sob]] (Schweizerische Südostbahn AG) [(00-overview-phase2-build-and-share p. 13)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 

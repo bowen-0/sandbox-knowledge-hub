@@ -17,7 +17,7 @@ regulation: [dsg-fadp, idg-zh]
 concept: [pseudonymisation, data-minimisation, partner-bottleneck]
 related_projects: [smart-parking, digital-eye-clinic]
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # AI in Education
@@ -33,7 +33,7 @@ Published legal best-practices guide [(p1-ai-in-education p. 2)](../sources/p1-a
 - Data-protection of minors is the dominant regulatory consideration in education-sector AI [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md) [(p1-ai-in-education p. 10)](../sources/p1-ai-in-education.md).
 - The privacy-by-design lexicon (low resolution, masking, edge computing, instant deletion, data minimisation) — first articulated in [[smart-parking]] and reused here — proves to be cross-sectoral [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md).
 - **School-IT access** as a specific instance of the partner-bottleneck pattern [(p1-ai-in-education p. 14)](../sources/p1-ai-in-education.md).
-- One of the Phase II projects discontinued by mutual agreement, a «KI-gestützte Plattform zur Vorbereitung von Gymnasialprüfungen» (an AI-supported platform for preparing for upper secondary school examinations, per [[00-overview-phase2-build-and-share]] §03 «Weitere Projekte»), attempted to extend this work; the test partner involved was GoGymi [(00-overview-phase2-build-and-share p. 15)](../sources/00-overview-phase2-build-and-share.md).
+- One of the Phase II projects discontinued by mutual agreement, a «KI-gestützte Plattform zur Vorbereitung von Gymnasialprüfungen» (an AI-supported platform for preparing for upper secondary school examinations, per [[00-overview-phase2-build-and-share]] §03 «Weitere Projekte»), attempted to extend this work; the company behind it was the startup GoGymi, whose founder Jan Bühlmann is quoted on the same page [(00-overview-phase2-build-and-share p. 15)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Stakeholders
 

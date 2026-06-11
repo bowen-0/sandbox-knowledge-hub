@@ -7,7 +7,7 @@ role: AI governance platform provider
 partner_role: [technical-implementation]
 project: [inspection-robots]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-10
 ---
 
 # Modulos
@@ -16,9 +16,7 @@ Swiss provider of an AI governance platform — software designed to operational
 
 ## Role in the sandbox
 
-Per [[00-overview-phase2-build-and-share]] §03, p. 14:
-
-> *"In addition, the project team, in collaboration with Modulos, tested the use of an AI governance platform and prepared the application of the ISO/IEC 42001 standard on an exemplary basis."*
+The Phase II overview booklet, [[00-overview-phase2-build-and-share]], records the engagement in one sentence: *«Ergänzend testete das Projektteam gemeinsam mit Modulos den Einsatz einer AI-Governance-Plattform und bereitete die Anwendung der Norm ISO/IEC 42001 exemplarisch vor.»* As a complement, the project team, together with Modulos, tested the use of an AI governance platform and prepared the application of the ISO/IEC 42001 standard on an exemplary basis [(00-overview-phase2-build-and-share p. 14)](../sources/00-overview-phase2-build-and-share.md).
 
 This makes Modulos the **only Phase II partner involved in operationalising an AI-governance standard on a concrete use case** — a position that maps directly to one of the booklet's Pillar III (SME adoption) ambitions in the [[zh-ai-ecosystem-strategy-2026-2029]].
 

@@ -13,6 +13,7 @@ sources:
   - p2-inspection-robots#page-22
   - p2-inspection-robots#page-29
   - p2-inspection-robots#page-35
+  - p2-inspection-robots#page-39
   - 00-overview-phase2-build-and-share#page-9
   - 00-overview-phase2-build-and-share#page-14
   - 00-overview-phase2-build-and-share#page-21
@@ -43,7 +44,7 @@ updated: 2026-06-10
 
 ## Stakeholders
 
-[[raphael-von-thiessen]], [[stephanie-volz]]; industry partner [[anybotics]]; governance-platform partner [[modulos]]; cross-border supervisory authorities [[bundesnetzagentur-de]] and [[li-digital-innovation]] [(p2-inspection-robots p. 4)](../sources/p2-inspection-robots.md).
+[[raphael-von-thiessen]], [[stephanie-volz]] [(p2-inspection-robots p. 39)](../sources/p2-inspection-robots.md); industry partner [[anybotics]]; governance-platform partner [[modulos]]; cross-border supervisory authorities [[bundesnetzagentur-de]] and [[li-digital-innovation]] [(p2-inspection-robots p. 4)](../sources/p2-inspection-robots.md).
 
 ## See also
 

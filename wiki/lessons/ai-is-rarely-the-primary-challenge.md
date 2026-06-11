@@ -23,7 +23,7 @@ freshness: 2026-05
 applies_to_lifecycle_stage: [scoping]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # AI is rarely the primary challenge
@@ -41,15 +41,15 @@ The model rarely fails. The surrounding system does:
 | Project | What the AI did | What was actually hard |
 |---|---|---|
 | [[smart-parking]] | Camera-based vehicle detection — mature CV | Property-owner consent for camera placement [(p1-smart-parking p. 17)](../sources/p1-smart-parking.md) |
-| [[infrastructure-maintenance]] | Drone-based defect detection — mature CV | Military base access permissions [(p1-infrastructure-maintenance p. 6, EN version)](../sources/p1-infrastructure-maintenance.md) |
-| [[digital-eye-clinic]] | Retinal-image classification — established medical AI | Hospital data-sharing agreements [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md) + in-house platform engineering [(p2-digital-eye-clinic p. 19)](../sources/p2-digital-eye-clinic.md) |
+| [[infrastructure-maintenance]] | Drone-based defect detection — mature CV | Drone operating-licence regulations (EU/EASA) and flight restrictions at the air base (runway closure, 10 m altitude cap) [(p1-infrastructure-maintenance p. 6, EN version)](../sources/p1-infrastructure-maintenance.md) |
+| [[digital-eye-clinic]] | Retinal-image classification — established medical AI | Data-protection compliance and contractual data-processing agreements [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md) + in-house platform engineering [(p2-digital-eye-clinic p. 19)](../sources/p2-digital-eye-clinic.md) |
 | [[medical-documentation]] | LLM transcription — commodity capability | Patient-data protection blocking deployment entirely [(00-overview-phase2-build-and-share p. 9)](../sources/00-overview-phase2-build-and-share.md) |
 | [[building-permits]] | Plan-document understanding — frontier capability | Integration with eBaugesucheZH [(p2-building-permits p. 23)](../sources/p2-building-permits.md) + administrative-reproducibility tension [(p2-building-permits p. 22)](../sources/p2-building-permits.md) |
 
 The Phase I overview drew the same conclusion from the Smart Parking roll-out: *«Die meisten Herausforderungen waren somit nicht KI-bezogen, sondern betrafen die grundlegende technische Infrastruktur.»* Most challenges, in other words, were not AI-related but concerned the basic technical infrastructure [(00-overview-phase1-play-and-learn p. 17)](../sources/00-overview-phase1-play-and-learn.md).
 
 > [!sandbox-operations]
-> Attribution: much of the "what was actually hard" column records obstacles the sandbox programme cleared in its operator role, not findings from a deploying organisation's own project files. Property-owner consent, military base access and hospital data agreements were partner-management work done by the programme team. For programme operators, the same table reads as a checklist of where pilot timelines stall.
+> Attribution: much of the "what was actually hard" column records obstacles the sandbox programme cleared in its operator role, not findings from a deploying organisation's own project files. Property-owner consent, air-base partner engagement and hospital data agreements were partner-management work done by the programme team. For programme operators, the same table reads as a checklist of where pilot timelines stall.
 
 ## How to apply
 
