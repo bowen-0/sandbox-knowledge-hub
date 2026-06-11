@@ -17,7 +17,7 @@ updated: 2026-06-11
 
 **Read the report:** [PDF (DE)](../pdfs/de/p1-autonomous-systems.pdf) · [PDF (EN)](../pdfs/en/p1-autonomous-systems.pdf)
 
-Phase I regulatory guide for autonomous machinery (drones, agricultural systems). The canonical Phase I example of why AI providers should integrate regulation early into product development: retrofitting agricultural vehicles for automation required full re-certification, demonstrating that late-stage regulatory fixes drive flawed business models. Cited frequently in the Build & Share booklet as the foundational "integrate regulation early" lesson.
+Phase I regulatory guide for ground-contact autonomous machinery (autonomous tractors and agricultural systems, professional lawnmowers, cleaning and security robots; airborne, rail and water systems are out of scope per the report, p. 3). The canonical Phase I example of why AI providers should integrate regulation early into product development: retrofitting agricultural vehicles for automation required full re-certification, demonstrating that late-stage regulatory fixes drive flawed business models. Cited frequently in the Build & Share booklet as the foundational "integrate regulation early" lesson.
 
 ## Methodology
 

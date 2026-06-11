@@ -12,3 +12,6 @@ dist/
 
 # MCP server build artifacts
 mcp-server/dist/
+
+# Harness artifacts
+.claude/scheduled_tasks.lock
