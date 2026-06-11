@@ -43,7 +43,7 @@ AI diagnostics for **diabetic retinopathy** screening in clinical practice. One 
 
 ## Stakeholders
 
-[[raphael-von-thiessen]], [[stephanie-volz]] [(p2-digital-eye-clinic p. 4)](../sources/p2-digital-eye-clinic.md); test partners Augenklinik Stadtspital Zürich and Spross Stiftung für Augenheilkunde [(p2-digital-eye-clinic p. 2)](../sources/p2-digital-eye-clinic.md); also referenced in active regulatory work with the Department of Health Canton Zürich [(00-overview-phase2-build-and-share p. 10)](../sources/00-overview-phase2-build-and-share.md).
+[[raphael-von-thiessen]], [[stephanie-volz]] [(p2-digital-eye-clinic p. 4)](../sources/p2-digital-eye-clinic.md); test partners Augenklinik Stadtspital Zürich and Spross Stiftung für Augenheilkunde [(p2-digital-eye-clinic p. 2)](../sources/p2-digital-eye-clinic.md); the project consulted regulatory experts on medical-device classification questions [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md); the booklet records Gesundheitsdirektion des Kantons Zürich involvement only for the sibling [[medical-documentation]] project [(00-overview-phase2-build-and-share p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 

@@ -18,12 +18,12 @@ regulation: [dsg-fadp, machinery-regulation]
 concept: [computer-vision]
 related_projects: [inspection-robots]
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # Autonomous Systems
 
-Regulatory guide for autonomous machinery — drones and autonomous agricultural systems — under the pre-EU-Machinery-Regulation Swiss legal framework [(p1-autonomous-systems p. 3)](../sources/p1-autonomous-systems.md). The canonical Phase I source for the lesson [[integrate-regulation-early]] (**"integrate regulation early into product development"**). Retrofitting agricultural vehicles for automation required full re-certification of the product [(p1-autonomous-systems p. 13)](../sources/p1-autonomous-systems.md), demonstrating that late-stage regulatory fixes drive flawed business models. The Phase II booklet states this directly, that flawed assumptions enter the business model when regulatory requirements are considered too late: «Werden regulatorische Anforderungen zu spät berücksichtigt, entstehen Fehlannahmen im Geschäftsmodell.» [(00-overview-phase2-build-and-share p. 18)](../sources/00-overview-phase2-build-and-share.md)
+Regulatory guide for autonomous machinery — ground-contact autonomous systems such as autonomous tractors and agricultural systems, professional lawnmowers, cleaning robots and security robots; airborne, rail and waterborne systems are excluded — under the pre-EU-Machinery-Regulation Swiss legal framework [(p1-autonomous-systems p. 3)](../sources/p1-autonomous-systems.md). The canonical Phase I source for the lesson [[integrate-regulation-early]] (**"integrate regulation early into product development"**). Retrofitting agricultural vehicles for automation required full re-certification of the product [(p1-autonomous-systems p. 13)](../sources/p1-autonomous-systems.md), demonstrating that late-stage regulatory fixes drive flawed business models. The Phase II booklet states this directly, that flawed assumptions enter the business model when regulatory requirements are considered too late: «Werden regulatorische Anforderungen zu spät berücksichtigt, entstehen Fehlannahmen im Geschäftsmodell.» [(00-overview-phase2-build-and-share p. 18)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Outcome
 

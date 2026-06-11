@@ -14,7 +14,7 @@ sources:
   - p2-building-permits#page-22
   - p2-building-permits#page-24
   - p2-building-permits#page-26
-  - p2-building-permits#page-29
+  - p2-building-permits#page-30
 confidence: medium
 freshness: 2026-04
 applies_to_lifecycle_stage: [scoping]
@@ -32,7 +32,7 @@ The report poses the reliability threshold as an open question of error toleranc
 
 ## Evidence base
 
-The framing matters: this is presented as a political-administrative question, not a technical one. The report's conclusion makes the same move at the system level, stating that existing conflicts of objectives require political clarification and cannot be resolved technologically [(p2-building-permits p. 29)](../sources/p2-building-permits.md). The probabilistic system might be cheaper, faster, and on-average accurate, but it cannot reproduce the case-by-case determinism that Swiss administrative law assumes.
+The framing matters: this is presented as a political-administrative question, not a technical one. The report's conclusion makes the same move at the system level, stating that existing conflicts of objectives require political clarification and cannot be resolved technologically [(p2-building-permits p. 30)](../sources/p2-building-permits.md). The probabilistic system might be cheaper, faster, and on-average accurate, but it cannot reproduce the case-by-case determinism that Swiss administrative law assumes.
 
 The corpus also notes that the benchmark measured consistency-across-3-runs, with each query repeated three times to test whether a model gives the same answer or fluctuates randomly [(p2-building-permits p. 10)](../sources/p2-building-permits.md), at 86.8% (best) to 78.8% (worst) [(p2-building-permits p. 14)](../sources/p2-building-permits.md). Meaning: a non-trivial fraction of building applications would receive *different* AI assessments from the same model run twice.
 

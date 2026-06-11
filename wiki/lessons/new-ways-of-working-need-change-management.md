@@ -42,7 +42,7 @@ These shifts feel threatening if introduced without communication, training, and
 
 - **[[infrastructure-maintenance]]** — the booklet's explicit example: drone inspection as a *complement* to manual inspection, not a replacement. Acceptance hinged on framing the AI as augmentation [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md).
 - **[[digital-eye-clinic]]** — clinical AI is highly sensitive to clinician acceptance; the project's evaluation framework includes practitioner-experience dimensions [(p2-digital-eye-clinic p. 23)](../sources/p2-digital-eye-clinic.md).
-- **[[building-permits]]** — administrative officials need to understand *what the AI checks* to trust its pre-checks [(p2-building-permits p. 22)](../sources/p2-building-permits.md).
+- **[[building-permits]]** — officials' trust in AI pre-checks depends on controlled, reproducible configurations: generative AI's non-deterministic outputs otherwise erode trust in the systems [(p2-building-permits p. 22)](../sources/p2-building-permits.md).
 
 ## How to apply
 

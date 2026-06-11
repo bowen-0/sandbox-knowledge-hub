@@ -2,7 +2,7 @@
 title: LLM-as-a-Judge
 type: concept
 slug: llm-as-a-judge
-canonical_source: null
+canonical_source: p2-building-permits#page-31
 related: [llm-benchmarks, frontier-models, large-language-models]
 appears_in: [building-permits]
 created: 2026-05-28
@@ -11,20 +11,20 @@ updated: 2026-06-10
 
 # LLM-as-a-Judge
 
-A methodology where one LLM is used to evaluate the outputs of another LLM against reference answers — typically scoring on a 0-10 scale across multiple capability dimensions. **Not in the booklet glossary**, but operationally central to [[building-permits]] as the scoring backbone of the 3,336-evaluation benchmark [(p2-building-permits p. 11)](../sources/p2-building-permits.md).
+A methodology where one LLM is used to evaluate the outputs of another LLM against reference answers — typically scoring on a 0-10 scale across multiple capability dimensions. **Not in the booklet glossary**, but operationally central to [[building-permits]] as the scoring backbone of the 3,336-evaluation benchmark [(p2-building-permits p. 11)](../sources/p2-building-permits.md). The project report defines it in its own glossary: *«Ansatz, bei dem ein grosses Sprachmodell zur Bewertung von KI-Outputs eingesetzt wird, etwa zur Beurteilung von Qualität, Konsistenz oder Übereinstimmung mit definierten Kriterien»*, that is, an approach in which a large language model is used to assess AI outputs, for instance their quality, consistency, or conformity with defined criteria [(p2-building-permits p. 31)](../sources/p2-building-permits.md).
 
 ## How [[building-permits]] uses it
 
 | Element | Value |
 |---|---|
 | Models evaluated | 8 frontier LLMs across OpenAI, Google, Anthropic |
-| Queries per model | ~417 |
+| Evaluations per model | ~417 |
 | Runs per query | 3 (for consistency measurement) |
 | Total evaluations | 3,336 |
 | Scoring | LLM-as-a-Judge → 0–10 against expert reference |
 | Dimensions | information extraction · counting · measuring/calculating · spatial understanding · context understanding |
 
-Benchmark design and judge mechanism per the project report [(p2-building-permits p. 10)](../sources/p2-building-permits.md); totals, scoring scale and dimensions [(p2-building-permits p. 11)](../sources/p2-building-permits.md). The per-model query count is derived from the totals.
+Benchmark design and judge mechanism per the project report [(p2-building-permits p. 10)](../sources/p2-building-permits.md); totals, scoring scale and dimensions [(p2-building-permits p. 11)](../sources/p2-building-permits.md). The per-model evaluation count is derived from the totals.
 
 ## Why it matters as a concept
 
