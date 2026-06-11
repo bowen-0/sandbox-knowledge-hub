@@ -15,14 +15,12 @@ confidence: medium
 freshness: 2026-05
 applies_to_lifecycle_stage: [deployment]
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # Publishing derived datasets multiplies a pilot's impact beyond its own engagement
 
 The canonical positive case in the corpus: [[infrastructure-maintenance]] (Phase I) → IBM Research published the project's structured, annotated drone-inspection dataset to **Hugging Face** as a public benchmark. The dataset now serves AI models that the sandbox itself never built.
-
-## What the booklet says
 
 From [[00-overview-phase2-build-and-share]] §01, under "Roll-out und nachhaltige Weiterführung von Projekten" (roll-out and sustainable continuation of projects):
 
@@ -30,7 +28,7 @@ From [[00-overview-phase2-build-and-share]] §01, under "Roll-out und nachhaltig
 
 In English: sustainable effects arise through the provision and reuse of data; within the drone inspection project, IBM Research developed a structured, annotated dataset for infrastructure inspection, which serves as a benchmark for future AI models and is publicly accessible via scientific publications and platforms such as Hugging Face. [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md)
 
-## Why this generalises
+## Evidence base
 
 Even "simple" datasets compound. Per [[00-overview-phase2-build-and-share]] §04 Technologie, under "Zugang zu Daten schafft den grössten Hebel" (access to data creates the biggest lever):
 
