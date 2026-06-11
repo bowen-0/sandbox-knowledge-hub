@@ -10,8 +10,7 @@ year: 2024
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-05-28
-paragraphs: []
+updated: 2026-06-10
 ---
 
 # Smart Parking — Best Practices for Image Recognition
@@ -22,7 +21,18 @@ Phase I project report. Operational + technical playbook for camera-based free-p
 
 ## Provenance
 
-Published January 2024. Original filename: `smart_parking_EN.pdf`.
+Published January 2024. Original filename: `smart_parking_EN.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-smart-parking.md](digests/p1-smart-parking.md). All wiki citations of this source are page-level against the German PDF.
+
+## Methodology
+
+The report distils best practices from a single real-world case. Parquery AG, an ETH spin-off, submitted the project proposal to the Innovation Sandbox in spring 2022 and was selected on public criteria; the city of Frauenfeld ([[stadt-frauenfeld]]) then agreed to implement the use case as test partner [(p1-smart-parking p. 5)](../sources/p1-smart-parking.md). The pilot covered 5 of Frauenfeld's 14 public car parks, around 500 individual spaces [(p1-smart-parking p. 5)](../sources/p1-smart-parking.md). Cameras captured still images every two minutes rather than video; the images were converted into numerical occupancy data and deleted immediately after processing [(p1-smart-parking p. 6)](../sources/p1-smart-parking.md). The use case was implemented in practice between August 2022 and November 2023, and the report content was developed from this concrete case together with expert interviews: Georg Spycher (Parking Zürich AG), Angie Garz (Parquery AG) and Peter Koch ([[stadt-frauenfeld]], Office for Communications and Business Development) [(p1-smart-parking p. 21)](../sources/p1-smart-parking.md). Occupancy data is integrated into Frauenfeld's "Regio" app and reaches car-navigation systems via the Parkopedia interface; open-data publication on the APDS ISO standard is planned as a next step [(p1-smart-parking p. 9)](../sources/p1-smart-parking.md).
+
+Authors: [[raphael-von-thiessen]] (head of the Innovation Sandbox for AI, Standortförderung Kanton Zürich) and [[stephanie-volz]] (legal expert, [[itsl-uzh]]) [(p1-smart-parking p. 21)](../sources/p1-smart-parking.md). The publishing Standortförderung sits within the [[amt-fuer-wirtschaft-zh]] [(p1-smart-parking p. 22)](../sources/p1-smart-parking.md). For data harmonisation the report points to the Ausschuss Digitalisierung of the ParkingSwiss association, the federal mobility-data infrastructure MODI (Federal Office of Transport), and the APDS ISO standard [(p1-smart-parking p. 18)](../sources/p1-smart-parking.md).
+
+## Notable quotes
+
+- *«Unser Ziel ist es, durch intelligente Technologien ein effizientes Parkplatzmanagement zu realisieren.»* — our goal is to realise efficient parking management through intelligent technologies. Peter Koch, [[stadt-frauenfeld]] ([p1-smart-parking p. 5](../sources/p1-smart-parking.md))
+- *«Bilderkennung im öffentlichen Raum kann durch technische und organisatorische Massnahmen verantwortungsvoll eingesetzt werden.»* — image recognition in public space can be deployed responsibly through technical and organisational measures. [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-smart-parking p. 14](../sources/p1-smart-parking.md))
 
 ## Use as citation
 

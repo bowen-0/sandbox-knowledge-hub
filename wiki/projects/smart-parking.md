@@ -35,7 +35,7 @@ Productive deployment in **Frauenfeld**, with subsequent roll-out to additional 
 ## Key learnings
 
 - The **partner-bottleneck** pattern: property-owner access to mount cameras is harder to secure than the AI itself [(p1-smart-parking p. 6)](../sources/p1-smart-parking.md) [(p1-smart-parking p. 17)](../sources/p1-smart-parking.md).
-- Privacy-by-design lexicon defined here [(p1-smart-parking p. 15)](../sources/p1-smart-parking.md) recurs in [[ai-in-education]], [[digital-eye-clinic]], and is referenced in the Build & Share insights synthesis ([[00-overview-phase2-build-and-share]] §04 Technology, [p. 17](../sources/00-overview-phase2-build-and-share.md)).
+- Privacy-by-design lexicon defined here [(p1-smart-parking p. 15)](../sources/p1-smart-parking.md) recurs in [[ai-in-education]], [[digital-eye-clinic]], and is referenced in the [[00-overview-phase2-build-and-share]] insights synthesis, §04 Technology [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md).
 - Image recognition on the physical environment is a *much easier* visual modality than the plan-document understanding examined later in [[building-permits]].
 
 ## Stakeholders
