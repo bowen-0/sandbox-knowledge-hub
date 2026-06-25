@@ -9,13 +9,13 @@ year: 2023
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen]
 created: 2026-05-28
-updated: 2026-06-11
-asymmetry: en-only
+updated: 2026-06-24
+asymmetry: en-only  # DE edition added to corpus 2026-06-24; citations still EN-page until remapped (see Provenance)
 ---
 
 # Automated Infrastructure Maintenance — Drone Inspections with Computer Vision
 
-**Read the report:** [PDF (EN)](../pdfs/en/p1-infrastructure-maintenance.pdf)
+**Read the report:** [PDF (EN)](../pdfs/en/p1-infrastructure-maintenance.pdf) · [PDF (DE)](../pdfs/de/p1-infrastructure-maintenance.pdf)
 
 Phase I project report. Computer-vision-based drone inspection of military infrastructure, executed with IBM Research. Notable downstream legacy: produced a structured, annotated dataset for infrastructure inspection that IBM Research subsequently published on **Hugging Face** as a public benchmark — referenced explicitly in the Build & Share booklet as a model of sustainable data reuse beyond the sandbox engagement itself [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md). Partner-access bottleneck: military base access constrained data collection; the report itself notes that access to high-resolution image data of airport runways "is usually difficult to obtain" [(p1-infrastructure-maintenance p. 14)](../sources/p1-infrastructure-maintenance.md).
 
@@ -32,7 +32,7 @@ How the report's findings were produced:
 
 ## Notable quotes
 
-This source is EN-only in the wiki (see Provenance), so quotes are given in English from the citation-authoritative EN PDF; no German original is held.
+Quotes are given in English from the EN PDF, which is still the citation-authoritative copy. The German edition has since been added to the corpus (`pdfs/de/p1-infrastructure-maintenance.pdf`, 29 pp.); re-pointing the page citations to the German pages is a pending build step (see Provenance).
 
 > "The data captured for the Dubendorf runway is the first dataset of its kind that provides three different mission types for the same test area." (EN version, p. 26)
 
@@ -48,7 +48,7 @@ This source is EN-only in the wiki (see Provenance), so quotes are given in Engl
 
 ## Provenance
 
-Published November 2023. Original filename: `sandbox_ibm_research_infrastructure_maintenance_en.pdf`. The report is published exclusively in digital format, in German and English [(p1-infrastructure-maintenance p. 29)](../sources/p1-infrastructure-maintenance.md), but the German edition was not part of the PDF bundle ingested into this wiki on 2026-05-28; the wiki holds only the English PDF. This source is therefore the documented exception to the German-PDF citation rule: all page-level citations for `p1-infrastructure-maintenance` refer to printed page numbers in the English PDF (`asymmetry: en-only` in the frontmatter).
+Published November 2023. Original filename: `sandbox_ibm_research_infrastructure_maintenance_en.pdf`. The report is published in digital format in both German and English [(p1-infrastructure-maintenance p. 29)](../sources/p1-infrastructure-maintenance.md). The German edition was missing from the original 2026-05-28 bundle and was added to the corpus on 2026-06-24 as `pdfs/de/p1-infrastructure-maintenance.pdf` (29 pp., same length as the EN PDF; original filename `sandbox_ibm_research_infrastrukturwartung_de.pdf`). Until the citations are re-pointed, all page-level citations for `p1-infrastructure-maintenance` still refer to the English PDF (`asymmetry: en-only` in the frontmatter). That remap is a pending build step: the equal page count suggests the pages may align directly, but each citation should be checked against the German PDF, not assumed.
 
 The report was digested and ingested into this wiki. The working digest (page-numbered quotes, methodology summary) lives at `sources/digests/p1-infrastructure-maintenance.md`; it is a locator aid derived from the EN PDF, never a citation target.
 
