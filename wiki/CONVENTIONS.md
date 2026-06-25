@@ -261,18 +261,23 @@ The schema is **soft by design**. The five rules:
 
 ## 8. Lint pass — what's checked
 
-The lint pass (`scripts/lint.py`) surfaces:
+The lint pass is `scripts/lint.mjs` — run `node scripts/lint.mjs` from the repo root (one-time setup: `cd mcp-server && npm install && npm run build`, since it imports the built parser). It has two severities: **errors** exit non-zero (fix before committing); **warnings** exit zero unless you pass `--strict`.
 
-- Broken `[[wikilinks]]` — referenced slugs not found in any folder.
-- Orphan pages — no incoming references from any other page.
-- Type mismatch — `type:` value doesn't match folder.
-- Missing required frontmatter — per the §2 spec for each type, including `insight_domain` on lessons and synthesis.
+**Errors:**
+- Type/folder mismatch — frontmatter `type:` doesn't match the folder it lives in.
+- Missing required frontmatter — per the §2 spec for each type (including `insight_domain` on lessons and synthesis, and `path`-or-`url` on sources).
+- Broken `[[wikilinks]]` — referenced slug not found in any folder.
+- A `sources:` frontmatter entry that doesn't resolve to a `sources/` page.
 - Hand-written `#para-N` anchors — forbidden while the anchor pipeline is dormant (§6).
-- `insight_domain: both` on a page without §3 domain callouts in the body.
-- Conflicting `[!tension]` callouts that haven't been responded to (e.g. one page claims X, another claims ¬X, neither acknowledges the other).
-- Stale `freshness:` (>18 months on a regulation; >12 months on a project).
+- `insight_domain` missing or invalid, or set to `both` without **both** `> [!sandbox-operations]` and `> [!ai-deployment]` callouts in the body.
 
-Lint output is advisory — warnings, not write-time enforcement. Reviewers should still read pages at PR time; lint catches structure, not sense.
+**Warnings:**
+- Orphan pages — no incoming wikilink or frontmatter edge from any page.
+- Pages missing from `index.md`.
+- Stale `freshness:` — a lesson whose `freshness:` is more than 18 months old (review with `> [!update-needed]`).
+- `insight_domain` set on a type that shouldn't carry it (the field belongs on lessons and synthesis only).
+
+Lint catches structure, not sense — reviewers still read pages at PR time. *(Specified but not yet implemented: cross-page conflicting-`[!tension]` detection, and staleness checks on regulations/projects.)*
 
 ---
 
@@ -286,3 +291,4 @@ Lint output is advisory — warnings, not write-time enforcement. Reviewers shou
 | 2026-06-10 | Added `insight_domain: ai-deployment \| sandbox-operations \| both` (required on lessons + synthesis) and the paired §3 domain callouts. Rationale: the corpus serves two audiences whose advice often sounds alike — units deploying AI vs. units running a sandbox programme — and a consumer must never generalise one as the other. Requested by the sandbox programme leads, 2026-06-08. |
 | 2026-06-10 | Citations re-grained to page level (`#page-N` against the German PDF). The paragraph-anchor system (§6) was specified but its extraction pipeline was never built, leaving every `#para-N` unresolvable; honest page numbers replace dead anchors. The paragraph spec stays in §6 as dormant, for mechanical migration when the pipeline lands. |
 | 2026-06-10 | Codified fields in use on 3+ pages: universal optional `priority: high`; `role:` on stakeholders; `question:` + `audience:` on synthesis; `phase: I-and-II` on lessons evidenced across both phases. |
+| 2026-06-14 | Doc-accuracy fix (no schema change), surfaced by an OKF-comparison review. Corrected §8 to match the implemented linter: the file is `scripts/lint.mjs` (was wrongly `lint.py`); split error vs warning severities; removed two checks the code does not run (cross-page conflicting-`[!tension]` detection, and the ">12-month project / regulation freshness" claim — the linter checks lesson `freshness:` at 18 months only); added the real `sources:`-resolution and index-coverage checks. Also corrected `wiki/README.md`, which still described citations as resolving to a *paragraph* (the live contract has been page-level since 2026-06-10). |

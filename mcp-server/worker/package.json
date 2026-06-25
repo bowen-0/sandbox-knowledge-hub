@@ -7,7 +7,8 @@
     "dev": "cd .. && npm run bundle && npx wrangler dev -c worker/wrangler.jsonc"
   },
   "dependencies": {
-    "agents": "^0.2.0"
+    "agents": "^0.2.0",
+    "ai": "^5.0.206"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

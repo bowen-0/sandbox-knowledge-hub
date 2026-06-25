@@ -27,11 +27,15 @@ In English: this can constitute a medical purpose, and in such cases one must ca
 
 The report's §04 assesses eight realistic LLM use cases against the regime [(p2-medical-documentation p. 20)](../sources/p2-medical-documentation.md), from dictation transcription (usually not a medical device) through ambient clinical intelligence and multi-source report aggregation (a device once it draws medical conclusions) to AI-suggested differential diagnoses (clearly a device). It is the corpus's only worked example of stacking FADP + IDG ZH + criminal professional secrecy + MedDO/IvDO + MDR/IVDR + the EU AI Act on a single artefact.
 
-Classification follows **MDR Annex VIII, Rule 11**: software is Class I, IIa, IIb or III by the significance of the information it provides against the patient's condition [(p2-medical-documentation p. 32)](../sources/p2-medical-documentation.md). Information that informs but does not drive treatment is typically Class IIa; high-significance information in a critical condition reaches Class III [(p2-medical-documentation p. 34)](../sources/p2-medical-documentation.md). Diagnostic decision-support such as [[digital-eye-clinic|diabetic-retinopathy screening]] lands at Class IIa or IIb [(p2-digital-eye-clinic p. 25)](../sources/p2-digital-eye-clinic.md).
+Classification follows **MDR Annex VIII, Rule 11**: software is Class I, IIa, IIb or III by the significance of the information it provides against the patient's condition [(p2-medical-documentation p. 32)](../sources/p2-medical-documentation.md). Information that informs but does not drive treatment is typically Class IIa; high-significance information in a critical condition reaches Class III [(p2-medical-documentation p. 34)](../sources/p2-medical-documentation.md). Diagnostic decision-support such as [[digital-eye-clinic|diabetic-retinopathy screening]] lands at Class IIa or IIb [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md).
 
 ## The in-house exception
 
-A healthcare institution may build and use a device internally without full MDR conformity assessment (the MedDO in-house exception), but it must still notify and meet the essential safety and performance requirements. The exception falls away once the tool's output drives a treatment decision; [[digital-eye-clinic]] flags this as a genuinely nuanced line and recommends regulatory consulting before any external release [(p2-digital-eye-clinic p. 25)](../sources/p2-digital-eye-clinic.md).
+A healthcare institution that manufactures and uses a device internally gets relaxed requirements under **Art. 9 MepV / Art. 9 IvDV** — but only relaxed, not waived: the software counts as placed in service, and the essential safety and performance requirements still apply in full; only the *other* MepV/IvDV requirements fall away [(p2-medical-documentation p. 34)](../sources/p2-medical-documentation.md). The institution must still notify the manufactured-and-used devices before commissioning (**Art. 18 MepV / Art. 10 IvDV**), with the MDCG 2023-1 guidance applying [(p2-medical-documentation p. 34)](../sources/p2-medical-documentation.md). The report states the exception precisely:
+
+> *«Besondere und erleichterte Anforderungen gelten für Medizinprodukte, die in Gesundheitseinrichtungen hergestellt und verwendet werden (Art. 9 MepV und 9 IvDV) ... Jedoch gelten die übrigen Anforderungen nach MepV bzw. IvDV nicht.»*
+
+In English: special, eased requirements apply to medical devices manufactured and used within healthcare institutions, but the remaining MepV/IvDV requirements do not apply [(p2-medical-documentation p. 34)](../sources/p2-medical-documentation.md). The exception falls away once the tool's output drives a treatment decision; [[digital-eye-clinic]] flags this as a genuinely nuanced line and recommends regulatory consulting before any external release [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md).
 
 ## How the EU AI Act stacks on top
 
@@ -39,11 +43,11 @@ For medical AI the [[eu-ai-act|EU AI Act]] is an additional layer, not a substit
 
 > *«...Regulierung, die mitlernt – flexibel, risikobasiert und jenseits starrer Zulassungen.»*
 
-In English: regulation that learns along, flexible, risk-based, and beyond rigid approvals (Raphael von Thiessen, [p2-medical-documentation p. 44](../sources/p2-medical-documentation.md)).
+In English: regulation that learns along, flexible, risk-based, and beyond rigid approvals (Raphael von Thiessen, [p2-medical-documentation p. 40](../sources/p2-medical-documentation.md)).
 
 ## Human oversight and documentation
 
-The recurring safeguards the report recommends are the deployment side of the same regime: a named professional keeps responsibility with traceability and a human in the loop, transparency through model cards, sanctioned tools to stop shadow use, and an ISO 13485 quality-management system [(p2-medical-documentation p. 37)](../sources/p2-medical-documentation.md). End-to-end encryption is preferred over anonymisation, which rarely succeeds for clinical text.
+The recurring safeguards the report recommends are the deployment side of the same regime: a named professional keeps responsibility with traceability and a human in the loop, transparency through model cards, sanctioned tools to stop shadow use, and an ISO 13485 quality-management system [(p2-medical-documentation p. 37)](../sources/p2-medical-documentation.md). End-to-end encryption is preferred over anonymisation, which rarely succeeds for clinical text. [[human-oversight-in-ai-deployment]] works the full oversight pattern out across both healthcare projects.
 
 ## Projects engaging this regime
 
@@ -57,5 +61,5 @@ The recurring safeguards the report recommends are the deployment side of the sa
 - [[iso-iec-42001]] — the AI management-system standard piloted in the autonomous-systems strand; the medical strand uses ISO 13485 instead.
 - [[swissmedic]] — the Swiss supervisory authority engaged through the medical-documentation roundtable.
 
-> [!gap] Citation-verification pending
-> The page numbers here are anchored to the German PDF (`pdfs/de/p2-medical-documentation.pdf`, 45 pp.) via a text-locating pass, and the [[digital-eye-clinic]] anchors are digest-derived. Both should be confirmed in the citation-verification sweep, alongside the [[p1-infrastructure-maintenance]] EN→DE remap. The in-house exception's exact MedDO article pages still need pinning.
+> [!note] Citations verified against the German PDFs (2026-06-25)
+> Every page number here was confirmed by locating the German text directly in `pdfs/de/p2-medical-documentation.pdf` (45 pp.) and `pdfs/de/p2-digital-eye-clinic.pdf` (33 pp.). Corrections made in this sweep: the in-house-exception articles are pinned to medical-documentation p. 34 (Art. 9 MepV / Art. 18 MepV); the [[digital-eye-clinic]] in-house and Class IIa/IIb anchors moved from the digest's p. 25 to the German p. 26; and the von Thiessen "regulation that learns" quote moved from p. 44 (the imprint) to p. 40, where it actually appears.

@@ -39,11 +39,11 @@ The corpus serves **two audiences**, and every lesson and synthesis page declare
 
 Three ways, depending on who you are:
 
-**As a human** — browse by type (folders above), or follow `[[wikilinks]]` between pages. Each page is self-contained and reads like a Wikipedia article. Citations resolve to a specific paragraph in a source PDF.
+**As a human** — browse by type (folders above), or follow `[[wikilinks]]` between pages. Each page is self-contained and reads like a Wikipedia article. Citations resolve to a specific page in a source PDF.
 
 **As an LLM / retrieval system answering a query** — start with [`QUERY.md`](QUERY.md). It contains the canonical answering procedure: read order, citation style, voice rules, gap-honesty. It auto-loads as a skill from [`.claude/skills/query/SKILL.md`](.claude/skills/query/SKILL.md) when this folder is the working directory for Claude Code or the Claude Agent SDK. Then read [`index.md`](index.md) for the navigable inventory. Frontmatter (`type:`, `audience:`, `priority:`, `sector:`, `connects:`, `cross_cutting:`) is structured for filtering and retrieval reranking — use it.
 
-**As an LLM / contributor adding a new source** — start with [`INGEST.md`](INGEST.md). It contains the canonical four-phase ingest procedure (READ → PLAN → EXECUTE → BOOKKEEP), the paragraph-anchored citation rules, and the page-template shape for each of the seven types. It auto-loads as a skill from [`.claude/skills/ingest/SKILL.md`](.claude/skills/ingest/SKILL.md). **Recommended runtime: Cowork or local Claude Code** — the paragraph-anchoring step needs a real execution environment for the Docling pipeline. Claude.ai with the GitHub connector works for *editorial* operations on already-ingested sources (drafting a lesson from existing material, cross-references, prose tightening), but not for new PDF ingest.
+**As an LLM / contributor adding a new source** — start with [`INGEST.md`](INGEST.md). It contains the canonical four-phase ingest procedure (READ → PLAN → EXECUTE → BOOKKEEP), the page-anchored citation rules, and the page-template shape for each of the seven types. It auto-loads as a skill from [`.claude/skills/ingest/SKILL.md`](.claude/skills/ingest/SKILL.md). **Recommended runtime: Cowork or local Claude Code** — ingesting a new PDF means reading it and verifying page-level citations against it, which needs a real execution environment. Claude.ai with the GitHub connector works for *editorial* operations on already-ingested sources (drafting a lesson from existing material, cross-references, prose tightening), but not for new PDF ingest.
 
 **As a human SME or challenge owner who wants to contribute** — read [`CONTRIBUTING.md`](CONTRIBUTING.md). It's the step-by-step handover doc: which runtime to pick (Cowork / Claude.ai Projects / ChatGPT), how to set it up from scratch, and what "correct ingest" looks like regardless of which runtime you used. INGEST is the contract; CONTRIBUTING is the operator's manual.
 
@@ -58,11 +58,11 @@ The canonical procedure lives in [`INGEST.md`](INGEST.md) — the four-phase REA
 ### Add a new source (PDF, paper, web page, video, transcript)
 1. If it's a PDF, drop it into `pdfs/de/` or `pdfs/en/` (or `pdfs/<lang>/` for other languages). Other file types live in a sensible sibling folder under `pdfs/` (e.g. `pdfs/transcripts/`).
 2. Create `sources/<slug>.md` with `type: source`, `source_type:` set to one of `pdf | url | paper | video | transcript | note`, plus `path` (for files, relative to the wiki root — e.g. `../pdfs/de/<slug>.pdf`) or `url` (for the web). Add a `**Read the report:**` link line under the H1 so HTML readers have a one-click way into the source.
-3. Optionally write the paragraph-anchor index in the same file (only needed for PDFs you intend to cite paragraph-level).
+3. Cite claims at **page level** (`<slug>#page-N`, verified against the citation-authoritative PDF). The `paragraphs:` anchor index is a dormant spec — see [`CONVENTIONS.md`](CONVENTIONS.md) §6 — leave it unpopulated.
 
 ### Add a lesson
 1. Read the source. Identify an atomic, transferable claim.
-2. Create `lessons/<slug>.md` with `type: lesson`, link to `project[]`, `concept[]`, `regulation[]`, `stakeholder[]`, and cite the source with paragraph anchor.
+2. Create `lessons/<slug>.md` with `type: lesson`, link to `project[]`, `concept[]`, `regulation[]`, `stakeholder[]`, and cite the source at page level (`#page-N`, verified against the German PDF).
 3. Use `[[wikilinks]]` in the body wherever you reference another wiki entity.
 
 ### Add a concept
