@@ -27,9 +27,9 @@ The corpus carries insights for **two different audiences whose advice often sou
 **By insight domain:**
 
 - `sandbox-operations` lessons: [[partner-pivot-is-normal]] · [[regulatory-roundtable-is-high-leverage]]
-- `sandbox-operations` synthesis: [[zh-ai-ecosystem-strategy-2026-2029]]
+- `sandbox-operations` synthesis: [[zh-ai-ecosystem-strategy-2026-2029]] · [[regulatory-learnings]] · [[what-makes-this-sandbox-different]] · [[scaling-constraints]] · [[economic-case-for-the-sandbox]] — the **Programme & Strategy** branch (Q8–Q11)
 - `both` (fenced): [[strong-stakeholder-engagement-is-decisive]] · [[cross-border-collab-unlocks-eu-access]] · [[data-reuse-multiplies-pilot-impact]] · [[partner-roles-around-a-pilot]]
-- everything else in `lessons/` and `synthesis/` is `ai-deployment`
+- everything else in `lessons/` and `synthesis/` is `ai-deployment` (incl. the new validation views [[opportunity-categories]], [[maturity-vs-caution]], [[implementation-anti-patterns]], [[human-oversight-in-ai-deployment]], [[portfolio-gaps-and-open-questions]])
 
 Consumers: never quote a `sandbox-operations` insight as deployment advice or vice versa — see [`QUERY.md`](QUERY.md), *The contract*.
 
@@ -46,6 +46,39 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 - **[[eu-market-access-for-swiss-ai]]** — *"What's the EU market access pathway for my Swiss AI product?"*
 - **[[partner-roles-around-a-pilot]]** — *"Who do I need around my AI pilot, and what do they each do?"*
 - **[[zh-ai-ecosystem-strategy-2026-2029]]** — the 4-pillar Canton-of-Zurich macro context.
+
+---
+
+## Insights by spine — Technology · Legal · Organisation · Programme & Strategy
+
+The booklet's three deployment dimensions (Technology / Legal / Organisation, §04) plus the **Programme & Strategy** branch for the sandbox-operations material. This is the four-category navigation across the synthesis "views" — use it to find the page that answers a given question. The first three categories are `ai-deployment` (for a unit deploying AI); the fourth is `sandbox-operations` (for a unit running a programme). Each view names the validation question it answers.
+
+**Technology & deployment readiness** — `ai-deployment`
+- [[opportunity-categories]] — which initiative areas to prioritise, and why they were tractable *(Q2)*
+- [[maturity-vs-caution]] — where AI is ready to adopt today vs. where to stay cautious *(Q3)*
+- [[human-oversight-in-ai-deployment]] — how a person stays in charge of a high-stakes AI decision *(Q6)*
+- [[when-rule-based-beats-generative]] — rule-based logic vs. generative AI
+- [[scoping-is-ai-the-right-approach]] — is AI even the right approach
+
+**Legal & regulatory** — `ai-deployment`
+- [[eu-ai-act]] — risk-based EU AI regulation, as a reverse index of the projects it touched *(Q5)*
+- [[medical-device-regulation]] — the MedDO + EU MDR/IVDR cluster for healthcare AI *(Q5)*
+- [[eu-market-access-for-swiss-ai]] — the EU market-access pathway for a Swiss AI product
+
+**Organisation & delivery** — `ai-deployment`
+- [[implementation-anti-patterns]] — the recurring implementation mistakes, ranked by pilot evidence *(Q4)*
+- [[portfolio-gaps-and-open-questions]] — what the portfolio has not yet resolved + absent sectors *(Q7)*
+- [[data-access-patterns-and-unblocking]] — how to unblock data access for a pilot
+- [[partner-roles-around-a-pilot]] — the five roles around a pilot
+
+**Programme & Strategy** — `sandbox-operations`
+- [[what-makes-this-sandbox-different]] — how the Sandbox differs from an accelerator or reg sandbox *(Q9)*
+- [[regulatory-learnings]] — what the Sandbox taught about future AI regulation *(Q8)*
+- [[scaling-constraints]] — what kept the Sandbox from scaling faster *(Q10)*
+- [[economic-case-for-the-sandbox]] — the two-minute economic justification *(Q11)*
+- [[zh-ai-ecosystem-strategy-2026-2029]] — the 4-pillar 2026–2029 macro context
+
+> The remaining validation questions route to existing pages: Q1 (pilot prerequisites) → [[building-permits]]; the answer-quality contract for all of them is in [`QUERY.md`](QUERY.md), *Answer principles*.
 
 ---
 
@@ -86,7 +119,7 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 - [[model-agnostic-architecture]] — swappable-model design pattern.
 - [[data-minimisation]] — privacy-by-design lexicon.
 
-### Regulations (10)
+### Regulations (11)
 
 #### Swiss
 - [[dsg-fadp]] — Federal Act on Data Protection.
@@ -100,6 +133,9 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 #### EU
 - [[eu-ai-act]] — Risk-based EU AI regulation.
 - [[machinery-regulation]] — EU Machinery Regulation 2023/1230.
+
+#### International (Swiss + EU)
+- [[medical-device-regulation]] — Swiss MedDO + EU MDR/IVDR; turns clinical-decision-influencing AI into a regulated device.
 
 #### Standards
 - [[iso-iec-42001]] — International AI management-system standard.
@@ -170,20 +206,32 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 - [[00-overview-phase2-build-and-share]] — Phase II overview ("Build & Share"). DE + EN. **The current authoritative snapshot.** `priority: high`
 
 #### Phase I project reports
-- [[p1-smart-parking]] · [[p1-autonomous-systems]] · [[p1-infrastructure-maintenance]] (EN only) · [[p1-machine-translation]] · [[p1-ai-in-education]]
+- [[p1-smart-parking]] · [[p1-autonomous-systems]] · [[p1-infrastructure-maintenance]] · [[p1-machine-translation]] · [[p1-ai-in-education]]
 
 #### Phase II project reports
 - [[p2-bridge-monitoring]] · [[p2-digital-eye-clinic]] · [[p2-inspection-robots]] · [[p2-medical-documentation]] · [[p2-building-permits]] `priority: high`
 
-### Synthesis (7 — cross-cutting patterns + themes)
+### Synthesis (16 — cross-cutting patterns, themes + validation views)
 
+`ai-deployment` (deployment guidance):
 - [[phase-2-cross-cutting-principles]] ★ — `priority: high`. The 17 general principles, the priority retrieval surface.
 - [[scoping-is-ai-the-right-approach]] — broadest scoping theme.
 - [[when-rule-based-beats-generative]] — rule-based-vs-generative decision guide.
 - [[data-access-patterns-and-unblocking]] — partner-bottleneck mitigations.
 - [[eu-market-access-for-swiss-ai]] — EU regulatory pathway.
-- [[partner-roles-around-a-pilot]] — the 5-role taxonomy applied.
+- [[partner-roles-around-a-pilot]] — the 5-role taxonomy applied. *(`both`, fenced.)*
+- [[opportunity-categories]] — the three high-potential initiative categories *(Q2)*.
+- [[maturity-vs-caution]] — ready-now vs. stay-cautious bands by oversight-feasibility *(Q3)*.
+- [[implementation-anti-patterns]] — the recurring implementation mistakes *(Q4)*.
+- [[human-oversight-in-ai-deployment]] — the human-oversight deployment pattern *(Q6)*. `priority: high`
+- [[portfolio-gaps-and-open-questions]] — evidence gaps + absent-sector negative space *(Q7)*.
+
+`sandbox-operations` (running a programme):
 - [[zh-ai-ecosystem-strategy-2026-2029]] — the 4-pillar macro context.
+- [[regulatory-learnings]] — what the Sandbox taught about AI regulation *(Q8)*.
+- [[what-makes-this-sandbox-different]] — vs. accelerator / regulatory sandbox *(Q9)*.
+- [[scaling-constraints]] — what limited scaling *(Q10)*.
+- [[economic-case-for-the-sandbox]] — the minister pitch *(Q11)*.
 
 ---
 
@@ -219,8 +267,9 @@ When a query lands, prefer in this order:
 2. **Specific case-study queries** → the relevant project page → that project's source + case-study-specific lessons.
 3. **Legal queries** → the relevant regulation page → relevant cross-cutting lesson(s) → specific project examples.
 4. **Partner / process queries** → [[partner-roles-around-a-pilot]] + relevant stakeholder pages.
-5. **Outcome / strategy queries** → [[zh-ai-ecosystem-strategy-2026-2029]] + [[phase-2-cross-cutting-principles]].
-6. **Sandbox-programme queries** ("how do we run one of these") → `insight_domain: sandbox-operations` lessons + synthesis → the two phase-overview sources.
+5. **Outcome / strategy / executive queries** ("what makes this different", "why fund it", "what limited scaling", "what did we learn about regulation") → the **Programme & Strategy** branch: [[what-makes-this-sandbox-different]] · [[economic-case-for-the-sandbox]] · [[scaling-constraints]] · [[regulatory-learnings]] · [[zh-ai-ecosystem-strategy-2026-2029]].
+6. **Sandbox-programme queries** ("how do we run one of these") → `insight_domain: sandbox-operations` lessons + the Programme & Strategy synthesis above → the two phase-overview sources.
+7. **Readiness / prioritisation / mistakes / oversight queries** → [[maturity-vs-caution]], [[opportunity-categories]], [[implementation-anti-patterns]], [[human-oversight-in-ai-deployment]], [[portfolio-gaps-and-open-questions]] (all `ai-deployment`).
 
 This is a heuristic for AI consumers, not a constraint on browsing — users navigating the wiki freely should find paths from anywhere to anywhere via wikilinks.
 
@@ -233,7 +282,7 @@ These are deliberate stubs — known places where the wiki can grow. Contributio
 - **Concepts** — `edge-computing`, `bias-audit`, additional sector-specific concepts from individual reports.
 - **Stakeholders** — remaining named partners + specialist support people: spross-stiftung, stadtspital-zuerich-augenklinik, gogymi, plus the FHNW/HSG specialist support people from [[building-permits]] (Walzer, Meyer, Klingler, Jost, Hüppin, Baldwin, Louis, Späti, Schneider, Arnold, Polach).
 - **Lessons** — case-study-specific lessons not yet extracted: e.g. cost-per-application economics from Building Permits, regulatory-roundtable-as-format details from Medical Documentation, intrapreneurship-as-procurement-path from Digital Eye Clinic.
-- **Regulations** — sector-specific instruments: MDR, IVDR, ÖREB cadastre framework, sectoral healthcare law.
-- **Synthesis** — additional themes: `healthcare-pilot-scoping`, `real-world-testing-vs-analysis-only` (sandbox outcome class chooser), `intrapreneurship-as-public-sector-procurement`.
+- **Regulations** — sector-specific instruments: ÖREB cadastre framework, sectoral healthcare law beyond the device regime. *(MDR / IVDR now covered in [[medical-device-regulation]].)*
+- **Synthesis** — additional themes: `healthcare-pilot-scoping`, `real-world-testing-vs-analysis-only` (sandbox outcome class chooser), `intrapreneurship-as-public-sector-procurement`. *(Maturity, anti-patterns, portfolio-gaps and the Q8–Q11 programme views are now built — see the spine navigation above.)*
 
 If you pick up one of these, link your PR to issue tag `wiki:expansion`.

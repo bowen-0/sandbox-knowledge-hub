@@ -3,14 +3,14 @@ title: "Automated Infrastructure Maintenance — Drone Inspections with Computer
 type: source
 source_type: pdf
 slug: p1-infrastructure-maintenance
-path: ../pdfs/en/p1-infrastructure-maintenance.pdf
-language: en
+path: ../pdfs/de/p1-infrastructure-maintenance.pdf
+en_path: ../pdfs/en/p1-infrastructure-maintenance.pdf
+language: bilingual
 year: 2023
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen]
 created: 2026-05-28
-updated: 2026-06-24
-asymmetry: en-only  # DE edition added to corpus 2026-06-24; citations still EN-page until remapped (see Provenance)
+updated: 2026-06-25
 ---
 
 # Automated Infrastructure Maintenance — Drone Inspections with Computer Vision
@@ -32,11 +32,15 @@ How the report's findings were produced:
 
 ## Notable quotes
 
-Quotes are given in English from the EN PDF, which is still the citation-authoritative copy. The German edition has since been added to the corpus (`pdfs/de/p1-infrastructure-maintenance.pdf`, 29 pp.); re-pointing the page citations to the German pages is a pending build step (see Provenance).
+Citations are anchored to the German PDF (the report is published in both languages; the German edition is the citation copy per the wiki conventions, §5). The page numbers align 1:1 with the English edition.
 
-> "The data captured for the Dubendorf runway is the first dataset of its kind that provides three different mission types for the same test area." (EN version, p. 26)
+> *«Die gesammelten Bilddaten sind der erste Datensatz dieser Art, der drei verschiedene Missionstypen für denselben Testbereich verfügbar macht.»*
 
-> "Furthermore, every project in which AI applications are successfully used adds to the assurance that the developed foundation models –in this case by IBM Research– operate reliably in a broad context." (EN version, p. 14)
+In English: the collected image data is the first dataset of its kind to make three different mission types available for the same test area [(p1-infrastructure-maintenance p. 26)](../sources/p1-infrastructure-maintenance.md).
+
+> *«Zusätzlich wird mit jedem Projekt, in dem KI-Anwendungen erfolgreich eingesetzt werden, immer sicherer, dass die entwickelten Foundation Models – in diesem Fall von IBM Research – in einem breiten Kontext zuverlässig funktionieren.»*
+
+In English: with every project in which AI applications are successfully deployed, it becomes ever more certain that the foundation models developed — in this case by IBM Research — operate reliably in a broad context [(p1-infrastructure-maintenance p. 14)](../sources/p1-infrastructure-maintenance.md).
 
 ## Stakeholders named in the report
 
@@ -48,7 +52,7 @@ Quotes are given in English from the EN PDF, which is still the citation-authori
 
 ## Provenance
 
-Published November 2023. Original filename: `sandbox_ibm_research_infrastructure_maintenance_en.pdf`. The report is published in digital format in both German and English [(p1-infrastructure-maintenance p. 29)](../sources/p1-infrastructure-maintenance.md). The German edition was missing from the original 2026-05-28 bundle and was added to the corpus on 2026-06-24 as `pdfs/de/p1-infrastructure-maintenance.pdf` (29 pp., same length as the EN PDF; original filename `sandbox_ibm_research_infrastrukturwartung_de.pdf`). Until the citations are re-pointed, all page-level citations for `p1-infrastructure-maintenance` still refer to the English PDF (`asymmetry: en-only` in the frontmatter). That remap is a pending build step: the equal page count suggests the pages may align directly, but each citation should be checked against the German PDF, not assumed.
+Published November 2023. The report is published in digital format in both German and English [(p1-infrastructure-maintenance p. 29)](../sources/p1-infrastructure-maintenance.md). The German edition was missing from the original 2026-05-28 bundle and was added to the corpus on 2026-06-24 as `pdfs/de/p1-infrastructure-maintenance.pdf` (29 pp.; original filename `sandbox_ibm_research_infrastrukturwartung_de.pdf`; the EN copy is `sandbox_ibm_research_infrastructure_maintenance_en.pdf`). On 2026-06-25 the citations were re-pointed to the German PDF and the `asymmetry: en-only` flag cleared: page alignment was checked to be 1:1 against the EN edition by locating distinctive tokens (the 15.2% crack-detection figure on p. 11, the EASA / 200 × 40 m / 2.8 km references on p. 6, the 13 May 2023 flight and 0.25 mm/pixel on p. 7, the BAZL exchange on p. 16, the first-dataset quote on p. 26), so the page numbers carried over unchanged.
 
 The report was digested and ingested into this wiki. The working digest (page-numbered quotes, methodology summary) lives at `sources/digests/p1-infrastructure-maintenance.md`; it is a locator aid derived from the EN PDF, never a citation target.
 
