@@ -26,7 +26,7 @@ For editing what's already in the wiki (a new lesson from an existing source, a 
 
 The skill is auto-loaded. You type `ingest`, the wiki tells you what to do.
 
-1. **Get access.** Confirm with Bowen that your GitHub account is added to the repo. Confirm you have a Claude.ai plan that includes Cowork.
+1. **Get access.** Confirm with the repository maintainer that your GitHub account is added to the repo. Confirm you have a Claude.ai plan that includes Cowork.
 2. **Open the repo in Cowork.** Point Cowork at this GitHub repo. Open a session on the `main` branch (it will create a working branch for your changes).
 3. **Drop the source in.** For a new PDF: copy it into `wiki/pdfs/de/` (German is citation-authoritative) and, if you have it, `wiki/pdfs/en/`. For pasted content, save to `wiki/sources/notes/<slug>.md` first. URLs and papers — just describe them in chat.
 4. **Trigger the ingest skill.** Type one of: *"ingest p2-new-thing"*, *"process this report"*, *"compile this into the wiki"*. The `ingest` skill auto-loads. If it doesn't (older Cowork harness, skill not discovered), paste [`INGEST.md`](INGEST.md) into the chat and say "follow this procedure".
