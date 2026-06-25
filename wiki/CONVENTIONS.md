@@ -53,6 +53,14 @@ stakeholder: [stephanie-volz, raphael-von-thiessen, byte-studio]
 regulation: [dsg-art-22, eu-ai-act]
 concept: [data-access, llm-as-a-judge]
 related_projects: [smart-parking] # other pilots this one references or extends
+
+# Use-case assessment facets — the "metadata to highlight" dimensions from the kickoff.
+# They live on the use case (project); insights (lessons/synthesis) are sliceable along
+# them through their `project:` link, so the portfolio can be filtered by any of them.
+data_sources: [building-applications, decision-criteria]   # what data the use case relies on (soft list; see §4)
+societal_acceptance: high                                  # high | moderate | sensitive | contested (see §4)
+technological_feasibility: high                            # high | moderate | emerging (see §4)
+process_change: moderate                                   # low | moderate | high — how far it reshapes the existing process (see §4)
 ```
 
 #### `concepts/` — reusable ideas / vocabulary
@@ -210,6 +218,17 @@ The field is required on `lessons/` and `synthesis/` (the insight-carrying types
 
 `I` (2022–2024) · `II` (2024–2026) · `I-and-II` (lessons evidenced across both phases) · (Phase III is on the roadmap for 2026–2029 per the booklet conclusion.)
 
+### Use-case assessment facets (on `projects/`)
+
+The four "metadata to highlight" dimensions named at the kickoff, so the portfolio can be sliced by what a decision-maker weighs when sizing up a use case. They sit on the **project** (the use case); a lesson or synthesis page is filtered along them through its `project:` link.
+
+| Facet | Values | Meaning |
+|---|---|---|
+| `data_sources` | soft list of slugs, e.g. `building-applications`, `sensor-data`, `retinal-images`, `patient-records`, `drone-imagery`, `camera-images`, `register-documents`, `none-regulatory-analysis` | the data the use case relies on. Use `none-regulatory-analysis` for analysis-only pilots with no operational data. |
+| `societal_acceptance` | `high` · `moderate` · `sensitive` · `contested` | how socially accepted or sensitive the use case is. `high` = uncontroversial efficiency/support; `moderate` = some privacy or public-surveillance considerations; `sensitive` = touches health, minors, or personal data; `contested` = autonomy or safety-critical decisions affecting rights or safety. |
+| `technological_feasibility` | `high` · `moderate` · `emerging` | maturity of the technology for this use case. `high` = proven, deployable now; `emerging` = autonomy / safety-critical or otherwise not yet deployment-ready. |
+| `process_change` | `low` · `moderate` · `high` | how far the technology reshapes the existing process. `low` = drop-in inside an existing workflow; `high` = restructures roles or replaces a process step. |
+
 ### `confidence` (on `lessons/`)
 
 | Slug | When to use |
@@ -292,3 +311,4 @@ Lint catches structure, not sense — reviewers still read pages at PR time. *(S
 | 2026-06-10 | Citations re-grained to page level (`#page-N` against the German PDF). The paragraph-anchor system (§6) was specified but its extraction pipeline was never built, leaving every `#para-N` unresolvable; honest page numbers replace dead anchors. The paragraph spec stays in §6 as dormant, for mechanical migration when the pipeline lands. |
 | 2026-06-10 | Codified fields in use on 3+ pages: universal optional `priority: high`; `role:` on stakeholders; `question:` + `audience:` on synthesis; `phase: I-and-II` on lessons evidenced across both phases. |
 | 2026-06-14 | Doc-accuracy fix (no schema change), surfaced by an OKF-comparison review. Corrected §8 to match the implemented linter: the file is `scripts/lint.mjs` (was wrongly `lint.py`); split error vs warning severities; removed two checks the code does not run (cross-page conflicting-`[!tension]` detection, and the ">12-month project / regulation freshness" claim — the linter checks lesson `freshness:` at 18 months only); added the real `sources:`-resolution and index-coverage checks. Also corrected `wiki/README.md`, which still described citations as resolving to a *paragraph* (the live contract has been page-level since 2026-06-10). |
+| 2026-06-25 | Added the four kickoff "metadata to highlight" facets to the `projects/` schema (§2, §4): `data_sources`, `societal_acceptance`, `technological_feasibility`, `process_change`. They sit on the use case (project); insights are sliceable along them via their `project:` link. Codifies the slicing the concept note promises the client. |

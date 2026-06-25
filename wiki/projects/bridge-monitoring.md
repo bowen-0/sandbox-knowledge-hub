@@ -11,6 +11,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz, irmos-technologies, sob]
 regulation: [dsg-fadp]
 concept: [real-world-testing, data-access]
 related_projects: [infrastructure-maintenance, building-permits]
+data_sources: [sensor-data]
+societal_acceptance: high
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-10
 ---

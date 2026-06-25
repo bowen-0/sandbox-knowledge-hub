@@ -39,7 +39,7 @@ The corpus serves **two audiences**, and every lesson and synthesis page declare
 
 Three ways, depending on who you are:
 
-**As a human** — browse by type (folders above), or follow `[[wikilinks]]` between pages. Each page is self-contained and reads like a Wikipedia article. Citations resolve to a specific page in a source PDF.
+**As a human** — browse by type (folders above); each page is self-contained and reads like a Wikipedia article, with citations resolving to a specific page in a source PDF. The `[[wikilinks]]` between pages are clickable in Obsidian (open the `wiki/` folder as a vault) and resolve through the MCP server's tools; on GitHub web they currently render as plain text, so navigate via the folders there.
 
 **As an LLM / retrieval system answering a query** — start with [`QUERY.md`](QUERY.md). It contains the canonical answering procedure: read order, citation style, voice rules, gap-honesty. It auto-loads as a skill from [`.claude/skills/query/SKILL.md`](.claude/skills/query/SKILL.md) when this folder is the working directory for Claude Code or the Claude Agent SDK. Then read [`index.md`](index.md) for the navigable inventory. Frontmatter (`type:`, `audience:`, `priority:`, `sector:`, `connects:`, `cross_cutting:`) is structured for filtering and retrieval reranking — use it.
 
