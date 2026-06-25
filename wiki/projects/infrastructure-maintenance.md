@@ -16,6 +16,10 @@ stakeholder: [raphael-von-thiessen, ibm-research]
 regulation: []
 concept: [computer-vision, data-access, partner-bottleneck]
 related_projects: [bridge-monitoring, smart-parking]
+data_sources: [drone-imagery]
+societal_acceptance: high
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-10
 ---

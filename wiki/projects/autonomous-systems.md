@@ -17,6 +17,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz]
 regulation: [dsg-fadp, machinery-regulation]
 concept: [computer-vision]
 related_projects: [inspection-robots]
+data_sources: [none-regulatory-analysis]
+societal_acceptance: contested
+technological_feasibility: emerging
+process_change: high
 created: 2026-05-28
 updated: 2026-06-11
 ---

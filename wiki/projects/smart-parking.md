@@ -20,6 +20,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz, stadt-frauenfeld]
 regulation: [dsg-fadp, idg-zh]
 concept: [computer-vision, pseudonymisation, data-minimisation, partner-bottleneck]
 related_projects: [infrastructure-maintenance, building-permits, ai-in-education, digital-eye-clinic]
+data_sources: [camera-images]
+societal_acceptance: moderate
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-10
 ---

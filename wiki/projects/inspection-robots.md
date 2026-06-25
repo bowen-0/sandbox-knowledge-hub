@@ -21,6 +21,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz, anybotics, modulos, bundesne
 regulation: [eu-ai-act, machinery-regulation, iso-iec-42001]
 concept: [frontier-models, real-world-testing]
 related_projects: [autonomous-systems, medical-documentation]
+data_sources: [none-regulatory-analysis]
+societal_acceptance: contested
+technological_feasibility: emerging
+process_change: high
 created: 2026-05-28
 updated: 2026-06-10
 ---

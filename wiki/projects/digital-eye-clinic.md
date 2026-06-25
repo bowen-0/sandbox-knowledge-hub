@@ -21,6 +21,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz]
 regulation: [dsg-fadp]
 concept: [intrapreneurship, real-world-testing, pseudonymisation]
 related_projects: [medical-documentation]
+data_sources: [retinal-images, patient-records]
+societal_acceptance: sensitive
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-10
 ---

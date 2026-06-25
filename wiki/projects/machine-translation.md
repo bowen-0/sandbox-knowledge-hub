@@ -18,6 +18,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz]
 regulation: [dsg-fadp, idg-zh, fadp-art-21, bv-art-29]
 concept: [auftragsdatenbearbeitung]
 related_projects: [building-permits, smart-parking]
+data_sources: [register-documents]
+societal_acceptance: high
+technological_feasibility: high
+process_change: low
 created: 2026-05-28
 updated: 2026-06-11
 ---

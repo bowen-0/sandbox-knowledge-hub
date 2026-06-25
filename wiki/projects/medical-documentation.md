@@ -16,6 +16,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz, mpassist, swissmedic]
 regulation: [dsg-fadp]
 concept: [large-language-models, generative-ai, regulatory-roundtable]
 related_projects: [digital-eye-clinic, inspection-robots]
+data_sources: [none-regulatory-analysis]
+societal_acceptance: sensitive
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-10
 ---

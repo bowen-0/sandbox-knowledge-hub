@@ -30,6 +30,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz, nokema, byte-studio, gosswei
 regulation: [dsg-fadp, fadp-art-21, bv-art-29, idg-zh, embag, postulate-ai-building-permits]
 concept: [llm-benchmarks, frontier-models, generative-ai, real-world-testing, llm-as-a-judge, model-agnostic-architecture]
 related_projects: [machine-translation]
+data_sources: [building-applications, decision-criteria]
+societal_acceptance: high
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-11
 priority: high

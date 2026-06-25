@@ -16,6 +16,10 @@ stakeholder: [raphael-von-thiessen, stephanie-volz]
 regulation: [dsg-fadp, idg-zh]
 concept: [pseudonymisation, data-minimisation, partner-bottleneck]
 related_projects: [smart-parking, digital-eye-clinic]
+data_sources: [none-regulatory-analysis]
+societal_acceptance: sensitive
+technological_feasibility: high
+process_change: moderate
 created: 2026-05-28
 updated: 2026-06-11
 ---
