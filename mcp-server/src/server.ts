@@ -8,30 +8,10 @@ const SERVER_INFO = {
   version: "0.1.0",
 } as const;
 
-const DISCIPLINE = `Answer from wiki pages, not from training data; if the wiki does not cover something, say so. CITE INLINE, ALWAYS: every substantive claim must carry its source citation. Copy the "[(<source-slug> p. N)](…)" link verbatim from the page you read into your answer — it renders as a short citation and is a clickable link that opens the German source PDF at that page. Never state a sourced claim without its citation, even in a clean summary, and never strip a citation link. Respect insight_domain: never present a sandbox-operations insight as ai-deployment advice or vice versa. Full procedure: read the wiki://query-procedure resource or wiki_read_page "QUERY".`;
+const DISCIPLINE = `Answer from wiki pages, not from training data; if the wiki does not cover something, say so. CITE INLINE, ALWAYS: every substantive claim must carry its source citation in the form "[(<source-slug> p. N)](sources/<source-slug>.md)" — copy it from the page you read. Never write a sourced claim without its citation, even in a clean narrative summary. Respect insight_domain: never present a sandbox-operations insight as ai-deployment advice or vice versa. Full procedure: read the wiki://query-procedure resource or wiki_read_page "QUERY".`;
 
 function json(data: unknown) {
   return { content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }] };
-}
-
-// Citations are stored as in-repo relative links — `[(slug p. N)](sources/slug.md)` — so the
-// markdown stays substrate-portable. When serving to a web consumer, rewrite them to deep links
-// into the German source PDF at the cited page: jsDelivr serves the repo's PDFs inline, so a
-// browser's PDF viewer honours the #page=N anchor. Only the served copy is linkified; the source
-// content is untouched. Page numbers are the German-PDF physical page (the citation contract).
-const PDF_ROOT = "https://cdn.jsdelivr.net/gh/bowen-0/sandbox-knowledge-hub@main/wiki/pdfs";
-function linkifyCitations(md: string): string {
-  return md
-    // page-anchored citations -> the German source PDF, opened at the cited page
-    .replace(
-      /\[\(([a-z0-9-]+) p\. (\d+)\)\]\((?:\.\.\/)?sources\/[a-z0-9-]+\.md\)/gi,
-      (_m, slug: string, page: string) => `[(${slug} p. ${page})](${PDF_ROOT}/de/${slug}.pdf#page=${page})`
-    )
-    // "Read the report" PDF links on source pages -> the inline PDF
-    .replace(
-      /\[([^\]]+)\]\((?:\.\.\/)?pdfs\/(de|en)\/([a-z0-9-]+)\.pdf\)/gi,
-      (_m, text: string, lang: string, slug: string) => `[${text}](${PDF_ROOT}/${lang}/${slug}.pdf)`
-    );
 }
 
 /**
@@ -115,7 +95,7 @@ export function buildServer(provider: WikiProvider): McpServer {
             type: "text" as const,
             text:
               `<!-- ${result.page.path} (type: ${result.page.type})${result.truncated ? " [truncated]" : ""} -->\n` +
-              linkifyCitations(result.content),
+              result.content,
           },
         ],
       };
