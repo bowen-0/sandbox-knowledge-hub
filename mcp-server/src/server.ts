@@ -8,7 +8,7 @@ const SERVER_INFO = {
   version: "0.1.0",
 } as const;
 
-const DISCIPLINE = `Answer from wiki pages, not from training data; if the wiki does not cover something, say so. Cite page-level by copying the "[(<source-slug> p. N)](…)" citation links from the pages you read — each one opens the German source PDF at the cited page, so keep them intact in your answer. Respect insight_domain: never present a sandbox-operations insight as ai-deployment advice or vice versa. Full procedure: read the wiki://query-procedure resource or wiki_read_page "QUERY".`;
+const DISCIPLINE = `Answer from wiki pages, not from training data; if the wiki does not cover something, say so. CITE INLINE, ALWAYS: every substantive claim must carry its source citation. Copy the "[(<source-slug> p. N)](…)" link verbatim from the page you read into your answer — it renders as a short citation and is a clickable link that opens the German source PDF at that page. Never state a sourced claim without its citation, even in a clean summary, and never strip a citation link. Respect insight_domain: never present a sandbox-operations insight as ai-deployment advice or vice versa. Full procedure: read the wiki://query-procedure resource or wiki_read_page "QUERY".`;
 
 function json(data: unknown) {
   return { content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }] };
