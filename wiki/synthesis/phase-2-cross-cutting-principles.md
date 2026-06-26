@@ -81,8 +81,8 @@ These come from cross-analysing the 10 pilots' organisational layer.
 
 1. **[[strong-stakeholder-engagement-is-decisive]]** — *"Successful projects are characterised by committed implementation partners who contribute time, resources, networks, and domain expertise."*
 
-   > [!sandbox-operations] This principle reads in both domains.
-   > For a deployment team it means: secure committed partners before you start. The lesson page also carries the *programme-side* reading — how a sandbox selects and manages partner commitment across a portfolio — fenced separately there (`insight_domain: both`).
+   > [!sandbox-operations] This principle also has a programme-side reading.
+   > On this `ai-deployment` page it means: secure committed partners before you start. The lesson page carries the running-a-sandbox reading too — how a sandbox *selects and manages* partner commitment across a portfolio — fenced there as `insight_domain: both`.
 
 2. **[[value-must-be-clearly-articulated]]** — *"The benefits of AI are not always immediately apparent to domain experts… AI should be deployed where it creates tangible value, not merely because it is technologically feasible."*
 
