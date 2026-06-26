@@ -45,7 +45,7 @@ The **flagship Phase II project**: the only one with a working deployed prototyp
 
 ## Track 1 — Capability benchmark
 
-A **3,336-evaluation benchmark** across eight frontier LLMs [(p2-building-permits p. 10)](../sources/p2-building-permits.md) [(p2-building-permits p. 11)](../sources/p2-building-permits.md):
+A **3,336-evaluation benchmark** across eight frontier LLMs [(p2-building-permits p. 10)](../sources/p2-building-permits.md) [(p2-building-permits p. 11)](../sources/p2-building-permits.md) — the 3,336 counts scored model runs (eight models × the query set × three repeats), not the number of applications:
 
 | Provider | Models |
 |---|---|

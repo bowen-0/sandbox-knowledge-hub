@@ -7,6 +7,21 @@ import { firstHeading } from "./parse.js";
 const CACHE_TTL_MS = 10_000;
 
 /**
+ * Frontmatter parser options that DISABLE gray-matter's executable engines.
+ * gray-matter's default `javascript`/`js` engine `eval()`s a `---js` block —
+ * arbitrary code execution at build time on whatever content is in the repo.
+ * Force YAML and make the JS engines throw, so no page content can ever reach
+ * an eval, no matter how the file got into the repo.
+ */
+const denyExecEngine = () => {
+  throw new Error("Executable frontmatter (---js) is disabled.");
+};
+const SAFE_MATTER_OPTIONS = {
+  language: "yaml",
+  engines: { javascript: denyExecEngine, js: denyExecEngine },
+} as unknown as Parameters<typeof matter>[1];
+
+/**
  * Reads the wiki live from the filesystem. Used by the stdio server and the
  * node HTTP server, where the wiki folder sits next to the process.
  *
@@ -61,7 +76,7 @@ export class FsWikiProvider implements WikiProvider {
     let frontmatter: Record<string, unknown> = {};
     let body = raw;
     try {
-      const parsed = matter(raw);
+      const parsed = matter(raw, SAFE_MATTER_OPTIONS);
       frontmatter = (parsed.data ?? {}) as Record<string, unknown>;
       body = parsed.content;
     } catch {

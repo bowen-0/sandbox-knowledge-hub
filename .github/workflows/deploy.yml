@@ -1,0 +1,49 @@
+name: deploy-mcp
+
+# Rebuild the wiki bundle and redeploy both MCP workers (read + write) whenever
+# the wiki content or the server changes on main. This is what makes the write
+# endpoint's commits go live: a write commits to the repo, this runs, and the
+# read/query endpoint serves the new content a minute or two later.
+#
+# Requires two repo secrets (Settings -> Secrets and variables -> Actions):
+#   CLOUDFLARE_API_TOKEN   — a Workers-deploy-scoped token
+#   CLOUDFLARE_ACCOUNT_ID  — the Cloudflare account id
+# Without them the workflow fails harmlessly; redeploy manually with
+#   cd mcp-server/worker && npm run deploy:all
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "wiki/**"
+      - "mcp-server/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install deps
+        run: |
+          npm ci --prefix mcp-server
+          npm ci --prefix mcp-server/worker
+      - name: Build wiki bundle
+        working-directory: mcp-server
+        run: npm run bundle
+      - name: Deploy read worker
+        working-directory: mcp-server/worker
+        run: npx wrangler deploy -c wrangler.jsonc
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Deploy write worker
+        working-directory: mcp-server/worker
+        run: npx wrangler deploy -c wrangler-write.jsonc
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

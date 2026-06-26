@@ -14,14 +14,21 @@ The sandbox ran ten pilots across two phases (2022–2026): building permits, me
 
 **Browse.** Start at [`wiki/index.md`](wiki/index.md) — the full inventory, organised by retrieval priority. Or open the `wiki/` folder in [Obsidian](https://obsidian.md) and use the graph view.
 
-**Connect your AI assistant (MCP).** The server in [`mcp-server/`](mcp-server/) exposes the wiki to any MCP-capable assistant — Claude, ChatGPT, Copilot, or your own agent — through one connection:
+**Connect your AI assistant (MCP).** The hub runs as a hosted MCP server — connect any MCP-capable assistant with one URL. No install, no API key; it is read-only over reports that are already public:
 
-```bash
-cd mcp-server && npm install && npm run build
-claude mcp add sandbox-hub -- node /path/to/repo/mcp-server/dist/stdio.js
+```
+https://sandbox-knowledge-hub-mcp.bowen-9cc.workers.dev/mcp
 ```
 
-Six read-only tools (overview, list, read, search, graph connections, citation resolution) plus the wiki's answering procedure as a resource. Details and hosted deployment: [`mcp-server/README.md`](mcp-server/README.md).
+Add it as a **custom connector** (most assistants require a paid plan to add one):
+
+- **Claude** (Claude Desktop or claude.ai): Settings → **Connectors** → **Add custom connector** → paste the URL.
+- **ChatGPT** (OpenAI): enable **Developer mode** in Settings, then add a connector with the URL.
+- **Gemini, Copilot, or your own agent**: any MCP-capable client uses the same URL (Gemini CLI, agent frameworks, or the provider's API). Consumer-app connector menus vary by provider, but the URL is all you need.
+
+Then ask a real question — e.g. *"We're considering AI to pre-check permit applications; what would we need before launching a pilot?"* — and the answer comes back grounded in the reports, with the source page cited.
+
+Six read-only tools (overview, list, read, search, graph connections, citation resolution), plus the answering procedure as a resource. To run it locally (stdio) or self-host instead: [`mcp-server/README.md`](mcp-server/README.md).
 
 **Work on it with an AI agent.** Open this repo in Claude Code or Cowork: the `query` and `ingest` skills load automatically from `wiki/.claude/skills/`, so "what does the corpus say about data access in healthcare?" and "ingest this new report" both just work — with the wiki's citation discipline built in.
 
@@ -33,10 +40,10 @@ Six read-only tools (overview, list, read, search, graph connections, citation r
 wiki/
 ├── projects/      10 pilot pages (one per sandbox project)
 ├── lessons/       21 atomic, transferable lessons — the highest-value layer
-├── synthesis/     7 cross-cutting guides (scoping, data access, EU market access …)
+├── synthesis/     16 cross-cutting guides + validation views (scoping, data access, EU market access …)
 ├── concepts/      16 reusable ideas and vocabulary
-├── regulations/   10 legal instruments (Swiss + EU + standards)
-├── stakeholders/  20+ people, organisations, and roles
+├── regulations/   11 legal instruments (Swiss + EU + standards)
+├── stakeholders/  20 people, organisations, and roles
 ├── sources/       12 source pages — the citation backbone, with methodology
 │   └── digests/   working digests per report (ingest provenance)
 └── pdfs/{de,en}/  the original report PDFs (immutable ground truth)

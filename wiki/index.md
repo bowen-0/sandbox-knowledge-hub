@@ -27,7 +27,7 @@ The corpus carries insights for **two different audiences whose advice often sou
 **By insight domain:**
 
 - `sandbox-operations` lessons: [[partner-pivot-is-normal]] · [[regulatory-roundtable-is-high-leverage]]
-- `sandbox-operations` synthesis: [[zh-ai-ecosystem-strategy-2026-2029]] · [[regulatory-learnings]] · [[what-makes-this-sandbox-different]] · [[scaling-constraints]] · [[economic-case-for-the-sandbox]] — the **Programme & Strategy** branch (Q8–Q11)
+- `sandbox-operations` synthesis: [[zh-ai-ecosystem-strategy-2026-2029]] · [[regulatory-learnings]] · [[what-makes-this-sandbox-different]] · [[scaling-constraints]] · [[economic-case-for-the-sandbox]] — the **Programme** branch (Q8–Q11)
 - `both` (fenced): [[strong-stakeholder-engagement-is-decisive]] · [[cross-border-collab-unlocks-eu-access]] · [[data-reuse-multiplies-pilot-impact]] · [[partner-roles-around-a-pilot]]
 - everything else in `lessons/` and `synthesis/` is `ai-deployment` (incl. the new validation views [[opportunity-categories]], [[maturity-vs-caution]], [[implementation-anti-patterns]], [[human-oversight-in-ai-deployment]], [[portfolio-gaps-and-open-questions]])
 
@@ -49,29 +49,29 @@ Six synthesis pages organised as persona-questions, each with a reading path:
 
 ---
 
-## Insights by spine — Technology · Legal · Organisation · Programme & Strategy
+## Insights by spine — Technology & Data · Regulation · Organisation · Programme
 
-The booklet's three deployment dimensions (Technology / Legal / Organisation, §04) plus the **Programme & Strategy** branch for the sandbox-operations material. This is the four-category navigation across the synthesis "views" — use it to find the page that answers a given question. The first three categories are `ai-deployment` (for a unit deploying AI); the fourth is `sandbox-operations` (for a unit running a programme). Each view names the validation question it answers.
+Our four top-level categories — **Technology & Data**, **Regulation**, **Organisation**, **Programme** — map to the booklet's three deployment dimensions (Technology / Legal / Organisation, §04) plus a **Programme** branch for the sandbox-operations material. (Data is grouped under Technology but is a distinct lever in its own right; *Regulation* covers all legal and regulatory matters, not only AI-specific regulation.) This is the four-category navigation across the synthesis "views" — use it to find the page that answers a given question. The first three categories are `ai-deployment` (for a unit deploying AI); the fourth is `sandbox-operations` (for a unit running a programme). Each view names the validation question it answers.
 
-**Technology & deployment readiness** — `ai-deployment`
+**Technology & Data** — `ai-deployment`
 - [[opportunity-categories]] — which initiative areas to prioritise, and why they were tractable *(Q2)*
 - [[maturity-vs-caution]] — where AI is ready to adopt today vs. where to stay cautious *(Q3)*
 - [[human-oversight-in-ai-deployment]] — how a person stays in charge of a high-stakes AI decision *(Q6)*
 - [[when-rule-based-beats-generative]] — rule-based logic vs. generative AI
 - [[scoping-is-ai-the-right-approach]] — is AI even the right approach
 
-**Legal & regulatory** — `ai-deployment`
+**Regulation** — `ai-deployment`
 - [[eu-ai-act]] — risk-based EU AI regulation, as a reverse index of the projects it touched *(Q5)*
 - [[medical-device-regulation]] — the MedDO + EU MDR/IVDR cluster for healthcare AI *(Q5)*
 - [[eu-market-access-for-swiss-ai]] — the EU market-access pathway for a Swiss AI product
 
-**Organisation & delivery** — `ai-deployment`
+**Organisation** — `ai-deployment`
 - [[implementation-anti-patterns]] — the recurring implementation mistakes, ranked by pilot evidence *(Q4)*
 - [[portfolio-gaps-and-open-questions]] — what the portfolio has not yet resolved + absent sectors *(Q7)*
 - [[data-access-patterns-and-unblocking]] — how to unblock data access for a pilot
 - [[partner-roles-around-a-pilot]] — the five roles around a pilot
 
-**Programme & Strategy** — `sandbox-operations`
+**Programme** — `sandbox-operations`
 - [[what-makes-this-sandbox-different]] — how the Sandbox differs from an accelerator or reg sandbox *(Q9)*
 - [[regulatory-learnings]] — what the Sandbox taught about future AI regulation *(Q8)*
 - [[scaling-constraints]] — what kept the Sandbox from scaling faster *(Q10)*
@@ -267,8 +267,8 @@ When a query lands, prefer in this order:
 2. **Specific case-study queries** → the relevant project page → that project's source + case-study-specific lessons.
 3. **Legal queries** → the relevant regulation page → relevant cross-cutting lesson(s) → specific project examples.
 4. **Partner / process queries** → [[partner-roles-around-a-pilot]] + relevant stakeholder pages.
-5. **Outcome / strategy / executive queries** ("what makes this different", "why fund it", "what limited scaling", "what did we learn about regulation") → the **Programme & Strategy** branch: [[what-makes-this-sandbox-different]] · [[economic-case-for-the-sandbox]] · [[scaling-constraints]] · [[regulatory-learnings]] · [[zh-ai-ecosystem-strategy-2026-2029]].
-6. **Sandbox-programme queries** ("how do we run one of these") → `insight_domain: sandbox-operations` lessons + the Programme & Strategy synthesis above → the two phase-overview sources.
+5. **Outcome / strategy / executive queries** ("what makes this different", "why fund it", "what limited scaling", "what did we learn about regulation") → the **Programme** branch: [[what-makes-this-sandbox-different]] · [[economic-case-for-the-sandbox]] · [[scaling-constraints]] · [[regulatory-learnings]] · [[zh-ai-ecosystem-strategy-2026-2029]].
+6. **Sandbox-programme queries** ("how do we run one of these") → `insight_domain: sandbox-operations` lessons + the Programme synthesis above → the two phase-overview sources.
 7. **Readiness / prioritisation / mistakes / oversight queries** → [[maturity-vs-caution]], [[opportunity-categories]], [[implementation-anti-patterns]], [[human-oversight-in-ai-deployment]], [[portfolio-gaps-and-open-questions]] (all `ai-deployment`).
 
 This is a heuristic for AI consumers, not a constraint on browsing — users navigating the wiki freely should find paths from anywhere to anywhere via wikilinks.

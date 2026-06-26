@@ -4,6 +4,8 @@
   "description": "Cloudflare Workers deployment of the Knowledge Hub MCP server",
   "scripts": {
     "deploy": "cd .. && npm run bundle && npx wrangler deploy -c worker/wrangler.jsonc",
+    "deploy:write": "cd .. && npm run bundle && npx wrangler deploy -c worker/wrangler-write.jsonc",
+    "deploy:all": "npm run deploy && npm run deploy:write",
     "dev": "cd .. && npm run bundle && npx wrangler dev -c worker/wrangler.jsonc"
   },
   "dependencies": {
