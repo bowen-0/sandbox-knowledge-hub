@@ -47,8 +47,8 @@ Frontmatter is a retrieval signal, not decoration. Useful filters:
 
 Compose an answer that:
 
-- **Cites inline, source-voice forward.** Write *"The [[digital-eye-clinic]] project found…"*, *"Phase II established that…"*, *"[[stephanie-volz]] argues…"* — not link-list dumps at the end of paragraphs. The reader should encounter sources as authors, not as footnote indices.
-- **Distinguishes synthesis from single source.** *"The wiki's cross-cutting principles consolidate"* vs *"the medical-documentation report specifically claims"*. The reader must be able to tell which sentences are corpus-wide patterns and which are single-case findings.
+- **Cites inline, source-voice forward.** Write *"The [[digital-eye-clinic]] project found…"*, *"Phase II established that…"*, *"[[stephanie-volz]] argues…"* — not link-list dumps at the end of paragraphs. The reader should encounter sources as authors, not as footnote indices. **Attribute to the source, not the tool.** Attribute each finding to its named report or project, and make clear the answer is grounded in the Sandbox reports. Banned is narrating the *retrieval act* (*"I looked in the wiki"*, *"the search returned"*); framing the evidence base (*"the reports don't address this directly"*) is required (P1/P2), not retrieval-narration. Name the source generically as the *Knowledge Repository* / *the corpus* / *the reports* — never "the wiki" or "the LLM wiki".
+- **Distinguishes synthesis from single source.** *"The corpus's cross-cutting principles consolidate"* vs *"the medical-documentation report specifically claims"*. The reader must be able to tell which sentences are corpus-wide patterns and which are single-case findings.
 - **Surfaces tensions and agreements.** Where pages disagree, name it. The corpus contains real tensions — e.g. probabilistic AI vs. administrative reproducibility, open-source-as-procurement vs. ISO-management-system formalism, rule-based vs. generative for defined logic. Use Obsidian-style `> [!tension]` callouts where two positions both have force.
 - **Page-anchors substantive claims.** Use the convention from [`CONVENTIONS.md`](CONVENTIONS.md) §6: `[(<source-slug> p. N)](sources/<source-slug>.md)`, where the page number refers to the German PDF. Never invent an anchor, and never write `#para-N` — paragraph anchors are a dormant spec with nothing to resolve them.
 - **Names the insight domain when it matters.** If the user is deploying AI and the best evidence is sandbox-operations experience (or vice versa), attribute it: *"from the programme's own operating experience…"*. Cross-domain evidence is allowed; silent cross-domain generalisation is not.
@@ -147,7 +147,7 @@ The default audience to assume is **"a non-technical administrator planning thei
 
 **Good** (gap-honest):
 
-> The wiki documents Swiss data protection ([[dsg-fadp]], [[idg-zh]]) and EU AI Act framing ([[eu-ai-act]]) for healthcare AI, but does not yet have pages on **MDR** or **IVDR** — both flagged as gaps in [`index.md`](index.md) Open areas. A complete answer on EU medical-device certification would require ingesting these.
+> The corpus documents Swiss data protection ([[dsg-fadp]], [[idg-zh]]), the EU AI Act ([[eu-ai-act]]), and the medical-device regime ([[medical-device-regulation]], covering MDR/IVDR) for healthcare AI, but it does not yet cover sector-specific healthcare law beyond the device regime — flagged in [`index.md`](index.md) Open areas. A complete answer on that would require ingesting those instruments.
 
 **Good** (German verbatim quote preserved):
 
@@ -166,6 +166,7 @@ The default audience to assume is **"a non-technical administrator planning thei
 - **Don't create new wiki pages during a query.** That's an ingest operation. Suggest instead.
 - **Don't write link-list paragraphs** (`[[x]] · [[y]] · [[z]]`) as a substitute for synthesis.
 - **Don't adopt sandbox-recruitment voice** unless the user explicitly asks about engaging the sandbox.
+- **Don't narrate the retrieval act** (*"the wiki says"* / *"I checked the knowledge base"*). Do attribute findings to the named report/project and make clear the answer is grounded in the Sandbox reports; framing the evidence base (*"the reports don't address this directly"*) is required (P1/P2), not narration. Name the source generically as the *Knowledge Repository* / *the corpus*, never "the wiki" / "the LLM wiki". (This governs answer text shown to the user; this procedure's own references to "the wiki" are documentation, not answer voice.) Keep answers concise (P8) — but never drop a page citation to shorten.
 - **Don't invent anchors.** Cite at page level (`p. N`, German PDF); never write `#para-N` — the paragraph-anchor pipeline is dormant and nothing resolves them.
 - **Don't machine-translate German verbatim quotes.** Keep the German exact, translate in surrounding prose. Per CONVENTIONS §5.
 - **Don't assume a persona.** Default is administrator-learner. Switch only when the query makes a different persona unambiguous.

@@ -70,10 +70,10 @@ describe("WikiStore on the real wiki", () => {
     expect(JSON.stringify(res)).not.toMatch(/%PDF/);
   });
 
-  it("flags the EN-only source as such", async () => {
+  it("treats infrastructure-maintenance as DE-authoritative (remapped EN→DE 2026-06-25)", async () => {
     const res = await store.resolveCitation("p1-infrastructure-maintenance p. 5");
     if ("error" in res) throw new Error(res.error);
-    expect(res.pdf.authoritative).toContain("en");
+    expect(res.pdf.authoritative).toContain("de");
   });
 });
 

@@ -44,6 +44,33 @@ npm run deploy            # wrangler deploy; endpoint: https://<worker>.workers.
 
 Remote clients connect with the URL — e.g. `claude mcp add --transport http sandbox-hub https://<worker>.workers.dev/mcp`.
 
+## Write endpoint (the update path)
+
+A **separate** worker (`worker/write.ts`, `worker/wrangler-write.jsonc`) exposes the six read tools **plus** three write tools, so the Sandbox team can update the wiki from any chat app without touching GitHub. The public read endpoint stays open and read-only; the write endpoint is gated.
+
+| Write tool | What it does |
+|---|---|
+| `wiki_validate_page` | Dry-run check of a draft: path shape, frontmatter, an H1, every citation resolves to a real source, every `[[wikilink]]` has a target. No write. |
+| `wiki_write_page` | Validates, then commits the page to the repo's `main` (create or update). Refuses drafts with blocking errors. |
+| `wiki_write_info` | Explains the workflow and guardrails. |
+
+How it works: the worker holds a GitHub token (a secret, never seen by the AI client) and commits via the GitHub Contents API. A push triggers the `deploy-mcp` GitHub Action, which rebuilds the bundle and redeploys both workers — so a chat-app edit goes live on the read endpoint a minute or two later. The drafting assistant is told to validate, show the user, and get approval before writing.
+
+**Security model.** Fail-closed: with no `WRITE_TOKEN` set the endpoint returns 503; with a token set, a request must present it (`?key=<token>` or `Authorization: Bearer <token>`) or it gets 401 (constant-time compared). With no `GITHUB_TOKEN` the endpoint serves read-only (the write tools aren't even registered). The path is validated and traversal-guarded, content is size-capped, and the GitHub token never leaves the Worker. Commits are plain git — anything is revertable. The `?key=` form puts the token in the URL, so treat the URL as a secret; rotate by re-running `secret put WRITE_TOKEN` if it leaks, or use the `Authorization: Bearer` form where the client supports it.
+
+**Activate (one-time, repo owner):**
+```bash
+cd mcp-server/worker
+npx wrangler secret put WRITE_TOKEN  -c wrangler-write.jsonc   # a long random string you share with the team
+npx wrangler secret put GITHUB_TOKEN -c wrangler-write.jsonc   # fine-grained PAT, Contents:read+write on this repo only
+npm run deploy:write
+```
+Optional secrets: `GITHUB_OWNER` / `GITHUB_REPO` / `GITHUB_BRANCH` (default `bowen-0` / `sandbox-knowledge-hub` / `main`). For the auto-redeploy Action, also set the repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+
+Then share with the team: `https://sandbox-knowledge-hub-write.<account>.workers.dev/mcp?key=<WRITE_TOKEN>`.
+
+Deploy both workers at once: `cd worker && npm run deploy:all`.
+
 ## Development
 
 ```bash

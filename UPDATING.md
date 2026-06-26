@@ -2,7 +2,17 @@
 
 > For the Sandbox team. Everything here works without the original developer. The wiki is plain markdown in git: nothing to rebuild, no database, no pipeline that can rot.
 
-## The three operations
+## The simplest path — update from a chat app (no repo access)
+
+The fastest way to add or fix content, for a non-technical editor: attach the **update connector** (a private MCP only the Sandbox team holds) to Claude, ChatGPT, or any MCP-capable assistant, and describe the change in chat. The assistant drafts the page to the conventions, **validates it** (structure, that every citation points at a real source page, that every link resolves), shows you the draft to approve, and on your go commits it to the repository. You never touch GitHub; the live query endpoint refreshes automatically a minute or two later.
+
+- **Connect:** add the update URL as a custom connector — `https://sandbox-knowledge-hub-write.<account>.workers.dev/mcp?key=<your-token>`. The URL and token are held only by the Sandbox team; the public read endpoint is a separate, read-only connection.
+- **Use:** *"Add a lesson about X from the building-permits report"*, or *"Fix the figure on the building-permits page."* The assistant runs `wiki_validate_page`, shows you the result, then `wiki_write_page` once you approve.
+- **Guardrail:** a draft with structural or citation errors is refused until fixed; every commit is plain git and revertable on GitHub. If two people edit the same page at nearly the same moment the later write wins, and the earlier version stays in git history.
+
+Activation (one-time, by the repo owner): set two Worker secrets — a `WRITE_TOKEN` you share with the team, and a `GITHUB_TOKEN` with commit access — then deploy the write worker. Steps in [`mcp-server/README.md`](mcp-server/README.md).
+
+## The three operations (from the repo)
 
 **1. Fix or improve an existing page.**
 Edit the markdown file under `wiki/`, keep the frontmatter intact, update its `updated:` date, commit. That's it. For AI-assisted editing, open this repo in Claude Code or Cowork and describe the change; the wiki's conventions load automatically as skills.
@@ -26,7 +36,7 @@ Run from the repo root (one-time setup: `cd mcp-server && npm install && npm run
 
 ## How AI assistants connect
 
-The wiki is served to any MCP-capable assistant (Claude, ChatGPT, Copilot and others) via the server in `mcp-server/` — one connection, no chatbot to maintain. Local use: point the assistant at this folder, or run `mcp-server` over stdio. Hosted use: see `mcp-server/README.md`. The answering rules an assistant follows are in `wiki/QUERY.md` and travel with the wiki itself.
+The wiki is served to any MCP-capable assistant (Claude, ChatGPT, Copilot and others) via the server in `mcp-server/` — one connection, no chatbot to maintain. Two endpoints: a **public read** connection (open, read-only — the one you share for querying) and a **private write** connection (token-gated — the update path above). Local use: point the assistant at this folder, or run `mcp-server` over stdio. Hosted use and both worker URLs: see `mcp-server/README.md`. The answering rules an assistant follows are in `wiki/QUERY.md` and travel with the wiki itself.
 
 ## Where everything lives
 

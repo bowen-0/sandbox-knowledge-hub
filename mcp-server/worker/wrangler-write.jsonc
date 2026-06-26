@@ -1,0 +1,24 @@
+// Cloudflare Workers config for the WRITE (update) MCP endpoint — separate
+// worker from the public read endpoint (worker/wrangler.jsonc).
+// Deploy: (from mcp-server/) npm run bundle && npx wrangler deploy -c worker/wrangler-write.jsonc
+// Secrets (one-time): wrangler secret put WRITE_TOKEN / GITHUB_TOKEN  -c worker/wrangler-write.jsonc
+{
+  "name": "sandbox-knowledge-hub-write",
+  "main": "write.ts",
+  "compatibility_date": "2026-01-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MCP_OBJECT",
+        "class_name": "KnowledgeHubWriteMCP"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["KnowledgeHubWriteMCP"]
+    }
+  ]
+}
