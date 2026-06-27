@@ -8,6 +8,7 @@ The fastest way to add or fix content, for a non-technical editor: attach the **
 
 - **Connect:** add the update URL as a custom connector — `https://sandbox-knowledge-hub-write.<account>.workers.dev/mcp?key=<your-token>`. The URL and token are held only by the Sandbox team; the public read endpoint is a separate, read-only connection.
 - **Use:** *"Add a lesson about X from the building-permits report"*, or *"Fix the figure on the building-permits page."* The assistant runs `wiki_validate_page`, shows you the result, then `wiki_write_page` once you approve.
+- **A whole new report:** give the assistant the report's public PDF URL and say *"ingest this report."* It fetches the PDF into the repo (`wiki_add_source_pdf`, fetched server-side — you don't upload bytes), then drafts and commits its source, digest, and pages. (A PDF that isn't published online yet can't be fetched; drag it into `wiki/pdfs/` on GitHub first.)
 - **Guardrail:** a draft with structural or citation errors is refused until fixed; every commit is plain git and revertable on GitHub. If two people edit the same page at nearly the same moment the later write wins, and the earlier version stays in git history.
 
 Activation (one-time, by the repo owner): set two Worker secrets — a `WRITE_TOKEN` you share with the team, and a `GITHUB_TOKEN` with commit access — then deploy the write worker. Steps in [`mcp-server/README.md`](mcp-server/README.md).

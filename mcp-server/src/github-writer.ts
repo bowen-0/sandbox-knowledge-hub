@@ -22,8 +22,10 @@ export interface WikiWriter {
   readonly branch: string;
   /** Current blob SHA for a repo path, or null if the file does not exist. */
   getFileSha(repoPath: string): Promise<string | null>;
-  /** Create or update a file (chooses create vs update by existence). */
+  /** Create or update a text file (chooses create vs update by existence). */
   putFile(repoPath: string, content: string, message: string): Promise<CommitResult>;
+  /** Create or update a binary file (e.g. a PDF) from raw bytes. */
+  putBinary(repoPath: string, bytes: Uint8Array, message: string): Promise<CommitResult>;
 }
 
 export interface GitHubWriterConfig {
@@ -78,14 +80,10 @@ export function makeGitHubWriter(cfg: GitHubWriterConfig): WikiWriter {
     return json.sha ?? null;
   }
 
-  async function putFile(repoPath: string, content: string, message: string): Promise<CommitResult> {
+  async function commitBase64(repoPath: string, base64Content: string, message: string): Promise<CommitResult> {
     assertSafeRepoPath(repoPath);
     const sha = await getFileSha(repoPath);
-    const body: Record<string, unknown> = {
-      message,
-      content: toBase64(content),
-      branch: cfg.branch,
-    };
+    const body: Record<string, unknown> = { message, content: base64Content, branch: cfg.branch };
     if (sha) body.sha = sha;
     if (cfg.authorName && cfg.authorEmail) {
       body.committer = { name: cfg.authorName, email: cfg.authorEmail };
@@ -111,7 +109,12 @@ export function makeGitHubWriter(cfg: GitHubWriterConfig): WikiWriter {
     };
   }
 
-  return { repo: `${cfg.owner}/${cfg.repo}`, branch: cfg.branch, getFileSha, putFile };
+  const putFile = (repoPath: string, content: string, message: string) =>
+    commitBase64(repoPath, toBase64(content), message);
+  const putBinary = (repoPath: string, bytes: Uint8Array, message: string) =>
+    commitBase64(repoPath, Buffer.from(bytes).toString("base64"), message);
+
+  return { repo: `${cfg.owner}/${cfg.repo}`, branch: cfg.branch, getFileSha, putFile, putBinary };
 }
 
 async function safeText(res: Response): Promise<string> {

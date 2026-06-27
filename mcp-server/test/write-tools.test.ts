@@ -22,6 +22,10 @@ function fakeWriter(): WikiWriter & { calls: Array<{ path: string; content: stri
       calls.push({ path, content, message });
       return { committed: true, path, action: "created", commitUrl: "https://github.com/c/x" };
     },
+    async putBinary(path, bytes, message): Promise<CommitResult> {
+      calls.push({ path, content: `<binary ${bytes.byteLength}b>`, message });
+      return { committed: true, path, action: "created", commitUrl: "https://github.com/c/pdf" };
+    },
   };
 }
 
