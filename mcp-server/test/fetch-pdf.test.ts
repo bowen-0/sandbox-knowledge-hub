@@ -20,9 +20,28 @@ describe("fetchPdfBytes", () => {
     await expect(fetchPdfBytes("http://www.zh.ch/report.pdf")).rejects.toThrow(/https/);
   });
 
-  it("rejects internal/private hosts (SSRF guard)", async () => {
+  it("rejects internal/private hosts (SSRF guard, IPv4 + IPv6)", async () => {
     await expect(fetchPdfBytes("https://169.254.169.254/latest")).rejects.toThrow(/internal|private/i);
     await expect(fetchPdfBytes("https://localhost/x.pdf")).rejects.toThrow(/internal|private/i);
+    await expect(fetchPdfBytes("https://10.0.0.5/x.pdf")).rejects.toThrow(/internal|private/i);
+    await expect(fetchPdfBytes("https://[::1]/x.pdf")).rejects.toThrow(/internal|private/i);
+    await expect(fetchPdfBytes("https://[fe80::1]/x.pdf")).rejects.toThrow(/internal|private/i);
+    await expect(fetchPdfBytes("https://[fd12:3456::1]/x.pdf")).rejects.toThrow(/internal|private/i);
+  });
+
+  it("blocks a redirect that points at an internal host", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => Response.redirect("https://169.254.169.254/meta", 302)));
+    await expect(fetchPdfBytes("https://www.zh.ch/redirector.pdf")).rejects.toThrow(/internal|private/i);
+  });
+
+  it("follows a redirect to an allowed host and returns the PDF", async () => {
+    let n = 0;
+    vi.stubGlobal("fetch", vi.fn(async () => {
+      n++;
+      return n === 1 ? Response.redirect("https://files.zh.ch/report.pdf", 302) : pdfResponse(PDF_BYTES);
+    }));
+    const out = await fetchPdfBytes("https://www.zh.ch/redirector.pdf");
+    expect(out.byteLength).toBe(PDF_BYTES.byteLength);
   });
 
   it("rejects a response that is not a PDF", async () => {
