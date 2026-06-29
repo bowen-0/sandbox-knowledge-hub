@@ -129,6 +129,11 @@ cross_cutting: true | false                                           # optional
 ```yaml
 type: source
 source_type: pdf | url | paper | video | transcript | note | dataset
+cite_as: "Building Permits"                                            # short friendly display name; the read tools
+                                                                       # substitute it for the slug in citation text
+                                                                       # ([(Building Permits, p. 22)] vs the raw slug).
+                                                                       # Omit and citations render the slug. Keep it
+                                                                       # unique and recognisable; the link keeps the slug.
 path: ../pdfs/de/p2-building-permits.pdf                              # for files (lives under wiki/pdfs/<lang>/)
 en_path: ../pdfs/en/p2-building-permits.pdf                           # optional sibling for bilingual sources
 url: https://...                                                       # for web sources (mutually exclusive with path)
