@@ -134,9 +134,12 @@ describe("MCP server end-to-end", () => {
     // No citation was rewritten into an http(s) PDF deep link (the reverted linkify).
     expect(text).not.toContain("jsdelivr");
     expect(text).not.toMatch(/\]\(https?:\/\/[^)]*#page=/);
-    // The cite-always contract rides with the content, so a client that skips
-    // wiki_overview / drops server instructions (Claude Desktop, tool-search mode) still sees it.
-    expect(text).toContain("Citing this page");
+    // The answer-formatting contract rides with the content, so a client that skips
+    // wiki_overview / drops server instructions (Claude Desktop, tool-search mode) still sees it:
+    // keep citations verbatim, but render [[wikilinks]] as plain names (they don't render in a chat client).
+    expect(text).toContain("Writing your answer");
+    expect(text).toContain("plain entity name");
+    expect(text).toContain("never literal");
   });
 
   it("wiki_search returns ranked hits", async () => {
