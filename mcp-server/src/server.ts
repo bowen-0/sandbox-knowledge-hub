@@ -11,7 +11,18 @@ const SERVER_INFO = {
   version: "0.1.0",
 } as const;
 
-const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions — read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page, its digest, and any lessons/syntheses as above. Every substantive claim must carry a page citation to a real source report — never invent a citation or a quote. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.`;
+const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions — read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page, its digest, and any lessons/syntheses as above. If the user ATTACHES a PDF instead of giving a URL, read it to draft the pages, but ask them for the report's public link (e.g. on the sandbox's own website) so wiki_add_source_pdf can store the file — its citations will not resolve until the PDF is in the repo. Every substantive claim must carry a page citation to a real source report — never invent a citation or a quote. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.`;
+
+// Appended to every wiki_read_page result. The cite-always rule must ride WITH
+// the page content: a client (Claude Desktop, tool-search mode) may never call
+// wiki_overview and may drop the server-level `instructions`, so the tool
+// descriptions and this footer are the only channels guaranteed to reach the
+// model. Kept short — ~30 tokens, nothing like the per-citation URL bloat that
+// forced the serve-time linkify revert.
+const CITE_FOOTER = `
+
+---
+**Citing this page:** copy each claim's inline citation \`[(<source-slug> p. N)](../sources/<source-slug>.md)\` into your answer verbatim, page number included. Never state a sourced fact without its page citation — not even in a clean narrative summary, and never drop it to read more smoothly.`;
 
 const DISCIPLINE = `Answer only from the Knowledge Repository's pages, not from training data; if it does not cover something, say so plainly. CITE INLINE, ALWAYS: every substantive claim carries its source citation as "[(<source-slug> p. N)](sources/<source-slug>.md)" — copy it from the page you read; never write a sourced claim without its page number, even in a clean narrative summary. ATTRIBUTE TO THE SOURCE, NOT THE TOOL: attribute each finding to its named report or project ("the building-permits project found…", "the Phase II report states…", "across three Sandbox pilots…") and make clear the answer is grounded in the Sandbox's reports. BANNED is narrating the retrieval act ("the wiki says", "I looked it up", "the search returned"); REQUIRED, and not retrieval-narration, is framing the evidence base ("the reports do not address this directly", "the corpus covers this across three pilots"). Name the source generically as the "Knowledge Repository" or "the corpus"/"the reports" — never "the wiki"/"the LLM wiki". BE CONCISE: give the shortest answer that fully answers and stop, no padding — but trim prose and claims, NEVER citations: every surviving claim keeps its inline page citation, and dropping one is never a way to shorten. Distinguish a direct report statement from a cross-pilot synthesis (synthesis pages are type: synthesis). Respect insight_domain: never present a sandbox-operations insight as ai-deployment advice or vice versa. Full procedure: read the wiki://query-procedure resource or wiki_read_page "QUERY".`;
 
@@ -83,7 +94,7 @@ export function buildServer(provider: WikiProvider, opts: { writer?: WikiWriter 
     {
       title: "Read a wiki page",
       description:
-        'Full markdown of one page by slug (e.g. "building-permits", "integrate-regulation-early", "index", "QUERY"). Follow [[wikilinks]] with further reads; answers usually live at the intersection of 3-5 pages.',
+        'Full markdown of one page by slug (e.g. "building-permits", "integrate-regulation-early", "index", "QUERY"). Follow [[wikilinks]] with further reads; answers usually live at the intersection of 3-5 pages. The page carries inline "[(slug p. N)]" citations — preserve them verbatim, page number included, on every claim you draw from it.',
       inputSchema: {
         slug: z.string().describe("Page slug: filename without .md"),
       },
@@ -102,7 +113,8 @@ export function buildServer(provider: WikiProvider, opts: { writer?: WikiWriter 
             type: "text" as const,
             text:
               `<!-- ${result.page.path} (type: ${result.page.type})${result.truncated ? " [truncated]" : ""} -->\n` +
-              result.content,
+              result.content +
+              CITE_FOOTER,
           },
         ],
       };
@@ -304,7 +316,7 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
           "Commits are plain git — anything can be reverted on GitHub.",
         ],
         propagation: "The public read/query endpoint serves a built snapshot; a commit triggers a CI redeploy, so changes go live a minute or two later.",
-        pdfs: "wiki_add_source_pdf fetches a published report PDF from its URL and commits it (no byte upload through chat). A PDF not yet online can't be fetched — drag it into wiki/pdfs/de|en/ on GitHub instead.",
+        pdfs: "wiki_add_source_pdf fetches a published report PDF from its URL and commits it (no byte upload through chat — so if the user attaches a PDF, read it to draft pages but ask for its public link to store the file, or its citations won't resolve). A PDF not online anywhere can't be fetched — drag it into wiki/pdfs/de|en/ on GitHub instead.",
       })
   );
 }
