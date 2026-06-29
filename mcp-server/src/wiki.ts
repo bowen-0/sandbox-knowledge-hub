@@ -72,7 +72,17 @@ export interface Connections {
 
 /** All read operations over the wiki. Provider-agnostic and read-only. */
 export class WikiStore {
-  constructor(private readonly provider: WikiProvider) {}
+  /**
+   * @param citationBaseUrl  When set (the hosted worker passes its own origin),
+   *   inline citations are rewritten to absolute "<base>/c/<slug>/<page>" links
+   *   that the worker 302-redirects to the source PDF at the cited page. Left
+   *   unset (stdio / local), citations keep their portable "../sources/<slug>.md"
+   *   relative form.
+   */
+  constructor(
+    private readonly provider: WikiProvider,
+    private readonly citationBaseUrl?: string,
+  ) {}
 
   private async pages(): Promise<WikiPage[]> {
     return this.provider.getPages();
@@ -140,20 +150,31 @@ export class WikiStore {
   }
 
   /**
-   * Swap the visible slug in each inline citation for its source's friendly
-   * name, keeping the link target (the file mapping) intact:
+   * Render each inline citation for serving: swap the visible slug for the
+   * source's friendly name, and (when a citationBaseUrl is set) point the link
+   * at the deep-link endpoint that opens the source PDF at the cited page:
    *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
-   *   -> [(Building Permits, p. 25)](../sources/p2-building-permits.md)
+   *   -> [(Building Permits, p. 25)](https://<base>/c/p2-building-permits/25)
+   * With no base, only the name is swapped and the relative link is kept.
    * Read-only / serve-time only; the stored markdown stays slug-anchored.
    */
   async renderCitationNames(text: string): Promise<string> {
     const names = await this.citationNames();
-    if (names.size === 0) return text;
-    return text.replace(CITATION_LINK_RE, (full, visSlug, pLetter, pNum, dotdot, hrefSlug) => {
+    const base = this.citationBaseUrl?.replace(/\/+$/, "");
+    if (names.size === 0 && !base) return text;
+    return text.replace(CITATION_LINK_RE, (_full, visSlug, pLetter, pNum, dotdot, hrefSlug) => {
       const name = names.get(visSlug) ?? names.get(hrefSlug);
-      if (!name) return full;
-      const label = pNum ? `${name}, ${pLetter}. ${pNum}` : name;
-      return `[(${label})](${dotdot ?? ""}sources/${hrefSlug}.md)`;
+      const label = name
+        ? pNum
+          ? `${name}, ${pLetter}. ${pNum}`
+          : name
+        : pNum
+          ? `${visSlug} ${pLetter}. ${pNum}`
+          : visSlug;
+      const href = base
+        ? `${base}/c/${hrefSlug}${pNum ? `/${pNum}` : ""}`
+        : `${dotdot ?? ""}sources/${hrefSlug}.md`;
+      return `[(${label})](${href})`;
     });
   }
 
