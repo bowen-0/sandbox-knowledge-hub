@@ -56,11 +56,14 @@ Compose an answer that:
 
 ### Wikilink discipline — the readability rule
 
-Wikilinks visually interrupt prose. Use them only when the link text *is the noun you would say anyway*. Two classes, two rules:
+**Rendering rule first — it depends on where your answer is read.** `[[slug]]` is the wiki's *authoring* notation for an internal link; it only renders as a clean link in Obsidian. Most consumers read your answer in a chat client (Claude Desktop, claude.ai, any MCP client), where `[[ ]]` shows as raw bracket salad. **Unless you know the answer renders in Obsidian, write the plain entity name — "the Digital Eye Clinic project", not `[[digital-eye-clinic]]`.** The page citations `[( … p. N)]` are the one bracketed form you always keep — they carry the page number and read fine anywhere. The `[[slug]]` notation in the examples throughout this file marks *which* entity to reference; in a chat-client answer, render it as the plain name.
 
-**Entity wikilinks** — projects, people, organisations, regulations, sources. The slug reads as a name. Use them inline freely.
+The rest of this section governs *which* entities to reference and how densely — it applies whatever the surface. Wikilinks visually interrupt prose. Reference an entity by name only when the name *is the noun you would say anyway*. Two classes, two rules:
 
-> *Good:* "The [[digital-eye-clinic]] project found that [[stephanie-volz]] and the legal team had to engage [[swissmedic]] directly."
+**Entity references** — projects, people, organisations, regulations, sources. The slug reads as a name. Reference them inline freely.
+
+> *Good (Obsidian):* "The [[digital-eye-clinic]] project found that [[stephanie-volz]] and the legal team had to engage [[swissmedic]] directly."
+> *Good (chat client — the default):* "The Digital Eye Clinic project found that Stephanie Volz and the legal team had to engage Swissmedic directly."
 
 **Principle / lesson references** — slugs like `ai-is-rarely-the-primary-challenge` or `interdisciplinary-legal-issues-are-the-norm` read as YAML filenames mid-sentence, not as nouns. Italicise the principle in prose; wikilink it only on first mention, in parentheses as a citation aside.
 
@@ -121,6 +124,8 @@ The default audience to assume is **"a non-technical administrator planning thei
 ---
 
 ## Citation patterns — examples
+
+*The examples below use `[[slug]]` authoring notation to mark entity references. In a chat-client answer (the default surface) render those as plain names per the rendering rule above; the `[( … p. N)]` page citations stay exactly as written.*
 
 **Good** (source-voice forward, page-anchored):
 
