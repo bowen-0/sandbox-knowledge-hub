@@ -118,6 +118,27 @@ describe("MCP server end-to-end", () => {
     expect(text.length).toBeGreaterThan(200);
   });
 
+  // Regression guard for the Friday 2026-06-26 serve-time-linkify episode: the
+  // linkify rewrote every "[(slug p. N)](../sources/slug.md)" citation into a
+  // ~110-char jsDelivr deep link, which made the client model drop citations
+  // when summarising. Page numbers must survive serving, and no serve-time
+  // transform may linkify them into http(s) URLs. This is what was untested.
+  it("wiki_read_page preserves page-numbered citations and never linkifies them", async () => {
+    const result = await client.callTool({
+      name: "wiki_read_page",
+      arguments: { slug: "building-permits" },
+    });
+    const text = textOf(result);
+    // Inline "(slug p. N)" citations with page numbers are present in the served copy.
+    expect(text).toMatch(/\[\(p2-building-permits p\. \d+\)\]\(\.\.\/sources\/p2-building-permits\.md\)/);
+    // No citation was rewritten into an http(s) PDF deep link (the reverted linkify).
+    expect(text).not.toContain("jsdelivr");
+    expect(text).not.toMatch(/\]\(https?:\/\/[^)]*#page=/);
+    // The cite-always contract rides with the content, so a client that skips
+    // wiki_overview / drops server instructions (Claude Desktop, tool-search mode) still sees it.
+    expect(text).toContain("Citing this page");
+  });
+
   it("wiki_search returns ranked hits", async () => {
     const result = await client.callTool({
       name: "wiki_search",
