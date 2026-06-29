@@ -5,6 +5,17 @@ const READ_CAP_BYTES = 60_000;
 const MAX_SNIPPETS_PER_PAGE = 3;
 const SNIPPET_RADIUS = 90;
 
+/**
+ * An inline citation, with its visible slug and its source link:
+ *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
+ * Captures: visible-slug, p|S, page-number, optional "../", href-slug.
+ * Page-anchoring stays slug-based in the stored markdown (CONVENTIONS §6);
+ * this lets the server swap the *visible* slug for a friendly source name at
+ * serve time while leaving the link (and so the file mapping) untouched.
+ */
+const CITATION_LINK_RE =
+  /\[\(([a-z0-9][a-z0-9-]*)(?:\s+(p|S)\.\s*(\d+))?\)\]\((\.\.\/)?sources\/([a-z0-9-]+)\.md\)/gi;
+
 /** Typed frontmatter fields that act as graph edges. */
 const EDGE_FIELDS = [
   "sources",
@@ -108,6 +119,44 @@ export class WikiStore {
     return summary;
   }
 
+  /**
+   * slug -> friendly citation name, from each source page's `cite_as`.
+   * Cached: source pages are stable for the life of the store. Sources without
+   * a `cite_as` are simply absent, so their citations render slug-as-before.
+   */
+  private citeNames?: Map<string, string>;
+  private async citationNames(): Promise<Map<string, string>> {
+    if (!this.citeNames) {
+      const m = new Map<string, string>();
+      for (const p of await this.pages()) {
+        if (p.type === "source" && typeof p.frontmatter.cite_as === "string") {
+          const name = p.frontmatter.cite_as.trim();
+          if (name) m.set(p.slug, name);
+        }
+      }
+      this.citeNames = m;
+    }
+    return this.citeNames;
+  }
+
+  /**
+   * Swap the visible slug in each inline citation for its source's friendly
+   * name, keeping the link target (the file mapping) intact:
+   *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
+   *   -> [(Building Permits, p. 25)](../sources/p2-building-permits.md)
+   * Read-only / serve-time only; the stored markdown stays slug-anchored.
+   */
+  async renderCitationNames(text: string): Promise<string> {
+    const names = await this.citationNames();
+    if (names.size === 0) return text;
+    return text.replace(CITATION_LINK_RE, (full, visSlug, pLetter, pNum, dotdot, hrefSlug) => {
+      const name = names.get(visSlug) ?? names.get(hrefSlug);
+      if (!name) return full;
+      const label = pNum ? `${name}, ${pLetter}. ${pNum}` : name;
+      return `[(${label})](${dotdot ?? ""}sources/${hrefSlug}.md)`;
+    });
+  }
+
   /** Full page content, capped. */
   async read(slug: string): Promise<{ page: WikiPage; content: string; truncated: boolean } | undefined> {
     const page = await this.resolve(slug);
@@ -117,7 +166,7 @@ export class WikiStore {
           .map(([k, v]) => `${k}: ${JSON.stringify(v)}`)
           .join("\n")}\n---\n\n`
       : "";
-    let content = fmBlock + page.body;
+    let content = await this.renderCitationNames(fmBlock + page.body);
     let truncated = false;
     if (content.length > READ_CAP_BYTES) {
       content = content.slice(0, READ_CAP_BYTES) + "\n\n[... truncated]";

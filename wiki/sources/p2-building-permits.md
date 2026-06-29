@@ -1,5 +1,6 @@
 ---
 title: "AI for Building Permits — Use Cases, Prototypes and Practical Insights"
+cite_as: "Building Permits"
 type: source
 source_type: pdf
 slug: p2-building-permits
