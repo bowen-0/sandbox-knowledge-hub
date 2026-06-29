@@ -88,7 +88,7 @@ Write the pages per the approved plan. Page formats are defined in [`CONVENTIONS
 **Source page** (`sources/<slug>.md`):
 
 - Filename = `p<phase>-<slug>` for sandbox reports; bare `<slug>` for other source types
-- Frontmatter per CONVENTIONS §2 `sources/`. Include `path` (file) *or* `url` (web), `language`, `year`, `publisher`, `authors[]` (as stakeholder slugs)
+- Frontmatter per CONVENTIONS §2 `sources/`. Include `path` (file) *or* `url` (web), `language`, `year`, `publisher`, `authors[]` (as stakeholder slugs), and `cite_as` — a short friendly display name (e.g. `cite_as: "Building Permits"`) that the read tools substitute for the slug in citation text. Omit it and citations to this source render the raw slug.
 - Body shape: H1 (repeats the title), one framing paragraph, **Provenance**, **Use as citation**, **See also** with `[[wikilinks]]`
 - Canonical example to model: [`sources/p2-building-permits.md`](sources/p2-building-permits.md)
 - Omit the `paragraphs:` field entirely — it exists only once the dormant anchor pipeline (CONVENTIONS §6) populates it. Never fabricate paragraph IDs
