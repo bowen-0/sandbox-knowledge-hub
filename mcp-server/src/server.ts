@@ -36,8 +36,11 @@ function json(data: unknown) {
  * Build the MCP server over a wiki provider. Transport-agnostic: the stdio
  * entry, the node HTTP server, and the Cloudflare Worker all call this.
  */
-export function buildServer(provider: WikiProvider, opts: { writer?: WikiWriter } = {}): McpServer {
-  const store = new WikiStore(provider);
+export function buildServer(
+  provider: WikiProvider,
+  opts: { writer?: WikiWriter; citationBaseUrl?: string } = {},
+): McpServer {
+  const store = new WikiStore(provider, opts.citationBaseUrl);
   const server = new McpServer(SERVER_INFO, {
     instructions:
       `This server exposes the Zurich AI Innovation Sandbox Knowledge Hub: a citable wiki compiled from the sandbox's pilot reports (2022-2026). Start with wiki_overview, then walk pages with wiki_read_page / wiki_connections. ${DISCIPLINE}` +

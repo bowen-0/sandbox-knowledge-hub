@@ -75,6 +75,16 @@ describe("WikiStore on the real wiki", () => {
     if ("error" in res) throw new Error(res.error);
     expect(res.pdf.authoritative).toContain("de");
   });
+
+  it("rewrites citation links to the deep-link endpoint when a citationBaseUrl is set", async () => {
+    const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
+    const r = await linked.read("building-permits");
+    if (!r) throw new Error("page not found");
+    // Friendly name in the text, link points at /c/<slug>/<page> (trailing slash on the base trimmed).
+    expect(r.content).toMatch(/\[\(Building Permits, p\. \d+\)\]\(https:\/\/hub\.example\/c\/p2-building-permits\/\d+\)/);
+    // No portable relative link survives for that citation when a base is set.
+    expect(r.content).not.toMatch(/\]\(\.\.\/sources\/p2-building-permits\.md\)/);
+  });
 });
 
 describe("MCP server end-to-end", () => {
