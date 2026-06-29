@@ -125,7 +125,7 @@ The default audience to assume is **"a non-technical administrator planning thei
 
 ## Citation patterns — examples
 
-*The examples below use `[[slug]]` authoring notation to mark entity references. In a chat-client answer (the default surface) render those as plain names per the rendering rule above; the `[( … p. N)]` page citations stay exactly as written.*
+*The examples below use `[[slug]]` authoring notation to mark entity references. In a chat-client answer (the default surface) render those as plain names per the rendering rule above. Page citations stay exactly as written: the read tools serve them with a friendly source name already — `(Building Permits, p. 22)` — while the link still targets the source file, so a citation always maps back to its report. (Stored markdown anchors citations by slug per [`CONVENTIONS.md`](CONVENTIONS.md) §6; the friendly name is applied at serve time. When you author a page, write the slug form.)*
 
 **Good** (source-voice forward, page-anchored):
 

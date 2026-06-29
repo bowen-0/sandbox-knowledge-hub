@@ -1,5 +1,6 @@
 ---
 title: "Build & Share — A Sandbox for Enabling the AI Ecosystem (Phase II overview)"
+cite_as: "Build & Share (Phase II overview)"
 title_de: "Build & Share — Eine Sandbox zur Befähigung des KI-Ökosystems"
 type: source
 source_type: pdf

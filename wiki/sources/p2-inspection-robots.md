@@ -1,5 +1,6 @@
 ---
 title: "Autonomous Inspection Robots — Approaches to the AI Act and EU Machinery Legislation"
+cite_as: "Inspection Robots"
 type: source
 source_type: pdf
 slug: p2-inspection-robots

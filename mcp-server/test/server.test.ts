@@ -129,8 +129,11 @@ describe("MCP server end-to-end", () => {
       arguments: { slug: "building-permits" },
     });
     const text = textOf(result);
-    // Inline "(slug p. N)" citations with page numbers are present in the served copy.
-    expect(text).toMatch(/\[\(p2-building-permits p\. \d+\)\]\(\.\.\/sources\/p2-building-permits\.md\)/);
+    // Citations render the friendly source name as visible text, page number kept,
+    // and the link target keeps the slug so each citation still maps to its file.
+    expect(text).toMatch(/\[\(Building Permits, p\. \d+\)\]\(\.\.\/sources\/p2-building-permits\.md\)/);
+    // The raw slug is no longer the visible citation text.
+    expect(text).not.toMatch(/\[\(p2-building-permits p\. \d+\)\]/);
     // No citation was rewritten into an http(s) PDF deep link (the reverted linkify).
     expect(text).not.toContain("jsdelivr");
     expect(text).not.toMatch(/\]\(https?:\/\/[^)]*#page=/);

@@ -1,5 +1,6 @@
 ---
 title: "Autonomous Systems — Guidelines for Regulatory Questions"
+cite_as: "Autonomous Systems"
 type: source
 source_type: pdf
 slug: p1-autonomous-systems

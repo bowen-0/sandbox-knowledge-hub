@@ -1,5 +1,6 @@
 ---
 title: "Artificial Intelligence in Education — Legal Best Practices"
+cite_as: "AI in Education"
 type: source
 source_type: pdf
 slug: p1-ai-in-education

@@ -1,5 +1,6 @@
 ---
 title: "Machine Translation — Recommendations for Public Administration"
+cite_as: "Machine Translation"
 type: source
 source_type: pdf
 slug: p1-machine-translation
