@@ -25,8 +25,7 @@ Add it as a **custom connector** (most assistants require a paid plan to add one
 - **Claude** (Claude Desktop or claude.ai): Settings → **Connectors** → **Add custom connector** → paste the URL.
 - **ChatGPT** (OpenAI, paid plan): the custom-connector option is hidden until you turn on developer mode.
   1. **Settings → Apps & Connectors → Advanced settings**, and toggle **Developer mode** on.
-  2. Back under **Apps & Connectors**, click **Create** (or **Connect more**): name it, paste the URL above as the **base server URL**, and set **Authentication** to **None** — this hub has no OAuth, so OAuth or Mixed will error. Tick the trust box, then **Create**.
-  3. In a chat, click **+ → More** and toggle the connector on — it stays active for that whole conversation.
+  2. Back under **Apps & Connectors**, click **Create** (or **Connect more**): name it, paste the URL above as the **base server URL**, and set **Authentication** to **None**. Tick the trust box, then **Create**.
 - **Gemini, Copilot, or your own agent**: any MCP-capable client uses the same URL (Gemini CLI, agent frameworks, or the provider's API). Consumer-app connector menus vary by provider, but the URL is all you need.
 
 Then ask a real question — e.g. *"We're considering AI to pre-check permit applications; what would we need before launching a pilot?"* — and the answer comes back grounded in the reports, with the source page cited.
