@@ -36,9 +36,13 @@ interface Env {
 
 const bundle = bundleJson as unknown as WikiBundle;
 
+// Citations resolve through the public read worker's /c/ deep-link endpoint, so
+// querying via this write connector gives the same clickable page links.
+const READ_ORIGIN = "https://sandbox-knowledge-hub-mcp.bowen-9cc.workers.dev";
+
 export class KnowledgeHubWriteMCP extends McpAgent<Env> {
   // Safe default so this.server is never undefined; init() upgrades it with the writer.
-  server = buildServer(new BundleWikiProvider(bundle));
+  server = buildServer(new BundleWikiProvider(bundle), { citationBaseUrl: READ_ORIGIN });
 
   async init() {
     if (!this.env.GITHUB_TOKEN) return; // no token → stays read-only (fail-safe)
@@ -50,7 +54,7 @@ export class KnowledgeHubWriteMCP extends McpAgent<Env> {
       authorName: "Sandbox Knowledge Hub write-MCP",
       authorEmail: "knowledge-hub@users.noreply.github.com",
     });
-    this.server = buildServer(new BundleWikiProvider(bundle), { writer });
+    this.server = buildServer(new BundleWikiProvider(bundle), { writer, citationBaseUrl: READ_ORIGIN });
   }
 }
 
