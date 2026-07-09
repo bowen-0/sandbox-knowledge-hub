@@ -68,7 +68,7 @@ export function buildServer(
           "sandbox-operations": "for government units designing or running an innovation-sandbox-style programme",
           counts: stats.byDomain,
         },
-        citation_contract: 'Every substantive claim cites "<source-slug>#page-N" (printed page in the German PDF). Use wiki_resolve_citation to follow one.',
+        citation_contract: 'Pages carry inline "[(Source Name, p. N)]" citations (N = printed page of the German PDF) — copy them verbatim into answers. To follow one to its source report, call wiki_resolve_citation with "<source-slug>#page-N".',
         discipline: DISCIPLINE,
         index_page: index?.content ?? "(index unavailable)",
       });
@@ -99,7 +99,7 @@ export function buildServer(
     {
       title: "Read a wiki page",
       description:
-        'Full markdown of one page by slug (e.g. "building-permits", "integrate-regulation-early", "index", "QUERY"). Follow [[wikilinks]] with further reads; answers usually live at the intersection of 3-5 pages. The page carries inline "[(slug p. N)]" citations — preserve them verbatim, page number included, on every claim you draw from it. Render any [[wikilinks]] as plain entity names in your answer, never literal "[[ ]]" brackets.',
+        'Full markdown of one page by slug (e.g. "building-permits", "integrate-regulation-early", "index", "QUERY"). Follow [[wikilinks]] with further reads; answers usually live at the intersection of 3-5 pages. The page carries inline "[(Source Name, p. N)]" citations — copy them verbatim, link and page number included, on every claim you draw from it. Render any [[wikilinks]] as plain entity names in your answer, never literal "[[ ]]" brackets.',
       inputSchema: {
         slug: z.string().describe("Page slug: filename without .md"),
       },
