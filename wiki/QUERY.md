@@ -47,7 +47,7 @@ Frontmatter is a retrieval signal, not decoration. Useful filters:
 
 Compose an answer that:
 
-- **Cites inline, source-voice forward.** Write *"The [[digital-eye-clinic]] project found…"*, *"Phase II established that…"*, *"[[stephanie-volz]] argues…"* — not link-list dumps at the end of paragraphs. The reader should encounter sources as authors, not as footnote indices. **Attribute to the source, not the tool.** Attribute each finding to its named report or project, and make clear the answer is grounded in the Sandbox reports. Banned is narrating the *retrieval act* (*"I looked in the wiki"*, *"the search returned"*); framing the evidence base (*"the reports don't address this directly"*) is required (P1/P2), not retrieval-narration. Name the source generically as the *Knowledge Repository* / *the corpus* / *the reports* — never "the wiki" or "the LLM wiki".
+- **Cites inline, answer forward.** State the finding and let the inline citation carry provenance — *"Pre-submission quality is the leverage [(p2-building-permits p. 22)](sources/p2-building-permits.md)"* — not a report as the subject of every sentence, and not link-list dumps at the end of paragraphs. Name a report or project in prose only where the source itself is the point: one pilot's specific outcome, a tension between named pilots, or a pattern that holds across several. Make clear the answer is grounded in the Sandbox reports — but banned is narrating the *retrieval act* (*"I looked in the wiki"*, *"the search returned"*); framing the evidence base (*"the reports don't address this directly"*) is required (P1/P2), not retrieval-narration. Name the source generically as the *Knowledge Repository* / *the corpus* / *the reports* — never "the wiki" or "the LLM wiki".
 - **Distinguishes synthesis from single source.** *"The corpus's cross-cutting principles consolidate"* vs *"the medical-documentation report specifically claims"*. The reader must be able to tell which sentences are corpus-wide patterns and which are single-case findings.
 - **Surfaces tensions and agreements.** Where pages disagree, name it. The corpus contains real tensions — e.g. probabilistic AI vs. administrative reproducibility, open-source-as-procurement vs. ISO-management-system formalism, rule-based vs. generative for defined logic. Use Obsidian-style `> [!tension]` callouts where two positions both have force.
 - **Page-anchors substantive claims.** Use the convention from [`CONVENTIONS.md`](CONVENTIONS.md) §6: `[(<source-slug> p. N)](sources/<source-slug>.md)`, where the page number refers to the German PDF. Never invent an anchor, and never write `#para-N` — paragraph anchors are a dormant spec with nothing to resolve them.
@@ -113,13 +113,13 @@ P3 (link statements to sources), P4 (distinguish synthesis from evidence), P6 (s
 
 The source corpus is published by the Canton of Zurich's sandbox programme, so many pages carry an implicit "here's what the sandbox can offer you" tone. **Neutralise this when synthesising.** The default voice is *explaining what the corpus shows*, not *recommending sandbox engagement*. Prefer:
 
-- *"The corpus shows…"* · *"The booklet found…"* · *"Phase II demonstrated…"* · *"[[digital-eye-clinic]] established that…"*
+- The finding itself, citation attached (*answer forward*, per Step 3) — or, where a frame is needed, *"The corpus shows…"* · *"The booklet found…"*. Source-as-subject (*"[[digital-eye-clinic]] established that…"*) is for when the source itself is the point.
 
 Avoid (unless the user explicitly asked about engaging the sandbox):
 
 - *"You should engage the sandbox…"* · *"You can apply to…"* · *"The sandbox offers you…"*
 
-The default audience to assume is **"a non-technical administrator planning their own AI pilot, learning from the case studies"** — an `ai-deployment` reader. The corpus's second audience is **"a public-sector team designing or running an innovation-sandbox-style programme"** — a `sandbox-operations` reader; switch to it when the query is about running a programme rather than deploying a system. Adapt to other personas (startup founder, researcher, journalist, policymaker) when the query makes a different one obvious — but don't invent a persona, and don't switch into recruitment posture unless asked.
+The default audience to assume is **"a non-technical administrator planning their own AI pilot, learning from the case studies"** — an `ai-deployment` reader. Treat an unscoped question as being about the asker's **own** pilot, outside any sandbox programme: general guidance drawn from the reports, with the sandbox's own intake or programme structure brought in only when the user asks about it or says they are in it. The corpus's second audience is **"a public-sector team designing or running an innovation-sandbox-style programme"** — a `sandbox-operations` reader; switch to it when the query is about running a programme rather than deploying a system. Adapt to other personas (startup founder, researcher, journalist, policymaker) when the query makes a different one obvious — but don't invent a persona, and don't switch into recruitment posture unless asked.
 
 ---
 
@@ -127,7 +127,11 @@ The default audience to assume is **"a non-technical administrator planning thei
 
 *The examples below use `[[slug]]` authoring notation to mark entity references. In a chat-client answer (the default surface) render those as plain names per the rendering rule above. Page citations stay exactly as written: the read tools serve them with a friendly source name already — `(Building Permits, p. 22)` — while the link still targets the source file, so a citation always maps back to its report. (Stored markdown anchors citations by slug per [`CONVENTIONS.md`](CONVENTIONS.md) §6; the friendly name is applied at serve time. When you author a page, write the slug form.)*
 
-**Good** (source-voice forward, page-anchored):
+**Good** (answer forward — the default; the citation carries provenance):
+
+> Building in-house on open source is a viable procurement route when no commercial provider meets public-sector requirements for data protection, transparency, and modifiability [(p2-digital-eye-clinic p. 14)](sources/p2-digital-eye-clinic.md).
+
+**Good** (single-pilot outcome — the source is the point, page-anchored):
 
 > The [[digital-eye-clinic]] project explicitly demonstrated intrapreneurship in public healthcare: no commercial provider met the public hospital's requirements (data protection, transparency, modifiability), so the team built an open-source diagnostic platform in-house [(p2-digital-eye-clinic p. 14)](sources/p2-digital-eye-clinic.md).
 
@@ -171,10 +175,11 @@ The default audience to assume is **"a non-technical administrator planning thei
 - **Don't create new wiki pages during a query.** That's an ingest operation. Suggest instead.
 - **Don't write link-list paragraphs** (`[[x]] · [[y]] · [[z]]`) as a substitute for synthesis.
 - **Don't adopt sandbox-recruitment voice** unless the user explicitly asks about engaging the sandbox.
-- **Don't narrate the retrieval act** (*"the wiki says"* / *"I checked the knowledge base"*). Do attribute findings to the named report/project and make clear the answer is grounded in the Sandbox reports; framing the evidence base (*"the reports don't address this directly"*) is required (P1/P2), not narration. Name the source generically as the *Knowledge Repository* / *the corpus*, never "the wiki" / "the LLM wiki". (This governs answer text shown to the user; this procedure's own references to "the wiki" are documentation, not answer voice.) Keep answers concise (P8) — but never drop a page citation to shorten.
+- **Don't narrate the retrieval act** (*"the wiki says"* / *"I checked the knowledge base"*). Do make clear the answer is grounded in the Sandbox reports — finding first, the inline citation carrying provenance; name a report in prose where the source itself is the point. Framing the evidence base (*"the reports don't address this directly"*) is required (P1/P2), not narration. Name the source generically as the *Knowledge Repository* / *the corpus*, never "the wiki" / "the LLM wiki". (This governs answer text shown to the user; this procedure's own references to "the wiki" are documentation, not answer voice.) Keep answers concise (P8) — but never drop a page citation to shorten.
 - **Don't invent anchors.** Cite at page level (`p. N`, German PDF); never write `#para-N` — the paragraph-anchor pipeline is dormant and nothing resolves them.
 - **Don't machine-translate German verbatim quotes.** Keep the German exact, translate in surrounding prose. Per CONVENTIONS §5.
 - **Don't assume a persona.** Default is administrator-learner. Switch only when the query makes a different persona unambiguous.
+- **Don't treat an unscoped question as a sandbox application.** The asker is usually running their own pilot outside any programme; give general guidance from the reports, and bring in the sandbox's intake or programme structure only on request.
 
 ---
 
