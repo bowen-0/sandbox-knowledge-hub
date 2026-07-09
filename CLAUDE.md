@@ -12,6 +12,7 @@ The knowledge layer of the Zurich AI Innovation Sandbox: a citable wiki (`wiki/`
 6. **Run lint before committing wiki changes**: `node scripts/lint.mjs` (setup: `cd mcp-server && npm install && npm run build`). Errors block; warnings are judgement calls.
 7. **Commits are deliberate.** `git add` specific paths, never `-A`. One ingest = one commit.
 8. **Content correctness belongs to the sandbox team.** Structure, citations, and conventions are the agent's job; whether an insight is right is theirs. Don't rewrite findings during editorial work.
+9. **Answering-rule changes sweep the whole instruction surface in one commit.** The same rules live in four channels: `mcp-server/src/server.ts` (`DISCIPLINE`, `CITE_FOOTER`, the tool descriptions) and `wiki/QUERY.md` (the canonical procedure, shipped as a pinnable resource). Changing a rule in one channel leaves the others teaching the old one — grep the rule's distinctive phrases across all four before shipping. (2026-07-09: the lead-with-the-answer fix patched `DISCIPLINE` only; QUERY.md kept teaching attribute-to-the-source for a day.) Prompt rewrites beyond mechanical sync are eval-gated — A/B against `internal/VALIDATION-SET.md` before deploying; deduping a repeated instruction is an ablation, not a cleanup.
 
 ## Layout
 
