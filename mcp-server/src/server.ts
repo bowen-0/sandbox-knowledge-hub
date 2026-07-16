@@ -11,7 +11,7 @@ const SERVER_INFO = {
   version: "0.1.0",
 } as const;
 
-const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions — read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page (give it a \`cite_as\` short display name in frontmatter that includes the document kind, e.g. \`cite_as: "Building Permits report"\`, so citations to it read cleanly and self-describe as a source document), its digest, and any lessons/syntheses as above. If the user ATTACHES a PDF instead of giving a URL, read it to draft the pages, but ask them for the report's public link (e.g. on the sandbox's own website) so wiki_add_source_pdf can store the file — its citations will not resolve until the PDF is in the repo. Every substantive claim must carry a page citation to a real source report — never invent a citation or a quote. When DRAFTING a page, author citations with the source SLUG — \`[(p2-building-permits p. 22)](../sources/p2-building-permits.md)\` — even though the read tools display a friendly source name; validation resolves the slug. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.`;
+const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions — read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. MAKE THE PUBLISH BOUNDARY UNMISTAKABLE: steps 1-3 are research — reading, drafting, validating — and write NOTHING; only wiki_write_page / wiki_add_source_pdf publish. Immediately before the first publishing call, say so in plain words: "Nothing has been written yet. The next tool call commits this publicly to the GitHub repository — approving it means publish." Never let a publish approval look like just another research approval, and never bundle the publish call into the same turn as exploratory tool calls. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page (give it a \`cite_as\` short display name in frontmatter that includes the document kind, e.g. \`cite_as: "Building Permits report"\`, so citations to it read cleanly and self-describe as a source document), its digest, and any lessons/syntheses as above. If the user ATTACHES a PDF instead of giving a URL, read it to draft the pages, but ask them for the report's public link (e.g. on the sandbox's own website) so wiki_add_source_pdf can store the file — its citations will not resolve until the PDF is in the repo. Every substantive claim must carry a page citation to a real source report — never invent a citation or a quote. When DRAFTING a page, author citations with the source SLUG — \`[(p2-building-permits p. 22)](../sources/p2-building-permits.md)\` — even though the read tools display a friendly source name; validation resolves the slug. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.`;
 
 // Appended to every wiki_read_page result. The cite-always rule must ride WITH
 // the page content: a client (Claude Desktop, tool-search mode) may never call
@@ -203,9 +203,9 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
   server.registerTool(
     "wiki_validate_page",
     {
-      title: "Validate a draft page (no write)",
+      title: "Validate a draft page (read-only — writes nothing)",
       description:
-        "Dry-run check of a draft page before committing: path shape, frontmatter block, an H1, that every inline citation resolves to a real source page, and that every [[wikilink]] has a target. Returns errors (block the commit) and warnings (advisory). ALWAYS run this and show the user the result before wiki_write_page.",
+        "Dry-run check of a draft page before committing: path shape, frontmatter block, an H1, that every inline citation resolves to a real source page, and that every [[wikilink]] has a target. Returns errors (block the commit) and warnings (advisory). This is part of RESEARCH — it writes and publishes nothing. ALWAYS run this and show the user the result before wiki_write_page.",
       inputSchema: {
         path: z.string().describe('Wiki-relative path "<folder>/<slug>.md", e.g. "lessons/integrate-regulation-early.md"'),
         content: z.string().describe("Full markdown of the page, including the --- frontmatter --- block"),
@@ -218,9 +218,9 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
   server.registerTool(
     "wiki_write_page",
     {
-      title: "Create or update a wiki page (commit)",
+      title: "PUBLISH — commit a page to the public GitHub repo",
       description:
-        "Commit a page to the repository (create or update, chosen automatically). Validates first and REFUSES if there are blocking errors. Only call after the user has seen the draft + validation and approved. Commits to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.",
+        "THE PUBLISH STEP: commits a page to the public repository's main branch (create or update, chosen automatically) — approving this call means 'publish now'. Validates first and REFUSES if there are blocking errors. Only call after the user has seen the draft + validation and approved, and after telling them in plain words that this call — unlike the research steps before it — writes publicly to GitHub. The live query endpoints refresh automatically a minute or two later.",
       inputSchema: {
         path: z.string().describe('Wiki-relative path "<folder>/<slug>.md"'),
         content: z.string().describe("Full markdown of the page, including frontmatter"),
@@ -262,9 +262,9 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
   server.registerTool(
     "wiki_add_source_pdf",
     {
-      title: "Add a report PDF from a URL",
+      title: "PUBLISH — commit a report PDF to the public GitHub repo",
       description:
-        "Fetch a published report PDF from a public https URL and commit it into the wiki (pdfs/de/<slug>.pdf or pdfs/en/<slug>.pdf, German is citation-authoritative), so citations to it resolve. The PDF is fetched and committed server-side — you supply the URL, not the bytes. Use this FIRST when adding a new report, then write its source/digest/lesson pages.",
+        "A PUBLISH STEP: fetches a published report PDF from a public https URL and commits it into the public repository (pdfs/de/<slug>.pdf or pdfs/en/<slug>.pdf, German is citation-authoritative), so citations to it resolve — approving this call means 'commit this file now'. The PDF is fetched and committed server-side — you supply the URL, not the bytes. Use this FIRST when adding a new report (announce the publish boundary before it), then write its source/digest/lesson pages.",
       inputSchema: {
         url: z.string().describe("Public https:// URL of the report PDF"),
         path: z.string().describe('Target path: "pdfs/de/<slug>.pdf" (preferred) or "pdfs/en/<slug>.pdf"'),
@@ -315,6 +315,7 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
         workflow: [
           "Edit/add a page: 1) draft to the conventions (wiki_read_page 'CONVENTIONS'); 2) wiki_validate_page; 3) show the user + get approval; 4) wiki_write_page.",
           "Add a NEW report: 1) wiki_add_source_pdf with its public PDF URL (fetched + committed server-side); 2) then write its source page, digest, and lessons/syntheses as above (wiki_read_page 'INGEST' for the four-phase procedure).",
+          "The publish boundary: steps before wiki_write_page / wiki_add_source_pdf are research and write nothing; those two calls are the only ones that commit publicly. Announce the boundary to the user before the first publishing call.",
         ],
         guardrails: [
           "Every substantive claim must cite a real source page; citations are checked against existing source pages.",
