@@ -8,7 +8,7 @@ The sandbox ran ten pilots across two phases (2022–2026): building permits, me
 
 - **Every claim traces to its source.** Substantive statements cite the printed page of the underlying report (`slug#page-N`, German PDFs are citation-authoritative). An assistant answering from this wiki can show exactly where a claim comes from — and cannot invent what isn't there.
 - **Two audiences, never conflated.** Insights for *deploying AI* (startups, SMEs, government units, policymakers) and insights for *running a sandbox programme* (other governments designing their own) sound alike but answer different questions. Every lesson declares which it serves via `insight_domain:`; AI consumers are bound to keep them apart.
-- **Built to stay current.** Adding a new report is a defined, AI-assisted procedure with human approval gates ([`wiki/INGEST.md`](wiki/INGEST.md)), and a lint pass guards the structure ([`UPDATING.md`](UPDATING.md)).
+- **Built to stay current.** Adding a new report is a defined, AI-assisted procedure with human approval gates ([`wiki/INGEST.md`](wiki/INGEST.md)), and a lint pass guards the structure (`scripts/lint.mjs`).
 
 ## Use it
 
@@ -34,7 +34,7 @@ Six read-only tools (overview, list, read, search, graph connections, citation r
 
 **Work on it with an AI agent.** Open this repo in Claude Code or Cowork: the `query` and `ingest` skills load automatically from `wiki/.claude/skills/`, so "what does the corpus say about data access in healthcare?" and "ingest this new report" both just work — with the wiki's citation discipline built in.
 
-**Update it.** [`UPDATING.md`](UPDATING.md) is the one-page guide. [`wiki/CONTRIBUTING.md`](wiki/CONTRIBUTING.md) covers contributing from any runtime.
+**Updates** are managed by the sandbox programme team. The procedures the tooling follows are documented in [`wiki/INGEST.md`](wiki/INGEST.md) (adding a source) and [`wiki/CONVENTIONS.md`](wiki/CONVENTIONS.md) (the schema).
 
 ## What's inside
 

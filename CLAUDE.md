@@ -16,4 +16,4 @@ The knowledge layer of the Zurich AI Innovation Sandbox: a citable wiki (`wiki/`
 
 ## Layout
 
-`wiki/` — the substrate (see `wiki/README.md`) · `mcp-server/` — MCP server, tests in `mcp-server/test/` · `scripts/lint.mjs` — health check · `UPDATING.md` — maintainer one-pager · `internal/` — gitignored engagement context, never publish or reference in client-facing artifacts.
+`wiki/` — the substrate (see `wiki/README.md`) · `mcp-server/` — MCP server, tests in `mcp-server/test/` · `scripts/lint.mjs` — health check · `internal/` — gitignored engagement context, never publish or reference in client-facing artifacts. (The maintainer one-pager UPDATING.md was removed from the public repo 2026-07-16 — on a public repo it read as an open-contribution invitation; the sandbox team holds it privately.)
