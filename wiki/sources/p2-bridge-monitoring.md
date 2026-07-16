@@ -1,6 +1,6 @@
 ---
 title: "Sensor-based Bridge Monitoring — Data Collection and Forecasting for Infrastructure Maintenance"
-cite_as: "Bridge Monitoring"
+cite_as: "Bridge Monitoring report"
 type: source
 source_type: pdf
 slug: p2-bridge-monitoring

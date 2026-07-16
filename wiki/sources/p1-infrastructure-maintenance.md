@@ -1,6 +1,6 @@
 ---
 title: "Automated Infrastructure Maintenance — Drone Inspections with Computer Vision"
-cite_as: "Infrastructure Maintenance"
+cite_as: "Infrastructure Maintenance report"
 type: source
 source_type: pdf
 slug: p1-infrastructure-maintenance

@@ -1,6 +1,6 @@
 ---
 title: "Smart Parking — Best Practices for Image Recognition"
-cite_as: "Smart Parking"
+cite_as: "Smart Parking report"
 type: source
 source_type: pdf
 slug: p1-smart-parking

@@ -1,6 +1,6 @@
 ---
 title: "Play & Learn — How to strengthen an AI hub with a sandbox (Phase I overview)"
-cite_as: "Play & Learn (Phase I overview)"
+cite_as: "Play & Learn (Phase I overview report)"
 title_de: "Play & Learn — Eine Sandbox zur Stärkung des KI-Standorts"
 type: source
 source_type: pdf

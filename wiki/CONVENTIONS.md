@@ -129,9 +129,13 @@ cross_cutting: true | false                                           # optional
 ```yaml
 type: source
 source_type: pdf | url | paper | video | transcript | note | dataset
-cite_as: "Building Permits"                                            # short friendly display name; the read tools
+cite_as: "Building Permits report"                                     # short friendly display name; the read tools
                                                                        # substitute it for the slug in citation text
-                                                                       # ([(Building Permits, p. 22)] vs the raw slug).
+                                                                       # ([(Building Permits report, p. 22)] vs the raw
+                                                                       # slug). Include the word "report" (or the document
+                                                                       # kind) so a served citation self-describes as a
+                                                                       # source document — a bare "Building Permits" reads
+                                                                       # as a concept to someone who never sees the tools.
                                                                        # Omit and citations render the slug. Keep it
                                                                        # unique and recognisable; the link keeps the slug.
 path: ../pdfs/de/p2-building-permits.pdf                              # for files (lives under wiki/pdfs/<lang>/)

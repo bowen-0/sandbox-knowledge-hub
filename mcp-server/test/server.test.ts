@@ -81,7 +81,7 @@ describe("WikiStore on the real wiki", () => {
     const r = await linked.read("building-permits");
     if (!r) throw new Error("page not found");
     // Friendly name in the text, link points at /c/<slug>/<page> (trailing slash on the base trimmed).
-    expect(r.content).toMatch(/\[\(Building Permits, p\. \d+\)\]\(https:\/\/hub\.example\/c\/p2-building-permits\/\d+\)/);
+    expect(r.content).toMatch(/\[\(Building Permits report, p\. \d+\)\]\(https:\/\/hub\.example\/c\/p2-building-permits\/\d+\)/);
     // No portable relative link survives for that citation when a base is set.
     expect(r.content).not.toMatch(/\]\(\.\.\/sources\/p2-building-permits\.md\)/);
   });
@@ -141,7 +141,7 @@ describe("MCP server end-to-end", () => {
     const text = textOf(result);
     // Citations render the friendly source name as visible text, page number kept,
     // and the link target keeps the slug so each citation still maps to its file.
-    expect(text).toMatch(/\[\(Building Permits, p\. \d+\)\]\(\.\.\/sources\/p2-building-permits\.md\)/);
+    expect(text).toMatch(/\[\(Building Permits report, p\. \d+\)\]\(\.\.\/sources\/p2-building-permits\.md\)/);
     // The raw slug is no longer the visible citation text.
     expect(text).not.toMatch(/\[\(p2-building-permits p\. \d+\)\]/);
     // No citation was rewritten into an http(s) PDF deep link (the reverted linkify).

@@ -1,6 +1,6 @@
 ---
 title: "Digital Eye Clinic — Bringing AI diagnostics into practice"
-cite_as: "Digital Eye Clinic"
+cite_as: "Digital Eye Clinic report"
 type: source
 source_type: pdf
 slug: p2-digital-eye-clinic

@@ -154,7 +154,7 @@ export class WikiStore {
    * source's friendly name, and (when a citationBaseUrl is set) point the link
    * at the deep-link endpoint that opens the source PDF at the cited page:
    *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
-   *   -> [(Building Permits, p. 25)](https://<base>/c/p2-building-permits/25)
+   *   -> [(Building Permits report, p. 25)](https://<base>/c/p2-building-permits/25)
    * With no base, only the name is swapped and the relative link is kept.
    * Read-only / serve-time only; the stored markdown stays slug-anchored.
    */
