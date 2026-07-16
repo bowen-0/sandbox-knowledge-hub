@@ -1,6 +1,6 @@
 ---
 title: "AI in Medical Documentation — Legal Frameworks and Recommendations"
-cite_as: "Medical Documentation"
+cite_as: "Medical Documentation report"
 type: source
 source_type: pdf
 slug: p2-medical-documentation
