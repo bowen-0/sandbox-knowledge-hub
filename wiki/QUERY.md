@@ -20,7 +20,7 @@ If the wiki doesn't cover something the user asked about, say so explicitly. The
 
 ### Step 1 — Find relevant pages
 
-Read [`index.md`](index.md) first. It is the navigable inventory of every page, organised by retrieval priority. The *Retrieval-priority quick reference* at the bottom of `index.md` is the routing table; use it:
+Read [`index.md`](index.md) first. It is the navigable inventory of every page, organised by retrieval priority. When searching (`wiki_search` or otherwise), use **English** terms — the corpus prose is English; German appears only in report titles and verbatim quotes, so a German question should be translated into English search terms first (the answer can still be given in German). The *Retrieval-priority quick reference* at the bottom of `index.md` is the routing table; use it:
 
 - **General / scoping queries** (*"what should we consider…"*, *"how do I scope X…"*) → [[phase-2-cross-cutting-principles]] + the relevant thematic synthesis page → cross-cutting lessons. These are `ai-deployment` queries — filter lessons accordingly.
 - **Specific case-study queries** → the relevant `projects/` page → that project's `sources/` entry + any `case-study` lessons.
