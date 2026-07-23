@@ -36,7 +36,7 @@ Phase I (2022–2024) operated almost entirely under Swiss law — the cantonal 
 
 Phase II (2024–2026) added EU regulation as a dominant frame, with the booklet listing targeted engagement with EU regulatory questions for the market access of local AI providers among the phase's strategic additions [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md):
 
-- **[[eu-ai-act]]** — risk-based EU regulation of AI systems, in force from 2024 with staggered application.
+- **[[eu-ai-act]]** — risk-based EU regulation of AI systems.
 - **[[machinery-regulation]]** — the EU Machinery Regulation 2023/1230, replacing the older Machinery Directive; dynamically interacts with the AI Act for autonomous/safety-critical machinery.
 - **[[iso-iec-42001]]** — international AI management-system standard, first published 2023.
 
@@ -60,11 +60,11 @@ This is **not** a regulatory shortcut — the EU regulations still apply in full
 
 ### Step 1 — Risk-classify your product under the AI Act
 
-The AI Act uses a risk-based taxonomy: *prohibited*, *high-risk*, *limited-risk*, *minimal-risk*. Most public-sector-facing AI in safety-critical or fundamental-rights-affecting domains lands in *high-risk*, triggering substantial obligations (risk-management system, data governance, human oversight, etc.). See [[eu-ai-act]].
+The AI Act classifies AI systems by risk level — the corpus glossary gives the tiers as low, high, or prohibited (*«gering, hoch oder unzulässig»*) [(00-overview-phase2-build-and-share p. 26)](../sources/00-overview-phase2-build-and-share.md). Most public-sector-facing AI in safety-critical or fundamental-rights-affecting domains lands in *high-risk*, triggering substantial obligations. See [[eu-ai-act]].
 
 ### Step 2 — Identify sectoral regulation that applies in parallel
 
-The AI Act sits *alongside* sectoral regulation, not above it. Autonomous machinery? Add [[machinery-regulation]]. Medical device? Add MDR/IVDR. Financial services? Add MiFID-II equivalents. The interplay is dynamic and not always harmonised — see [[continuous-regulatory-learning-beats-rigid-approval]] for the broader implication.
+The AI Act sits *alongside* sectoral regulation, not above it. Autonomous machinery? Add [[machinery-regulation]]. Medical device? Add MDR/IVDR. The interplay is dynamic and not always harmonised — see [[continuous-regulatory-learning-beats-rigid-approval]] for the broader implication.
 
 ### Step 3 — Pilot an [[iso-iec-42001]] AI-management system
 
