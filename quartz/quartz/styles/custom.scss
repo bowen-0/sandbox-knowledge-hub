@@ -1,0 +1,34 @@
+@use "./base.scss";
+
+// Wiki-specific callout styling.
+// The two insight-domain callouts are the wiki's audience fencing
+// (CONVENTIONS §3) — they get distinct, stable colours.
+.callout[data-callout="ai-deployment"] {
+  --color: #1d4ed8;
+  --border: #1d4ed844;
+  --bg: #1d4ed80f;
+}
+
+.callout[data-callout="sandbox-operations"] {
+  --color: #0f766e;
+  --border: #0f766e44;
+  --bg: #0f766e0f;
+}
+
+.callout[data-callout="gap"] {
+  --color: #b45309;
+  --border: #b4530944;
+  --bg: #b453090f;
+}
+
+.callout[data-callout="tension"] {
+  --color: #b91c1c;
+  --border: #b91c1c44;
+  --bg: #b91c1c0f;
+}
+
+.callout[data-callout="update-needed"] {
+  --color: #6b7280;
+  --border: #6b728044;
+  --bg: #6b72800f;
+}

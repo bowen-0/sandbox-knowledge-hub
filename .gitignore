@@ -13,5 +13,11 @@ dist/
 # MCP server build artifacts
 mcp-server/dist/
 
+# Quartz (vendored static-site generator) build artifacts
+quartz/public/
+quartz/.quartz-cache/
+quartz/prof/
+quartz/tsconfig.tsbuildinfo
+
 # Harness artifacts
 .claude/scheduled_tasks.lock
