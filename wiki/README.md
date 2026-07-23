@@ -10,7 +10,7 @@ If you only read one other file: [`CONVENTIONS.md`](CONVENTIONS.md). It defines 
 
 ## What this is, in one paragraph
 
-The Canton of Zürich runs the *Innovation Sandbox for Artificial Intelligence* — a regulatory + technical playground where public administration, businesses, and researchers pilot AI applications under real conditions. Across two phases (2022–2026) it produced ~13 detailed PDF reports. Those reports hold hard-won knowledge (legal frameworks, data access, organisational prerequisites, technical learnings) that today is locked inside static documents. **This wiki restructures that corpus as a navigable, citable, extensible knowledge base** so a non-technical administrator planning a new AI pilot can find what they need and trust where it came from.
+The Canton of Zürich runs the *Innovation Sandbox for Artificial Intelligence* — a regulatory + technical playground where public administration, businesses, and researchers pilot AI applications under real conditions. Across two phases (2022–2026) it produced ~13 detailed PDF reports. Those reports hold hard-won knowledge (legal frameworks, data access, organisational prerequisites, technical learnings) that today is locked inside static documents. **This wiki restructures that corpus as a navigable, citable, extensible knowledge base** so that the technical people building AI assistants and retrieval systems can give an administrator planning a new AI pilot trustworthy, cited access to it.
 
 The corpus is bounded but **the wiki is not**. New sources — papers, web pages, transcripts, news articles, future sandbox reports — can be added as first-class citizens. See `sources/` below.
 
@@ -47,7 +47,7 @@ Three ways, depending on who you are:
 
 **As a human SME or challenge owner who wants to contribute** — read [`CONTRIBUTING.md`](CONTRIBUTING.md). It's the step-by-step handover doc: which runtime to pick (Cowork / Claude.ai Projects / ChatGPT), how to set it up from scratch, and what "correct ingest" looks like regardless of which runtime you used. INGEST is the contract; CONTRIBUTING is the operator's manual.
 
-**As an agent / RAG / knowledge-base operator plugging this wiki into your own stack** — this wiki is designed to be **substrate-portable**. Clone the folder; point your consumer at it. Both procedures (`QUERY.md` / `.claude/skills/query/SKILL.md` for read-side, `INGEST.md` / `.claude/skills/ingest/SKILL.md` for write-side) ship with the corpus, so any downstream LLM consumer inherits the same discipline without bespoke prompt engineering on your side. For runtimes that can't walk folders dynamically (custom GPTs, Claude.ai Projects, raw single-shot API calls), paste the relevant procedure file as the system prompt and the relevant pages as context. MCP-capable assistants get all of this through the server in [`../mcp-server/`](../mcp-server/) — one connection, the same discipline. The procedures are identical across runtimes; only the page-loading and tooling mechanism differs.
+**As an agent / RAG / knowledge-base operator plugging this wiki into your own stack** — this wiki is designed to be **substrate-portable**. Clone the folder; point your consumer at it. Both procedures (`QUERY.md` / `.claude/skills/query/SKILL.md` for read-side, `INGEST.md` / `.claude/skills/ingest/SKILL.md` for write-side) ship with the corpus, so a downstream LLM consumer can pick up the same discipline without bespoke prompt engineering on your side. For runtimes that can't walk folders dynamically (custom GPTs, Claude.ai Projects, raw single-shot API calls), paste the relevant procedure file as the system prompt and the relevant pages as context. MCP-capable assistants get all of this through the server in [`../mcp-server/`](../mcp-server/) — one connection, the same discipline. The procedures are identical across runtimes; only the page-loading and tooling mechanism differs.
 
 ---
 
@@ -76,7 +76,7 @@ If you're unsure which type a page should be, **open an issue** using the "Propo
 
 ## What this is *not*
 
-- **Not a chat interface.** That's a later layer. The wiki is the substrate; UIs sit on top.
+- **Not a chat interface — and none is planned here.** The wiki is the substrate; the intended path is integrating it into your own assistant or AI system.
 - **Not a knowledge graph in a triple store.** The graph lives in YAML frontmatter and is *exportable* to JSON-LD / DuckDB / Neo4j on demand.
 - **Not a database with enforced schema.** Frontmatter conventions are linted, not validated. Easier evolution > stricter typing during the formative phase.
 - **Not the only place truth lives.** The German PDFs in [`pdfs/de/`](pdfs/de/) are the citation-authoritative ground truth. The wiki structures them; it does not replace them.

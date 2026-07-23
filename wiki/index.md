@@ -2,7 +2,7 @@
 
 > Auto-navigable inventory of every page in the wiki. Organised by retrieval priority first, then by type, phase, and sector.
 >
-> **Maintenance**: hand-edited for now. Will be regenerated from frontmatter by a ~30-line script once the wiki exceeds ~100 pages and hand-maintenance becomes painful.
+> **Maintenance**: maintained by hand; `scripts/lint.mjs` warns when a page is missing from this index. There is no size limit on the wiki — if hand-maintenance ever becomes painful, the index can be regenerated from frontmatter.
 
 ---
 
