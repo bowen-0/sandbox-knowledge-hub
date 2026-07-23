@@ -54,6 +54,36 @@ describe("WikiStore on the real wiki", () => {
     expect(hits.map((h) => h.slug)).toContain("data-access");
   });
 
+  it("search folds diacritics: Zurich and Zürich return the same top hits", async () => {
+    const plain = await store.search("Zurich");
+    const umlaut = await store.search("Zürich");
+    expect(plain.length).toBeGreaterThan(0);
+    expect(plain.map((h) => h.slug)).toEqual(umlaut.map((h) => h.slug));
+  });
+
+  it("search ranks full-coverage pages above single-term-heavy pages", async () => {
+    const hits = await store.search("data protection officer");
+    expect(hits[0].slug).toBe("data-protection-officer");
+    // data-access is data-heavy but covers neither "protection" nor "officer" strongly
+    const dataAccess = hits.find((h) => h.slug === "data-access-is-the-most-powerful-lever");
+    if (dataAccess) expect(hits[0].score).toBeGreaterThan(dataAccess.score);
+  });
+
+  it("search ignores stop words instead of letting them dominate", async () => {
+    const withStop = await store.search("of human oversight");
+    const without = await store.search("human oversight");
+    expect(withStop.map((h) => h.slug)).toEqual(without.map((h) => h.slug));
+    expect(await store.search("of the und der")).toEqual([]);
+  });
+
+  it("search matches short terms on word boundaries ('act' must not hit 'practice')", async () => {
+    const hits = await store.search("act");
+    for (const h of hits) {
+      const joined = (h.title + " " + h.snippets.join(" ")).toLowerCase();
+      expect(joined).toMatch(/\bact\b|\bacts\b|ai.?act/);
+    }
+  });
+
   it("connections returns outgoing links and backlinks", async () => {
     const conn = await store.connections("building-permits");
     expect(conn).toBeDefined();

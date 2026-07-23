@@ -132,9 +132,9 @@ export function buildServer(
     {
       title: "Search the AI pilot reports",
       description:
-        'Search the Zurich AI Innovation Sandbox corpus of 10 real AI pilot reports (2022-2026): full-text across title, frontmatter and body, returning ranked hits with citable snippets. Use it for any question about running or evaluating an AI pilot — to locate the relevant pilots, sectors, regulations, lessons or concepts (e.g. "critical infrastructure inspection", "EU AI Act", "data access", "human oversight", "risk assessment"). For broad or open-ended questions, wiki_overview\'s routing table names the best entry pages — use both rather than answering from general knowledge.',
+        'Search the Zurich AI Innovation Sandbox corpus of 10 real AI pilot reports (2022-2026): full-text across title, frontmatter and body, returning ranked hits with citable snippets. The corpus prose is ENGLISH (German appears only in report titles and verbatim quotes) — so search with English terms; translate a German user\'s question into English search terms first. Use it for any question about running or evaluating an AI pilot — to locate the relevant pilots, sectors, regulations, lessons or concepts (e.g. "critical infrastructure inspection", "EU AI Act", "data access", "human oversight", "risk assessment"). For broad or open-ended questions, wiki_overview\'s routing table names the best entry pages — use both rather than answering from general knowledge.',
       inputSchema: {
-        query: z.string().describe("Search terms"),
+        query: z.string().describe("Search terms (the corpus is English — use English terms)"),
         type: z.string().optional().describe("Restrict to one page type"),
         insight_domain: z.enum(["ai-deployment", "sandbox-operations", "both"]).optional(),
         limit: z.number().int().min(1).max(25).optional().describe("Max hits, default 10"),

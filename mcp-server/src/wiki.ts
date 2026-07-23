@@ -5,6 +5,27 @@ const READ_CAP_BYTES = 60_000;
 const MAX_SNIPPETS_PER_PAGE = 3;
 const SNIPPET_RADIUS = 90;
 
+/** Terms too common to carry signal; a query of only these returns nothing. */
+const SEARCH_STOP_WORDS = new Set([
+  // EN
+  "of", "the", "and", "for", "with", "from", "into", "are", "was", "this", "that", "how", "what", "which", "not",
+  // DE (German report titles and verbatim quotes appear in the corpus)
+  "der", "die", "das", "und", "fur", "fuer", "von", "mit", "aus", "dem", "den", "ein", "eine", "im", "bei", "auf", "ist", "sind", "wie",
+]);
+
+/** Lowercase + strip diacritics + ß→ss, so Zurich ≡ Zürich and Behörde ≡ Behoerde-ish queries meet in the middle. */
+function foldForSearch(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/ß/g, "ss");
+}
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 /**
  * An inline citation, with its visible slug and its source link:
  *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
@@ -197,40 +218,73 @@ export class WikiStore {
   }
 
   async search(query: string, opts: { type?: string; insight_domain?: string; limit?: number } = {}): Promise<SearchHit[]> {
-    const terms = query
-      .toLowerCase()
+    const foldedQuery = foldForSearch(query).trim();
+    const terms = foldedQuery
       .split(/\s+/)
       .map((t) => t.trim())
-      .filter((t) => t.length > 1);
+      .filter((t) => t.length > 1 && !SEARCH_STOP_WORDS.has(t));
     if (terms.length === 0) return [];
     const limit = Math.min(opts.limit ?? 10, 25);
+
+    // Short terms match on word boundaries only ("act" must not hit "practice");
+    // longer terms keep substring matching so German compounds still match.
+    const matchers = terms.map((term) =>
+      term.length <= 3 ? new RegExp(`\\b${escapeRegExp(term)}\\b`, "g") : null
+    );
 
     const hits: SearchHit[] = [];
     for (const p of await this.pages()) {
       if (opts.type && p.type !== normalizeType(opts.type)) continue;
       if (opts.insight_domain && p.frontmatter.insight_domain !== opts.insight_domain) continue;
 
-      const titleLc = p.title.toLowerCase();
+      // Offsets are computed on the folded body; folding preserves length except
+      // ß→ss, so snippet windows can drift by a char or two — cosmetic only.
+      const titleLc = foldForSearch(p.title);
       const slugLc = p.slug.toLowerCase();
-      const bodyLc = p.body.toLowerCase();
-      const fmLc = JSON.stringify(p.frontmatter).toLowerCase();
+      const bodyLc = foldForSearch(p.body);
+      const fmLc = foldForSearch(JSON.stringify(p.frontmatter));
 
       let score = 0;
+      let matchedTerms = 0;
       const snippetOffsets: number[] = [];
-      for (const term of terms) {
-        if (titleLc.includes(term)) score += 8;
-        if (slugLc.includes(term)) score += 6;
-        if (fmLc.includes(term)) score += 3;
-        let idx = bodyLc.indexOf(term);
+      for (let i = 0; i < terms.length; i++) {
+        const term = terms[i];
+        const boundary = matchers[i];
+        let termScore = 0;
+        const fieldHas = (field: string) =>
+          boundary ? (boundary.lastIndex = 0, boundary.test(field)) : field.includes(term);
+        if (fieldHas(titleLc)) termScore += 8;
+        if (fieldHas(slugLc)) termScore += 6;
+        if (fieldHas(fmLc)) termScore += 3;
         let bodyHits = 0;
-        while (idx !== -1 && bodyHits < 10) {
-          bodyHits++;
-          if (snippetOffsets.length < MAX_SNIPPETS_PER_PAGE) snippetOffsets.push(idx);
-          idx = bodyLc.indexOf(term, idx + term.length);
+        if (boundary) {
+          boundary.lastIndex = 0;
+          let m: RegExpExecArray | null;
+          while ((m = boundary.exec(bodyLc)) !== null && bodyHits < 10) {
+            bodyHits++;
+            if (snippetOffsets.length < MAX_SNIPPETS_PER_PAGE) snippetOffsets.push(m.index);
+          }
+        } else {
+          let idx = bodyLc.indexOf(term);
+          while (idx !== -1 && bodyHits < 10) {
+            bodyHits++;
+            if (snippetOffsets.length < MAX_SNIPPETS_PER_PAGE) snippetOffsets.push(idx);
+            idx = bodyLc.indexOf(term, idx + term.length);
+          }
         }
-        score += bodyHits;
+        termScore += bodyHits;
+        if (termScore > 0) matchedTerms++;
+        score += termScore;
       }
       if (score === 0) continue;
+      // Multi-term queries: reward pages that cover every term, and the exact
+      // phrase (built from the filtered terms, so stop words stay neutral).
+      if (terms.length > 1) {
+        const phrase = terms.join(" ");
+        if (matchedTerms === terms.length) score += 10 * terms.length;
+        if (titleLc.includes(phrase)) score += 20;
+        else if (bodyLc.includes(phrase)) score += 10;
+      }
       if (p.frontmatter.priority === "high") score += 4;
       if (p.frontmatter.cross_cutting === true) score += 2;
 
