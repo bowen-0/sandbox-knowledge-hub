@@ -17,7 +17,7 @@ The Swiss Federal Act on Data Protection (FADP in English, *Datenschutzgesetz* /
 
 ## Key articles cited in the corpus
 
-- **Art. 21 FADP** — Automated individual decisions; right to human review. Cited in [[building-permits]] as the reason fully automated rejection of a building application would likely breach the FADP [(p2-building-permits p. 26)](../sources/p2-building-permits.md). Also referenced in [[machine-translation]] and Phase II healthcare projects. See [[fadp-art-21]] for the dedicated article page.
+- **Art. 21 FADP** — Automated individual decisions; right to human review. Discussed in [[building-permits]], where the report concludes fully automated rejection of a building application would likely not be permissible under current law generally (*«dürften … unter geltendem Recht nicht zulässig sein»* — the report derives this from several higher-ranking legal bases, not from the FADP alone) [(p2-building-permits p. 26)](../sources/p2-building-permits.md). Also referenced in [[machine-translation]] and Phase II healthcare projects. See [[fadp-art-21]] for the dedicated article page.
 
 ## Phase I usage
 

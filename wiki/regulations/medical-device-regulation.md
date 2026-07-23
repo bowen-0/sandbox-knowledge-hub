@@ -13,7 +13,7 @@ updated: 2026-06-24
 
 # Medical Device Regulation (MedDO, EU MDR/IVDR)
 
-The regime that turns AI software into a regulated medical device the moment it influences a medical decision. It is the densest legal cluster in the corpus, worked out in the [[medical-documentation]] report and cross-referenced by [[digital-eye-clinic]]. The Swiss [[medical-device-regulation|Medizinprodukteverordnung (MepV / MedDO)]] sits on top of the EU **MDR (2017/745)** and **IVDR**, which apply directly because Switzerland's mutual-recognition agreement for medical devices lapsed in 2021, so a Class IIa-or-higher device needs an EU notified body.
+The regime that turns AI software into a regulated medical device the moment it influences a medical decision. It is the densest legal cluster in the corpus, worked out in the [[medical-documentation]] report and cross-referenced by [[digital-eye-clinic]]. The Swiss *Medizinprodukteverordnung* (MepV / MedDO) mirrors the EU **MDR (2017/745)** and **IVDR**. Since the EU's mutual recognition of Swiss medical-device certification lapsed in 2021, a Class IIa-or-higher device can no longer be certified in Switzerland — it needs an EU notified body, and Switzerland unilaterally recognises the EU approval (expert box, Dr. Atanas Todorov, CMO Arcondis) [(p2-medical-documentation p. 34)](../sources/p2-medical-documentation.md).
 
 ## The "medical purpose" line decides everything
 
@@ -39,7 +39,7 @@ In English: special, eased requirements apply to medical devices manufactured an
 
 ## How the EU AI Act stacks on top
 
-For medical AI the [[eu-ai-act|EU AI Act]] is an additional layer, not a substitute: medical-decision-influencing systems are high-risk, carrying obligations for risk management, transparency, human oversight and accuracy, plus a predetermined change-control plan for systems that keep learning [(p2-medical-documentation p. 41)](../sources/p2-medical-documentation.md). The report argues this is exactly where rigid approval logic strains, and calls for adaptive regulation:
+For medical AI the [[eu-ai-act|EU AI Act]] is an additional layer, not a substitute. Per the report's glossary, medical AI applications *mostly* count as high-risk systems, with the Act setting requirements for development, transparency, safety and monitoring [(p2-medical-documentation p. 41)](../sources/p2-medical-documentation.md); the precise trigger is conditional — software classed MDR Class IIa or higher (or IVDR Class B or higher) counts as high-risk automatically [(p2-medical-documentation p. 21)](../sources/p2-medical-documentation.md). For systems that keep learning, the report points to the Act's Art. 43(4) predetermined-change-control approach [(p2-medical-documentation p. 37)](../sources/p2-medical-documentation.md). The report argues this is exactly where rigid approval logic strains, and calls for adaptive regulation:
 
 > *«...Regulierung, die mitlernt – flexibel, risikobasiert und jenseits starrer Zulassungen.»*
 

@@ -14,21 +14,19 @@ updated: 2026-06-10
 
 # FADP Art. 21 — Automated Individual Decisions
 
-Article 21 of the Swiss Federal Act on Data Protection ([[dsg-fadp]]). Provides individuals with the right to human review when a decision affecting them is taken solely by automated means: *«Nach Art. 21 DSG haben betroffene Personen Anspruch darauf, über eine solche Entscheidung informiert zu werden und eine Überprüfung durch eine natürliche Person zu verlangen.»* (under Art. 21 DSG, affected persons have the right to be informed about such a decision and to request review by a natural person) [(p2-building-permits p. 26)](../sources/p2-building-permits.md). Functionally parallel to GDPR Art. 22, but with distinctly Swiss statutory framing.
+Article 21 of the Swiss Federal Act on Data Protection ([[dsg-fadp]]). Provides individuals with the right to human review when a decision that carries legal consequences or similarly significant effects for them is taken solely by automated means: *«Nach Art. 21 DSG haben betroffene Personen Anspruch darauf, über eine solche Entscheidung informiert zu werden und eine Überprüfung durch eine natürliche Person zu verlangen.»* (under Art. 21 DSG, affected persons have the right to be informed about such a decision and to request review by a natural person) [(p2-building-permits p. 26)](../sources/p2-building-permits.md). Functionally parallel to GDPR Art. 22, but with distinctly Swiss statutory framing.
 
 ## Why it's load-bearing in the corpus
 
 This is the single most-cited article when sandbox projects engage automated administrative decisions:
 
-- **[[building-permits]]** — flags this as the reason fully automated rejection of a building application would likely breach the FADP: *«Solche vollautomatisierten Entscheide dürften jedoch unter geltendem Recht nicht zulässig sein.»* (such fully automated decisions would likely not be permissible under current law) [(p2-building-permits p. 26)](../sources/p2-building-permits.md). The prototype is designed as a *pre-check* — non-binding, human-reviewed — specifically to stay clear of Art. 21.
+- **[[building-permits]]** — discusses it where the report concludes fully automated rejection of a building application would likely not be permissible under current law (a conclusion the report draws from several legal bases, Art. 21 among them): *«Solche vollautomatisierten Entscheide dürften jedoch unter geltendem Recht nicht zulässig sein.»* [(p2-building-permits p. 26)](../sources/p2-building-permits.md). The prototype is designed as a *pre-check*, non-binding and human-reviewed, which keeps it outside the fully-automated-decision pattern.
 - **[[machine-translation]]** — referenced in the original FADP framing for AI-in-administrative-procedures.
 - **[[medical-documentation]]** — relevant whenever AI-generated medical notes inform clinical decisions; emphasised in the regulatory roundtable convened with the data-protection supervisory authority.
 
 ## The "voluntary AI pre-check" liability gotcha
 
-From [[building-permits]]:
-
-> Even non-binding AI pre-check tools may trigger **state liability under "protected trust"** if users reasonably rely on them — they must be clearly labelled as non-binding. [(p2-building-permits p. 27)](../sources/p2-building-permits.md)
+From [[building-permits]]: even for a voluntary, non-binding AI pre-check, the report notes that state responsibility is not excluded — the pre-check is not a formal ruling (*Verfügung*), but liability based on legitimate trust (*Vertrauenshaftung*) can arise from it if users reasonably rely on it, so it must be clearly labelled as non-binding [(p2-building-permits p. 27)](../sources/p2-building-permits.md).
 
 The report's own wording: *«Wenn der Vorabcheck den Eindruck erweckt, er sei zuverlässig, verbindlich oder autoritativ, kann bei den Nutzenden ein schutzwürdiges Vertrauen entstehen.»* (if the pre-check creates the impression of being reliable, binding or authoritative, users may develop trust that warrants legal protection), and therefore: *«Wichtig ist es deshalb, klarzustellen, dass der Vorabcheck unverbindlich ist und die massgebliche Prüfung im formellen Verfahren durch die Behörde erfolgt.»* (it is therefore important to make clear that the pre-check is non-binding and that the authoritative review takes place in the formal procedure, conducted by the authority) [(p2-building-permits p. 27)](../sources/p2-building-permits.md).
 
