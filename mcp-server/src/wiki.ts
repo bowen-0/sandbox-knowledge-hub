@@ -27,15 +27,17 @@ function escapeRegExp(s: string): string {
 }
 
 /**
- * An inline citation, with its visible slug and its source link:
+ * An inline citation, with its visible label and its source link. Both the
+ * historic slug form and the friendly-label form are matched:
  *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
- * Captures: visible-slug, p|S, page-number, optional "../", href-slug.
- * Page-anchoring stays slug-based in the stored markdown (CONVENTIONS §6);
- * this lets the server swap the *visible* slug for a friendly source name at
- * serve time while leaving the link (and so the file mapping) untouched.
+ *   [(Building Permits report, p. 25)](../sources/p2-building-permits.md)
+ * Captures: visible-label, p|S, page-number, optional "../", href-slug.
+ * The href slug is what maps to the source file (and drives the deep-link
+ * rewrite); the visible label is normalised to the source's `cite_as` at
+ * serve time whichever form is stored.
  */
 const CITATION_LINK_RE =
-  /\[\(([a-z0-9][a-z0-9-]*)(?:\s+(p|S)\.\s*(\d+))?\)\]\((\.\.\/)?sources\/([a-z0-9-]+)\.md\)/gi;
+  /\[\(([^()[\]]+?)(?:,?\s+(p|S)\.\s*(\d+))?\)\]\((\.\.\/)?sources\/([a-z0-9-]+)\.md\)/gi;
 
 /** Typed frontmatter fields that act as graph edges. */
 const EDGE_FIELDS = [
@@ -183,15 +185,15 @@ export class WikiStore {
     const names = await this.citationNames();
     const base = this.citationBaseUrl?.replace(/\/+$/, "");
     if (names.size === 0 && !base) return text;
-    return text.replace(CITATION_LINK_RE, (_full, visSlug, pLetter, pNum, dotdot, hrefSlug) => {
-      const name = names.get(visSlug) ?? names.get(hrefSlug);
+    return text.replace(CITATION_LINK_RE, (_full, visLabel, pLetter, pNum, dotdot, hrefSlug) => {
+      const name = names.get(visLabel) ?? names.get(hrefSlug);
       const label = name
         ? pNum
           ? `${name}, ${pLetter}. ${pNum}`
           : name
         : pNum
-          ? `${visSlug} ${pLetter}. ${pNum}`
-          : visSlug;
+          ? `${visLabel} ${pLetter}. ${pNum}`
+          : visLabel;
       const href = base
         ? `${base}/c/${hrefSlug}${pNum ? `/${pNum}` : ""}`
         : `${dotdot ?? ""}sources/${hrefSlug}.md`;

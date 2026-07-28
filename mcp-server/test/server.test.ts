@@ -115,6 +115,17 @@ describe("WikiStore on the real wiki", () => {
     // No portable relative link survives for that citation when a base is set.
     expect(r.content).not.toMatch(/\]\(\.\.\/sources\/p2-building-permits\.md\)/);
   });
+
+  it("renders friendly-label citations identically to slug-label ones (both stored forms)", async () => {
+    const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
+    const slugForm = "[(p2-building-permits p. 25)](../sources/p2-building-permits.md)";
+    const labelForm = "[(Building Permits report, p. 25)](../sources/p2-building-permits.md)";
+    const a = await linked.renderCitationNames(slugForm);
+    const b = await linked.renderCitationNames(labelForm);
+    expect(a).toBe(b);
+    expect(a).toContain("https://hub.example/c/p2-building-permits/25");
+    expect(a).toContain("Building Permits report, p. 25");
+  });
 });
 
 describe("MCP server end-to-end", () => {
