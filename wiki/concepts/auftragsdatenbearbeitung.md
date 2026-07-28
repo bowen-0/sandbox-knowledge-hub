@@ -1,7 +1,6 @@
 ---
 title: Auftragsdatenbearbeitung (Commissioned Data Processing)
 type: concept
-slug: auftragsdatenbearbeitung
 canonical_source: null
 related: [data-access, pseudonymisation]
 appears_in: [machine-translation, smart-parking, ai-in-education, building-permits]

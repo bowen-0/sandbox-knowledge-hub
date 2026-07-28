@@ -1,7 +1,6 @@
 ---
 title: Pseudonymisation
 type: concept
-slug: pseudonymisation
 canonical_source: null
 related: [data-access, data-minimisation]
 appears_in: [smart-parking, ai-in-education, digital-eye-clinic, building-permits]

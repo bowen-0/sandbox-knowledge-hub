@@ -55,8 +55,8 @@ The overview itself is non-technical, but it names: **MPAssist** (medical docume
 This is the single most strategic document in the corpus — it explains what the sandbox *is now*, how it changed from Phase I, and the four-pillar 2026–2029 location strategy it now anchors. Without reading this, you can't speak credibly about where the sandbox is heading.
 
 ## Notable quotes
-- "Our sandbox approach deliberately uses the strengths of the Swiss AI ecosystem: collaboration, openness and a clear practical focus." (*«Unser Sandbox-Ansatz nutzt gezielt die Stärken des Schweizer KI-Ökosystems: Kollaboration, Offenheit und klarer Praxisfokus.»*) — Raphael von Thiessen, p. 4.
-- "Precisely in healthcare, you need protected test spaces to effectively bring regulatory requirements and progress together." (*«Gerade im Gesundheitswesen braucht es geschützte Testräume, um regulatorische Anforderungen und Fortschritt effektiv zusammenzubringen.»*) — Stefan Lienhard, CEO digital health center Bülach, p. 7.
+- "Our sandbox approach deliberately leverages the strengths of the Swiss AI ecosystem: collaboration, openness, and a strong focus on practical application." — Raphael von Thiessen, p. 4.
+- "Particularly in the healthcare sector, controlled testing environments are essential to effectively align regulatory requirements with innovation" — Stefan Lienhard, CEO digital health center Bülach, p. 7.
 
 ## Taxonomies the booklet hands us (load-bearing for the wiki schema)
 

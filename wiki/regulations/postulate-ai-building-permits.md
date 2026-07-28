@@ -1,8 +1,7 @@
 ---
 title: 'Postulate "AI in the Building Permit Procedure" (KR No. 226/2023)'
-title_de: Postulat «KI im Baubewilligungsverfahren» (KR-Nr. 226/2023)
+title_de: Postulat "KI im Baubewilligungsverfahren" (KR-Nr. 226/2023)
 type: regulation
-slug: postulate-ai-building-permits
 jurisdiction: ch-canton-zh
 instrument: postulate
 domain: [ai-governance]
@@ -14,9 +13,9 @@ updated: 2026-06-10
 
 # Postulate "AI in the Building Permit Procedure" (KR No. 226/2023)
 
-A postulate in the Zurich Cantonal Parliament (Kantonsrat) on the use of AI in the building-permit procedure, the political backdrop to [[building-permits]]. The report references the parliamentary business «KI im Baubewilligungsverfahren» and the Kantonsrat's decision on postulate KR-Nr. 226/2023 in its problem framing: standardisation and automation must start within existing structures, while systemic questions are to be clarified at the political level to create reliable and coordinated framework conditions for further development [(p2-building-permits p. 6)](../sources/p2-building-permits.md).
+A postulate in the Zurich Cantonal Parliament (Kantonsrat) on the use of AI in the building-permit procedure, the political backdrop to [[building-permits]]. The report references the parliamentary business "AI in the building permit procedure" (*KI im Baubewilligungsverfahren*) and the Kantonsrat's decision on postulate KR-Nr. 226/2023 in its problem framing: standardisation and automation must start within existing structures, while systemic questions are to be clarified at the political level to create reliable and coordinated framework conditions for further development [(Building Permits report, p. 6)](../sources/p2-building-permits.md).
 
-The conclusion chapter positions the sandbox project's outputs as the evidence base for answering it: *«Die Ergebnisse der KI-Analyse und die Entwicklung des Prototyps leisten einen konkreten, evidenzbasierten Beitrag, um politische Vorstösse wie «KI im Baubewilligungsverfahren» im Kanton Zürich zu beantworten.»* The results of the AI analysis and the development of the prototype make a concrete, evidence-based contribution to answering political motions such as "AI in the building permit procedure" in Canton Zürich; the report adds that similar motions in other cantons underline the national relevance [(p2-building-permits p. 29)](../sources/p2-building-permits.md).
+The conclusion chapter positions the sandbox project's outputs as the evidence base for answering it: *"The results of the AI analysis and the development of the prototype will make a concrete, evidence-based contribution to answering political initiatives such as AI in the building permit process in the canton of Zurich. Similar initiatives in other cantons underscore the national relevance."* [(Building Permits report, p. 29)](../sources/p2-building-permits.md)
 
 ## See also
 

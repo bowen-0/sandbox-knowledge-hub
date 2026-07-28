@@ -1,7 +1,6 @@
 ---
 title: Phase II cross-cutting principles — the booklet's 17 general lessons
 type: synthesis
-slug: phase-2-cross-cutting-principles
 insight_domain: ai-deployment
 priority: high
 question: "What are the general principles the sandbox has learned across all its pilots?"

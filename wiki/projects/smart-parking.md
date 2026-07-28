@@ -1,7 +1,6 @@
 ---
 title: Smart Parking
 type: project
-slug: smart-parking
 phase: I
 year: 2024
 status: completed
@@ -30,21 +29,21 @@ updated: 2026-06-10
 
 # Smart Parking
 
-Camera-based detection of free parking spaces using image recognition [(p1-smart-parking p. 4)](../sources/p1-smart-parking.md). The Phase I project that codified the operational playbook for computer vision in Swiss public-sector deployments — covering camera placement [(p1-smart-parking p. 5)](../sources/p1-smart-parking.md), image-handling under the Swiss legal stack [(p1-smart-parking p. 10)](../sources/p1-smart-parking.md), and the canonical **privacy-by-design vocabulary** (low resolution, masking, edge computing, instant deletion, data minimisation) that the rest of the Phase I corpus subsequently reuses [(p1-smart-parking p. 15)](../sources/p1-smart-parking.md).
+Camera-based detection of free parking spaces using image recognition [(Smart Parking report, p. 4)](../sources/p1-smart-parking.md). The Phase I project that codified the operational playbook for computer vision in Swiss public-sector deployments — covering camera placement [(Smart Parking report, p. 5)](../sources/p1-smart-parking.md), image-handling under the Swiss legal stack [(Smart Parking report, p. 10)](../sources/p1-smart-parking.md), and the canonical **privacy-by-design vocabulary** (low resolution, masking, edge computing, instant deletion, data minimisation) that the rest of the Phase I corpus subsequently reuses [(Smart Parking report, p. 15)](../sources/p1-smart-parking.md).
 
 ## Outcome
 
-Productive deployment in **Frauenfeld**, with subsequent roll-out to additional cantons. The Phase II booklet records the status: *«So ist das Projekt Smart Parking in der Stadt Frauenfeld produktiv im Einsatz und wurde ausgeweitet.»* — the Smart Parking project in the City of Frauenfeld is in productive use and has been expanded [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md). Cited in [[00-overview-phase2-build-and-share]] as one of the canonical Phase I projects that scaled beyond the sandbox engagement itself.
+Productive deployment in **Frauenfeld**, with subsequent roll-out to additional cantons. The Phase II booklet records the status: *"For example, the Smart Parking project is in productive use in the City of Frauenfeld and has been further expanded."* [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md) Cited in [[00-overview-phase2-build-and-share]] as one of the canonical Phase I projects that scaled beyond the sandbox engagement itself.
 
 ## Key learnings
 
-- The **partner-bottleneck** pattern: property-owner access to mount cameras is harder to secure than the AI itself [(p1-smart-parking p. 6)](../sources/p1-smart-parking.md) [(p1-smart-parking p. 17)](../sources/p1-smart-parking.md).
-- Privacy-by-design lexicon defined here [(p1-smart-parking p. 15)](../sources/p1-smart-parking.md) recurs in [[ai-in-education]], [[digital-eye-clinic]], and is referenced in the [[00-overview-phase2-build-and-share]] insights synthesis, §04 Technology [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md).
+- The **partner-bottleneck** pattern: property-owner access to mount cameras is harder to secure than the AI itself [(Smart Parking report, p. 6)](../sources/p1-smart-parking.md) [(Smart Parking report, p. 17)](../sources/p1-smart-parking.md).
+- Privacy-by-design lexicon defined here [(Smart Parking report, p. 15)](../sources/p1-smart-parking.md) recurs in [[ai-in-education]], [[digital-eye-clinic]], and is referenced in the [[00-overview-phase2-build-and-share]] insights synthesis, §04 Technology [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md).
 - Image recognition on the physical environment is a *much easier* visual modality than the plan-document understanding examined later in [[building-permits]].
 
 ## Stakeholders
 
-[[raphael-von-thiessen]] (programme lead), [[stephanie-volz]] (legal). Test partner: [[stadt-frauenfeld]] [(p1-smart-parking p. 21)](../sources/p1-smart-parking.md).
+[[raphael-von-thiessen]] (programme lead), [[stephanie-volz]] (legal). Test partner: [[stadt-frauenfeld]] [(Smart Parking report, p. 21)](../sources/p1-smart-parking.md).
 
 ## See also
 

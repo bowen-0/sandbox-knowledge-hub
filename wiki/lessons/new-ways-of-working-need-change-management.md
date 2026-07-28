@@ -1,7 +1,6 @@
 ---
 title: New ways of working with AI require active change management
 type: lesson
-slug: new-ways-of-working-need-change-management
 phase: II
 insight_domain: ai-deployment
 project: [infrastructure-maintenance, digital-eye-clinic, building-permits]
@@ -10,7 +9,7 @@ regulation: []
 stakeholder: []
 sources:
   - 00-overview-phase2-build-and-share#page-19
-  - p2-digital-eye-clinic#page-23
+  - p2-digital-eye-clinic#page-22
   - p2-building-permits#page-22
 confidence: high
 freshness: 2026-05
@@ -24,9 +23,7 @@ updated: 2026-06-10
 
 From [[00-overview-phase2-build-and-share]] §04 Organisation:
 
-> *«Neue Arbeitsweisen brauchen aktive Begleitung: KI verändert bestehende Prozesse und Rollenbilder. Akzeptanz entsteht durch transparente Kommunikation, Schulung und Einbindung der Mitarbeitenden (z. B. Drohneninspektionen als Ergänzung manueller Pistenkontrollen).»* [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md)
-
-In English: new ways of working need active support. AI reshapes existing processes and roles; acceptance is fostered through transparent communication, training, and the involvement of employees (e.g. drone inspections as a complement to manual runway inspections).
+> *"New ways of working require active management: AI reshapes existing processes and roles. Acceptance is fostered through transparent communication, training, and the involvement of employees (e.g. drone inspections as a complement to manual runway inspections)."* [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md)
 
 ## What it means in practice
 
@@ -40,9 +37,9 @@ These shifts feel threatening if introduced without communication, training, and
 
 ## Evidence base
 
-- **[[infrastructure-maintenance]]** — the booklet's explicit example: drone inspection as a *complement* to manual inspection, not a replacement. Acceptance hinged on framing the AI as augmentation [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md).
-- **[[digital-eye-clinic]]** — clinical AI is highly sensitive to clinician acceptance; the project's evaluation framework includes practitioner-experience dimensions [(p2-digital-eye-clinic p. 23)](../sources/p2-digital-eye-clinic.md).
-- **[[building-permits]]** — officials' trust in AI pre-checks depends on controlled, reproducible configurations: generative AI's non-deterministic outputs otherwise erode trust in the systems [(p2-building-permits p. 22)](../sources/p2-building-permits.md).
+- **[[infrastructure-maintenance]]** — the booklet's explicit example: drone inspection as a *complement* to manual inspection, not a replacement. Acceptance hinged on framing the AI as augmentation [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md).
+- **[[digital-eye-clinic]]** — clinical AI is highly sensitive to clinician acceptance; the project's evaluation framework includes practitioner-experience dimensions [(Digital Eye Clinic report, p. 22)](../sources/p2-digital-eye-clinic.md).
+- **[[building-permits]]** — officials' trust in AI pre-checks depends on controlled, reproducible configurations: generative AI's non-deterministic outputs otherwise erode trust in the systems [(Building Permits report, p. 22)](../sources/p2-building-permits.md).
 
 ## How to apply
 

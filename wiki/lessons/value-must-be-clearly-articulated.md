@@ -1,7 +1,6 @@
 ---
 title: AI value must be clearly articulated, not assumed from technical feasibility
 type: lesson
-slug: value-must-be-clearly-articulated
 phase: II
 insight_domain: ai-deployment
 project: [bridge-monitoring, digital-eye-clinic, building-permits]
@@ -10,8 +9,8 @@ regulation: []
 stakeholder: []
 sources:
   - 00-overview-phase2-build-and-share#page-19
+  - p2-bridge-monitoring#page-5
   - p2-bridge-monitoring#page-6
-  - p2-bridge-monitoring#page-7
   - p2-digital-eye-clinic#page-2
   - p2-building-permits#page-7
   - p2-building-permits#page-8
@@ -26,11 +25,9 @@ updated: 2026-06-11
 
 # AI value must be clearly articulated
 
-From [[00-overview-phase2-build-and-share]], §04 Organisation, under the heading «Mehrwert muss klar sein» [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md):
+From [[00-overview-phase2-build-and-share]], §04 Organisation [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md):
 
-> *«Der Nutzen von KI ist für Fachbereiche nicht immer unmittelbar ersichtlich (z. B. sensorbasierte Überwachung des Schwingungsverhaltens von Brücken als Ergänzung zu visuellen Inspektionen). Entscheidend ist die klare Verknüpfung zu konkreten Entscheidungen und operativem Mehrwert im Alltag. KI sollte dabei gezielt dort eingesetzt werden, wo sie echten Mehrwert schafft – nicht allein, weil sie technologisch möglich ist.»*
-
-In English: the benefits of AI are not always immediately apparent to domain experts (e.g. sensor-based monitoring of bridge vibration behaviour as a complement to visual inspections). The key is a clear link to concrete decisions and operational value in day-to-day activities. AI should be deployed where it creates tangible value, not merely because it is technologically feasible.
+> *"Value must be clearly articulated: the benefits of AI are not always immediately apparent to domain experts (e.g. sensor-based monitoring of bridge vibration behaviour as a complement to visual inspections). The key is a clear link to concrete decisions and operational value in day-to-day activities. AI should be deployed where it creates tangible value, not merely because it is technologically feasible."*
 
 ## What "clearly articulated" means
 
@@ -42,9 +39,9 @@ A clear AI value articulation has three properties:
 
 ## Evidence base
 
-- **[[bridge-monitoring]]** — the booklet's named example: sensor-based monitoring complements (rather than replaces) visual structural inspection [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md). Value = earlier signal on deteriorating components [(p2-bridge-monitoring p. 6)](../sources/p2-bridge-monitoring.md), not "replacing" engineers: «Datenbasiertes Monitoring ersetzt bestehende Nachweise nicht, sondern ergänzt sie mit Messdaten aus dem Betrieb.» (data-based monitoring does not replace existing structural evidence, it complements it with measurement data from live operations) [(p2-bridge-monitoring p. 7)](../sources/p2-bridge-monitoring.md).
-- **[[digital-eye-clinic]]** — value = throughput against rising patient volumes + shortages of skilled professionals, not "AI replaces ophthalmologists" [(p2-digital-eye-clinic p. 2)](../sources/p2-digital-eye-clinic.md).
-- **[[building-permits]]** — value = preliminary check costing under CHF 2/application [(p2-building-permits p. 13)](../sources/p2-building-permits.md) + catching formal deficiencies before formal proceedings [(p2-building-permits p. 8)](../sources/p2-building-permits.md), not "AI decides the permit" [(p2-building-permits p. 7)](../sources/p2-building-permits.md).
+- **[[bridge-monitoring]]** — the booklet's named example: sensor-based monitoring complements (rather than replaces) visual structural inspection [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Value = earlier signal on deteriorating components [(Bridge Monitoring report, p. 5)](../sources/p2-bridge-monitoring.md), not "replacing" engineers: *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* (Raphael von Thiessen, AI Sandbox Programme Manager, Canton of Zurich) [(Bridge Monitoring report, p. 6)](../sources/p2-bridge-monitoring.md).
+- **[[digital-eye-clinic]]** — value = throughput against rising patient volumes + shortages of skilled professionals, not "AI replaces ophthalmologists" [(Digital Eye Clinic report, p. 2)](../sources/p2-digital-eye-clinic.md).
+- **[[building-permits]]** — value = preliminary check costing under CHF 2/application [(Building Permits report, p. 13)](../sources/p2-building-permits.md) + catching formal deficiencies before formal proceedings [(Building Permits report, p. 8)](../sources/p2-building-permits.md), not "AI decides the permit" [(Building Permits report, p. 7)](../sources/p2-building-permits.md).
 
 Each of these articulations names a concrete operational benefit. None of them claims AI is *replacing* the human work.
 

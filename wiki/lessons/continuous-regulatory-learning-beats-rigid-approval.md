@@ -1,7 +1,6 @@
 ---
 title: Continuous regulatory learning beats rigid approval mechanisms
 type: lesson
-slug: continuous-regulatory-learning-beats-rigid-approval
 phase: II
 insight_domain: ai-deployment
 project: [inspection-robots, medical-documentation]
@@ -20,11 +19,9 @@ updated: 2026-06-10
 
 # Continuous regulatory learning beats rigid approval mechanisms
 
-The Phase II booklet [[00-overview-phase2-build-and-share]] states the principle in its §04 legal insights [(00-overview-phase2-build-and-share p. 18)](../sources/00-overview-phase2-build-and-share.md):
+The Phase II booklet [[00-overview-phase2-build-and-share]] states the principle in its §04 legal insights [(Build & Share (Phase II overview report), p. 18)](../sources/00-overview-phase2-build-and-share.md):
 
-> *«Kontinuierliches regulatorisches Lernen wird zentral: Klassische Regulierungslogiken stossen bei dynamischen, lernenden Systemen an Grenzen. Neue Formate für Austausch und Feedback zwischen Behörden und Anbietern gewinnen jenseits von rigider Zulassungslogik an Bedeutung.»*
-
-In the booklet's English version (p. 18): "Continuous regulatory learning becomes critical: traditional regulatory approaches reach their limits with dynamic, adaptive systems. New formats for exchange and feedback between authorities and providers are gaining importance beyond rigid approval mechanisms."
+> *"Continuous regulatory learning becomes critical: traditional regulatory approaches reach their limits with dynamic, adaptive systems. New formats for exchange and feedback between authorities and providers are gaining importance beyond rigid approval mechanisms."*
 
 ## Evidence base
 

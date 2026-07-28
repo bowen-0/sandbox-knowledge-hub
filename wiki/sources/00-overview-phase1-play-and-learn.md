@@ -4,7 +4,6 @@ cite_as: "Play & Learn (Phase I overview report)"
 title_de: "Play & Learn — Eine Sandbox zur Stärkung des KI-Standorts"
 type: source
 source_type: pdf
-slug: 00-overview-phase1-play-and-learn
 path: ../pdfs/de/00-overview-phase1-play-and-learn.pdf
 en_path: ../pdfs/en/00-overview-phase1-play-and-learn.pdf
 language: bilingual
@@ -43,8 +42,8 @@ How the report's findings were produced:
 
 ## Notable quotes
 
-- *«Ausnahmslos alle Aktivitäten der Sandbox müssen den aktuellen gesetzlichen Anforderungen entsprechen (z.B. im Datenschutz oder im öffentlichen Recht). Dieser pragmatische Ansatz ermöglichte einen schnellen Start und die Sammlung praktischer Erfahrungen.»* In English: "Without exception, all sandbox activities must meet current legal requirements (e.g. in data protection or public law). This pragmatic approach enabled a swift start and the collection of practical experience." (p. 9)
-- *«Es wurde deutlich, dass bei bestimmten Projekten, abhängig vom spezifischen Anwendungsfall, einer der beiden Sandbox-Services im Vordergrund stehen würde.»* In English: "It became clear that for certain projects, depending on the specific use case, one of the two sandbox services would be the focus." (p. 11; the EN edition carries this passage on p. 10)
+- *"All sandbox activities are required to comply fully with current legal requirements (e.g. in the areas of data protection and public law). This pragmatic approach enabled a swift launch and the rapid accumulation of practical experience."* (p. 9)
+- *"It became clear that for certain projects, depending on the specific use case, one of the two sandbox services would form the focus."* (p. 10)
 
 ## Named stakeholders
 

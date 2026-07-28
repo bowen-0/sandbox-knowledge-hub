@@ -1,7 +1,6 @@
 ---
 title: ITSL — Center for Information Technology, Society, and Law (University of Zurich)
 type: stakeholder
-slug: itsl-uzh
 kind: org
 role: Academic legal partner across all sandbox projects
 partner_role: [mandated-expert]
@@ -12,7 +11,7 @@ updated: 2026-06-10
 
 # ITSL — Center for Information Technology, Society, and Law
 
-The University of Zurich's Center for Information Technology, Society, and Law. The **standing legal partner** of the AI Innovation Sandbox — provides regulatory and legal analysis on every project across both phases, fulfilling the *mandated-expert* role from the booklet's 5-role partner taxonomy [(00-overview-phase2-build-and-share p. 8)](../sources/00-overview-phase2-build-and-share.md).
+The University of Zurich's Center for Information Technology, Society, and Law. The **standing legal partner** of the AI Innovation Sandbox — provides regulatory and legal analysis on every project across both phases, fulfilling the *mandated-expert* role from the booklet's 5-role partner taxonomy [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Personnel in the corpus
 
@@ -21,9 +20,9 @@ The University of Zurich's Center for Information Technology, Society, and Law. 
 
 ## Sandbox role
 
-- Provides the formal regulatory analysis for each project — the mandated-expert role per the booklet's partner-role diagram [(00-overview-phase2-build-and-share p. 8)](../sources/00-overview-phase2-build-and-share.md).
+- Provides the formal regulatory analysis for each project — the mandated-expert role per the booklet's partner-role diagram [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md).
 - Operates as the recurring channel through which sectoral and cross-sectoral Swiss legal questions are clarified.
-- Sits on the Phase II steering committee (listed under *Projekt-Steering* in the booklet impressum) [(00-overview-phase2-build-and-share p. 28)](../sources/00-overview-phase2-build-and-share.md).
+- Sits on the Phase II steering committee (listed under *Projekt-Steering* in the booklet impressum) [(Build & Share (Phase II overview report), p. 28)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 

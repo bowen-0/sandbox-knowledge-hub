@@ -1,7 +1,6 @@
 ---
 title: Combine frontier models and open-source solutions strategically
 type: lesson
-slug: combine-frontier-and-open-source-strategically
 phase: II
 insight_domain: ai-deployment
 project: [digital-eye-clinic, building-permits, medical-documentation]
@@ -20,11 +19,9 @@ updated: 2026-06-10
 
 # Combine frontier models and open-source solutions strategically
 
-From [[00-overview-phase2-build-and-share]], section 04 Technology [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md):
+From [[00-overview-phase2-build-and-share]], section 04 Technology [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md):
 
-> *«Frontier-Modelle vs. Open Source gezielt kombinieren: Anforderungen an Datenschutz, Performance, Kosten und Skalierbarkeit unterscheiden sich je nach Anwendungsfall stark. Organisationen können kommerzielle Frontier-Modelle aus der Cloud mit lokal betriebenen Open-Source-Modellen kombinieren und wählen idealerweise je nach Anforderung das passende Set-up (z. B. im Gesundheitskontext).»*
-
-In the English edition (also p. 17) this reads: "Combine frontier models and open-source solutions strategically: requirements relating to data protection, performance, cost, and scalability vary significantly across use cases. Organisations can combine commercial frontier models from the cloud with locally deployed open-source models and should select the most appropriate configuration based on specific requirements (e.g. in healthcare contexts)."
+> *"Combine frontier models and open-source solutions strategically: requirements relating to data protection, performance, cost, and scalability vary significantly across use cases. Organisations can combine commercial frontier models from the cloud with locally deployed open-source models and should select the most appropriate configuration based on specific requirements (e.g. in healthcare contexts)."*
 
 ## Evidence base
 

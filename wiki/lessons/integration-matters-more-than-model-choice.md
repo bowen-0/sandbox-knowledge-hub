@@ -1,7 +1,6 @@
 ---
 title: Scaling fails on integration, not on model performance
 type: lesson
-slug: integration-matters-more-than-model-choice
 phase: I-and-II
 insight_domain: ai-deployment
 project: [building-permits, digital-eye-clinic, smart-parking]
@@ -13,7 +12,7 @@ sources:
   - 00-overview-phase2-build-and-share#page-17
   - p2-building-permits#page-23
   - p2-building-permits#page-29
-  - p2-digital-eye-clinic#page-28
+  - p2-digital-eye-clinic#page-27
   - p1-smart-parking#page-9
 confidence: high
 freshness: 2026-05
@@ -27,15 +26,13 @@ updated: 2026-06-10
 
 From [[00-overview-phase2-build-and-share]] §04 Organisation:
 
-> *«Skalierung scheitert oft an Integration, nicht an KI: Der Übergang vom Pilot in den produktiven Betrieb scheitert häufig an fehlender Integration in bestehende Systeme, Prozesse und Governance-Strukturen – nicht an der Modellleistung.»*
-
-In English: scaling often fails at integration, not at AI performance; the transition from pilot to operational deployment frequently fails due to insufficient integration into existing systems, processes, and governance structures, rather than limitations of the models themselves [(00-overview-phase2-build-and-share p. 19)](../sources/00-overview-phase2-build-and-share.md).
+> *"Scaling often fails at integration, not at AI performance: the transition from pilot to operational deployment frequently fails due to insufficient integration into existing systems, processes, and governance structures, rather than limitations of the models themselves."* [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Evidence base
 
-- **[[building-permits]]**: the prototype is explicitly architected for integration with **eBaugesucheZH** (cantonal building-permit platform) and the **GIS-Browser** [(p2-building-permits p. 29)](../sources/p2-building-permits.md). The report warns that isolated stand-alone solutions increase interface overhead, media discontinuities and error-proneness, and hamper scaling, operation and acceptance: *«Isolierte Insellösungen erhöhen Schnittstellenaufwand, Medienbrüche und Fehleranfälligkeit und erschweren Skalierung, Betrieb und Akzeptanz im Baubewilligungsverfahren.»* [(p2-building-permits p. 23)](../sources/p2-building-permits.md)
-- **[[digital-eye-clinic]]**: clinical workflow integration was as load-bearing as the diagnostic model itself; the **modular open-source platform** was designed around integration constraints [(p2-digital-eye-clinic p. 28)](../sources/p2-digital-eye-clinic.md).
-- **[[smart-parking]]**: successful Frauenfeld roll-out followed *exactly* because integration into city operations was deliberate [(p1-smart-parking p. 9)](../sources/p1-smart-parking.md); the model was the easy part [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md).
+- **[[building-permits]]**: the prototype is explicitly architected for integration with **eBaugesucheZH** (cantonal building-permit platform) and the **GIS-Browser** [(Building Permits report, p. 29)](../sources/p2-building-permits.md). The report warns: *"Isolated isolated solutions increase interface costs, media discontinuity and susceptibility to errors, and complicate scaling, operation and acceptance in the building permit process."* [(Building Permits report, p. 23)](../sources/p2-building-permits.md) (the doubled "Isolated isolated" is as printed in the EN edition)
+- **[[digital-eye-clinic]]**: clinical workflow integration was as load-bearing as the diagnostic model itself; the **modular open-source platform** was designed around integration constraints [(Digital Eye Clinic report, p. 27)](../sources/p2-digital-eye-clinic.md).
+- **[[smart-parking]]**: successful Frauenfeld roll-out followed *exactly* because integration into city operations was deliberate [(Smart Parking report, p. 9)](../sources/p1-smart-parking.md); the model was the easy part [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md).
 
 ## How to apply
 

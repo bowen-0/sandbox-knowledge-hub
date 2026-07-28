@@ -1,7 +1,6 @@
 ---
 title: AI in Education
 type: project
-slug: ai-in-education
 phase: I
 year: 2023
 status: completed
@@ -26,22 +25,22 @@ updated: 2026-06-11
 
 # AI in Education
 
-Legal best-practices framework for AI deployment in classroom and educational settings [(p1-ai-in-education p. 2)](../sources/p1-ai-in-education.md). The Phase I project that surfaces the data-protection-of-minors angle [(p1-ai-in-education p. 10)](../sources/p1-ai-in-education.md) and the **school-IT-access partner bottleneck** — schools' IT environments are not easily integrated with external AI services [(p1-ai-in-education p. 14)](../sources/p1-ai-in-education.md).
+Legal best-practices framework for AI deployment in classroom and educational settings [(AI in Education report, p. 2)](../sources/p1-ai-in-education.md). The Phase I project that surfaces the data-protection-of-minors angle [(AI in Education report, p. 10)](../sources/p1-ai-in-education.md) and the **school-IT-access partner bottleneck** — schools' IT environments are not easily integrated with external AI services [(AI in Education report, p. 14)](../sources/p1-ai-in-education.md).
 
 ## Outcome
 
-Published legal best-practices guide [(p1-ai-in-education p. 2)](../sources/p1-ai-in-education.md).
+Published legal best-practices guide [(AI in Education report, p. 2)](../sources/p1-ai-in-education.md).
 
 ## Key learnings
 
-- Data-protection of minors is the dominant regulatory consideration in education-sector AI [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md) [(p1-ai-in-education p. 10)](../sources/p1-ai-in-education.md).
-- The privacy-by-design lexicon (low resolution, masking, edge computing, instant deletion, data minimisation) — first articulated in [[smart-parking]] and reused here — proves to be cross-sectoral [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md).
-- **School-IT access** as a specific instance of the partner-bottleneck pattern [(p1-ai-in-education p. 14)](../sources/p1-ai-in-education.md).
-- One of the Phase II projects discontinued by mutual agreement, a «KI-gestützte Plattform zur Vorbereitung von Gymnasialprüfungen» (an AI-supported platform for preparing for upper secondary school examinations, per [[00-overview-phase2-build-and-share]] §03 «Weitere Projekte»), attempted to extend this work; the company behind it was the startup GoGymi, whose founder Jan Bühlmann is quoted on the same page [(00-overview-phase2-build-and-share p. 15)](../sources/00-overview-phase2-build-and-share.md).
+- Data-protection of minors is the dominant regulatory consideration in education-sector AI [(AI in Education report, p. 8)](../sources/p1-ai-in-education.md) [(AI in Education report, p. 10)](../sources/p1-ai-in-education.md).
+- The privacy-by-design lexicon (low resolution, masking, edge computing, instant deletion, data minimisation) — first articulated in [[smart-parking]] and reused here — proves to be cross-sectoral [(AI in Education report, p. 8)](../sources/p1-ai-in-education.md).
+- **School-IT access** as a specific instance of the partner-bottleneck pattern [(AI in Education report, p. 14)](../sources/p1-ai-in-education.md).
+- One of the Phase II projects discontinued by mutual agreement, *"an AI-supported platform for preparing for upper secondary school examinations"* (per [[00-overview-phase2-build-and-share]] §03 "Additional Projects"), attempted to extend this work; the company behind it was the startup GoGymi, whose founder Jan Bühlmann is quoted on the same page [(Build & Share (Phase II overview report), p. 15)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Stakeholders
 
-[[raphael-von-thiessen]], [[stephanie-volz]] [(p1-ai-in-education p. 14)](../sources/p1-ai-in-education.md).
+[[raphael-von-thiessen]], [[stephanie-volz]] [(AI in Education report, p. 14)](../sources/p1-ai-in-education.md).
 
 ## See also
 

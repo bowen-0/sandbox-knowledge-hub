@@ -4,7 +4,6 @@ cite_as: "Build & Share (Phase II overview report)"
 title_de: "Build & Share — Eine Sandbox zur Befähigung des KI-Ökosystems"
 type: source
 source_type: pdf
-slug: 00-overview-phase2-build-and-share
 path: ../pdfs/de/00-overview-phase2-build-and-share.pdf
 en_path: ../pdfs/en/00-overview-phase2-build-and-share.pdf
 language: bilingual
@@ -41,8 +40,8 @@ How the booklet's findings were produced:
 
 ## Notable quotes
 
-- *«Unser Sandbox-Ansatz nutzt gezielt die Stärken des Schweizer KI-Ökosystems: Kollaboration, Offenheit und klarer Praxisfokus.»* In English: "Our sandbox approach deliberately uses the strengths of the Swiss AI ecosystem: collaboration, openness and a clear practical focus." (Raphael von Thiessen, Programmleiter KI-Standort, Kanton Zürich, p. 4)
-- *«Gerade im Gesundheitswesen braucht es geschützte Testräume, um regulatorische Anforderungen und Fortschritt effektiv zusammenzubringen.»* In English: "Precisely in healthcare, you need protected test spaces to effectively bring regulatory requirements and progress together." (Stefan Lienhard, CEO, digital health center bülach, p. 7)
+- *"Our sandbox approach deliberately leverages the strengths of the Swiss AI ecosystem: collaboration, openness, and a strong focus on practical application."* (Raphael von Thiessen, Programme Lead AI, Canton of Zurich, p. 4)
+- *"Particularly in the healthcare sector, controlled testing environments are essential to effectively align regulatory requirements with innovation"* (Stefan Lienhard, CEO, digital health center bülach, p. 7)
 
 ## Named stakeholders
 
