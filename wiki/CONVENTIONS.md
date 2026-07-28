@@ -169,13 +169,13 @@ connects: [p1-machine-translation, p2-medical-documentation, dsg-art-22]
 After frontmatter, write markdown prose. A few conventions:
 
 - **First-level heading repeats the title.** `# {{title}}` as the first body line. Some renderers strip frontmatter; the H1 makes the page legible without it.
-- **Cite page-anchored inline**, e.g. *"The prototype combines rule-based and generative AI [(p2-building-permits p. 7)](../sources/p2-building-permits.md)."* The page number refers to the German PDF (§5); link to the `sources/` page, which carries the link into the PDF itself. Paragraph-level anchors are a dormant spec (§6) — never write a `#para-N` anchor by hand.
+- **Cite page-anchored inline**, e.g. *"The prototype combines rule-based and generative AI [(Building Permits report, p. 7)](../sources/p2-building-permits.md)."* The visible label is the source's `cite_as` name; the link target stays the slug-named `sources/` page. The page number refers to the English-edition PDF (§5); the `sources/` page carries the link into the PDF itself. Paragraph-level anchors are a dormant spec (§6) — never write a `#para-N` anchor by hand.
 - **Use `[[wikilinks]]`** for in-wiki cross-references. Resolved at render time to the matching file under any of the seven folders. Broken wikilinks are surfaced by the lint pass.
-- **German verbatim quotations** for citation strength. Always keep the German exact, then translate into English in the surrounding sentence. Pattern:
+- **Verbatim quotations come from the official English edition** — quotation marks and italics are reserved for character-exact EN-edition text. Pattern:
 
-  > *«<exact German sentence, copied character-for-character from the PDF>»* — followed by the English translation in the surrounding sentence. (Volz, [p2-building-permits p. 25](../sources/p2-building-permits.md))
+  > *"<exact sentence, copied character-for-character from the English-edition PDF>"* (Volz, [(Building Permits report, p. 25)](../sources/p2-building-permits.md))
 
-  Copy the German from the PDF; never reconstruct or back-translate it. If you can't access the German text, quote in English and say the translation is yours.
+  Never write your own translation inside quotation marks. Everything outside quotation marks is the wiki's paraphrase. For a future source with no official English edition: quote the original language verbatim and gloss it in English, tagging the gloss "(translation ours)". German terms of art (*Auftragsdatenbearbeitung*, *Vertrauenshaftung*, …) stay italic German with an English gloss on first mention.
 
 - **Callouts** for non-prose structure (Obsidian-compatible):
   - `> [!tension]` — pages making opposing claims (e.g. centralised vs. decentralised data handling).
@@ -256,18 +256,16 @@ The four "metadata to highlight" dimensions named at the kickoff, so the portfol
 
 Working baseline:
 
-- **Wiki body language is English by default.** Reason: the team's dev feedback loop is English; the German report content is preserved as **verbatim quotations** inline (see §3).
-- **Source PDFs and verbatim citations stay in their original language**, almost always German. Never machine-translate a source quote.
-- **Page slugs are English.** Filenames don't change with locale.
-- **Titles are English.** German equivalents go in a `title_de:` frontmatter field when useful.
-
-This is reversible. When the application UI is bilingual via `next-intl`, the wiki will likely grow `page.de.md` siblings for the pages that need them. Not yet.
+- **The wiki is English-only** (decided with the sandbox team, 2026-07-23): body prose, quotations, and citation page numbers all follow the official **English editions** of the reports (`pdfs/en/`). Rationale: the repo's audience is technical integrators, and the earlier mix of German quotes plus wiki-made translations produced exactly the ambiguity an external review flagged — unmarked translations that diverge from the official EN wording.
+- **The German originals stay in-repo** (`pdfs/de/`) as the authoritative source text, linked from each `sources/` page. For legal wording, the German PDF remains the final word; the wiki cites the official EN edition and the reader can follow through to the DE original.
+- **Never machine-translate a source quote.** Quote the official EN edition verbatim (§3).
+- **Page slugs and titles are English.** German equivalents go in a `title_de:` frontmatter field — kept deliberately, as a searchable alias for German-language queries.
 
 ---
 
 ## 6. Citation anchors — current contract: page-level
 
-**The current citation grain is the page.** Every substantive claim cites `<source-slug>#page-N`, where `N` is the page number in the citation-authoritative German PDF (§5; for the one EN-only source, the English PDF). Frontmatter `sources:` entries use `slug#page-N`; inline prose cites read `[(p2-building-permits p. 25)](../sources/p2-building-permits.md)`. A page-level citation means: *open that PDF page and you will find the claim*.
+**The current citation grain is the page.** Every substantive claim cites `<source-slug>#page-N`, where `N` is the page number in the citation-authoritative **English-edition** PDF (§5). Frontmatter `sources:` entries use `slug#page-N`; inline prose cites read `[(Building Permits report, p. 25)](../sources/p2-building-permits.md)` — friendly `cite_as` label, slug-named link target. A page-level citation means: *open that PDF page and you will find the claim*.
 
 **Paragraph anchors (`#para-N`) are a dormant spec, not the working contract.** The design: an extraction pipeline assigns deterministic paragraph IDs, stable across re-ingests via deterministic chunking + checksum-on-anchor-resolution, and writes the anchor index into each `sources/` page's `paragraphs:` field. Until that pipeline exists and has populated the indexes, **never write a `#para-N` anchor** — a paragraph anchor that nothing resolves is worse than an honest page number. When the pipeline lands, it migrates page-level citations to paragraph anchors mechanically; the schema gains a per-paragraph `checksum` field at the same time.
 
@@ -317,6 +315,7 @@ Lint catches structure, not sense — reviewers still read pages at PR time. *(S
 | 2026-05-28 | Added `cross_cutting: true \| false` to the lesson schema. Used on lessons that are *general principles* drawn from [[00-overview-phase2-build-and-share]] §04 — these should retrieve before case-study-specific lessons for general queries. Codified after applying to 14 lessons in the same commit (well past the 3+ rule). Source: cross-cutting principles synthesis page `wiki/synthesis/phase-2-cross-cutting-principles.md`. |
 | 2026-05-29 | Added `pdfs/` folder as a static-asset companion to `sources/`. All 23 source PDFs (DE + EN) live under `wiki/pdfs/{de,en}/`, and `sources/*.md` frontmatter `path:` / `en_path:` references them via `../pdfs/...`. Each `sources/<slug>.md` also carries a **Read the report** link under its H1. Rationale: the wiki is meant to be substrate-portable (per `README.md`) and hostable as static HTML — PDFs must live inside the deployable tree. |
 | 2026-06-10 | Added `insight_domain: ai-deployment \| sandbox-operations \| both` (required on lessons + synthesis) and the paired §3 domain callouts. Rationale: the corpus serves two audiences whose advice often sounds alike — units deploying AI vs. units running a sandbox programme — and a consumer must never generalise one as the other. Requested by the sandbox programme leads, 2026-06-08. |
+| 2026-07-28 | English-only flip (decided with the sandbox team 2026-07-23, after Patrick Arnecke's review): verbatim quotes now come from the official English editions, character-for-character; the English PDFs are citation-authoritative and all ~285 German «quotes» plus their translation glosses were replaced, with page anchors re-verified (the four reports with divergent DE/EN pagination re-anchored). Inline citation labels switched from slugs to `cite_as` names. German originals stay in `pdfs/de/` as the source text; two German sentences with no EN counterpart remain quoted in German with tagged translations. |
 | 2026-06-10 | Citations re-grained to page level (`#page-N` against the German PDF). The paragraph-anchor system (§6) was specified but its extraction pipeline was never built, leaving every `#para-N` unresolvable; honest page numbers replace dead anchors. The paragraph spec stays in §6 as dormant, for mechanical migration when the pipeline lands. |
 | 2026-06-10 | Codified fields in use on 3+ pages: universal optional `priority: high`; `role:` on stakeholders; `question:` + `audience:` on synthesis; `phase: I-and-II` on lessons evidenced across both phases. |
 | 2026-06-14 | Doc-accuracy fix (no schema change), surfaced by an OKF-comparison review. Corrected §8 to match the implemented linter: the file is `scripts/lint.mjs` (was wrongly `lint.py`); split error vs warning severities; removed two checks the code does not run (cross-page conflicting-`[!tension]` detection, and the ">12-month project / regulation freshness" claim — the linter checks lesson `freshness:` at 18 months only); added the real `sources:`-resolution and index-coverage checks. Also corrected `wiki/README.md`, which still described citations as resolving to a *paragraph* (the live contract has been page-level since 2026-06-10). |

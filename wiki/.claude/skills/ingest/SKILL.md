@@ -29,9 +29,9 @@ Summary of the procedure (for quick orientation; the full version is in `INGEST.
 3. **EXECUTE** — write the pages per CONVENTIONS. Highest-value outputs are **lessons** (`wiki/lessons/<slug>.md`) — atomic transferable claims with page-anchored citations and a declared `insight_domain`.
 4. **BOOKKEEP** — update `wiki/index.md`, verify no orphans, verify no broken `[[wikilinks]]`, verify every claim is page-anchored, then run `node scripts/lint.mjs` from the repo root.
 
-**Citation backbone.** Every claim added to the wiki traces to a `<source-slug>#page-N` page anchor, verified by reading the German PDF page. **Never invent an anchor, and never write `#para-N`** — the paragraph pipeline is a dormant spec. Every new lesson/synthesis page declares `insight_domain: ai-deployment | sandbox-operations | both` (CONVENTIONS §4). Full rules in `INGEST.md`'s contract section and `CONVENTIONS.md` §6.
+**Citation backbone.** Every claim added to the wiki traces to a `<source-slug>#page-N` page anchor, verified by reading the English-edition PDF page. **Never invent an anchor, and never write `#para-N`** — the paragraph pipeline is a dormant spec. Every new lesson/synthesis page declares `insight_domain: ai-deployment | sandbox-operations | both` (CONVENTIONS §4). Full rules in `INGEST.md`'s contract section and `CONVENTIONS.md` §6.
 
-**German verbatim quotes are preserved exactly.** Never machine-translate a source quote. Pattern and rationale in `CONVENTIONS.md` §5.
+**Quotes come from the official English edition, character-for-character.** Never write your own translation inside quotation marks. Pattern and rationale in `CONVENTIONS.md` §5.
 
 **Wikilink discipline at write-time.** Entity wikilinks (projects, people, organisations, regulations, sources) inline freely. Principle / lesson wikilinks italicised in prose, wikilink in parentheses on first mention only. ≤3 wikilinks per paragraph. Same rule as the query skill — see `QUERY.md`.
 

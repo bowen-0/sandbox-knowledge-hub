@@ -96,14 +96,15 @@ describe("WikiStore on the real wiki", () => {
     expect(res).not.toHaveProperty("error");
     if ("error" in res) throw new Error(res.error);
     expect(res.page_number).toBe(25);
-    expect(res.pdf.authoritative).toContain("de");
+    expect(res.pdf.authoritative).toContain("en");
+    expect(res.pdf.de).toBeDefined(); // the German original stays listed
     expect(JSON.stringify(res)).not.toMatch(/%PDF/);
   });
 
-  it("treats infrastructure-maintenance as DE-authoritative (remapped EN→DE 2026-06-25)", async () => {
+  it("treats every source with an EN edition as EN-authoritative (English-only flip 2026-07-28)", async () => {
     const res = await store.resolveCitation("p1-infrastructure-maintenance p. 5");
     if ("error" in res) throw new Error(res.error);
-    expect(res.pdf.authoritative).toContain("de");
+    expect(res.pdf.authoritative).toContain("en");
   });
 
   it("rewrites citation links to the deep-link endpoint when a citationBaseUrl is set", async () => {

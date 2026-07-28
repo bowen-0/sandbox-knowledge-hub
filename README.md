@@ -12,7 +12,7 @@ Technical experts: developers, AI engineers, and knowledge-base operators. The s
 
 ## How it's built
 
-- **Every claim traces to its source.** Substantive statements cite the printed page of the underlying report (`slug#page-N`, German PDFs are citation-authoritative). Citations let a reader verify any claim against the report page — they make errors checkable, not impossible.
+- **Every claim traces to its source.** Substantive statements cite the printed page of the underlying report (`slug#page-N`, against the official English editions; the German originals ship alongside in `wiki/pdfs/de/`). Citations let a reader verify any claim against the report page — they make errors checkable, not impossible.
 - **Two audiences, never conflated.** Insights for *deploying AI* (startups, SMEs, government units, policymakers) and insights for *running a sandbox programme* (other governments designing their own) sound alike but answer different questions. Every lesson declares which it serves via `insight_domain:`; AI consumers are instructed to keep them apart.
 - **Extendable by design.** Adding a new report is a defined, AI-assisted procedure with human approval gates ([`wiki/INGEST.md`](wiki/INGEST.md)), and a lint pass guards the structure (`scripts/lint.mjs`).
 
