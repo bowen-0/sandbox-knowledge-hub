@@ -367,22 +367,28 @@ export class WikiStore {
       return { error: `No source page found for slug "${parsed.sourceSlug}". Use wiki_list_pages with type "source" to see available sources.` };
     }
     const fm = page.frontmatter;
-    // path: usually points at the German PDF, but EN-only sources point it at
-    // the English one — classify by the path's language folder, not the field.
+    // Classify PDFs by the path's language folder, not the field name.
+    // The English edition is citation-authoritative (2026-07-28 flip); the
+    // German original stays listed as the source text.
     const paths = [fm.path, fm.en_path].filter((p): p is string => typeof p === "string");
     const de = paths.find((p) => p.includes("/de/"))?.replace(/^\.\.\//, "wiki/");
     const en = paths.find((p) => p.includes("/en/"))?.replace(/^\.\.\//, "wiki/");
-    const enOnly = !de && !!en;
     return {
       source_slug: page.slug,
       page_number: parsed.page,
       title: page.title,
       source_page_path: `wiki/${page.path}`,
-      pdf: { de, en, authoritative: enOnly ? "en (this source exists only in English)" : "de (German is citation-authoritative)" },
+      pdf: {
+        de,
+        en,
+        authoritative: en
+          ? "en (English edition is citation-authoritative; the German original remains the final word on legal wording)"
+          : "de (no English edition for this source; the original is citation-authoritative)",
+      },
       publisher: typeof fm.publisher === "string" ? fm.publisher : undefined,
       year: typeof fm.year === "number" ? fm.year : undefined,
       note: parsed.page
-        ? `The cited claim is on printed page ${parsed.page} of the ${enOnly ? "English" : "German"} PDF. Read the source page (wiki_read_page "${page.slug}") for context; open the PDF only if you must verify the exact wording.`
+        ? `The cited claim is on printed page ${parsed.page} of the ${en ? "English" : "German"} PDF. Read the source page (wiki_read_page "${page.slug}") for context; open the PDF only if you must verify the exact wording.`
         : `Whole-source citation. Read the source page (wiki_read_page "${page.slug}") for the report's summary, methodology, and notable quotes.`,
     };
   }

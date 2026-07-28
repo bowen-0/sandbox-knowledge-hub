@@ -32,15 +32,16 @@ export class KnowledgeHubMCP extends McpAgent {
   }
 }
 
-// slug -> repo-relative PDF path, from the source pages in the bundle. German
-// is citation-authoritative; fall back to the English PDF for EN-only sources.
+// slug -> repo-relative PDF path, from the source pages in the bundle. The
+// English edition is citation-authoritative; fall back to the German original
+// for sources without one.
 const PDF_BY_SLUG: Map<string, string> = (() => {
   const m = new Map<string, string>();
   for (const p of bundle.pages ?? []) {
     if (p.type !== "source") continue;
     const fm = (p.frontmatter ?? {}) as Record<string, unknown>;
     const paths = [fm.path, fm.en_path].filter((x): x is string => typeof x === "string");
-    const chosen = paths.find((x) => x.includes("/de/")) ?? paths.find((x) => x.includes("/en/"));
+    const chosen = paths.find((x) => x.includes("/en/")) ?? paths.find((x) => x.includes("/de/"));
     if (chosen) m.set(p.slug, chosen.replace(/^\.\.\//, "wiki/"));
   }
   return m;

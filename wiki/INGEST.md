@@ -14,8 +14,8 @@ The wiki is the source of truth, and the citation backbone is page-anchored to s
 
 Four rules follow from that:
 
-1. **Cite the page you actually verified.** Read the PDF page and confirm the claim is on it before writing `slug#page-N`. The German PDF is citation-authoritative (§5). Never write a `#para-N` anchor — the paragraph-anchor pipeline is a dormant spec (CONVENTIONS §6) and nothing resolves those anchors.
-2. **Never machine-translate a German verbatim quote.** Source PDFs are German; quotes stay exact, copied character-for-character. Translate in the surrounding prose. See [`CONVENTIONS.md`](CONVENTIONS.md) §5.
+1. **Cite the page you actually verified.** Read the PDF page and confirm the claim is on it before writing `slug#page-N`. The English-edition PDF is citation-authoritative (§5). Never write a `#para-N` anchor — the paragraph-anchor pipeline is a dormant spec (CONVENTIONS §6) and nothing resolves those anchors.
+2. **Never write your own translation inside quotation marks.** Quote the official English edition verbatim, character-for-character. For a source with no official English edition, quote the original language and tag any gloss "(translation ours)". See [`CONVENTIONS.md`](CONVENTIONS.md) §5.
 3. **Declare the insight domain.** Every new lesson and synthesis page carries `insight_domain: ai-deployment | sandbox-operations | both` (CONVENTIONS §4). Ask of every candidate lesson: is this advice for someone *deploying an AI system*, or for someone *running a sandbox programme*? If genuinely both, the body must fence the two audiences with the §3 domain callouts.
 4. **Ingest is collaborative, not automated.** The procedure has four phases and requires user approval at the end of phases 1 and 2. The discussion shapes the output.
 
@@ -28,7 +28,7 @@ Four rules follow from that:
 ### Phase 1 — READ
 
 1. **Determine the source and where it lives.** Common cases:
-   - Sandbox project report: `pdfs/{de,en}/p<phase>-<slug>.pdf` — German is citation-authoritative
+   - Sandbox project report: `pdfs/{de,en}/p<phase>-<slug>.pdf` — the English edition is citation-authoritative; the German original stays in-repo as the source text
    - Phase-overview booklet: `00-overview-phase<N>-...` — contains the cross-cutting principles
    - External paper / web URL / video / transcript / dataset — see [`CONVENTIONS.md`](CONVENTIONS.md) §2 for `source_type` values
    - Pasted content in conversation — save the raw text to `pdfs/notes/<slug>.md` so future ingests can re-resolve citations
@@ -41,7 +41,7 @@ Four rules follow from that:
    - **Concepts used** — especially ones not yet in `concepts/`
    - **Atomic transferable lessons** — the highest-value extractions. See [`lessons/integrate-regulation-early.md`](lessons/integrate-regulation-early.md) for the shape: one sentence stating the claim, one verbatim quote establishing it, one bullet per supporting project
    - **The insight domain of each candidate lesson** — deployment advice, programme-operating advice, or genuinely both (the contract, rule 3)
-   - **Page anchors** — note the printed page number (German PDF) for every claim and quote you expect to cite
+   - **Page anchors** — note the printed page number (English-edition PDF) for every claim and quote you expect to cite
 5. **Present 3–5 key takeaways to the user.** Frame as: what's *new* here, what does this *reinforce* across the existing corpus, what does this *challenge*?
 
 **Wait for the user before proceeding.** This is the first approval gate.
@@ -98,8 +98,8 @@ Write the pages per the approved plan. Page formats are defined in [`CONVENTIONS
 
 - Filename drops the `p<phase>-` prefix; phase lives in frontmatter (`phase: I | II`)
 - Frontmatter per CONVENTIONS §2 `projects/`. Use `status: analysis-only` for projects without real-world deployment
-- Body uses page-anchored citations: `[(p2-building-permits p. 25)](../sources/p2-building-permits.md)`
-- Preserve German verbatim quotes; translate in surrounding prose
+- Body uses page-anchored citations with the source's `cite_as` label: `[(Building Permits report, p. 25)](../sources/p2-building-permits.md)`
+- Quote verbatim from the official English edition; never write your own translation inside quotation marks
 - Cross-link to all relevant existing entities — stakeholders, regulations, concepts, related projects — using `[[wikilinks]]`
 
 **Lessons** (`lessons/<slug>.md`) — the highest-value output type:
@@ -125,11 +125,11 @@ Write the pages per the approved plan. Page formats are defined in [`CONVENTIONS
 - **Principle / lesson wikilinks** — slugs like `ai-is-rarely-the-primary-challenge` read as YAML filenames mid-sentence, not as nouns. Italicise the principle in prose; put the wikilink in parentheses on first mention only, drop it on subsequent references
 - **Soft cap**: ≤3 wikilinks per paragraph in narrative prose. The `See also` section and closing reading lists don't count
 
-**German verbatim quote pattern** (CONVENTIONS §3):
+**Verbatim quote pattern** (CONVENTIONS §3):
 
-> *«<exact German sentence, copied character-for-character from the PDF>»* [(p2-building-permits p. 25)](sources/p2-building-permits.md)
+> *"<exact sentence, copied character-for-character from the English-edition PDF>"* [(Building Permits report, p. 25)](sources/p2-building-permits.md)
 
-The German stays exact. The English translation is the surrounding sentence, not a replacement for the quote. If you cannot access the German text, quote in English and attribute it to the EN version.
+Quotation marks are reserved for character-exact EN-edition text; everything outside them is the wiki's paraphrase. For a source with no official English edition, quote the original language verbatim and tag any gloss "(translation ours)".
 
 ### Phase 4 — BOOKKEEP
 
@@ -164,7 +164,7 @@ The German stays exact. The English translation is the surrounding sentence, not
 **Sandbox project reports (PDF — the canonical case).** `pdfs/{de,en}/p<phase>-<slug>.pdf`
 
 - Highest density. Expect: 1 source page + 1 project page + 2–6 lessons + 3–10 page updates
-- German PDF is the citation-authoritative version per CONVENTIONS §5. The English PDF is a translation aid; never cite from it as primary
+- The English-edition PDF is citation-authoritative per CONVENTIONS §5. The German original stays in-repo and remains the final word on legal wording; link through to it rather than citing its pages
 - Always populate stakeholders for named project participants (test partner, technical implementation, mandated expert, supervisory authority)
 - Always cross-check `regulations/` before creating a regulation page — most relevant Swiss + EU instruments are already there
 
@@ -192,7 +192,7 @@ The German stays exact. The English translation is the surrounding sentence, not
 
 - **Never write a `#para-N` anchor.** The paragraph pipeline is dormant; cite the page you verified (`#page-N`)
 - **Never assign `insight_domain` by vibe.** Ask who acts on the advice: a team deploying AI, or a team running a programme. When genuinely both, fence the audiences; don't average them
-- **Never machine-translate German verbatim quotes.** Preserve exact; translate in surrounding prose
+- **Never write your own translation inside quotation marks.** Quote the official English edition verbatim; no official EN edition → original language + "(translation ours)" on the gloss
 - **Never create orphan pages.** Every new page is linked from at least one other + listed in `index.md`
 - **Never modify source PDFs in `pdfs/`.** Immutable
 - **Never auto-run an ingest.** READ → PLAN → EXECUTE → BOOKKEEP requires user approval at the end of phases 1 and 2
@@ -209,7 +209,7 @@ The German stays exact. The English translation is the surrounding sentence, not
 
 Different runtimes give the ingest procedure different leverage:
 
-- **Cowork / local Claude Code / Claude Agent SDK** — this file auto-loads as a skill from `.claude/skills/ingest/SKILL.md`. You have `Read`, `Write`, `Edit`, `Glob`, `Grep`, `Bash` against the repo: read the German PDF page-by-page to verify citations, and run the lint pass before committing. **This is the recommended runtime for ingest.**
+- **Cowork / local Claude Code / Claude Agent SDK** — this file auto-loads as a skill from `.claude/skills/ingest/SKILL.md`. You have `Read`, `Write`, `Edit`, `Glob`, `Grep`, `Bash` against the repo: read the English-edition PDF page-by-page to verify citations, and run the lint pass before committing. **This is the recommended runtime for ingest.**
 - **Claude.ai Projects with GitHub connector** — paste this file as the project system prompt, attach [`CONVENTIONS.md`](CONVENTIONS.md) and [`index.md`](index.md), enable the GitHub connector pointed at this repo. The connector can read and write files via the GitHub API, but it cannot page through large PDFs reliably or run lint. Use claude.ai for *editorial* operations on already-ingested sources — drafting a new lesson from an existing source, cross-references, prose tightening, fixing a citation — not for ingesting new PDFs
 - **Raw API call (single-shot)** — concatenate this file with CONVENTIONS, index, and the source content. Page-verified ingest is not feasible here; treat output as a draft for review
 
