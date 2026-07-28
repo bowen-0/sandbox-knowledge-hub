@@ -1,7 +1,6 @@
 ---
 title: Automated Infrastructure Maintenance
 type: project
-slug: infrastructure-maintenance
 phase: I
 year: 2023
 status: completed
@@ -26,16 +25,16 @@ updated: 2026-06-10
 
 # Automated Infrastructure Maintenance
 
-Drone inspections of military infrastructure with computer vision, executed with **IBM Research** [(p1-infrastructure-maintenance p. 2)](../sources/p1-infrastructure-maintenance.md). The "missing" Phase I project in the German corpus: no German edition of this report is available, so this page cites the English PDF (the one EN-only exception to the German-PDF citation convention).
+Drone inspections of military infrastructure with computer vision, executed with **IBM Research** [(Infrastructure Maintenance report, p. 2)](../sources/p1-infrastructure-maintenance.md). The "missing" Phase I project in the German corpus: no German edition of this report is available, so this page cites the English PDF (the one EN-only exception to the German-PDF citation convention).
 
 ## Outcome
 
-The project produced a **structured, annotated dataset for infrastructure inspection** that IBM Research subsequently published on **Hugging Face** as a public benchmark — cited in [[00-overview-phase2-build-and-share]] §01 as a canonical example of *sustainable data reuse beyond the sandbox engagement*. The booklet records it verbatim: *«Im Projekt Drohneninspektion hat IBM Research einen strukturierten, annotierten Datensatz für die Inspektion von Infrastrukturen entwickelt, der als Benchmark für zukünftige KI-Modelle dient und über wissenschaftliche Publikationen sowie Plattformen wie Hugging Face öffentlich zugänglich ist.»* — in the drone-inspection project, IBM Research developed a structured, annotated dataset for infrastructure inspection that serves as a benchmark for future AI models and is publicly accessible via scientific publications and platforms such as Hugging Face [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md).
+The project produced a **structured, annotated dataset for infrastructure inspection** that IBM Research subsequently published on **Hugging Face** as a public benchmark — cited in [[00-overview-phase2-build-and-share]] §01 as a canonical example of *sustainable data reuse beyond the sandbox engagement*. The booklet records it verbatim: *"...within the drone inspection project, IBM Research developed a structured, annotated dataset for infrastructure inspection, which serves as a benchmark for future AI models and is publicly accessible via scientific publications and platforms such as Hugging Face."* [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Key learnings
 
-- High-resolution drone imagery is a powerful but logistically-constrained data source — partner access (military base permissions) was the operational bottleneck. The report notes that access to high-resolution imagery of airport runways "is usually difficult to obtain" [(p1-infrastructure-maintenance p. 14)](../sources/p1-infrastructure-maintenance.md), and the missions ran on a closed runway with flight altitude capped at 10 m [(p1-infrastructure-maintenance p. 6)](../sources/p1-infrastructure-maintenance.md).
-- The "tiny dataset, large reuse" pattern: even apparently simple datasets generate outsized value when made publicly accessible. The Build & Share booklet states the principle as *«Zugang zu Daten schafft den grössten Hebel»*, access to data creates the biggest lever, and names this project's imagery as its example: *«z. B. hochaufgelöste Drohnenaufnahmen einer Landepiste»* ([[00-overview-phase2-build-and-share]] §04 Technology, [p. 17](../sources/00-overview-phase2-build-and-share.md)).
+- High-resolution drone imagery is a powerful but logistically-constrained data source — partner access (military base permissions) was the operational bottleneck. The report notes that access to high-resolution imagery of airport runways "is usually difficult to obtain" [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md), and the missions ran on a closed runway with flight altitude capped at 10 m [(Infrastructure Maintenance report, p. 6)](../sources/p1-infrastructure-maintenance.md).
+- The "tiny dataset, large reuse" pattern: even apparently simple datasets generate outsized value when made publicly accessible. The Build & Share booklet states the principle as *"Data access is the most powerful lever"* and names this project's imagery as its example: *"e.g. high-resolution drone imagery of a runway"* ([[00-overview-phase2-build-and-share]] §04 Technology, [p. 17](../sources/00-overview-phase2-build-and-share.md)).
 - Direct lineage to [[bridge-monitoring]] in Phase II — same theme (sensor-/CV-based infrastructure monitoring), shifted from drone imagery to sensor data.
 
 > [!gap] Less detail in the corpus than other Phase I projects

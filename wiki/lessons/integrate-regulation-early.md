@@ -1,7 +1,6 @@
 ---
 title: AI providers should integrate regulation early into product development
 type: lesson
-slug: integrate-regulation-early
 phase: I-and-II
 insight_domain: ai-deployment
 project: [autonomous-systems, inspection-robots, medical-documentation, building-permits]
@@ -23,17 +22,15 @@ updated: 2026-06-10
 
 # AI providers should integrate regulation early into product development
 
-The [[00-overview-phase2-build-and-share]] booklet states this as a cross-cutting legal insight in section 04 (Recht):
+The [[00-overview-phase2-build-and-share]] booklet states this as a cross-cutting legal insight in section 04 (Legal):
 
-> *«KI-Anbieter sollten Regulierung in ihre Produktentwicklung integrieren: Werden regulatorische Anforderungen zu spät berücksichtigt, entstehen Fehlannahmen im Geschäftsmodell. Eine frühzeitige Klärung ist entscheidend, um nicht einen falschen Weg einzuschlagen. Beispielsweise zeigte sich im Projekt «Autonome Systeme», dass Nachrüstung von bestehenden Landwirtschaftsfahrzeugen zur Automatisierung eine vollständige Neuzertifizierung des Produkts erfordert.»* [(00-overview-phase2-build-and-share p. 18)](../sources/00-overview-phase2-build-and-share.md)
-
-In translation: AI providers should integrate regulatory considerations early into product development; if regulatory requirements are addressed too late, flawed assumptions may arise in the business model. Early clarification is essential to avoid pursuing an incorrect development path. For example, the «Autonomous Systems» project showed that retrofitting existing agricultural vehicles for automation may require full recertification of the product.
+> *"AI providers should integrate regulatory considerations early into product development: if regulatory requirements are addressed too late, flawed assumptions may arise in the business model. Early clarification is essential to avoid pursuing an incorrect development path. For example, the 'Autonomous Systems' project showed that retrofitting existing agricultural vehicles for automation may require full recertification of the product."* [(Build & Share (Phase II overview report), p. 18)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Evidence base
 
-- **[[autonomous-systems]]** — the canonical case: agricultural-vehicle retrofitting required full re-certification. The business model assumed retrofit; the regulation imposed re-cert. The Phase I legal guide makes the underlying rule explicit: product-safety rules also apply to modified products, so any existing certification must be re-examined after changes [(p1-autonomous-systems p. 9)](../sources/p1-autonomous-systems.md).
-- **[[inspection-robots]]** — engaged [[eu-ai-act]] + [[machinery-regulation]] interplay early; ISO/IEC 42001 piloted in parallel rather than bolted on later [(00-overview-phase2-build-and-share p. 14)](../sources/00-overview-phase2-build-and-share.md).
-- **[[medical-documentation]]** — patient-data protection blocked operational deployment entirely [(00-overview-phase2-build-and-share p. 10)](../sources/00-overview-phase2-build-and-share.md); had the data-protection regime been engaged at product-design time, the operational design might have been different (e.g. on-prem deployment from day one).
+- **[[autonomous-systems]]** — the canonical case: agricultural-vehicle retrofitting required full re-certification. The business model assumed retrofit; the regulation imposed re-cert. The Phase I legal guide makes the underlying rule explicit: product-safety rules also apply to modified products, so any existing certification must be re-examined after changes [(Autonomous Systems report, p. 9)](../sources/p1-autonomous-systems.md).
+- **[[inspection-robots]]** — engaged [[eu-ai-act]] + [[machinery-regulation]] interplay early; ISO/IEC 42001 piloted in parallel rather than bolted on later [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
+- **[[medical-documentation]]** — patient-data protection blocked operational deployment entirely [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md); had the data-protection regime been engaged at product-design time, the operational design might have been different (e.g. on-prem deployment from day one).
 
 ## How to apply
 

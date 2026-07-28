@@ -1,7 +1,6 @@
 ---
 title: Stephanie Volz
 type: stakeholder
-slug: stephanie-volz
 kind: person
 role: Managing Director, ITSL (Center for Information Technology, Society, and Law), University of Zurich
 affiliation: itsl-uzh
@@ -13,7 +12,7 @@ updated: 2026-06-10
 
 # Stephanie Volz
 
-Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Technology, Society, and Law), University of Zurich [(p2-building-permits p. 25)](../sources/p2-building-permits.md). The **constant legal anchor** of the sandbox — appears as legal author / co-author on every sandbox project report across both phases.
+Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Technology, Society, and Law), University of Zurich [(Building Permits report, p. 25)](../sources/p2-building-permits.md). The **constant legal anchor** of the sandbox — appears as legal author / co-author on every sandbox project report across both phases.
 
 ## Role
 
@@ -23,8 +22,8 @@ Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Techno
 
 ## Notable quotes in the corpus
 
-> *«KI kann Baubehörden unterstützen – die Begründung und Verantwortung von Entscheidungen bleibt aber beim Menschen.»*
-> — "AI can support building authorities, but the justification and responsibility for decisions remain with humans." (Volz, [p2-building-permits p. 25](../sources/p2-building-permits.md))
+> *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"*
+> — Volz ([p2-building-permits p. 25](../sources/p2-building-permits.md))
 
 ## See also
 

@@ -1,7 +1,6 @@
 ---
 title: When rule-based systems beat generative AI — A decision guide
 type: synthesis
-slug: when-rule-based-beats-generative
 insight_domain: ai-deployment
 question: "Should I use rule-based logic or generative AI for this decision?"
 audience: [administrative-staff-scoping-a-pilot, ai-providers-pre-rfp, public-sector-architects]
@@ -25,11 +24,9 @@ updated: 2026-06-11
 
 ## The booklet's own framing
 
-From [[00-overview-phase2-build-and-share]] §04 Technology [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md):
+From [[00-overview-phase2-build-and-share]] §04 Technology:
 
-> *«Regelbasierte Systeme schlagen generative KI bei klaren Entscheidungslogiken: Generative Modelle entfalten ihre Stärken insbesondere bei der Verarbeitung unstrukturierter Informationen – etwa bei Zusammenfassungen, Transkription, Informationsaufbereitung oder Vorprüfungen (z. B. medizinische Dokumentation oder Vorabchecks bei Baubewilligungen). Bei klar definierten, nachvollziehbaren und rechtlich relevanten Entscheidungslogiken stossen sie jedoch an Grenzen. In solchen Fällen liefern regelbasierte Ansätze robustere und besser nachvollziehbare Resultate.»*
->
-> In the booklet's English edition: "Rule-based systems outperform generative AI for well-defined decision logic: generative models demonstrate strengths in processing unstructured information, such as summarisation, transcription, information structuring, or preliminary checks (e.g. medical documentation or pre-checks in building permit procedures). However, they reach their limits in clearly defined, traceable, and legally relevant decision-making processes. In such cases, rule-based approaches deliver more robust and transparent results." (EN version, p. 17)
+> *"Rule-based systems outperform generative AI for well-defined decision logic: generative models demonstrate strengths in processing unstructured information, such as summarisation, transcription, information structuring, or preliminary checks (e.g. medical documentation or pre-checks in building permit procedures). However, they reach their limits in clearly defined, traceable, and legally relevant decision-making processes. In such cases, rule-based approaches deliver more robust and transparent results."* [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md)
 
 ---
 

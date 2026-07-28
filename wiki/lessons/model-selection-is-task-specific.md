@@ -1,7 +1,6 @@
 ---
 title: Model selection is task-specific — design model-agnostic architectures
 type: lesson
-slug: model-selection-is-task-specific
 phase: II
 insight_domain: ai-deployment
 project: [building-permits]
@@ -23,15 +22,13 @@ updated: 2026-06-10
 
 # Model selection is task-specific — design model-agnostic architectures
 
-From [[00-overview-phase2-build-and-share]] §04 Technologie:
+From [[00-overview-phase2-build-and-share]] §04 Technology:
 
-> *«Unterschiedliche Modelle zeigen je nach Aufgabe klare Stärken und Schwächen (z. B. visuelle Planinterpretation vs. Textextraktion bei Baugesuchen). Anders als bei generischen LLM-Benchmarks zeigt sich in der Praxis, dass ein einzelnes «bestes» Modell oftmals nicht existiert, insbesondere in vielfältigen Anwendungsfällen mit unterschiedlichen Dateninputs (z. B. Bild und Text).»*
-
-In English: different models exhibit distinct strengths and weaknesses depending on the task (e.g. visual plan interpretation versus text extraction in building applications); unlike generic LLM benchmarks, practical experience shows that a single "best" model often does not exist, particularly in diverse use cases involving multiple data inputs (e.g. images and text). [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)
+> *"Model selection is task-specific: different models exhibit distinct strengths and weaknesses depending on the task (e.g. visual plan interpretation versus text extraction in building applications). Unlike generic LLM benchmarks, practical experience shows that a single 'best' model often does not exist, particularly in diverse use cases involving multiple data inputs (e.g. images and text)."* [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Evidence base
 
-[[building-permits]] benchmarked 8 frontier LLMs [(p2-building-permits p. 10)](../sources/p2-building-permits.md) across 3,336 evaluations using [[llm-as-a-judge]] [(p2-building-permits p. 11)](../sources/p2-building-permits.md). Findings [(p2-building-permits p. 14)](../sources/p2-building-permits.md):
+[[building-permits]] benchmarked 8 frontier LLMs [(Building Permits report, p. 10)](../sources/p2-building-permits.md) across 3,336 evaluations using [[llm-as-a-judge]] [(Building Permits report, p. 11)](../sources/p2-building-permits.md). Findings [(Building Permits report, p. 14)](../sources/p2-building-permits.md):
 
 - **Best model**: 60.2% accuracy on perfect answers
 - **Average**: 37.9%
@@ -42,7 +39,7 @@ In English: different models exhibit distinct strengths and weaknesses depending
 
 ## How to apply
 
-Per [[00-overview-phase2-build-and-share]] §04: *«Aufgrund der schnellen technologischen Entwicklung sollten Systeme so aufgebaut sein, dass Modelle austauschbar bleiben und kontinuierlich evaluiert werden können (z. B. Benchmarking im Projekt «KI bei Baubewilligungen»).»* That is, systems should be designed so that models remain exchangeable and can be continuously evaluated. [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)
+Per [[00-overview-phase2-build-and-share]] §04: *"Model-agnostic architecture proves advantageous: given the rapid pace of technological development, systems should be designed to allow models to be exchanged and continuously evaluated (e.g. benchmarking in the 'AI for building permits' project)."* [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md)
 
 1. **Abstract at the API layer**: prompts and outputs through a unified interface; provider-specific quirks hidden.
 2. **Configuration over code**: model choice is a config-file value.

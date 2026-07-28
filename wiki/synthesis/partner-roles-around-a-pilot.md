@@ -1,7 +1,6 @@
 ---
 title: Partner roles around a sandbox pilot — Who do you actually need?
 type: synthesis
-slug: partner-roles-around-a-pilot
 insight_domain: both
 question: "Who do I need around my AI pilot, and what do they each do?"
 audience: [administrative-staff-scoping-a-pilot, sandbox-applicants, ai-providers-pre-rfp]
@@ -25,7 +24,7 @@ updated: 2026-06-11
 
 ## The five roles (canonical from the booklet)
 
-From the role diagram in [[00-overview-phase2-build-and-share]] §03 [(00-overview-phase2-build-and-share p. 8)](../sources/00-overview-phase2-build-and-share.md), with the booklet's German role names:
+From the role diagram in [[00-overview-phase2-build-and-share]] §03 [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md), with the booklet's German role names:
 
 | Role | What they contribute | Example from corpus |
 |---|---|---|
@@ -43,9 +42,7 @@ This is **the** taxonomy the wiki uses on every `wiki/stakeholders/` page — se
 
 The booklet's framing, from §03:
 
-> *«Die Umsetzung erfolgte in enger Zusammenarbeit mit einer Vielzahl von Partnern, die je nach Rolle und Expertise klar definierte Aufgaben übernahmen.»* [(00-overview-phase2-build-and-share p. 8)](../sources/00-overview-phase2-build-and-share.md)
-
-In English: implementation took place in close collaboration with a large number of partners who took on clearly defined tasks according to their role and expertise.
+> *"Implementation took place in close collaboration with a wide range of partners, each assuming clearly defined roles and responsibilities according to their expertise."* [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md)
 
 The roles are *not* interchangeable:
 
@@ -58,10 +55,10 @@ Conflating roles is the most common mistake the corpus surfaces — and the most
 > [!sandbox-operations]
 > The portfolio view: how the programme structures these roles across projects.
 >
-> - **Roles are assigned per project, with tasks defined by role and expertise.** Each pilot gets its own constellation of the five roles [(00-overview-phase2-build-and-share p. 8)](../sources/00-overview-phase2-build-and-share.md).
+> - **Roles are assigned per project, with tasks defined by role and expertise.** Each pilot gets its own constellation of the five roles [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md).
 > - **One standing mandated expert serves the whole portfolio.** [[itsl-uzh]] appears on every sandbox project, which gives the programme continuity of legal analysis across heterogeneous pilots.
 > - **Supervisor access is programme-mediated.** The programme facilitates contact with supervisory authorities and uses the [[regulatory-roundtable]] format to aggregate demand from multiple providers, so a supervisor can respond at scale (see [[regulatory-roundtable-is-high-leverage]]).
-> - **A project with an unfillable role is pivoted, not cancelled.** When no suitable test partner was found for [[inspection-robots]], the project moved to a regulatory-analysis-only scope and still delivered substantial value [(00-overview-phase2-build-and-share p. 9)](../sources/00-overview-phase2-build-and-share.md).
+> - **A project with an unfillable role is pivoted, not cancelled.** When no suitable test partner was found for [[inspection-robots]], the project moved to a regulatory-analysis-only scope and still delivered substantial value [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md).
 
 ---
 
@@ -105,7 +102,7 @@ Conflating roles is the most common mistake the corpus surfaces — and the most
 > [!ai-deployment]
 > If a role stays unfilled, the corpus documents these pivot directions:
 >
-> - **No test partner** → pivot to **analysis-only** outcome class ([[inspection-robots]], [[medical-documentation]]) [(00-overview-phase2-build-and-share p. 9)](../sources/00-overview-phase2-build-and-share.md).
+> - **No test partner** → pivot to **analysis-only** outcome class ([[inspection-robots]], [[medical-documentation]]) [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md).
 > - **No technical implementation partner** → the pilot may need to delay until one exists; not a fatal blocker.
 > - **No mandated expert** → consider engaging [[itsl-uzh]] or equivalent before continuing.
 > - **No supervisory engagement** → consider a [[regulatory-roundtable]] to aggregate demand and unlock supervisor time.

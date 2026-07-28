@@ -1,7 +1,6 @@
 ---
 title: EU AI Act
 type: regulation
-slug: eu-ai-act
 jurisdiction: eu
 instrument: act
 domain: [ai-governance]
@@ -16,19 +15,17 @@ canonical_source: 00-overview-phase2-build-and-share#page-26
 
 The booklet glossary in [[00-overview-phase2-build-and-share]] defines the instrument as follows:
 
-> *«EU-Verordnung zur Regulierung von KI-Systemen auf Basis eines risikobasierten Ansatzes. Sie definiert Anforderungen für Hochrisiko-KI-Systeme, Transparenzpflichten und Verbote bestimmter Anwendungen.»*
+> *"EU regulation governing AI systems based on a risk-based approach. It defines requirements for high-risk AI systems, transparency obligations, and prohibitions of certain applications."* [(Build & Share (Phase II overview report), p. 26)](../sources/00-overview-phase2-build-and-share.md)
 
-In English: "EU regulation governing AI systems based on a risk-based approach. It defines requirements for high-risk AI systems, transparency obligations, and prohibitions of certain applications." [(00-overview-phase2-build-and-share p. 26)](../sources/00-overview-phase2-build-and-share.md)
-
-The defining EU instrument of the Phase II regulatory landscape. Where Phase I was dominated by Swiss law, Phase II projects engaged the AI Act as their primary regulatory frame — most notably [[inspection-robots]], whose entire project objective was to **systematically clarify EU AI Act + [[machinery-regulation]] interaction** for autonomous-robotics market access [(00-overview-phase2-build-and-share p. 14)](../sources/00-overview-phase2-build-and-share.md).
+The defining EU instrument of the Phase II regulatory landscape. Where Phase I was dominated by Swiss law, Phase II projects engaged the AI Act as their primary regulatory frame — most notably [[inspection-robots]], whose entire project objective was to **systematically clarify EU AI Act + [[machinery-regulation]] interaction** for autonomous-robotics market access [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Projects engaging the AI Act
 
 Four projects touched the Act, two of them substantively. The Act was never the whole regulatory picture: each project also engaged the sector law that sits alongside it (see *How the Act sits alongside other regimes* below).
 
-- [[inspection-robots]] (autonomous systems) — the central case. A structured risk-based classification of autonomous inspection systems, worked out against the EU [[machinery-regulation|Machinery Regulation 2023/1230]]; the interaction between the two instruments was the regulatory novelty, and [[iso-iec-42001]] was piloted as the management-system layer [(p2-inspection-robots p. 22)](../sources/p2-inspection-robots.md) [(00-overview-phase2-build-and-share p. 14)](../sources/00-overview-phase2-build-and-share.md).
-- [[medical-documentation]] (healthcare) — medical AI *mostly* counts as high-risk under the Act (the report's glossary: requirements for development, transparency, safety and monitoring) [(p2-medical-documentation p. 41)](../sources/p2-medical-documentation.md); software classed MDR Class IIa+ / IVDR Class B+ is high-risk automatically [(p2-medical-documentation p. 21)](../sources/p2-medical-documentation.md). The report stacks the Act on top of the medical-device regime ([[medical-device-regulation|MedDO + EU MDR/IVDR]]) rather than in its place, including the Act's Art. 43(4) predetermined-change-control approach for continuously-learning systems [(p2-medical-documentation p. 37)](../sources/p2-medical-documentation.md). Von Thiessen's framing: *«...Regulierung, die mitlernt – flexibel, risikobasiert und jenseits starrer Zulassungen.»* (regulation that learns along, flexible, risk-based, and beyond rigid approvals) [(p2-medical-documentation p. 40)](../sources/p2-medical-documentation.md)
-- [[digital-eye-clinic]] (healthcare) — AI that influences a treatment decision (diabetic-retinopathy screening) is medical-decision-influencing and so high-risk; the report classifies it as a medical device ([[medical-device-regulation|MDR Class IIa/IIb]]) and defers to the medical-documentation analysis for the detail [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md).
+- [[inspection-robots]] (autonomous systems) — the central case. A structured risk-based classification of autonomous inspection systems, worked out against the EU [[machinery-regulation|Machinery Regulation 2023/1230]]; the interaction between the two instruments was the regulatory novelty, and [[iso-iec-42001]] was piloted as the management-system layer [(Inspection Robots report, p. 22)](../sources/p2-inspection-robots.md) [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
+- [[medical-documentation]] (healthcare) — medical AI *generally* counts as high-risk under the Act (the report's glossary: requirements for development, transparency, security and monitoring) [(Medical Documentation report, p. 39)](../sources/p2-medical-documentation.md); software classed MDR Class IIa+ / IVDR Class B+ is high-risk automatically [(Medical Documentation report, p. 19)](../sources/p2-medical-documentation.md). The report stacks the Act on top of the medical-device regime ([[medical-device-regulation|MedDO + EU MDR/IVDR]]) rather than in its place, including the Act's Art. 43(4) predetermined-change-control approach for continuously-learning systems [(Medical Documentation report, p. 35)](../sources/p2-medical-documentation.md). Von Thiessen's framing: *"AI needs new regulatory approaches – flexible, risk-based, and beyond rigid approvals."* [(Medical Documentation report, p. 38)](../sources/p2-medical-documentation.md)
+- [[digital-eye-clinic]] (healthcare) — AI that influences a treatment decision (diabetic-retinopathy screening) is medical-decision-influencing and so high-risk; the report classifies it as a medical device ([[medical-device-regulation|MDR Class IIa/IIb]]) and defers to the medical-documentation analysis for the detail [(Digital Eye Clinic report, p. 25)](../sources/p2-digital-eye-clinic.md).
 - [[building-permits]] (public administration) — peripheral engagement only; its regulatory analysis is framed in Swiss administrative and data-protection law, not the Act.
 
 ## How the Act sits alongside other regimes
@@ -43,11 +40,11 @@ So a project's AI Act question is rarely settled by the Act alone. The practical
 
 ## What the Sandbox did, and didn't do
 
-The Sandbox clarified regulatory implications; it did not approve, certify, or exempt. Every project ran within existing law, with no regulatory exemptions [(00-overview-phase2-build-and-share p. 5)](../sources/00-overview-phase2-build-and-share.md). Some questions stay open and depend on the final implementation context of a given system. Human oversight, documentation, risk management and transparency recur as the safeguards across these projects; [[human-oversight-in-ai-deployment]] sets out how the healthcare pilots implemented the oversight piece.
+The Sandbox clarified regulatory implications; it did not approve, certify, or exempt. Every project ran within existing law, with no regulatory exemptions [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md). Some questions stay open and depend on the final implementation context of a given system. Human oversight, documentation, risk management and transparency recur as the safeguards across these projects; [[human-oversight-in-ai-deployment]] sets out how the healthcare pilots implemented the oversight piece.
 
 ## Cross-border collaboration
 
-The booklet's §03 project chapter records that the [[inspection-robots]] project engaged in **first-time cross-border collaboration** with Germany's *Bundesnetzagentur* ([[bundesnetzagentur-de]]) and Liechtenstein's *Office for Digital Innovation* ([[li-digital-innovation]]): *«Erstmals arbeitete das Sandbox-Projekt zudem grenzüberschreitend mit zuständigen Aufsichtsbehörden zusammen – der Bundesnetzagentur in Deutschland und der Stabsstelle für Digitale Innovation des Fürstentums Liechtenstein.»* In English: for the first time, the sandbox project also worked across borders with competent supervisory authorities [(00-overview-phase2-build-and-share p. 14)](../sources/00-overview-phase2-build-and-share.md). This set a precedent for the cross-jurisdictional sandbox engagements the Phase III ecosystem strategy [[zh-ai-ecosystem-strategy-2026-2029]] envisions.
+The booklet's §03 project chapter records that the [[inspection-robots]] project engaged in **first-time cross-border collaboration** with Germany's *Bundesnetzagentur* ([[bundesnetzagentur-de]]) and Liechtenstein's *Office for Digital Innovation* ([[li-digital-innovation]]): *"For the first time, the sandbox project also engaged in cross-border collaboration with competent supervisory authorities, e.g. the Federal Network Agency in Germany and the Office for Digital Innovation of the Principality of Liechtenstein."* [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md) This set a precedent for the cross-jurisdictional sandbox engagements the Phase III ecosystem strategy [[zh-ai-ecosystem-strategy-2026-2029]] envisions.
 
 ## See also
 

@@ -1,7 +1,6 @@
 ---
 title: Lukas Willi
 type: stakeholder
-slug: lukas-willi
 kind: person
 role: Project Lead AI, Canton of Zurich
 affiliation: amt-fuer-wirtschaft-zh
@@ -11,11 +10,11 @@ updated: 2026-06-10
 
 # Lukas Willi
 
-Project Lead AI (*Projektleiter KI*) at the Canton of Zurich, *Amt für Wirtschaft*, Volkswirtschaftsdirektion. Named alongside [[raphael-von-thiessen]] as one of the two authors of the Phase II overview booklet [(00-overview-phase2-build-and-share p. 27)](../sources/00-overview-phase2-build-and-share.md).
+Project Lead AI (*Projektleiter KI*) at the Canton of Zurich, *Amt für Wirtschaft*, Volkswirtschaftsdirektion. Named alongside [[raphael-von-thiessen]] as one of the two authors of the Phase II overview booklet [(Build & Share (Phase II overview report), p. 27)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Role
 
-- Co-author of [[00-overview-phase2-build-and-share]] (Phase II overview booklet, May 2026) [(00-overview-phase2-build-and-share p. 27)](../sources/00-overview-phase2-build-and-share.md).
+- Co-author of [[00-overview-phase2-build-and-share]] (Phase II overview booklet, May 2026) [(Build & Share (Phase II overview report), p. 27)](../sources/00-overview-phase2-build-and-share.md).
 - Day-to-day project lead on Phase II sandbox engagements.
 - Operational counterpart to [[raphael-von-thiessen]] for individual project execution.
 

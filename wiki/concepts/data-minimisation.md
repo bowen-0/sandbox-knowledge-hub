@@ -1,7 +1,6 @@
 ---
 title: Data Minimisation
 type: concept
-slug: data-minimisation
 canonical_source: null
 related: [pseudonymisation, data-access]
 appears_in: [smart-parking, ai-in-education, digital-eye-clinic]
@@ -11,15 +10,15 @@ updated: 2026-06-10
 
 # Data Minimisation
 
-The privacy-by-design principle of collecting and processing only the data strictly necessary for the AI system's purpose. Part of the **canonical Phase I privacy-by-design lexicon** — alongside *low resolution*, *masking*, *edge computing*, and *instant deletion* — first articulated in [[smart-parking]] [(p1-smart-parking p. 15)](../sources/p1-smart-parking.md) and reused across the Phase I corpus. The [[ai-in-education]] report states the principle directly: *«Ergänzt wird der Grundsatz durch das Prinzip der Datenminimierung, wonach Personendaten, die für den Bearbeitungszweck nicht mehr notwendig sind, vernichtet oder anonymisiert werden»*, that is, personal data no longer necessary for the processing purpose must be destroyed or anonymised [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md).
+The privacy-by-design principle of collecting and processing only the data strictly necessary for the AI system's purpose. Part of the **canonical Phase I privacy-by-design lexicon** — alongside *low resolution*, *masking*, *edge computing*, and *instant deletion* — first articulated in [[smart-parking]] [(Smart Parking report, p. 15)](../sources/p1-smart-parking.md) and reused across the Phase I corpus. The [[ai-in-education]] report states the principle directly: *"This principle is complemented by the principle of data minimisation, according to which personal data that is no longer needed for the processing purpose is destroyed or rendered anonymous."* [(AI in Education report, p. 8)](../sources/p1-ai-in-education.md)
 
 ## Concrete forms in the corpus
 
 | Project | Form of minimisation |
 |---|---|
-| [[smart-parking]] | Low-resolution cameras incapable of capturing identifying detail; masking of bystander faces; instant deletion after parking-state inference. [(p1-smart-parking p. 15)](../sources/p1-smart-parking.md) |
-| [[ai-in-education]] | Limiting student-data processing to the AI-task scope; not retaining inputs beyond the immediate query. [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md) |
-| [[digital-eye-clinic]] | For the MVP, all patient images and data were stored on-premises; any future cloud storage (e.g. Microsoft Azure) would make encryption, anonymisation, and contractual data-processing agreements obligatory. [(p2-digital-eye-clinic p. 26)](../sources/p2-digital-eye-clinic.md) |
+| [[smart-parking]] | Low-resolution cameras incapable of capturing identifying detail; masking of bystander faces; instant deletion after parking-state inference. [(Smart Parking report, p. 15)](../sources/p1-smart-parking.md) |
+| [[ai-in-education]] | Limiting student-data processing to the AI-task scope; not retaining inputs beyond the immediate query. [(AI in Education report, p. 8)](../sources/p1-ai-in-education.md) |
+| [[digital-eye-clinic]] | For the MVP, all patient images and data were stored on-premises; any future cloud storage (e.g. Microsoft Azure) would make encryption, anonymisation, and contractual data-processing agreements obligatory. [(Digital Eye Clinic report, p. 25)](../sources/p2-digital-eye-clinic.md) |
 
 ## Legal anchor
 

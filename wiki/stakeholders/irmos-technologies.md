@@ -1,7 +1,6 @@
 ---
 title: irmos technologies
 type: stakeholder
-slug: irmos-technologies
 kind: org
 role: Sensor-based structural-monitoring vendor
 partner_role: [technical-implementation]
@@ -16,9 +15,9 @@ Swiss vendor of sensor-based structural-monitoring systems. Project-submission p
 
 ## Role in the sandbox
 
-The Phase II overview booklet, [[00-overview-phase2-build-and-share]], describes the submission: *«Dieses von irmos technologies eingereichte Sandbox-Projekt untersuchte, wie eine datenbasierte Überwachung mittels KI bessere Entscheidungsgrundlagen für Betrieb, Unterhalt und Investitionen schaffen kann.»* This sandbox project, submitted by irmos technologies, examined how data-based monitoring using AI can create better decision-making foundations for operations, maintenance, and investment [(00-overview-phase2-build-and-share p. 13)](../sources/00-overview-phase2-build-and-share.md).
+The Phase II overview booklet, [[00-overview-phase2-build-and-share]], describes the submission: *"This sandbox project, submitted by irmos technologies, examined how data-driven monitoring using AI can provide improved decision-making foundations for operations, maintenance, and investment."* [(Build & Share (Phase II overview report), p. 13)](../sources/00-overview-phase2-build-and-share.md)
 
-After the originally planned municipal-footbridge implementation partner withdrew, the project was carried out at the **Reidholz railway bridge in Wädenswil** in collaboration with [[sob]] (Schweizerische Südostbahn AG) [(00-overview-phase2-build-and-share p. 13)](../sources/00-overview-phase2-build-and-share.md).
+After the originally planned municipal-footbridge implementation partner withdrew, the project was carried out at the **Reidholz railway bridge in Wädenswil** in collaboration with [[sob]] (Schweizerische Südostbahn AG) [(Build & Share (Phase II overview report), p. 13)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 
