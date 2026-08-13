@@ -69,7 +69,7 @@ export function buildServer(
           "sandbox-operations": "for government units designing or running an innovation-sandbox-style programme",
           counts: stats.byDomain,
         },
-        citation_contract: 'Pages carry inline "[(Source Name, p. N)]" citations (N = printed page of the German PDF) — copy them verbatim into answers. The bracketed form always means a source report + page: never bracket-cite a wiki page (synthesis/theme/lesson) as if it were a source — carry through the report citations its claims already hold. To follow a citation to its source report, call wiki_resolve_citation with "<source-slug>#page-N".',
+        citation_contract: 'Pages carry inline "[(Source Name, p. N)]" citations (N = printed page of the official English edition, which is citation-authoritative; the German original remains the final word on legal wording) — copy them verbatim into answers. The bracketed form always means a source report + page: never bracket-cite a wiki page (synthesis/theme/lesson) as if it were a source — carry through the report citations its claims already hold. To follow a citation to its source report, call wiki_resolve_citation with "<source-slug>#page-N".',
         discipline: DISCIPLINE,
         index_page: index?.content ?? "(index unavailable)",
       });
@@ -166,7 +166,7 @@ export function buildServer(
     {
       title: "Resolve a citation",
       description:
-        'Resolve a citation like "p2-building-permits#page-25" or "p2-building-permits p. 25" to its source: report title, publisher, PDF locations (German is citation-authoritative), and the source page to read. Returns metadata, never PDF content.',
+        'Resolve a citation like "p2-building-permits#page-25" or "p2-building-permits p. 25" to its source: report title, publisher, PDF locations (the English edition is citation-authoritative; the German original remains the final word on legal wording), and the source page to read. Returns metadata, never PDF content.',
       inputSchema: {
         citation: z.string().describe('Citation reference, e.g. "p2-building-permits#page-25"'),
       },
@@ -264,10 +264,10 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
     {
       title: "PUBLISH — commit a report PDF to the public GitHub repo",
       description:
-        "A PUBLISH STEP: fetches a published report PDF from a public https URL and commits it into the public repository (pdfs/de/<slug>.pdf or pdfs/en/<slug>.pdf, German is citation-authoritative), so citations to it resolve — approving this call means 'commit this file now'. The PDF is fetched and committed server-side — you supply the URL, not the bytes. Use this FIRST when adding a new report (announce the publish boundary before it), then write its source/digest/lesson pages.",
+        "A PUBLISH STEP: fetches a published report PDF from a public https URL and commits it into the public repository (pdfs/en/<slug>.pdf or pdfs/de/<slug>.pdf; the English edition is citation-authoritative, so commit that one for citations and the German original alongside as source text), so citations to it resolve — approving this call means 'commit this file now'. The PDF is fetched and committed server-side — you supply the URL, not the bytes. Use this FIRST when adding a new report (announce the publish boundary before it), then write its source/digest/lesson pages.",
       inputSchema: {
         url: z.string().describe("Public https:// URL of the report PDF"),
-        path: z.string().describe('Target path: "pdfs/de/<slug>.pdf" (preferred) or "pdfs/en/<slug>.pdf"'),
+        path: z.string().describe('Target path: "pdfs/en/<slug>.pdf" (preferred, citation-authoritative) or "pdfs/de/<slug>.pdf"'),
         message: z.string().optional().describe("Commit message; a default is used if omitted"),
       },
       annotations: { readOnlyHint: false, destructiveHint: false },
