@@ -22,7 +22,7 @@ Phase II project report — **the most recent and most concrete** report in the 
 
 ## Provenance
 
-Published April 2026. Original filename: `InnovationSandbox_AI_for_building_permits.pdf`. Most recent and most operationally concrete report in the corpus; fed directly into the response to Cantonal Parliament postulate KR no. 226/2023 ([[postulate-ai-building-permits]]). The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p2-building-permits.md](digests/p2-building-permits.md). All wiki citations of this source are page-level against the German PDF.
+Published April 2026. Original filename: `InnovationSandbox_AI_for_building_permits.pdf`. Most recent and most operationally concrete report in the corpus; fed directly into the response to Cantonal Parliament postulate KR no. 226/2023 ([[postulate-ai-building-permits]]). The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p2-building-permits.md](digests/p2-building-permits.md). All wiki citations of this source are page-level against the official English edition, which is citation-authoritative; the German original stays in-repo as the source text.
 
 ## Methodology
 

@@ -62,7 +62,7 @@ The canonical procedure lives in [`INGEST.md`](INGEST.md) — the four-phase REA
 
 ### Add a lesson
 1. Read the source. Identify an atomic, transferable claim.
-2. Create `lessons/<slug>.md` with `type: lesson`, link to `project[]`, `concept[]`, `regulation[]`, `stakeholder[]`, and cite the source at page level (`#page-N`, verified against the German PDF).
+2. Create `lessons/<slug>.md` with `type: lesson`, link to `project[]`, `concept[]`, `regulation[]`, `stakeholder[]`, and cite the source at page level (`#page-N`, verified against the official English edition).
 3. Use `[[wikilinks]]` in the body wherever you reference another wiki entity.
 
 ### Add a concept
@@ -79,7 +79,7 @@ If you're unsure which type a page should be, **open an issue** using the "Propo
 - **Not a chat interface — and none is planned here.** The wiki is the substrate; the intended path is integrating it into your own assistant or AI system.
 - **Not a knowledge graph in a triple store.** The graph lives in YAML frontmatter and is *exportable* to JSON-LD / DuckDB / Neo4j on demand.
 - **Not a database with enforced schema.** Frontmatter conventions are linted, not validated. Easier evolution > stricter typing during the formative phase.
-- **Not the only place truth lives.** The German PDFs in [`pdfs/de/`](pdfs/de/) are the citation-authoritative ground truth. The wiki structures them; it does not replace them.
+- **Not the only place truth lives.** The published reports are the ground truth. The English editions in [`pdfs/en/`](pdfs/en/) are citation-authoritative, so every page number resolves against those; the German originals in [`pdfs/de/`](pdfs/de/) ship alongside and remain the final word on legal wording. The wiki structures them; it does not replace them.
 
 ---
 

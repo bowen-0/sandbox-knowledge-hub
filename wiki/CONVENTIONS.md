@@ -111,7 +111,7 @@ concept: [data-access, pseudonymisation, partner-bottleneck]
 regulation: [dsg-art-22, eu-ai-act-art-9]
 stakeholder: [data-protection-officer, baudirektion-zh]
 sources:
-  - p2-building-permits#page-25                                       # required; page-anchored against the German PDF
+  - p2-building-permits#page-25                                       # required; page-anchored against the English edition
   - p2-building-permits#page-7                                        # (see §6 — paragraph anchors are a dormant spec)
 confidence: high | medium | low                                       # how transferable is this lesson?
 freshness: 2026-04                                                    # source publication month; drives stale-warning UI

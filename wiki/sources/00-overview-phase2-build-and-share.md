@@ -25,7 +25,7 @@ The 28-page final report of Phase II (2024–2026), published May 2026. The sing
 
 Published May 2026 by the *Standortförderung Kanton Zürich* (Amt für Wirtschaft), *Verein Metropolitanraum Zürich* and *Innovation Zurich* (imprint, p. 28). Original filename: `052026-1-Innovation-Sandbox-Booklet-A4-EN.pdf` (English); German edition on zh.ch. Provided directly by the sandbox programme team on 2026-05-28.
 
-This report has been digested and ingested into the wiki. The working digest (page-numbered locator quotes, methodology summary) lives at [sources/digests/00-overview-phase2-build-and-share.md](digests/00-overview-phase2-build-and-share.md); it is a locator aid, not a citation target. All wiki citations of this report are page-level against the German PDF; page numbers on this page refer to the German PDF.
+This report has been digested and ingested into the wiki. The working digest (page-numbered locator quotes, methodology summary) lives at [sources/digests/00-overview-phase2-build-and-share.md](digests/00-overview-phase2-build-and-share.md); it is a locator aid, not a citation target. All wiki citations of this report are page-level against the official English edition, which is citation-authoritative; page numbers on this page refer to that edition. The German original stays in-repo as the source text.
 
 ## Methodology
 

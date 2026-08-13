@@ -23,7 +23,7 @@ Phase II `analysis-only` project report — a legal manual disguised as a projec
 
 Published November 2025; the report appears digital-only, in German and English [(Inspection Robots report, p. 40)](../sources/p2-inspection-robots.md). Original filename: `autonome_inspektionsroboter_en.pdf`. Publisher: Standortförderung Kanton Zürich [(Inspection Robots report, p. 40)](../sources/p2-inspection-robots.md). Industry partner: [[anybotics]] (Swiss autonomous-robotics vendor), which submitted the underlying project proposal to the sandbox in summer 2024 [(Inspection Robots report, p. 39)](../sources/p2-inspection-robots.md).
 
-The report was digested and ingested into this wiki. The working digest (a locator aid, not a citation target) lives at [digests/p2-inspection-robots.md](digests/p2-inspection-robots.md). Citations across the wiki are page-level against the German PDF.
+The report was digested and ingested into this wiki. The working digest (a locator aid, not a citation target) lives at [digests/p2-inspection-robots.md](digests/p2-inspection-robots.md). Citations across the wiki are page-level against the official English edition, which is citation-authoritative; the German original stays in-repo as the source text.
 
 ## Methodology
 
