@@ -21,7 +21,7 @@ Phase I project report. Operational + technical playbook for camera-based free-p
 
 ## Provenance
 
-Published January 2024. Original filename: `smart_parking_EN.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-smart-parking.md](digests/p1-smart-parking.md). All wiki citations of this source are page-level against the German PDF.
+Published January 2024. Original filename: `smart_parking_EN.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-smart-parking.md](digests/p1-smart-parking.md). All wiki citations of this source are page-level against the official English edition, which is citation-authoritative; the German original stays in-repo as the source text.
 
 ## Methodology
 

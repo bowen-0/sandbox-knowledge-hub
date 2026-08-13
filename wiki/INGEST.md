@@ -150,7 +150,7 @@ Quotation marks are reserved for character-exact EN-edition text; everything out
    - Quick grep: `grep -oE '\[\[[a-z0-9-]+\]\]' <new-files>` then check each slug resolves to a real file under any of the seven folders. Either create the missing page or remove the link. The lint pass catches broken wikilinks — don't leave them for it
 
 4. **Verify the citation backbone**:
-   - Every substantive claim in every new page traces to `<source-slug>#page-N` (frontmatter) / `p. N` (inline), page numbers verified against the German PDF
+   - Every substantive claim in every new page traces to `<source-slug>#page-N` (frontmatter) / `p. N` (inline), page numbers verified against the official English edition
    - No `#para-N` anchors anywhere — the paragraph pipeline is dormant (CONVENTIONS §6)
 
 5. **Run the lint pass** — `node scripts/lint.mjs` from the repo root (see [`CONTRIBUTING.md`](CONTRIBUTING.md) for one-time setup). It checks broken wikilinks, orphans, missing required frontmatter, hand-written `#para-N` anchors, unfenced `both` pages, and index coverage. Fix what it flags before committing.

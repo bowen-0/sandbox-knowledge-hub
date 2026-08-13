@@ -21,7 +21,7 @@ Phase I project report. Recommendations for public-administration adoption of MT
 
 ## Provenance
 
-Published February 2024. Original filename: `maschine_translation_kzh_sandbox_report.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-machine-translation.md](digests/p1-machine-translation.md). All wiki citations of this source are page-level against the German PDF.
+Published February 2024. Original filename: `maschine_translation_kzh_sandbox_report.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-machine-translation.md](digests/p1-machine-translation.md). All wiki citations of this source are page-level against the official English edition, which is citation-authoritative; the German original stays in-repo as the source text.
 
 ## Methodology
 

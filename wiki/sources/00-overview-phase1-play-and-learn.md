@@ -24,7 +24,7 @@ The Phase I final report of the AI Innovation Sandbox (2022–2024). Explains *w
 
 Published September 2024 by the *Standortförderung Kanton Zürich* in collaboration with *Verein Metropolitanraum Zürich*; *Innovation Zurich* appears as co-publisher in the imprint (p. 31). Original filenames on zh.ch: `sandbox_de.pdf` / `sandbox_en.pdf`. Public landing page: <https://www.zh.ch/en/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html>
 
-This report has been digested and ingested into the wiki. The working digest (page-numbered locator quotes, methodology summary) lives at [sources/digests/00-overview-phase1-play-and-learn.md](digests/00-overview-phase1-play-and-learn.md); it is a locator aid, not a citation target. All wiki citations of this report are page-level against the German PDF; page numbers on this page refer to the German PDF.
+This report has been digested and ingested into the wiki. The working digest (page-numbered locator quotes, methodology summary) lives at [sources/digests/00-overview-phase1-play-and-learn.md](digests/00-overview-phase1-play-and-learn.md); it is a locator aid, not a citation target. All wiki citations of this report are page-level against the official English edition, which is citation-authoritative; page numbers on this page refer to that edition. The German original stays in-repo as the source text.
 
 ## Methodology
 

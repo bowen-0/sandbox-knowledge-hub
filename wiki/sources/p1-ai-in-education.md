@@ -21,7 +21,7 @@ Phase I project report. Legal best-practices framework for AI use in classroom /
 
 ## Provenance
 
-Published October 2023. Original filename: `best_practices_ki_bildung_EN.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-ai-in-education.md](digests/p1-ai-in-education.md). All wiki citations of this source are page-level against the German PDF.
+Published October 2023. Original filename: `best_practices_ki_bildung_EN.pdf`. The report has been digested and ingested into this wiki; the working digest (page-numbered locator quotes plus a methodology summary, derived from the English PDF) lives at [sources/digests/p1-ai-in-education.md](digests/p1-ai-in-education.md). All wiki citations of this source are page-level against the official English edition, which is citation-authoritative; the German original stays in-repo as the source text.
 
 ## Methodology
 
