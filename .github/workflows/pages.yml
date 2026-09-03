@@ -2,17 +2,18 @@
 # to GitHub Pages. Separate from deploy-mcp.yml — the MCP workers are
 # untouched by this workflow.
 #
-# Currently manual-trigger only: GitHub Pages must be enabled on the repo
-# (Settings → Pages → Source: GitHub Actions) before the deploy step can
-# succeed. Once Pages is enabled, uncomment the push trigger so the site
-# redeploys on every wiki change, in step with the MCP bundle.
+# Runs on every push to main that touches the wiki or the site build, so the
+# published site never drifts from the repository (it did for 15 days in
+# August: a page correction was committed and the site kept serving the old
+# text until someone ran this by hand). GitHub Pages is enabled on the repo
+# (Settings -> Pages -> Source: GitHub Actions). Manual runs still work.
 name: Deploy wiki site to GitHub Pages
 
 on:
   workflow_dispatch: {}
-  # push:
-  #   branches: [main]
-  #   paths: ["wiki/**", "quartz/**", ".github/workflows/pages.yml"]
+  push:
+    branches: [main]
+    paths: ["wiki/**", "quartz/**", ".github/workflows/pages.yml"]
 
 permissions:
   contents: read
