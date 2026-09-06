@@ -80,3 +80,37 @@ describe("makeGitHubWriter", () => {
     await expect(makeGitHubWriter(cfg).putFile("wiki/lessons/x.md", "x", "m")).rejects.toThrow(/422/);
   });
 });
+
+describe("makeGitHubWriter — delete path", () => {
+  it("getFile decodes the Contents API's wrapped base64 and returns the blob sha", async () => {
+    const content = Buffer.from("# Hallo\n\nGrüße «Bewilligung»\n", "utf-8").toString("base64");
+    const wrapped = content.replace(/(.{20})/g, "$1\n"); // GitHub inserts line breaks
+    vi.stubGlobal("fetch", vi.fn(async () => res(200, { sha: "blob1", type: "file", encoding: "base64", content: wrapped })));
+    const f = await makeGitHubWriter(cfg).getFile("wiki/lessons/x.md");
+    expect(f).toEqual({ sha: "blob1", content: "# Hallo\n\nGrüße «Bewilligung»\n" });
+  });
+
+  it("getFile returns null on 404", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => res(404, { message: "Not Found" })));
+    expect(await makeGitHubWriter(cfg).getFile("wiki/lessons/x.md")).toBeNull();
+  });
+
+  it("deleteFile sends DELETE with the sha and branch, and returns the commit", async () => {
+    const fetchMock = vi.fn(async () => res(200, { commit: { sha: "c1", html_url: "https://github.com/c/1" } }));
+    vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
+    const r = await makeGitHubWriter(cfg).deleteFile("wiki/lessons/x.md", "blob1", "bye");
+    expect(r).toEqual({ deleted: true, path: "wiki/lessons/x.md", commitSha: "c1", commitUrl: "https://github.com/c/1" });
+    const [url, opts] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
+    expect(opts.method).toBe("DELETE");
+    expect(url).toContain("/contents/wiki/lessons/x.md");
+    const body = JSON.parse(opts.body as string);
+    expect(body).toMatchObject({ message: "bye", sha: "blob1", branch: "main" });
+  });
+
+  it("deleteFile rejects a traversal path before any request", async () => {
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
+    await expect(makeGitHubWriter(cfg).deleteFile("wiki/../secrets", "s", "m")).rejects.toThrow(/Unsafe/);
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+});

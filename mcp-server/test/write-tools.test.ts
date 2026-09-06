@@ -5,7 +5,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildServer } from "../src/server.js";
 import { FsWikiProvider } from "../src/fs-provider.js";
-import type { CommitResult, WikiWriter } from "../src/github-writer.js";
+import type { CommitResult, DeleteResult, WikiWriter } from "../src/github-writer.js";
 
 const WIKI_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "wiki");
 
@@ -17,6 +17,12 @@ function fakeWriter(): WikiWriter & { calls: Array<{ path: string; content: stri
     calls,
     async getFileSha() {
       return null;
+    },
+    async getFile() {
+      return null;
+    },
+    async deleteFile(path): Promise<DeleteResult> {
+      throw new Error(`unexpected delete of ${path}`);
     },
     async putFile(path, content, message): Promise<CommitResult> {
       calls.push({ path, content, message });

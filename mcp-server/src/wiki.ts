@@ -343,6 +343,36 @@ export class WikiStore {
   }
 
   /**
+   * Every page that points at `slug`, and how: a [[wikilink]], a typed
+   * frontmatter edge, or an inline citation (a source page is cited as
+   * "[(slug p. N)]" and linked as "../sources/<slug>.md"). The delete tool
+   * refuses while any content page still references the target; meta pages
+   * (index, README, ...) are reported but do not block, because the write
+   * tools cannot edit them and index.md lists every page by design.
+   */
+  async inboundReferences(slug: string): Promise<Array<{ slug: string; type: string; title: string; via: string[] }>> {
+    const page = await this.resolve(slug);
+    if (!page) return [];
+    const all = await this.pages();
+    const citeRe = new RegExp(`\\[\\(${escapeRegExp(page.slug)}\\s+(?:p|S)\\.?\\s*\\d+\\)\\]`, "i");
+    const hrefRe = new RegExp(`sources/${escapeRegExp(page.slug)}\\.md`);
+    const out: Array<{ slug: string; type: string; title: string; via: string[] }> = [];
+    for (const p of all) {
+      if (p.slug === page.slug) continue;
+      const via: string[] = [];
+      if (extractWikilinks(p.body).some((r) => r.slug === page.slug)) via.push("wikilink");
+      for (const f of EDGE_FIELDS) {
+        const v = p.frontmatter[f];
+        const slugs = Array.isArray(v) ? v : typeof v === "string" ? [v] : [];
+        if (slugs.some((s) => typeof s === "string" && s.split("#")[0] === page.slug)) via.push(`frontmatter:${f}`);
+      }
+      if (citeRe.test(p.body) || hrefRe.test(p.body)) via.push("citation");
+      if (via.length > 0) out.push({ slug: p.slug, type: p.type, title: p.title, via });
+    }
+    return out;
+  }
+
+  /**
    * Resolve a citation like "p2-building-permits#page-25" to its source page
    * and PDF locations. Returns metadata, never PDF content — the corpus PDFs
    * overload LLM context windows; that is a design constraint, not a gap.

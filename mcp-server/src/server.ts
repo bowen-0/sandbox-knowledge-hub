@@ -3,15 +3,19 @@ import { z } from "zod";
 import { WikiStore } from "./wiki.js";
 import { validatePage } from "./validate.js";
 import { fetchPdfBytes } from "./fetch-pdf.js";
-import type { WikiProvider } from "./types.js";
+import { CONTENT_FOLDERS, type WikiProvider } from "./types.js";
 import type { WikiWriter } from "./github-writer.js";
+import { mintConfirmation, readConfirmation } from "./confirm-token.js";
+
+/** How long a delete confirmation token stays valid after the preview. */
+const DELETE_CONFIRM_TTL_MS = 10 * 60 * 1000;
 
 const SERVER_INFO = {
   name: "sandbox-knowledge-hub",
   version: "0.1.0",
 } as const;
 
-const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions — read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. MAKE THE PUBLISH BOUNDARY UNMISTAKABLE: steps 1-3 are research — reading, drafting, validating — and write NOTHING; only wiki_write_page / wiki_add_source_pdf publish. Immediately before the first publishing call, say so in plain words: "Nothing has been written yet. The next tool call commits this publicly to the GitHub repository — approving it means publish." Never let a publish approval look like just another research approval, and never bundle the publish call into the same turn as exploratory tool calls. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page (give it a \`cite_as\` short display name in frontmatter that includes the document kind, e.g. \`cite_as: "Building Permits report"\`, so citations to it read cleanly and self-describe as a source document), its digest, and any lessons/syntheses as above. If the user ATTACHES a PDF instead of giving a URL, read it to draft the pages, but ask them for the report's public link (e.g. on the sandbox's own website) so wiki_add_source_pdf can store the file — its citations will not resolve until the PDF is in the repo. Every substantive claim must carry a page citation to a real source report — never invent a citation or a quote. When DRAFTING a page, author citations with the source SLUG — \`[(p2-building-permits p. 22)](../sources/p2-building-permits.md)\` — even though the read tools display a friendly source name; validation resolves the slug. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.`;
+const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions — read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. MAKE THE PUBLISH BOUNDARY UNMISTAKABLE: steps 1-3 are research — reading, drafting, validating — and write NOTHING; only wiki_write_page / wiki_add_source_pdf publish. Immediately before the first publishing call, say so in plain words: "Nothing has been written yet. The next tool call commits this publicly to the GitHub repository — approving it means publish." Never let a publish approval look like just another research approval, and never bundle the publish call into the same turn as exploratory tool calls. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page (give it a \`cite_as\` short display name in frontmatter that includes the document kind, e.g. \`cite_as: "Building Permits report"\`, so citations to it read cleanly and self-describe as a source document), its digest, and any lessons/syntheses as above. If the user ATTACHES a PDF instead of giving a URL, read it to draft the pages, but ask them for the report's public link (e.g. on the sandbox's own website) so wiki_add_source_pdf can store the file — its citations will not resolve until the PDF is in the repo. Every substantive claim must carry a page citation to a real source report — never invent a citation or a quote. When DRAFTING a page, author citations with the source SLUG — \`[(p2-building-permits p. 22)](../sources/p2-building-permits.md)\` — even though the read tools display a friendly source name; validation resolves the slug. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later. To DELETE a page, wiki_delete_page takes TWO calls. Call 1, with the path only, returns the page's full current content, every page that still references it, and a one-time confirmation_token — and deletes NOTHING; if any content page still references it, deletion is refused until those references are removed with wiki_write_page. Between the calls, SHOW the user the full content and get explicit approval for THIS deletion: approval of an earlier step does not carry over, and neither does any "always allow" setting. Call 2, with the confirmation_token, deletes the page and returns the deleted content and the commit, so the deletion is reversible with a plain git revert. The token expires after ten minutes and is bound to the exact content previewed. PDFs are never deleted: a revised report replaces its PDF by calling wiki_add_source_pdf with the same path.`;
 
 // Appended to every wiki_read_page result. The cite-always rule must ride WITH
 // the page content: a client (Claude Desktop, tool-search mode) may never call
@@ -39,7 +43,14 @@ function json(data: unknown) {
  */
 export function buildServer(
   provider: WikiProvider,
-  opts: { writer?: WikiWriter; citationBaseUrl?: string } = {},
+  opts: {
+    writer?: WikiWriter;
+    citationBaseUrl?: string;
+    /** HMAC key for delete confirmation tokens. Defaults to a per-process random key. */
+    confirmSecret?: string;
+    /** Token lifetime override (tests). */
+    confirmTtlMs?: number;
+  } = {},
 ): McpServer {
   const store = new WikiStore(provider, opts.citationBaseUrl);
   const server = new McpServer(SERVER_INFO, {
@@ -190,7 +201,12 @@ export function buildServer(
     });
   }
 
-  if (opts.writer) registerWriteTools(server, store, opts.writer);
+  if (opts.writer) {
+    registerWriteTools(server, store, opts.writer, {
+      confirmSecret: opts.confirmSecret ?? crypto.randomUUID(),
+      confirmTtlMs: opts.confirmTtlMs ?? DELETE_CONFIRM_TTL_MS,
+    });
+  }
 
   return server;
 }
@@ -199,7 +215,12 @@ export function buildServer(
  * Write tools — registered only when a WikiWriter is supplied (the separate,
  * authenticated write endpoint). The read endpoint never gets these.
  */
-function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWriter): void {
+function registerWriteTools(
+  server: McpServer,
+  store: WikiStore,
+  writer: WikiWriter,
+  confirm: { confirmSecret: string; confirmTtlMs: number },
+): void {
   server.registerTool(
     "wiki_validate_page",
     {
@@ -301,6 +322,113 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
   );
 
   server.registerTool(
+    "wiki_delete_page",
+    {
+      title: "DELETE — remove a page from the public GitHub repo (two calls; needs the confirmation token from call 1)",
+      description:
+        "Deletes ONE content page from the public repository, in two calls. CALL 1 (path only): returns the page's full current content, every page that still references it, and a one-time confirmation_token — it deletes NOTHING. If any content page still references it (a [[wikilink]], a frontmatter edge, or a citation), deletion is refused until those references are removed with wiki_write_page. CALL 2 (path + confirmation_token): deletes the page and returns the deleted content and the commit, so the deletion can be reverted with a plain git revert. Between the calls, SHOW the user the full content and get explicit approval for THIS deletion — a standing 'always allow' does not count, and approval of an earlier edit does not carry over. The token expires after 10 minutes and is bound to the exact content previewed; if the page changed in between, the delete is refused and you start again. PDFs cannot be deleted here: a revised report replaces its PDF via wiki_add_source_pdf with the same path.",
+      inputSchema: {
+        path: z.string().describe('Wiki-relative path "<folder>/<slug>.md" of the page to delete'),
+        confirmation_token: z.string().optional().describe("The token returned by call 1. Omit on call 1."),
+        message: z.string().optional().describe("Commit message for call 2; a default is used if omitted"),
+      },
+      annotations: { readOnlyHint: false, destructiveHint: true },
+    },
+    async ({ path, confirmation_token, message }) => {
+      const rel = path.replace(/^wiki\//, "").replace(/^\/+/, "");
+      const parts = rel.split("/");
+      const slug = parts.length === 2 && parts[1].endsWith(".md") ? parts[1].slice(0, -3) : "";
+      const okPath = parts.length === 2 && CONTENT_FOLDERS.includes(parts[0]) && /^[a-z0-9][a-z0-9-]*$/.test(slug);
+      if (!okPath) {
+        return json({
+          deleted: false,
+          reason: "bad_path",
+          error: `path must be "<folder>/<slug>.md" inside a content folder (${CONTENT_FOLDERS.join(", ")}); got "${path}". PDFs and root files cannot be deleted here.`,
+        });
+      }
+      const repoPath = `wiki/${rel}`;
+
+      let current;
+      try {
+        current = await writer.getFile(repoPath);
+      } catch (err) {
+        return json({ deleted: false, reason: "lookup_failed", error: err instanceof Error ? err.message : String(err) });
+      }
+      if (!current) {
+        return json({ deleted: false, reason: "not_found", error: `No file at ${repoPath} on branch ${writer.branch}. Nothing to delete.` });
+      }
+
+      // References come from the served snapshot (as of the last deploy);
+      // content and SHA come live from the repository.
+      const refs = await store.inboundReferences(slug);
+      const blocking = refs.filter((r) => r.type !== "meta");
+      const listedIn = refs.filter((r) => r.type === "meta").map((r) => r.slug);
+      if (blocking.length > 0) {
+        return json({
+          deleted: false,
+          deletable: false,
+          reason: "referenced",
+          path: rel,
+          referenced_by: blocking,
+          hint: "Nothing was deleted. Remove these references first (edit each page with wiki_write_page and wait for the redeploy), then call again.",
+        });
+      }
+
+      if (!confirmation_token) {
+        const exp = Date.now() + confirm.confirmTtlMs;
+        const token = await mintConfirmation(confirm.confirmSecret, { path: rel, sha: current.sha, exp });
+        return json({
+          deleted: false,
+          deletable: true,
+          path: rel,
+          preview: current.content,
+          sha: current.sha,
+          also_listed_in: listedIn,
+          confirmation_token: token,
+          expires_in_seconds: Math.round(confirm.confirmTtlMs / 1000),
+          next: "Nothing has been deleted. SHOW the user this full content and ask for explicit approval to delete it from the public repository. Only then call wiki_delete_page again with the same path and this confirmation_token.",
+        });
+      }
+
+      const claims = await readConfirmation(confirm.confirmSecret, confirmation_token);
+      if (!claims) {
+        return json({ deleted: false, reason: "bad_token", error: "confirmation_token is not valid. Call wiki_delete_page with the path only to get a fresh preview and token." });
+      }
+      if (claims.path !== rel) {
+        return json({ deleted: false, reason: "token_path_mismatch", error: `This token was issued for "${claims.path}", not "${rel}". Preview the right page first.` });
+      }
+      if (Date.now() > claims.exp) {
+        return json({ deleted: false, reason: "token_expired", error: "The confirmation token has expired. Call wiki_delete_page with the path only, show the user the preview again, and confirm within ten minutes." });
+      }
+      if (claims.sha !== current.sha) {
+        return json({ deleted: false, reason: "changed_since_preview", error: "The page changed after the preview was taken. Call wiki_delete_page with the path only and show the user the current content before confirming." });
+      }
+
+      try {
+        const result = await writer.deleteFile(repoPath, current.sha, (message?.trim() || `wiki: delete ${rel} (via write-MCP)`).slice(0, 200));
+        return json({
+          ...result,
+          deleted_content: current.content,
+          also_listed_in: listedIn,
+          revert: result.commitSha ? `git revert ${result.commitSha}` : "revert the commit on GitHub",
+          note:
+            "Deleted. The live query endpoints refresh a minute or two later." +
+            (listedIn.length > 0
+              ? ` ${listedIn.join(", ")} still list this page; remove those lines by hand on GitHub (the write tools cannot edit root files).`
+              : ""),
+        });
+      } catch (err) {
+        return json({
+          deleted: false,
+          reason: "commit_failed",
+          error: err instanceof Error ? err.message : String(err),
+          hint: "The write endpoint may be misconfigured (GitHub token/permissions). Tell the user; do not retry blindly.",
+        });
+      }
+    }
+  );
+
+  server.registerTool(
     "wiki_write_info",
     {
       title: "How updating works",
@@ -316,11 +444,13 @@ function registerWriteTools(server: McpServer, store: WikiStore, writer: WikiWri
           "Edit/add a page: 1) draft to the conventions (wiki_read_page 'CONVENTIONS'); 2) wiki_validate_page; 3) show the user + get approval; 4) wiki_write_page.",
           "Add a NEW report: 1) wiki_add_source_pdf with its public PDF URL (fetched + committed server-side); 2) then write its source page, digest, and lessons/syntheses as above (wiki_read_page 'INGEST' for the four-phase procedure).",
           "The publish boundary: steps before wiki_write_page / wiki_add_source_pdf are research and write nothing; those two calls are the only ones that commit publicly. Announce the boundary to the user before the first publishing call.",
+          "Delete a page: wiki_delete_page in two calls. 1) path only: returns the full content, the pages that reference it, and a one-time confirmation token, deleting nothing (refused while any content page references it); 2) show the user the content, get explicit approval for this deletion, then call again with the token. The result returns the deleted content and the commit to revert.",
         ],
         guardrails: [
           "Every substantive claim must cite a real source page; citations are checked against existing source pages.",
           "wiki_write_page refuses drafts with blocking errors.",
           "Commits are plain git — anything can be reverted on GitHub.",
+          "Deletions need a confirmation token minted by a preview call, bound to the exact content shown and valid for ten minutes, so no client setting can skip the preview; a deletion returns the deleted content and its commit SHA.",
         ],
         propagation: "The public read/query endpoint serves a built snapshot; a commit triggers a CI redeploy, so changes go live a minute or two later.",
         pdfs: "wiki_add_source_pdf fetches a published report PDF from its URL and commits it (no byte upload through chat — so if the user attaches a PDF, read it to draft pages but ask for its public link to store the file, or its citations won't resolve). A PDF not online anywhere can't be fetched — drag it into wiki/pdfs/de|en/ on GitHub instead.",
