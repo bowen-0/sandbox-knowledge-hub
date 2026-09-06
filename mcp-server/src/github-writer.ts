@@ -16,12 +16,33 @@ export interface CommitResult {
   fileUrl?: string;
 }
 
+/** A file as it currently sits on the branch. */
+export interface FileRecord {
+  /** Git blob SHA — the delete handshake binds its confirmation token to this. */
+  sha: string;
+  /** Decoded UTF-8 content. */
+  content: string;
+}
+
+export interface DeleteResult {
+  deleted: boolean;
+  /** Repo-relative path removed, e.g. "wiki/lessons/foo.md". */
+  path: string;
+  /** SHA of the commit that removed it — `git revert <sha>` brings it back. */
+  commitSha?: string;
+  commitUrl?: string;
+}
+
 export interface WikiWriter {
   /** "owner/repo". */
   readonly repo: string;
   readonly branch: string;
   /** Current blob SHA for a repo path, or null if the file does not exist. */
   getFileSha(repoPath: string): Promise<string | null>;
+  /** Current content + blob SHA for a text file, or null if it does not exist. */
+  getFile(repoPath: string): Promise<FileRecord | null>;
+  /** Remove a file. `sha` must be the blob SHA the caller previewed (GitHub rejects a stale one). */
+  deleteFile(repoPath: string, sha: string, message: string): Promise<DeleteResult>;
   /** Create or update a text file (chooses create vs update by existence). */
   putFile(repoPath: string, content: string, message: string): Promise<CommitResult>;
   /** Create or update a binary file (e.g. a PDF) from raw bytes. */
@@ -80,6 +101,41 @@ export function makeGitHubWriter(cfg: GitHubWriterConfig): WikiWriter {
     return json.sha ?? null;
   }
 
+  async function getFile(repoPath: string): Promise<FileRecord | null> {
+    assertSafeRepoPath(repoPath);
+    const res = await fetch(`${base}/${encodeRepoPath(repoPath)}?ref=${encodeURIComponent(cfg.branch)}`, { headers });
+    if (res.status === 404) return null;
+    if (!res.ok) {
+      throw new Error(`GitHub GET ${repoPath} failed: ${res.status} ${await safeText(res)}`);
+    }
+    const json = (await res.json()) as { sha?: string; type?: string; encoding?: string; content?: string };
+    if (!json.sha || json.type === "dir") return null;
+    // The Contents API base64-encodes with line breaks every 60 chars; Buffer ignores them.
+    const content =
+      json.encoding === "base64" && typeof json.content === "string"
+        ? Buffer.from(json.content, "base64").toString("utf-8")
+        : "";
+    return { sha: json.sha, content };
+  }
+
+  async function deleteFile(repoPath: string, sha: string, message: string): Promise<DeleteResult> {
+    assertSafeRepoPath(repoPath);
+    const body: Record<string, unknown> = { message, sha, branch: cfg.branch };
+    if (cfg.authorName && cfg.authorEmail) {
+      body.committer = { name: cfg.authorName, email: cfg.authorEmail };
+    }
+    const res = await fetch(`${base}/${encodeRepoPath(repoPath)}`, {
+      method: "DELETE",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      throw new Error(`GitHub DELETE ${repoPath} failed: ${res.status} ${await safeText(res)}`);
+    }
+    const json = (await res.json()) as { commit?: { sha?: string; html_url?: string } };
+    return { deleted: true, path: repoPath, commitSha: json.commit?.sha, commitUrl: json.commit?.html_url };
+  }
+
   async function commitBase64(repoPath: string, base64Content: string, message: string): Promise<CommitResult> {
     assertSafeRepoPath(repoPath);
     const sha = await getFileSha(repoPath);
@@ -114,7 +170,7 @@ export function makeGitHubWriter(cfg: GitHubWriterConfig): WikiWriter {
   const putBinary = (repoPath: string, bytes: Uint8Array, message: string) =>
     commitBase64(repoPath, Buffer.from(bytes).toString("base64"), message);
 
-  return { repo: `${cfg.owner}/${cfg.repo}`, branch: cfg.branch, getFileSha, putFile, putBinary };
+  return { repo: `${cfg.owner}/${cfg.repo}`, branch: cfg.branch, getFileSha, getFile, putFile, putBinary, deleteFile };
 }
 
 async function safeText(res: Response): Promise<string> {

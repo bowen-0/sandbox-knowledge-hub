@@ -29,6 +29,8 @@ interface Env {
   WRITE_TOKEN?: string;
   /** Fine-grained PAT with Contents:write on the repo. */
   GITHUB_TOKEN?: string;
+  /** HMAC key for delete confirmation tokens; falls back to WRITE_TOKEN. */
+  DELETE_SECRET?: string;
   GITHUB_OWNER?: string;
   GITHUB_REPO?: string;
   GITHUB_BRANCH?: string;
@@ -54,7 +56,12 @@ export class KnowledgeHubWriteMCP extends McpAgent<Env> {
       authorName: "Sandbox Knowledge Hub write-MCP",
       authorEmail: "knowledge-hub@users.noreply.github.com",
     });
-    this.server = buildServer(new BundleWikiProvider(bundle), { writer, citationBaseUrl: READ_ORIGIN });
+    this.server = buildServer(new BundleWikiProvider(bundle), {
+      writer,
+      citationBaseUrl: READ_ORIGIN,
+      // A stable key so a token minted by one isolate verifies in another.
+      confirmSecret: this.env.DELETE_SECRET ?? this.env.WRITE_TOKEN,
+    });
   }
 }
 
