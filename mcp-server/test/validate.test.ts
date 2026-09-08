@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { dirname, join } from "node:path";
+import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { FsWikiProvider } from "../src/fs-provider.js";
 import { WikiStore } from "../src/wiki.js";
@@ -61,6 +62,38 @@ describe("validatePage", () => {
     const r = await validatePage(store, "lessons/x.md", bad);
     expect(r.ok).toBe(true); // warning, not blocking
     expect(r.warnings.join(" ")).toMatch(/no known source page "p2-does-not-exist"/);
+  });
+
+  it("counts friendly-label citations, the form the whole corpus is stored in", async () => {
+    const friendly = GOOD.replace(
+      "[(p2-building-permits p. 10)]",
+      "[(Building Permits report, p. 10)]",
+    );
+    const r = await validatePage(store, "lessons/x.md", friendly);
+    expect(r.info.join(" ")).toMatch(/1 inline citation\(s\); 1 resolve/);
+    expect(r.warnings.join(" ")).not.toMatch(/No inline citations found/);
+  });
+
+  it("counts citations whose source name contains brackets", async () => {
+    const overview = GOOD.replace(
+      "[(p2-building-permits p. 10)](../sources/p2-building-permits.md)",
+      "[(Build & Share (Phase II overview report), p. 26)](../sources/00-overview-phase2-build-and-share.md)",
+    );
+    const r = await validatePage(store, "lessons/x.md", overview);
+    expect(r.info.join(" ")).toMatch(/1 inline citation\(s\); 1 resolve/);
+    expect(r.warnings.join(" ")).not.toMatch(/No inline citations found/);
+  });
+
+  it("finds citations on every real page that carries them", async () => {
+    // The corpus flipped to friendly labels in July; matching the visible label
+    // alone made this check silently pass on all of them.
+    const pages = ["regulations/eu-ai-act.md", "projects/building-permits.md"];
+    for (const rel of pages) {
+      const body = readFileSync(join(WIKI_ROOT, rel), "utf8");
+      const r = await validatePage(store, rel, body);
+      expect(r.warnings.join(" "), rel).not.toMatch(/No inline citations found/);
+      expect(r.info.join(" "), rel).toMatch(/inline citation\(s\)/);
+    }
   });
 
   it("warns on an unresolved wikilink", async () => {

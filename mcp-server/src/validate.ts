@@ -1,5 +1,5 @@
 /**
- * Page validation for the write path — the "check before you commit" gate.
+ * Page validation for the write path - the "check before you commit" gate.
  *
  * Dependency-free and Node-API-free so it runs unchanged in a Cloudflare
  * Worker. It does NOT parse YAML semantically (no engine in the Worker);
@@ -12,24 +12,38 @@ import { CONTENT_FOLDERS } from "./types.js";
 import type { WikiStore } from "./wiki.js";
 
 export interface ValidationResult {
-  /** true when there are no blocking errors — safe to commit. */
+  /** true when there are no blocking errors - safe to commit. */
   ok: boolean;
   path: string;
-  /** Blocking problems — wiki_write_page refuses to commit while any exist. */
+  /** Blocking problems - wiki_write_page refuses to commit while any exist. */
   errors: string[];
-  /** Non-blocking — surface to the user, let them decide. */
+  /** Non-blocking - surface to the user, let them decide. */
   warnings: string[];
   /** Informational notes (citation/link resolution counts). */
   info: string[];
 }
 
-/** Visible part of an inline citation: "[(p2-building-permits p. 25)]". */
-const CITATION_RE = /\[\(([a-z0-9][a-z0-9-]*)\s+(?:p|S)\.?\s*(\d+)\)\]/gi;
+/**
+ * An inline citation and its source link, in either stored form:
+ *   [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
+ *   [(Building Permits report, p. 25)](../sources/p2-building-permits.md)
+ * Captures: visible label, page number, href slug.
+ *
+ * The href slug is what resolves. Matching the visible label alone stopped
+ * working when the corpus moved to friendly labels, which silently turned
+ * the citations-resolve check into a no-op on every page and made validate
+ * report "no inline citations found" on pages carrying dozens.
+ */
+const CITATION_RE =
+  /\[\(((?:[^()[\]]|\([^()[\]]*\))+?)(?:,?\s+(?:p|S)\.?\s*(\d+))?\)\]\((?:\.\.\/)?sources\/([a-z0-9-]+)\.md\)/gi;
+
+/** A visible label that is itself a slug is checked too: label and href disagreeing is a real defect. */
+const SLUG_SHAPED = /^[a-z0-9][a-z0-9-]*$/;
 
 /** Content types where an absence of citations is worth flagging. */
 const CITATION_EXPECTED = new Set(["lesson", "synthesis", "project", "regulation"]);
 
-/** Per-page ceiling — keeps any one commit from bloating the hosted bundle. */
+/** Per-page ceiling - keeps any one commit from bloating the hosted bundle. */
 const MAX_CONTENT_BYTES = 256 * 1024;
 
 function stripFrontmatter(content: string): string {
@@ -52,7 +66,7 @@ export async function validatePage(
     errors.push(`Page is ${Math.round(content.length / 1024)} KB; the per-page limit is ${MAX_CONTENT_BYTES / 1024} KB. Split it into smaller pages.`);
   }
 
-  // 1 — Path shape: "<content-folder>/<slug>.md".
+  // 1 - Path shape: "<content-folder>/<slug>.md".
   let folder = "";
   const rel = path.replace(/^wiki\//, "").replace(/^\/+/, "");
   const parts = rel.split("/");
@@ -69,7 +83,7 @@ export async function validatePage(
     }
   }
 
-  // 2 — Frontmatter block present and closed.
+  // 2 - Frontmatter block present and closed.
   if (!content.startsWith("---\n")) {
     errors.push(`Page must open with a YAML frontmatter block ("---" on line 1).`);
   } else {
@@ -78,34 +92,43 @@ export async function validatePage(
       errors.push(`Frontmatter block is never closed (needs a line that is exactly "---").`);
     } else {
       const fm = content.slice(4, close);
-      if (/\t/.test(fm)) errors.push(`Frontmatter contains a tab — YAML forbids tabs; use spaces.`);
-      if (!/^title:\s*\S/m.test(fm)) warnings.push(`Frontmatter has no "title:" — the H1 or slug will be used as the title.`);
+      if (/\t/.test(fm)) errors.push(`Frontmatter contains a tab - YAML forbids tabs; use spaces.`);
+      if (!/^title:\s*\S/m.test(fm)) warnings.push(`Frontmatter has no "title:" - the H1 or slug will be used as the title.`);
       if (!/^type:\s*\S/m.test(fm)) warnings.push(`Frontmatter has no "type:".`);
     }
   }
 
   const body = stripFrontmatter(content);
 
-  // 3 — A heading to render as the title.
+  // 3 - A heading to render as the title.
   if (!firstHeading(body)) warnings.push(`No H1 ("# …") heading in the body.`);
 
-  // 4 — Citations resolve to a real source page.
+  // 4 - Citations resolve to a real source page.
   let cites = 0;
   let badCites = 0;
   for (const m of content.matchAll(CITATION_RE)) {
     cites++;
-    const src = await store.resolve(m[1]);
-    if (!src || src.type !== "source") {
-      badCites++;
-      warnings.push(`Citation "(${m[1]} p. ${m[2]})" points at no known source page "${m[1]}" — check the slug (wiki_list_pages type=source).`);
+    const [, label, page, hrefSlug] = m;
+    const shown = `(${label}${page ? ` p. ${page}` : ""})`;
+    // The href is what the reader follows and what the serve-time rewrite uses,
+    // so it is always checked; a slug-shaped visible label is checked as well.
+    const targets = [hrefSlug, ...(SLUG_SHAPED.test(label.trim()) && label.trim() !== hrefSlug ? [label.trim()] : [])];
+    let bad = false;
+    for (const slug of targets) {
+      const src = await store.resolve(slug);
+      if (!src || src.type !== "source") {
+        bad = true;
+        warnings.push(`Citation "${shown}" points at no known source page "${slug}" - check the slug (wiki_list_pages type=source).`);
+      }
     }
+    if (bad) badCites++;
   }
   if (cites > 0) info.push(`${cites} inline citation(s); ${cites - badCites} resolve to a known source.`);
   else if (folder && CITATION_EXPECTED.has(folderToType(folder))) {
     warnings.push(`No inline citations found. A ${folderToType(folder)} page should anchor its substantive claims to source pages "[(<source-slug> p. N)](../sources/<source-slug>.md)".`);
   }
 
-  // 5 — Wikilinks resolve.
+  // 5 - Wikilinks resolve.
   const links = extractWikilinks(body);
   const unresolved: string[] = [];
   for (const l of links) {
