@@ -142,6 +142,28 @@ describe("WikiStore on the real wiki", () => {
     expect(offenders).toEqual([]);
   });
 
+  it("search snippets carry the same deep links as the page they were cut from", async () => {
+    // The tool description calls these "citable snippets", so a client citing
+    // from search alone must not get links the page read would have rewritten.
+    const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
+    let complete = 0;
+    const leftovers: string[] = [];
+    for (const q of ["EU AI Act", "human oversight", "data access", "sandbox"]) {
+      for (const hit of await linked.search(q, { limit: 25 })) {
+        for (const s of hit.snippets) {
+          complete += (s.match(/\[\([^[\]]*\)\]\(https:\/\/hub\.example\/c\//g) || []).length;
+          // Only whole citations: a snippet window can cut either end of one,
+          // and a half-citation cannot be rewritten by anything.
+          for (const m of s.match(/\[\((?:[^()[\]]|\([^()[\]]*\))+?\)\]\((?:\.\.\/)?sources\/[a-z0-9-]+\.md\)/g) || []) {
+            leftovers.push(`${hit.slug}: ${m}`);
+          }
+        }
+      }
+    }
+    expect(complete).toBeGreaterThan(0); // the check would pass vacuously on zero
+    expect(leftovers).toEqual([]);
+  });
+
   it("renders friendly-label citations identically to slug-label ones (both stored forms)", async () => {
     const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
     const slugForm = "[(p2-building-permits p. 25)](../sources/p2-building-permits.md)";

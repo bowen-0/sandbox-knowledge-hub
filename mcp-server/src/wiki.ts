@@ -307,7 +307,19 @@ export class WikiStore {
       if (typeof p.frontmatter.insight_domain === "string") hit.insight_domain = p.frontmatter.insight_domain;
       hits.push(hit);
     }
-    return hits.sort((a, b) => b.score - a.score).slice(0, limit);
+    const top = hits.sort((a, b) => b.score - a.score).slice(0, limit);
+    // Snippets are cut from the stored body, so without this they carry the
+    // stored relative "../sources/<slug>.md" citation links while the same
+    // citation read through wiki_read_page carries a working deep link. The
+    // tool description calls these "citable snippets", so a client that cites
+    // from search alone produced an answer whose every link was dead.
+    // Rendered after the slice, so only the returned hits pay for it. A
+    // citation the snippet window cut in half simply does not match and is
+    // left alone, exactly as before.
+    for (const hit of top) {
+      hit.snippets = await Promise.all(hit.snippets.map((s) => this.renderCitationNames(s)));
+    }
+    return top;
   }
 
   async connections(slug: string): Promise<Connections | undefined> {
