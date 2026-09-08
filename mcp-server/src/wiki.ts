@@ -35,9 +35,16 @@ function escapeRegExp(s: string): string {
  * The href slug is what maps to the source file (and drives the deep-link
  * rewrite); the visible label is normalised to the source's `cite_as` at
  * serve time whichever form is stored.
+ *
+ * The label admits one level of nested parentheses, because two sources carry
+ * them in their own `cite_as` ("Build & Share (Phase II overview report)").
+ * Without that, those citations failed to match and were served with their
+ * stored relative "../sources/<slug>.md" link, which is dead in a chat client.
+ * Brackets stay excluded at both levels, so a label can never run past the
+ * "]" that ends its own citation.
  */
 const CITATION_LINK_RE =
-  /\[\(([^()[\]]+?)(?:,?\s+(p|S)\.\s*(\d+))?\)\]\((\.\.\/)?sources\/([a-z0-9-]+)\.md\)/gi;
+  /\[\(((?:[^()[\]]|\([^()[\]]*\))+?)(?:,?\s+(p|S)\.\s*(\d+))?\)\]\((\.\.\/)?sources\/([a-z0-9-]+)\.md\)/gi;
 
 /** Typed frontmatter fields that act as graph edges. */
 const EDGE_FIELDS = [
@@ -240,7 +247,7 @@ export class WikiStore {
       if (opts.insight_domain && p.frontmatter.insight_domain !== opts.insight_domain) continue;
 
       // Offsets are computed on the folded body; folding preserves length except
-      // ß→ss, so snippet windows can drift by a char or two — cosmetic only.
+      // ß→ss, so snippet windows can drift by a char or two - cosmetic only.
       const titleLc = foldForSearch(p.title);
       const slugLc = p.slug.toLowerCase();
       const bodyLc = foldForSearch(p.body);
@@ -344,7 +351,7 @@ export class WikiStore {
 
   /**
    * Resolve a citation like "p2-building-permits#page-25" to its source page
-   * and PDF locations. Returns metadata, never PDF content — the corpus PDFs
+   * and PDF locations. Returns metadata, never PDF content - the corpus PDFs
    * overload LLM context windows; that is a design constraint, not a gap.
    */
   async resolveCitation(ref: string): Promise<
@@ -393,7 +400,7 @@ export class WikiStore {
     };
   }
 
-  /** Counts by type plus domain split — the overview surface. */
+  /** Counts by type plus domain split - the overview surface. */
   async stats(): Promise<{ byType: Record<string, number>; byDomain: Record<string, number>; total: number }> {
     const all = await this.pages();
     const byType: Record<string, number> = {};

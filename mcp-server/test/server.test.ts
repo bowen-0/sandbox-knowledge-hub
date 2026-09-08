@@ -117,6 +117,31 @@ describe("WikiStore on the real wiki", () => {
     expect(r.content).not.toMatch(/\]\(\.\.\/sources\/p2-building-permits\.md\)/);
   });
 
+  it("rewrites citations whose source name contains brackets, e.g. the two overview reports", async () => {
+    const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
+    const stored =
+      "[(Build & Share (Phase II overview report), p. 26)](../sources/00-overview-phase2-build-and-share.md)";
+    const out = await linked.renderCitationNames(stored);
+    expect(out).toBe(
+      "[(Build & Share (Phase II overview report), p. 26)](https://hub.example/c/00-overview-phase2-build-and-share/26)",
+    );
+  });
+
+  it("leaves no relative source link anywhere in the corpus once a base is set", async () => {
+    // The whole corpus, not one hand-picked page: a citation that fails to match
+    // is served with its stored "../sources/<slug>.md" link, which is dead in a
+    // chat client. Picking a single well-behaved source is what let the two
+    // overview reports ship broken.
+    const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
+    const offenders: string[] = [];
+    for (const p of await linked.pages()) {
+      const rendered = await linked.renderCitationNames(p.body);
+      const left = rendered.match(/\[\([^\]]*\)\]\((?:\.\.\/)?sources\/[a-z0-9-]+\.md\)/gi);
+      if (left) offenders.push(`${p.slug}: ${left[0]}`);
+    }
+    expect(offenders).toEqual([]);
+  });
+
   it("renders friendly-label citations identically to slug-label ones (both stored forms)", async () => {
     const linked = new WikiStore(new FsWikiProvider(WIKI_ROOT), "https://hub.example/");
     const slugForm = "[(p2-building-permits p. 25)](../sources/p2-building-permits.md)";
