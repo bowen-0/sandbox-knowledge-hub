@@ -26,7 +26,7 @@ For editing what's already in the wiki (a new lesson from an existing source, a 
 
 The skill is auto-loaded. You type `ingest`, the wiki tells you what to do.
 
-1. **Get access.** Confirm with the repository maintainer that your GitHub account is added to the repo. Confirm you have a Claude.ai plan that includes Cowork.
+1. **Before you start.** This guide is for the sandbox programme team and anyone they have asked to maintain the corpus. You will need write access to the repository and a Claude.ai plan that includes Cowork.
 2. **Open the repo in Cowork.** Point Cowork at this GitHub repo. Open a session on the `main` branch (it will create a working branch for your changes).
 3. **Drop the source in.** For a new PDF: copy the official English edition into `wiki/pdfs/en/` (citation-authoritative) and the original into `wiki/pdfs/de/` (or the language's folder). No official English edition → the original language is citation-authoritative. For pasted content, save to `wiki/sources/notes/<slug>.md` first. URLs and papers - just describe them in chat.
 4. **Trigger the ingest skill.** Type one of: *"ingest p2-new-thing"*, *"process this report"*, *"compile this into the wiki"*. The `ingest` skill auto-loads. If it doesn't (older Cowork harness, skill not discovered), paste [`INGEST.md`](INGEST.md) into the chat and say "follow this procedure".
@@ -108,4 +108,4 @@ Source PDFs sit in [`wiki/pdfs/{de,en}/`](pdfs/). Each PDF gets a page in [`wiki
 
 ## Maintainer contact
 
-For access, review, or anchor backfills: open a GitHub issue or contact the team listed in the project [`CLAUDE.md`](../CLAUDE.md).
+For access, review, or anchor backfills: open a GitHub issue on this repository.

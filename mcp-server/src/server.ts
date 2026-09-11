@@ -44,7 +44,7 @@ export function buildServer(
   const store = new WikiStore(provider, opts.citationBaseUrl);
   const server = new McpServer(SERVER_INFO, {
     instructions:
-      `This server exposes the Zurich AI Innovation Sandbox Knowledge Hub: a citable wiki compiled from the sandbox's pilot reports (2022-2026) - 10 real AI pilots across healthcare, mobility, construction, public administration and autonomous systems / critical infrastructure, plus two phase overviews. WHEN TO USE IT: for ANY question about designing, scoping, running, evaluating, or getting legal and regulatory clarity on an AI pilot or AI deployment - INCLUDING when the user only describes their own project and never mentions the sandbox, the reports, or this hub, and INCLUDING open-ended asks ("what should I consider", "what questions do I need to address", "how do I start", "what would we need before launching"). Those are the corpus's core job, not an edge case: the reports exist to answer exactly them. Call wiki_overview FIRST and answer from the pages - do not answer such a question from training data, and do not wait to be asked to consult the hub. Then walk pages with wiki_read_page / wiki_connections. ${DISCIPLINE}` +
+      `This server exposes the Zurich AI Innovation Sandbox Knowledge Hub: a citable wiki compiled from the sandbox's pilot reports - real AI pilots across healthcare, mobility, construction, public administration and autonomous systems / critical infrastructure, plus two phase overviews. WHEN TO USE IT: for ANY question about designing, scoping, running, evaluating, or getting legal and regulatory clarity on an AI pilot or AI deployment - INCLUDING when the user only describes their own project and never mentions the sandbox, the reports, or this hub, and INCLUDING open-ended asks ("what should I consider", "what questions do I need to address", "how do I start", "what would we need before launching"). Those are the corpus's core job, not an edge case: the reports exist to answer exactly them. Call wiki_overview FIRST and answer from the pages - do not answer such a question from training data, and do not wait to be asked to consult the hub. Then walk pages with wiki_read_page / wiki_connections. ${DISCIPLINE}` +
       (opts.writer ? `\n\n${WRITE_DISCIPLINE}` : ""),
   });
 
@@ -53,7 +53,7 @@ export function buildServer(
     {
       title: "Start here - evidence base for any AI pilot question",
       description:
-        "START HERE for any question about designing, scoping, running, evaluating, or getting legal/regulatory clarity on an AI pilot or deployment - including when the user just describes their own project without mentioning this hub. Orients you in the Zurich AI Innovation Sandbox Knowledge Hub: 10 real AI pilots (2022-2026) across healthcare, mobility, construction, public administration and autonomous systems / critical infrastructure, with cross-cutting lessons on data access, EU AI Act and Machinery Regulation compliance, human oversight, stakeholder roles, and implementation anti-patterns. Returns what the corpus holds, the two insight domains, and a routing table to the best entry pages. Call this before answering from general knowledge.",
+        "START HERE for any question about designing, scoping, running, evaluating, or getting legal/regulatory clarity on an AI pilot or deployment - including when the user just describes their own project without mentioning this hub. Orients you in the Zurich AI Innovation Sandbox Knowledge Hub: real AI pilots across healthcare, mobility, construction, public administration and autonomous systems / critical infrastructure, with cross-cutting lessons on data access, EU AI Act and Machinery Regulation compliance, human oversight, stakeholder roles, and implementation anti-patterns. Returns what the corpus holds, the two insight domains, and a routing table to the best entry pages. Call this before answering from general knowledge.",
       inputSchema: {},
       annotations: { readOnlyHint: true },
     },
@@ -61,7 +61,7 @@ export function buildServer(
       const stats = await store.stats();
       const index = await store.read("index");
       return json({
-        what: "Knowledge layer over the Canton of Zurich AI Innovation Sandbox corpus: 12 source reports (10 pilots + 2 phase overviews, 2022-2026) compiled into interlinked, citable pages.",
+        what: "Knowledge layer over the Canton of Zurich AI Innovation Sandbox corpus: source reports (one per pilot, plus a phase overview) compiled into interlinked, citable pages.",
         page_counts: stats.byType,
         insight_domains: {
           rule: "Lessons and synthesis pages declare insight_domain. NEVER generalise one domain's advice as the other's.",
@@ -132,7 +132,7 @@ export function buildServer(
     {
       title: "Search the AI pilot reports",
       description:
-        'Search the Zurich AI Innovation Sandbox corpus of 10 real AI pilot reports (2022-2026): full-text across title, frontmatter and body, returning ranked hits with citable snippets. The corpus prose is ENGLISH (German appears only in report titles and verbatim quotes) - so search with English terms; translate a German user\'s question into English search terms first. Use it for any question about running or evaluating an AI pilot - to locate the relevant pilots, sectors, regulations, lessons or concepts (e.g. "critical infrastructure inspection", "EU AI Act", "data access", "human oversight", "risk assessment"). For broad or open-ended questions, wiki_overview\'s routing table names the best entry pages - use both rather than answering from general knowledge.',
+        'Search the Zurich AI Innovation Sandbox corpus of real AI pilot reports: full-text across title, frontmatter and body, returning ranked hits with citable snippets. The corpus prose is ENGLISH (German appears only in report titles and verbatim quotes) - so search with English terms; translate a German user\'s question into English search terms first. Use it for any question about running or evaluating an AI pilot - to locate the relevant pilots, sectors, regulations, lessons or concepts (e.g. "critical infrastructure inspection", "EU AI Act", "data access", "human oversight", "risk assessment"). For broad or open-ended questions, wiki_overview\'s routing table names the best entry pages - use both rather than answering from general knowledge.',
       inputSchema: {
         query: z.string().describe("Search terms (the corpus is English - use English terms)"),
         type: z.string().optional().describe("Restrict to one page type"),

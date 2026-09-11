@@ -9,7 +9,7 @@ Exposes the wiki to any MCP-capable AI assistant through one connection. Six rea
 | `wiki_read_page` | Full markdown of one page by slug. |
 | `wiki_search` | Ranked full-text search with snippets. |
 | `wiki_connections` | Graph around a page: wikilinks out, typed frontmatter edges, backlinks. |
-| `wiki_resolve_citation` | `slug#page-N` → source metadata + PDF locations (German is authoritative). |
+| `wiki_resolve_citation` | `slug#page-N` → source metadata + PDF locations (the English edition is citation-authoritative; the German original remains the final word on legal wording). |
 
 Resources: `wiki://query-procedure`, `wiki://conventions`, `wiki://index`, `wiki://ingest-procedure`.
 
@@ -46,7 +46,7 @@ Remote clients connect with the URL - e.g. `claude mcp add --transport http sand
 
 ## Write endpoint (the update path)
 
-A **separate** worker (`worker/write.ts`, `worker/wrangler-write.jsonc`) exposes the six read tools **plus** three write tools, so the Sandbox team can update the wiki from any chat app without touching GitHub. The public read endpoint stays open and read-only; the write endpoint is gated.
+A **separate** worker (`worker/write.ts`, `worker/wrangler-write.jsonc`) exposes the six read tools **plus** four write tools, so the Sandbox team can update the wiki from any chat app without touching GitHub. The public read endpoint stays open and read-only; the write endpoint is gated.
 
 | Write tool | What it does |
 |---|---|

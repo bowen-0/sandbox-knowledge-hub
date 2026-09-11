@@ -10,7 +10,7 @@ If you only read one other file: [`CONVENTIONS.md`](CONVENTIONS.md). It defines 
 
 ## What this is, in one paragraph
 
-The Canton of Zürich runs the *Innovation Sandbox for Artificial Intelligence* - a regulatory + technical playground where public administration, businesses, and researchers pilot AI applications under real conditions. Across two phases (2022-2026) it produced ~13 detailed PDF reports. Those reports hold hard-won knowledge (legal frameworks, data access, organisational prerequisites, technical learnings) that today is locked inside static documents. **This wiki restructures that corpus as a navigable, citable, extensible knowledge base** so that the technical people building AI assistants and retrieval systems can give an administrator planning a new AI pilot trustworthy, cited access to it.
+The Canton of Zürich runs the *Innovation Sandbox for Artificial Intelligence* - a regulatory + technical playground where public administration, businesses, and researchers pilot AI applications under real conditions. Each phase produces a detailed PDF report per pilot, plus an overview of the phase. Those reports hold hard-won knowledge (legal frameworks, data access, organisational prerequisites, technical learnings) that today is locked inside static documents. **This wiki restructures that corpus as a navigable, citable, extensible knowledge base** so that the technical people building AI assistants and retrieval systems can give an administrator planning a new AI pilot trustworthy, cited access to it.
 
 The corpus is bounded but **the wiki is not**. New sources - papers, web pages, transcripts, news articles, future sandbox reports - can be added as first-class citizens. See `sources/` below.
 

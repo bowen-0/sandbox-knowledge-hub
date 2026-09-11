@@ -1,10 +1,18 @@
 # Sandbox Knowledge Hub
 
-**The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - 4.5 years of real-world AI piloting in Swiss public administration, restructured from 12 published reports into a navigable, citable, AI-ready wiki.
+**The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published pilot reports, restructured into a navigable, citable, AI-ready wiki.
 
 > **Status: feasibility study.** This repository demonstrates that the sandbox's published reports can be restructured into an AI-readable knowledge base - it is not a finished product. Answer quality has not been systematically assured and the system has not been red-teamed, so use is at your own risk: verify anything that matters against the cited report page. The primary goal is to share the insights gained while building it. Given significant interest, it could be developed into a fully supported resource at a later stage.
 
-The sandbox ran ten pilots across two phases (2022-2026): building permits, medical documentation, autonomous inspection robots, bridge monitoring, machine translation, and more. Each produced a detailed report. Those reports hold hard-won knowledge about deploying AI under Swiss and EU law - and about running a regulatory sandbox at all. This repository restructures that knowledge so it can be read by AI systems, not just people.
+The sandbox has run pilots across two phases: building permits, medical documentation, autonomous inspection robots, bridge monitoring, machine translation, and more. Each produced a detailed report. Those reports hold hard-won knowledge about deploying AI under Swiss and EU law - and about running a regulatory sandbox at all. This repository restructures that knowledge so it can be read by AI systems, not just people.
+
+## Read it in the browser
+
+**[bowen-0.github.io/sandbox-knowledge-hub](https://bowen-0.github.io/sandbox-knowledge-hub)**
+
+The whole corpus as a browsable site: full-text search, every claim linked to the report page it came from, and a graph of how the pages connect. Nothing to install, and no AI assistant needed. This is the readable version; the rest of this page is for connecting it to your own systems.
+
+![The Knowledge Hub as a browsable site: left-hand navigation, a page of prose with each claim citing its report and printed page, and a graph of linked pages on the right.](.github/site-preview.png)
 
 ## Who this is for
 
