@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "agents": "^0.2.0",
-    "ai": "^5.0.206"
+    "ai": "^5.0.255"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
