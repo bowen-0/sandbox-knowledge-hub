@@ -11,13 +11,13 @@ updated: 2026-06-10
 
 # Raphael von Thiessen
 
-Programme Lead AI at the Canton of Zurich (Standortförderung, *Amt für Wirtschaft*). The **constant institutional anchor** of the sandbox across both phases - appears as project manager / programme lead on every sandbox report, both phase overviews, and is the named lead author of [[00-overview-phase2-build-and-share]] [(Build & Share (Phase II overview report), p. 27)](../sources/00-overview-phase2-build-and-share.md).
+Programme Lead AI at the Canton of Zurich (Standortförderung, *Amt für Wirtschaft*). The **constant institutional anchor** of the sandbox across both phases - appears as project manager / programme lead on every sandbox report, both phase overviews, and is named first among the two authors of [[00-overview-phase2-build-and-share]] [(Build & Share (Phase II overview report), p. 27)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Role
 
 - Strategic direction of the AI Innovation Sandbox programme.
 - Co-author of the Phase I and Phase II final reports.
-- Coordinates project portfolio, steering committee engagement, public communication [(Build & Share (Phase II overview report), p. 28)](../sources/00-overview-phase2-build-and-share.md).
+- Named for project conception and coordination, and listed with the project-steering bodies [(Build & Share (Phase II overview report), p. 28)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Notable quotes in the corpus
 

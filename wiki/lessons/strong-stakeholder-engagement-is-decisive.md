@@ -30,13 +30,13 @@ Compare:
 
 | Project | Partner engagement intensity | Outcome |
 |---|---|---|
-| [[smart-parking]] (Frauenfeld) | Extensive - city resources, prolonged testing, post-pilot scaling | Production deployment, multi-canton roll-out |
+| [[smart-parking]] (Frauenfeld) | Extensive - city resources, prolonged testing, post-pilot scaling | Production deployment in Frauenfeld, since further expanded |
 | [[building-permits]] (Stadt Kloten) | Extensive - real applications, expert validation, multi-vendor coordination | Working prototype + 3,336-eval benchmark, postulate input |
 | [[bridge-monitoring]] (SOB pivot) | Strong - physical access, train-traffic data, structural-engineering expertise | Successful real-world testing despite original-partner withdrawal |
 | [[medical-documentation]] | Partner-data access blocked by regulation | Analysis-only outcome (still valuable) |
 | [[inspection-robots]] | No suitable test partner identified | Analysis-only outcome |
 
-The two analysis-only projects pivoted *not* because the model was wrong, but because partner engagement could not reach the required intensity [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md).
+Neither analysis-only project pivoted because the model was wrong. [[inspection-robots]] found no suitable test partner for operational deployment [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md); [[medical-documentation]] was blocked by the stringent data-protection requirements governing patient data in a public hospital [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
 ## How to apply
 
@@ -52,7 +52,7 @@ The two analysis-only projects pivoted *not* because the model was wrong, but be
 >
 > 1. **Choose partners who can commit, not just who are interested.** Municipalities with operational autonomy tend to engage more deeply than larger institutions with diffuse approval processes.
 > 2. **Formulate expectations towards implementation partners at intake**, before a project enters the portfolio; the booklet states this must happen from the outset [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md).
-> 3. **Treat engagement intensity as an early-warning signal across the portfolio**: both Phase II analysis-only outcomes trace back to partner engagement that could not reach the required intensity [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md).
+> 3. **Check early what would block operational deployment**: one Phase II analysis-only outcome traces to a missing test partner [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md), the other to data-protection requirements on patient data [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 

@@ -62,7 +62,7 @@ From [[00-overview-phase2-build-and-share]] §04 Technology:
 
 ### 1. Reproducibility
 
-Swiss administrative law assumes that the same case gets the same outcome - *equal treatment* and *prohibition of arbitrariness* are core principles. Generative AI fights this by construction: ask the same question three times and get three slightly different answers. The [[building-permits]] benchmark measured consistency-across-3-runs at 86.8% (best) to 78.8% (worst) - meaning a non-trivial fraction of cases would receive *different* AI assessments from the same model run twice. See [[probabilistic-ai-vs-administrative-reproducibility]].
+Swiss administrative law assumes that the same case gets the same outcome - *equal treatment* and *prohibition of arbitrariness* are core principles. Generative AI fights this by construction: ask the same question three times and get three slightly different answers. The [[building-permits]] benchmark measured consistency-across-3-runs at 86.8% (best) to 78.8% (worst) [(Building Permits report, p. 14)](../sources/p2-building-permits.md) - meaning a non-trivial fraction of cases would receive *different* AI assessments from the same model run twice. See [[probabilistic-ai-vs-administrative-reproducibility]].
 
 ### 2. Traceability
 
@@ -70,7 +70,7 @@ A rule-based system can explain *exactly* why it gave the answer it did. A gener
 
 ### 3. Cost stability
 
-A rule-based check on a building application costs essentially zero (one IF-statement evaluation). A frontier-LLM check on the same application costs CHF 0.0001 - CHF 0.033 per query and runs in 3.2 - 41.7 seconds. For high-volume processes, the cost difference matters at the budget level.
+A rule-based check on a building application costs essentially zero (one IF-statement evaluation). A frontier-LLM check on the same application costs USD 0.0001 to USD 0.033 per query and runs in 3.2 to 41.7 seconds [(Building Permits report, p. 14)](../sources/p2-building-permits.md). For high-volume processes, the cost difference matters at the budget level.
 
 ---
 

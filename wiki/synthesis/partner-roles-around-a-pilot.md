@@ -46,7 +46,7 @@ The booklet's framing, from §03:
 
 The roles are *not* interchangeable:
 
-- A test partner cannot substitute for a supervisory authority. (You can deploy with a test partner; you cannot deploy without regulator approval.)
+- A test partner cannot substitute for a supervisory authority. A test partner gives you an environment; only the competent authority can settle what the law requires of you.
 - A technical implementation partner cannot substitute for a mandated expert. (They build the prototype; they do not analyse the law.)
 - A domain sparring partner cannot substitute for a test partner. (They advise; they don't provide the operational environment.)
 
@@ -69,7 +69,7 @@ Conflating roles is the most common mistake the corpus surfaces - and the most c
 >
 > **Test partner.** The hardest one. Often the binding constraint - see [[data-access-patterns-and-unblocking]]. Patterns:
 > - **Municipalities** ([[stadt-kloten]], [[stadt-frauenfeld]]) are willing test partners with bounded data.
-> - **Hospitals** require extensive data-sharing agreements (years of lead time if going public-sector hospital).
+> - **Hospitals** require data-sharing agreements that can take considerable lead time - [[medical-documentation]] could not clear them inside its window [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 > - **Infrastructure operators** (SOB, military) require physical access permissions.
 >
 > **Technical implementation partner.** Usually multiple. The corpus shows pilots often combine a *use-case-specific* implementation partner ([[nokema]] for building permits) with a *technical-platform* partner ([[byte-studio]]). For startup-scale teams, this distinction may collapse into one organisation.
