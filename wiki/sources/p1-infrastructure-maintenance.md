@@ -1,5 +1,5 @@
 ---
-title: "Automated Infrastructure Maintenance — Drone Inspections with Computer Vision"
+title: "Automated Infrastructure Maintenance - Drone Inspections with Computer Vision"
 cite_as: "Infrastructure Maintenance report"
 type: source
 source_type: pdf
@@ -13,11 +13,11 @@ created: 2026-05-28
 updated: 2026-06-25
 ---
 
-# Automated Infrastructure Maintenance — Drone Inspections with Computer Vision
+# Automated Infrastructure Maintenance - Drone Inspections with Computer Vision
 
 **Read the report:** [PDF (EN)](../pdfs/en/p1-infrastructure-maintenance.pdf) · [PDF (DE)](../pdfs/de/p1-infrastructure-maintenance.pdf)
 
-Phase I project report. Computer-vision-based drone inspection of military infrastructure, executed with IBM Research. Notable downstream legacy: produced a structured, annotated dataset for infrastructure inspection that IBM Research subsequently published on **Hugging Face** as a public benchmark — referenced explicitly in the Build & Share booklet as a model of sustainable data reuse beyond the sandbox engagement itself [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md). Partner-access bottleneck: military base access constrained data collection; the report itself notes that access to high-resolution image data of airport runways "is usually difficult to obtain" [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md).
+Phase I project report. Computer-vision-based drone inspection of military infrastructure, executed with IBM Research. Notable downstream legacy: produced a structured, annotated dataset for infrastructure inspection that IBM Research subsequently published on **Hugging Face** as a public benchmark - referenced explicitly in the Build & Share booklet as a model of sustainable data reuse beyond the sandbox engagement itself [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md). Partner-access bottleneck: military base access constrained data collection; the report itself notes that access to high-resolution image data of airport runways "is usually difficult to obtain" [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md).
 
 ## Methodology
 
@@ -36,7 +36,7 @@ The report is published in both languages with 1:1 page alignment; quotes follow
 
 > *"The data captured for the Dubendorf runway is the first dataset of its kind that provides three different mission types for the same test area."* [(Infrastructure Maintenance report, p. 26)](../sources/p1-infrastructure-maintenance.md)
 
-> *"Furthermore, every project in which AI applications are successfully used adds to the assurance that the developed foundation models –in this case by IBM Research– operate reliably in a broad context."* [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md)
+> *"Furthermore, every project in which AI applications are successfully used adds to the assurance that the developed foundation models - in this case by IBM Research - operate reliably in a broad context."* [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md)
 
 ## Stakeholders named in the report
 
@@ -61,6 +61,6 @@ Authoritative source for:
 
 ## See also
 
-- [[infrastructure-maintenance]] — project page.
-- [[bridge-monitoring]] — Phase II thematic successor (sensor + AI on infrastructure).
-- [[smart-parking]] — fellow Phase I computer-vision pilot.
+- [[infrastructure-maintenance]] - project page.
+- [[bridge-monitoring]] - Phase II thematic successor (sensor + AI on infrastructure).
+- [[smart-parking]] - fellow Phase I computer-vision pilot.

@@ -45,5 +45,5 @@ The downstream **commercial-register-extracts MT solution** was, after a success
 
 ## See also
 
-- [[p1-machine-translation]] — the source PDF.
-- [[building-permits]] — fellow "AI in administrative procedures" report; shares the FADP / BV framing.
+- [[p1-machine-translation]] - the source PDF.
+- [[building-permits]] - fellow "AI in administrative procedures" report; shares the FADP / BV framing.

@@ -34,6 +34,6 @@ The full Phase II steering committee comprises representatives from:
 
 ## See also
 
-- [[raphael-von-thiessen]] — Programme Lead AI; institutionally located here.
-- [[lukas-willi]] — Project Lead AI; institutionally located here.
-- [[zh-ai-ecosystem-strategy-2026-2029]] — the 4-pillar strategy this office is now operationalising.
+- [[raphael-von-thiessen]] - Programme Lead AI; institutionally located here.
+- [[lukas-willi]] - Project Lead AI; institutionally located here.
+- [[zh-ai-ecosystem-strategy-2026-2029]] - the 4-pillar strategy this office is now operationalising.

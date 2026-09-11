@@ -35,12 +35,12 @@ The post-2022 LLM hype cycle compressed public discourse about AI into "AI = LLM
 When scoping a public-sector AI use case:
 
 1. **Don't anchor on LLMs by default.** Start from the problem and let the modality follow.
-2. **Computer vision is mature** for a wide range of perception/inspection use cases — the technology is rarely the binding constraint (see [[ai-is-rarely-the-primary-challenge]]).
-3. **Sensor + AI patterns** unlock infrastructure monitoring, predictive maintenance, anomaly detection — modalities LLMs are not the right tool for.
-4. **Combine modalities deliberately** — multi-modal problems (e.g. [[building-permits]] with images + text) are different from single-modality ones.
+2. **Computer vision is mature** for a wide range of perception/inspection use cases - the technology is rarely the binding constraint (see [[ai-is-rarely-the-primary-challenge]]).
+3. **Sensor + AI patterns** unlock infrastructure monitoring, predictive maintenance, anomaly detection - modalities LLMs are not the right tool for.
+4. **Combine modalities deliberately** - multi-modal problems (e.g. [[building-permits]] with images + text) are different from single-modality ones.
 
 ## See also
 
-- [[computer-vision]] — the dominant Phase I paradigm.
-- [[large-language-models]] — what this lesson contrasts against.
-- [[scoping-is-ai-the-right-approach]] — broader scoping theme.
+- [[computer-vision]] - the dominant Phase I paradigm.
+- [[large-language-models]] - what this lesson contrasts against.
+- [[scoping-is-ai-the-right-approach]] - broader scoping theme.

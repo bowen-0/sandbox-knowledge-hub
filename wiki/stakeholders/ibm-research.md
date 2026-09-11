@@ -11,7 +11,7 @@ updated: 2026-06-10
 
 # IBM Research
 
-Research arm of IBM. Partnered with the Canton of Zurich sandbox on the Phase I [[infrastructure-maintenance]] project — drone inspections of military infrastructure with computer vision.
+Research arm of IBM. Partnered with the Canton of Zurich sandbox on the Phase I [[infrastructure-maintenance]] project - drone inspections of military infrastructure with computer vision.
 
 ## Why IBM Research is notable in the corpus
 
@@ -23,6 +23,6 @@ This canonical instance of *data reuse beyond the sandbox engagement* is the emp
 
 ## See also
 
-- [[infrastructure-maintenance]] — the project they partnered on.
-- [[data-access]] — the underlying concept whose canonical positive case this is.
-- [[bridge-monitoring]] — Phase II thematic successor (also data-collection-focused infrastructure work).
+- [[infrastructure-maintenance]] - the project they partnered on.
+- [[data-access]] - the underlying concept whose canonical positive case this is.
+- [[bridge-monitoring]] - Phase II thematic successor (also data-collection-focused infrastructure work).

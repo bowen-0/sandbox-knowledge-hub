@@ -1,5 +1,5 @@
 ---
-title: Is AI even the right approach? — Scoping guide
+title: Is AI even the right approach? - Scoping guide
 type: synthesis
 insight_domain: ai-deployment
 question: "Is AI the right approach for this problem?"
@@ -41,21 +41,21 @@ In other words: the **default position in the sandbox programme's own publicatio
 
 If you can describe the decision as an if/then matrix, you probably don't need generative AI. You need rule-based logic and maybe AI for unstructured-input handling at the edges.
 
-The canonical case: [[building-permits]] — procedure determination uses pure rule-based logic (8 project types × ~20 zone/protection criteria); generative AI is reserved for unstructured document quality checks. Read [[rule-based-beats-generative-for-defined-logic]] for the full pattern.
+The canonical case: [[building-permits]] - procedure determination uses pure rule-based logic (8 project types × ~20 zone/protection criteria); generative AI is reserved for unstructured document quality checks. Read [[rule-based-beats-generative-for-defined-logic]] for the full pattern.
 
-**Signal you should use rule-based instead:** the decision is *traceable*, *legally relevant*, and you need it to be *reproducible* across runs. Generative AI fights all three — see [[probabilistic-ai-vs-administrative-reproducibility]].
+**Signal you should use rule-based instead:** the decision is *traceable*, *legally relevant*, and you need it to be *reproducible* across runs. Generative AI fights all three - see [[probabilistic-ai-vs-administrative-reproducibility]].
 
 ### 2. Do you have data access?
 
 Data access is the most-cited blocker in the corpus. The booklet's own heading for the principle is *"Data access is the most powerful lever"* [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md). See [[data-access-is-the-most-powerful-lever]] and the [[data-access-patterns-and-unblocking]] theme.
 
-**Signal data access is your real bottleneck:** you keep finding "promising approaches" that you can't execute because no one will give you the data. Don't keep iterating on model choice. Invest in unblocking access — pseudonymisation, [[auftragsdatenbearbeitung]] contracts, partner negotiation. The data is what unlocks the AI, not the other way around.
+**Signal data access is your real bottleneck:** you keep finding "promising approaches" that you can't execute because no one will give you the data. Don't keep iterating on model choice. Invest in unblocking access - pseudonymisation, [[auftragsdatenbearbeitung]] contracts, partner negotiation. The data is what unlocks the AI, not the other way around.
 
 ### 3. Is your bottleneck partners, integration, or governance?
 
-[[partner-bottleneck]] is the cross-cutting failure mode — surfaced in 6 of 10 sandbox projects. [[integration-matters-more-than-model-choice]] is the production-stage equivalent. [[new-ways-of-working-need-change-management]] is the people-side equivalent.
+[[partner-bottleneck]] is the cross-cutting failure mode - surfaced in 6 of 10 sandbox projects. [[integration-matters-more-than-model-choice]] is the production-stage equivalent. [[new-ways-of-working-need-change-management]] is the people-side equivalent.
 
-**Signal you should stop optimising the model:** the model already works adequately in a notebook. What doesn't work is the rest of the system — getting it into the workflow, persuading the team to use it, getting the legal sign-off.
+**Signal you should stop optimising the model:** the model already works adequately in a notebook. What doesn't work is the rest of the system - getting it into the workflow, persuading the team to use it, getting the legal sign-off.
 
 ### 4. What outcome class can you realistically aim for?
 
@@ -74,7 +74,7 @@ For a deployment reader the takeaway translates directly: scope honestly, and tr
 |---|---|---|
 | "We have access to the data, the model works in a notebook, we can't get it into production" | Integration | [[integration-matters-more-than-model-choice]] |
 | "Our partner won't give us the data" | Data access / partner | [[data-access-patterns-and-unblocking]] |
-| "The decision rule is well-defined but the AI gives different answers" | Wrong tool — rule-based | [[rule-based-beats-generative-for-defined-logic]] |
+| "The decision rule is well-defined but the AI gives different answers" | Wrong tool - rule-based | [[rule-based-beats-generative-for-defined-logic]] |
 | "Our staff distrust the system; they keep working around it" | Change management | [[new-ways-of-working-need-change-management]] |
 | "Legal flagged a problem with how we're processing data" | Regulation was engaged too late | [[integrate-regulation-early]] |
 | "We need EU market access" | Cross-border regulatory clarity | [[eu-market-access-for-swiss-ai]] |
@@ -83,11 +83,11 @@ For a deployment reader the takeaway translates directly: scope honestly, and tr
 
 ## What to read next, in order
 
-1. **[[ai-is-rarely-the-primary-challenge]]** — the foundational lesson.
-2. **[[data-access-is-the-most-powerful-lever]]** — the most-cited blocker pattern.
-3. **[[rule-based-beats-generative-for-defined-logic]]** — when to *not* use generative AI even if you could.
-4. **[[integration-matters-more-than-model-choice]]** — what makes pilots become products.
-5. **[[partner-bottleneck]]** (concept) and **[[partner-pivot-is-normal]]** (lesson) — how to plan for partner risk.
+1. **[[ai-is-rarely-the-primary-challenge]]** - the foundational lesson.
+2. **[[data-access-is-the-most-powerful-lever]]** - the most-cited blocker pattern.
+3. **[[rule-based-beats-generative-for-defined-logic]]** - when to *not* use generative AI even if you could.
+4. **[[integration-matters-more-than-model-choice]]** - what makes pilots become products.
+5. **[[partner-bottleneck]]** (concept) and **[[partner-pivot-is-normal]]** (lesson) - how to plan for partner risk.
 
 If after reading these you're still convinced AI is right, the corpus has more granular guidance:
 
@@ -99,6 +99,6 @@ If after reading these you're still convinced AI is right, the corpus has more g
 
 ## See also
 
-- [[00-overview-phase2-build-and-share]] — the booklet that anchors most of this synthesis.
-- [[when-rule-based-beats-generative]] — companion theme, narrower question.
-- [[zh-ai-ecosystem-strategy-2026-2029]] — the macro context in which "do we need AI?" decisions get made.
+- [[00-overview-phase2-build-and-share]] - the booklet that anchors most of this synthesis.
+- [[when-rule-based-beats-generative]] - companion theme, narrower question.
+- [[zh-ai-ecosystem-strategy-2026-2029]] - the macro context in which "do we need AI?" decisions get made.

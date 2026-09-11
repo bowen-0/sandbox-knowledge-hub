@@ -11,16 +11,16 @@ updated: 2026-06-10
 
 # MPAssist
 
-Swiss AI provider for automated medical documentation. The use-case anchor for [[medical-documentation]] — the project examined MPAssist's product on a regulatory-analysis basis after stringent data-protection requirements blocked operational deployment with patient data in a hospital with a public service mandate [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
+Swiss AI provider for automated medical documentation. The use-case anchor for [[medical-documentation]] - the project examined MPAssist's product on a regulatory-analysis basis after stringent data-protection requirements blocked operational deployment with patient data in a hospital with a public service mandate [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Role in the sandbox
 
 The Phase II overview booklet, [[00-overview-phase2-build-and-share]], frames the project's premise: *"AI-supported speech recognition and large language models offer the potential to efficiently transcribe, structure, and improve the quality of reports."* [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md) Based on the use case of the AI provider MPAssist, the sandbox project developed a practice-oriented guideline for the safe use of AI in medical documentation, in particular regarding data protection and the distinction from medical devices [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
-The MPAssist engagement is the canonical Phase II example of how an AI provider can benefit from sandbox-mediated access to supervisory authorities even when operational testing isn't possible — to scale the results, the project team convened a [[regulatory-roundtable]] with over ten start-ups in AI-supported medical documentation and the competent data-protection supervisory authority [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
+The MPAssist engagement is the canonical Phase II example of how an AI provider can benefit from sandbox-mediated access to supervisory authorities even when operational testing isn't possible - to scale the results, the project team convened a [[regulatory-roundtable]] with over ten start-ups in AI-supported medical documentation and the competent data-protection supervisory authority [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 
-- [[medical-documentation]] — the project anchored on this provider.
-- [[regulatory-roundtable]] — the transfer format that scaled the engagement beyond MPAssist alone.
-- [[swissmedic]] — the sectoral supervisory authority engaged.
+- [[medical-documentation]] - the project anchored on this provider.
+- [[regulatory-roundtable]] - the transfer format that scaled the engagement beyond MPAssist alone.
+- [[swissmedic]] - the sectoral supervisory authority engaged.

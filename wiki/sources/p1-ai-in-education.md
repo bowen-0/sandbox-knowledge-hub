@@ -1,5 +1,5 @@
 ---
-title: "Artificial Intelligence in Education — Legal Best Practices"
+title: "Artificial Intelligence in Education - Legal Best Practices"
 cite_as: "AI in Education report"
 type: source
 source_type: pdf
@@ -13,7 +13,7 @@ created: 2026-05-28
 updated: 2026-06-11
 ---
 
-# Artificial Intelligence in Education — Legal Best Practices
+# Artificial Intelligence in Education - Legal Best Practices
 
 **Read the report:** [PDF (DE)](../pdfs/de/p1-ai-in-education.pdf) · [PDF (EN)](../pdfs/en/p1-ai-in-education.pdf)
 
@@ -31,9 +31,9 @@ Authors: [[stephanie-volz]] (legal expert of the sandbox, managing director [[it
 
 ## Notable quotes
 
-- *"Due to the legal complexity of AI projects in schools, a holistic approach is recommended."* — [[stephanie-volz]], [[itsl-uzh]] ([p1-ai-in-education p. 4](../sources/p1-ai-in-education.md))
-- *"The collection of personal data that is not strictly necessary for an AI application significantly increases legal complexity."* — [[stephanie-volz]], [[itsl-uzh]] ([p1-ai-in-education p. 8](../sources/p1-ai-in-education.md))
-- *"The integration of Large Language Models offers great opportunities for solution providers, but also leads to legal risks that are difficult to control."* — [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-ai-in-education p. 12](../sources/p1-ai-in-education.md))
+- *"Due to the legal complexity of AI projects in schools, a holistic approach is recommended."* - [[stephanie-volz]], [[itsl-uzh]] ([p1-ai-in-education p. 4](../sources/p1-ai-in-education.md))
+- *"The collection of personal data that is not strictly necessary for an AI application significantly increases legal complexity."* - [[stephanie-volz]], [[itsl-uzh]] ([p1-ai-in-education p. 8](../sources/p1-ai-in-education.md))
+- *"The integration of Large Language Models offers great opportunities for solution providers, but also leads to legal risks that are difficult to control."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-ai-in-education p. 12](../sources/p1-ai-in-education.md))
 
 ## Use as citation
 
@@ -44,6 +44,6 @@ Authoritative source for:
 
 ## See also
 
-- [[ai-in-education]] — project page.
-- [[p1-smart-parking]] — fellow Phase I source for the privacy-by-design lexicon.
-- [[digital-eye-clinic]] — re-uses similar privacy vocabulary in a healthcare context.
+- [[ai-in-education]] - project page.
+- [[p1-smart-parking]] - fellow Phase I source for the privacy-by-design lexicon.
+- [[digital-eye-clinic]] - re-uses similar privacy vocabulary in a healthcare context.

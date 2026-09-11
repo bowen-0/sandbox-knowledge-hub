@@ -1,5 +1,5 @@
 ---
-title: "Smart Parking — Best Practices for Image Recognition"
+title: "Smart Parking - Best Practices for Image Recognition"
 cite_as: "Smart Parking report"
 type: source
 source_type: pdf
@@ -13,11 +13,11 @@ created: 2026-05-28
 updated: 2026-06-10
 ---
 
-# Smart Parking — Best Practices for Image Recognition
+# Smart Parking - Best Practices for Image Recognition
 
 **Read the report:** [PDF (DE)](../pdfs/de/p1-smart-parking.pdf) · [PDF (EN)](../pdfs/en/p1-smart-parking.pdf)
 
-Phase I project report. Operational + technical playbook for camera-based free-parking-space detection. Covers data handling under cantonal IDG / federal FADP, the privacy-by-design vocabulary (low resolution, masking, edge computing, instant deletion) that recurs across the Phase I corpus, and the partner-bottleneck pattern (property owners gate-keeping camera placement). Pilot site: Frauenfeld — now in productive use and rolled out to additional cantons.
+Phase I project report. Operational + technical playbook for camera-based free-parking-space detection. Covers data handling under cantonal IDG / federal FADP, the privacy-by-design vocabulary (low resolution, masking, edge computing, instant deletion) that recurs across the Phase I corpus, and the partner-bottleneck pattern (property owners gate-keeping camera placement). Pilot site: Frauenfeld - now in productive use and rolled out to additional cantons.
 
 ## Provenance
 
@@ -31,8 +31,8 @@ Authors: [[raphael-von-thiessen]] (head of the Innovation Sandbox for AI, Stando
 
 ## Notable quotes
 
-- *"Our goal is to realise an efficient parking management based on intelligent technologies."* — Peter Koch, [[stadt-frauenfeld]] ([p1-smart-parking p. 5](../sources/p1-smart-parking.md))
-- *"Image recognition in public can be responsibly implemented through technical and organisational measures."* — [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-smart-parking p. 14](../sources/p1-smart-parking.md))
+- *"Our goal is to realise an efficient parking management based on intelligent technologies."* - Peter Koch, [[stadt-frauenfeld]] ([p1-smart-parking p. 5](../sources/p1-smart-parking.md))
+- *"Image recognition in public can be responsibly implemented through technical and organisational measures."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-smart-parking p. 14](../sources/p1-smart-parking.md))
 
 ## Use as citation
 
@@ -44,6 +44,6 @@ Authoritative source for:
 
 ## See also
 
-- [[smart-parking]] — project page.
-- [[bridge-monitoring]] — same "sensor + AI" pattern, Phase II.
-- [[infrastructure-maintenance]] — sibling computer-vision pilot.
+- [[smart-parking]] - project page.
+- [[bridge-monitoring]] - same "sensor + AI" pattern, Phase II.
+- [[infrastructure-maintenance]] - sibling computer-vision pilot.

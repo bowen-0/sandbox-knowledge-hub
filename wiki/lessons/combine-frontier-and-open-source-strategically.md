@@ -36,17 +36,17 @@ The booklet does **not** prescribe one-or-the-other. It prescribes *deliberate c
 | Auditability + modifiability required | Open-source |
 | Latency-sensitive at the edge | Open-source, edge-deployed |
 
-[[digital-eye-clinic]] is the canonical example — open-source platform because hospital data cannot leave the institution. [[building-permits]] is the inverse — frontier-model benchmark because the prototype tests the absolute capability ceiling. [[medical-documentation]] sits in the middle — providers will likely deploy hybrid configurations as the use case scales.
+[[digital-eye-clinic]] is the canonical example - open-source platform because hospital data cannot leave the institution. [[building-permits]] is the inverse - frontier-model benchmark because the prototype tests the absolute capability ceiling. [[medical-documentation]] sits in the middle - providers will likely deploy hybrid configurations as the use case scales.
 
 ## How to apply
 
-1. **Audit your constraints first** — data residency, cost ceiling, capability floor, latency.
-2. **Reach for open-source when constraints bind** — and that's *often*, especially in healthcare and public administration.
-3. **Reach for frontier models when ceiling matters** — benchmarking, hardest cases, rapidly improving capabilities.
-4. **Architect to support both** — see [[model-agnostic-architecture]].
+1. **Audit your constraints first** - data residency, cost ceiling, capability floor, latency.
+2. **Reach for open-source when constraints bind** - and that's *often*, especially in healthcare and public administration.
+3. **Reach for frontier models when ceiling matters** - benchmarking, hardest cases, rapidly improving capabilities.
+4. **Architect to support both** - see [[model-agnostic-architecture]].
 
 ## See also
 
-- [[model-agnostic-architecture]] — the concept that makes this combination ergonomic.
-- [[open-source-as-procurement-alternative]] — when commercial doesn't fit at all.
-- [[frontier-models]] — concept definition.
+- [[model-agnostic-architecture]] - the concept that makes this combination ergonomic.
+- [[open-source-as-procurement-alternative]] - when commercial doesn't fit at all.
+- [[frontier-models]] - concept definition.

@@ -1,4 +1,4 @@
-# Sandbox Knowledge Hub — MCP Server
+# Sandbox Knowledge Hub - MCP Server
 
 Exposes the wiki to any MCP-capable AI assistant through one connection. Six read-only tools, plus the wiki's procedure files as resources. Serves wiki pages, never PDF blobs (the reports overload LLM context windows; pages are the right grain).
 
@@ -21,7 +21,7 @@ npm install && npm run build
 # Claude Code
 claude mcp add sandbox-hub -- node /absolute/path/to/mcp-server/dist/stdio.js
 
-# Claude Desktop / any stdio client — command:
+# Claude Desktop / any stdio client - command:
 node /absolute/path/to/mcp-server/dist/stdio.js
 ```
 
@@ -35,14 +35,14 @@ The server finds the wiki automatically when run from this repo. Elsewhere, pass
 npm run start:http        # stateless Streamable HTTP on :3920/mcp
 ```
 
-**Cloudflare Workers (free tier):** the `worker/` folder is a ready-to-deploy variant that bundles the wiki into the artifact (`npm run bundle` produces `dist/wiki-bundle.json`, ~340 KB — pages only, no PDFs):
+**Cloudflare Workers (free tier):** the `worker/` folder is a ready-to-deploy variant that bundles the wiki into the artifact (`npm run bundle` produces `dist/wiki-bundle.json`, ~340 KB - pages only, no PDFs):
 
 ```bash
 cd worker && npm install
 npm run deploy            # wrangler deploy; endpoint: https://<worker>.workers.dev/mcp
 ```
 
-Remote clients connect with the URL — e.g. `claude mcp add --transport http sandbox-hub https://<worker>.workers.dev/mcp`.
+Remote clients connect with the URL - e.g. `claude mcp add --transport http sandbox-hub https://<worker>.workers.dev/mcp`.
 
 ## Write endpoint (the update path)
 
@@ -52,14 +52,14 @@ A **separate** worker (`worker/write.ts`, `worker/wrangler-write.jsonc`) exposes
 |---|---|
 | `wiki_validate_page` | Dry-run check of a draft: path shape, frontmatter, an H1, every citation resolves to a real source, every `[[wikilink]]` has a target. No write. |
 | `wiki_write_page` | Validates, then commits the page to the repo's `main` (create or update). Refuses drafts with blocking errors. |
-| `wiki_add_source_pdf` | Fetches a report PDF from a public https URL and commits it under `wiki/pdfs/de\|en/` (server-side — the bytes never go through the chat). Use first when adding a new report, so its citations resolve. |
+| `wiki_add_source_pdf` | Fetches a report PDF from a public https URL and commits it under `wiki/pdfs/de\|en/` (server-side - the bytes never go through the chat). Use first when adding a new report, so its citations resolve. |
 | `wiki_write_info` | Explains the workflow and guardrails. |
 
-Adding a brand-new report is therefore fully self-service from chat: `wiki_add_source_pdf` with the report's public URL, then write its source/digest/lesson pages. (A PDF that isn't online yet can't be fetched — drag it into `wiki/pdfs/` on GitHub instead.)
+Adding a brand-new report is therefore fully self-service from chat: `wiki_add_source_pdf` with the report's public URL, then write its source/digest/lesson pages. (A PDF that isn't online yet can't be fetched - drag it into `wiki/pdfs/` on GitHub instead.)
 
-How it works: the worker holds a GitHub token (a secret, never seen by the AI client) and commits via the GitHub Contents API. A push triggers the `deploy-mcp` GitHub Action, which rebuilds the bundle and redeploys both workers — so a chat-app edit goes live on the read endpoint a minute or two later. The drafting assistant is told to validate, show the user, and get approval before writing.
+How it works: the worker holds a GitHub token (a secret, never seen by the AI client) and commits via the GitHub Contents API. A push triggers the `deploy-mcp` GitHub Action, which rebuilds the bundle and redeploys both workers - so a chat-app edit goes live on the read endpoint a minute or two later. The drafting assistant is told to validate, show the user, and get approval before writing.
 
-**Security model.** Fail-closed: with no `WRITE_TOKEN` set the endpoint returns 503; with a token set, a request must present it (`?key=<token>` or `Authorization: Bearer <token>`) or it gets 401 (constant-time compared). With no `GITHUB_TOKEN` the endpoint serves read-only (the write tools aren't even registered). The path is validated and traversal-guarded, content is size-capped, and the GitHub token never leaves the Worker. Commits are plain git — anything is revertable. The `?key=` form puts the token in the URL, so treat the URL as a secret; rotate by re-running `secret put WRITE_TOKEN` if it leaks, or use the `Authorization: Bearer` form where the client supports it.
+**Security model.** Fail-closed: with no `WRITE_TOKEN` set the endpoint returns 503; with a token set, a request must present it (`?key=<token>` or `Authorization: Bearer <token>`) or it gets 401 (constant-time compared). With no `GITHUB_TOKEN` the endpoint serves read-only (the write tools aren't even registered). The path is validated and traversal-guarded, content is size-capped, and the GitHub token never leaves the Worker. Commits are plain git - anything is revertable. The `?key=` form puts the token in the URL, so treat the URL as a secret; rotate by re-running `secret put WRITE_TOKEN` if it leaks, or use the `Authorization: Bearer` form where the client supports it.
 
 **Activate (one-time, repo owner):**
 ```bash

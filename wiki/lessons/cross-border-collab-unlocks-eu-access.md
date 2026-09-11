@@ -26,9 +26,9 @@ From [[00-overview-phase2-build-and-share]], section 03 "Implementation of the S
 
 ## Evidence base
 
-- **[[inspection-robots]]** — the canonical case. The booklet states the project's goal as systematically clarifying the regulatory prerequisites for EU market access, along a concrete [[anybotics]] use case under the [[eu-ai-act]] and the [[machinery-regulation]] [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
+- **[[inspection-robots]]** - the canonical case. The booklet states the project's goal as systematically clarifying the regulatory prerequisites for EU market access, along a concrete [[anybotics]] use case under the [[eu-ai-act]] and the [[machinery-regulation]] [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
 - The same page credits the outcome explicitly: *"In doing so, the sandbox made a concrete contribution to facilitating EU market access for Swiss robotics companies."* [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md)
-- This is *not* a regulatory shortcut — the EU regulations still apply in full. What changes is the **coordination cost**: a Swiss vendor would otherwise need to navigate each EU member-state authority bilaterally.
+- This is *not* a regulatory shortcut - the EU regulations still apply in full. What changes is the **coordination cost**: a Swiss vendor would otherwise need to navigate each EU member-state authority bilaterally.
 
 > [!sandbox-operations]
 > For programme operators, the transferable move is the convening itself. The sandbox provides a structured convening surface: by bringing the competent foreign authorities ([[bundesnetzagentur-de]], [[li-digital-innovation]]) into a domestic project, it spared the vendor bilateral navigation of each authority. This was the programme's first cross-border engagement with non-Swiss regulators [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
@@ -40,11 +40,11 @@ From [[00-overview-phase2-build-and-share]], section 03 "Implementation of the S
 >
 > 1. **Pre-classify your product** under the [[eu-ai-act]] risk taxonomy (prohibited, high-risk, limited-risk, minimal-risk) and any sectoral regulation that applies (e.g. [[machinery-regulation]] for autonomous systems).
 > 2. **Identify which EU supervisory authorities** are relevant for your product class and target markets.
-> 3. **Engage early** — via the sandbox programme or directly — rather than at certification time. See [[integrate-regulation-early]].
+> 3. **Engage early** - via the sandbox programme or directly - rather than at certification time. See [[integrate-regulation-early]].
 > 4. **Consider piloting [[iso-iec-42001]]** as a structured operationalisation of AI-management requirements, as [[inspection-robots]] did with [[modulos]] [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
 
 ## See also
 
-- [[inspection-robots]] — canonical case.
-- [[eu-market-access-for-swiss-ai]] — the broader theme.
-- [[anybotics]] — the vendor whose use case anchored the engagement.
+- [[inspection-robots]] - canonical case.
+- [[eu-market-access-for-swiss-ai]] - the broader theme.
+- [[anybotics]] - the vendor whose use case anchored the engagement.

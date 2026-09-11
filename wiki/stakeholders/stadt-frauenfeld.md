@@ -19,7 +19,7 @@ Frauenfeld supplied the real-world operating environment: the city has 14 public
 
 ## See also
 
-- [[smart-parking]] — the pilot this city partnered on.
-- [[strong-stakeholder-engagement-is-decisive]] — lesson citing the extensive testing in Frauenfeld.
-- [[stadt-kloten]] — the parallel municipal test partner in Phase II ([[building-permits]]).
-- [[p1-smart-parking]] — the source report.
+- [[smart-parking]] - the pilot this city partnered on.
+- [[strong-stakeholder-engagement-is-decisive]] - lesson citing the extensive testing in Frauenfeld.
+- [[stadt-kloten]] - the parallel municipal test partner in Phase II ([[building-permits]]).
+- [[p1-smart-parking]] - the source report.

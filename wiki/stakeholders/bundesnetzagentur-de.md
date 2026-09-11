@@ -20,7 +20,7 @@ The German project report lists Yvonne Finger, Referatsleiterin (head of unit) a
 
 ## See also
 
-- [[inspection-robots]] — the project that engaged this authority.
-- [[li-digital-innovation]] — the other cross-border authority in the same engagement.
-- [[cross-border-collab-unlocks-eu-access]] — the lesson drawn from the collaboration.
-- [[eu-market-access-for-swiss-ai]] — the broader synthesis.
+- [[inspection-robots]] - the project that engaged this authority.
+- [[li-digital-innovation]] - the other cross-border authority in the same engagement.
+- [[cross-border-collab-unlocks-eu-access]] - the lesson drawn from the collaboration.
+- [[eu-market-access-for-swiss-ai]] - the broader synthesis.

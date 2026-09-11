@@ -1,5 +1,5 @@
 ---
-title: When rule-based systems beat generative AI — A decision guide
+title: When rule-based systems beat generative AI - A decision guide
 type: synthesis
 insight_domain: ai-deployment
 question: "Should I use rule-based logic or generative AI for this decision?"
@@ -18,7 +18,7 @@ updated: 2026-06-11
 
 > **For:** anyone choosing between rule-based logic, ML models, and generative AI for a Swiss-public-sector decision system.
 >
-> **TL;DR:** Generative AI is for *unstructured input*. Rule-based logic is for *traceable, legally-relevant, reproducible decisions*. The corpus is unusually unambiguous on this — and the consequences are administrative-law-shaped, not engineering-shaped.
+> **TL;DR:** Generative AI is for *unstructured input*. Rule-based logic is for *traceable, legally-relevant, reproducible decisions*. The corpus is unusually unambiguous on this - and the consequences are administrative-law-shaped, not engineering-shaped.
 
 ---
 
@@ -49,7 +49,7 @@ From [[00-overview-phase2-build-and-share]] §04 Technology:
                             YES                          NO
                               │                           │
                               ▼                           ▼
-                      Generative AI is        Reconsider — most
+                      Generative AI is        Reconsider - most
                       a fit. Frame outputs    "AI-shaped" problems
                       as suggestions, not     fall in one of the
                       decisions. See          two yes-branches.
@@ -62,15 +62,15 @@ From [[00-overview-phase2-build-and-share]] §04 Technology:
 
 ### 1. Reproducibility
 
-Swiss administrative law assumes that the same case gets the same outcome — *equal treatment* and *prohibition of arbitrariness* are core principles. Generative AI fights this by construction: ask the same question three times and get three slightly different answers. The [[building-permits]] benchmark measured consistency-across-3-runs at 86.8% (best) to 78.8% (worst) — meaning a non-trivial fraction of cases would receive *different* AI assessments from the same model run twice. See [[probabilistic-ai-vs-administrative-reproducibility]].
+Swiss administrative law assumes that the same case gets the same outcome - *equal treatment* and *prohibition of arbitrariness* are core principles. Generative AI fights this by construction: ask the same question three times and get three slightly different answers. The [[building-permits]] benchmark measured consistency-across-3-runs at 86.8% (best) to 78.8% (worst) - meaning a non-trivial fraction of cases would receive *different* AI assessments from the same model run twice. See [[probabilistic-ai-vs-administrative-reproducibility]].
 
 ### 2. Traceability
 
-A rule-based system can explain *exactly* why it gave the answer it did. A generative model can produce a plausible-sounding explanation that doesn't necessarily reflect the actual computation. For administrative-law contexts — where [[fadp-art-21]] requires human review of automated decisions, and [[bv-art-29]] requires that decisions be comprehensible — rule-based explainability is structurally easier to defend.
+A rule-based system can explain *exactly* why it gave the answer it did. A generative model can produce a plausible-sounding explanation that doesn't necessarily reflect the actual computation. For administrative-law contexts - where [[fadp-art-21]] requires human review of automated decisions, and [[bv-art-29]] requires that decisions be comprehensible - rule-based explainability is structurally easier to defend.
 
 ### 3. Cost stability
 
-A rule-based check on a building application costs essentially zero (one IF-statement evaluation). A frontier-LLM check on the same application costs CHF 0.0001 — CHF 0.033 per query and runs in 3.2 — 41.7 seconds. For high-volume processes, the cost difference matters at the budget level.
+A rule-based check on a building application costs essentially zero (one IF-statement evaluation). A frontier-LLM check on the same application costs CHF 0.0001 - CHF 0.033 per query and runs in 3.2 - 41.7 seconds. For high-volume processes, the cost difference matters at the budget level.
 
 ---
 
@@ -78,9 +78,9 @@ A rule-based check on a building application costs essentially zero (one IF-stat
 
 It's not always wrong. Generative AI is the right tool for:
 
-- **Unstructured input parsing** — extracting structured data from documents, transcribing speech, summarising free text (e.g. [[medical-documentation]] transcription, [[building-permits]] plan-document understanding).
-- **Pre-checks and quality improvement** — voluntary, non-binding pre-screening that an applicant runs before submission. See [[pre-submission-quality-is-the-leverage]].
-- **Cases where reproducibility doesn't matter** — exploratory queries, draft suggestions, document discovery.
+- **Unstructured input parsing** - extracting structured data from documents, transcribing speech, summarising free text (e.g. [[medical-documentation]] transcription, [[building-permits]] plan-document understanding).
+- **Pre-checks and quality improvement** - voluntary, non-binding pre-screening that an applicant runs before submission. See [[pre-submission-quality-is-the-leverage]].
+- **Cases where reproducibility doesn't matter** - exploratory queries, draft suggestions, document discovery.
 
 The discipline is to keep generative AI **out of the deterministic decision step** while letting it do the work it's actually good at.
 
@@ -112,13 +112,13 @@ Result: predictable cost, traceable decisions, AI doing the work it's good at, r
 
 ## What to read next
 
-1. **[[rule-based-beats-generative-for-defined-logic]]** — the underlying atomic lesson with quantitative support.
-2. **[[building-permits]]** — the canonical case study; read for the hybrid pattern in production.
-3. **[[probabilistic-ai-vs-administrative-reproducibility]]** — the lesson on why reproducibility matters in admin law.
-4. **[[fadp-art-21]]** — the legal anchor that constrains "AI decides" patterns.
-5. **[[pre-submission-quality-is-the-leverage]]** — where generative AI does add value in admin processes.
+1. **[[rule-based-beats-generative-for-defined-logic]]** - the underlying atomic lesson with quantitative support.
+2. **[[building-permits]]** - the canonical case study; read for the hybrid pattern in production.
+3. **[[probabilistic-ai-vs-administrative-reproducibility]]** - the lesson on why reproducibility matters in admin law.
+4. **[[fadp-art-21]]** - the legal anchor that constrains "AI decides" patterns.
+5. **[[pre-submission-quality-is-the-leverage]]** - where generative AI does add value in admin processes.
 
 ## See also
 
-- [[scoping-is-ai-the-right-approach]] — the broader scoping theme.
-- [[generative-ai]] — concept definition.
+- [[scoping-is-ai-the-right-approach]] - the broader scoping theme.
+- [[generative-ai]] - concept definition.

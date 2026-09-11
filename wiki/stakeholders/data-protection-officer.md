@@ -22,6 +22,6 @@ The corpus uses the data protection officer (Datenschutzbeauftragte:r, DPO) as a
 
 ## See also
 
-- [[idg-zh]] / [[dsg-fadp]] — the legal anchors of the function in the corpus.
-- [[ai-in-education]] — Phase I project where prior checking by the cantonal DPO is operative.
-- [[medical-documentation]] — Phase II project restating the prior-checking duty for public hospitals.
+- [[idg-zh]] / [[dsg-fadp]] - the legal anchors of the function in the corpus.
+- [[ai-in-education]] - Phase I project where prior checking by the cantonal DPO is operative.
+- [[medical-documentation]] - Phase II project restating the prior-checking duty for public hospitals.

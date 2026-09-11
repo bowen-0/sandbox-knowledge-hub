@@ -37,11 +37,11 @@ The model rarely fails. The surrounding system does:
 
 | Project | What the AI did | What was actually hard |
 |---|---|---|
-| [[smart-parking]] | Camera-based vehicle detection — mature CV | Property-owner consent for camera placement [(Smart Parking report, p. 17)](../sources/p1-smart-parking.md) |
-| [[infrastructure-maintenance]] | Drone-based defect detection — mature CV | Drone operating-licence regulations (EU/EASA) and flight restrictions at the air base (runway closure, 10 m altitude cap) [(Infrastructure Maintenance report, p. 6)](../sources/p1-infrastructure-maintenance.md) |
-| [[digital-eye-clinic]] | Retinal-image classification — established medical AI | Data-protection compliance and contractual data-processing agreements [(Digital Eye Clinic report, p. 25)](../sources/p2-digital-eye-clinic.md) + in-house platform engineering [(Digital Eye Clinic report, p. 18)](../sources/p2-digital-eye-clinic.md) |
-| [[medical-documentation]] | LLM transcription — commodity capability | Patient-data protection blocking deployment entirely [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md) |
-| [[building-permits]] | Plan-document understanding — frontier capability | Integration with eBaugesucheZH [(Building Permits report, p. 23)](../sources/p2-building-permits.md) + administrative-reproducibility tension [(Building Permits report, p. 22)](../sources/p2-building-permits.md) |
+| [[smart-parking]] | Camera-based vehicle detection - mature CV | Property-owner consent for camera placement [(Smart Parking report, p. 17)](../sources/p1-smart-parking.md) |
+| [[infrastructure-maintenance]] | Drone-based defect detection - mature CV | Drone operating-licence regulations (EU/EASA) and flight restrictions at the air base (runway closure, 10 m altitude cap) [(Infrastructure Maintenance report, p. 6)](../sources/p1-infrastructure-maintenance.md) |
+| [[digital-eye-clinic]] | Retinal-image classification - established medical AI | Data-protection compliance and contractual data-processing agreements [(Digital Eye Clinic report, p. 25)](../sources/p2-digital-eye-clinic.md) + in-house platform engineering [(Digital Eye Clinic report, p. 18)](../sources/p2-digital-eye-clinic.md) |
+| [[medical-documentation]] | LLM transcription - commodity capability | Patient-data protection blocking deployment entirely [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md) |
+| [[building-permits]] | Plan-document understanding - frontier capability | Integration with eBaugesucheZH [(Building Permits report, p. 23)](../sources/p2-building-permits.md) + administrative-reproducibility tension [(Building Permits report, p. 22)](../sources/p2-building-permits.md) |
 
 The Phase I overview drew the same conclusion from the Smart Parking roll-out: *"Most challenges were therefore not AI-related, but rather linked to the basic technical infrastructure."* [(Play & Learn (Phase I overview report), p. 17)](../sources/00-overview-phase1-play-and-learn.md)
 
@@ -57,10 +57,10 @@ When scoping a new AI pilot, do **not** start with model choice. Start with:
 3. **What's the integration surface** (existing systems, processes, governance)?
 4. **What's the adoption barrier** (training, change management, organisational alignment)?
 
-If you can't answer those four, model choice is premature. If you *can*, model choice is often a swap-in decision rather than a hard engineering problem — see [[model-agnostic-architecture]].
+If you can't answer those four, model choice is premature. If you *can*, model choice is often a swap-in decision rather than a hard engineering problem - see [[model-agnostic-architecture]].
 
 ## See also
 
-- [[scoping-is-ai-the-right-approach]] — the broader theme this lesson anchors.
-- [[partner-bottleneck]] — the cross-cutting failure mode this lesson names.
-- [[data-access]] / [[data-access-is-the-most-powerful-lever]] — the most-cited blocker.
+- [[scoping-is-ai-the-right-approach]] - the broader theme this lesson anchors.
+- [[partner-bottleneck]] - the cross-cutting failure mode this lesson names.
+- [[data-access]] / [[data-access-is-the-most-powerful-lever]] - the most-cited blocker.

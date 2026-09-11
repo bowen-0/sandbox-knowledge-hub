@@ -38,10 +38,10 @@ A compliance review that addresses only one of these will miss the interactions.
 
 ## Evidence base
 
-- **[[digital-eye-clinic]]** — data protection + medical device + ethics simultaneously.
-- **[[medical-documentation]]** — data protection + healthcare regulation + supervisory-authority engagement.
-- **[[inspection-robots]]** — EU AI Act + EU Machinery Regulation + ISO/IEC 42001 management standard.
-- **[[building-permits]]** — cantonal building law + federal data protection + EMBAG + automated-decision regulation.
+- **[[digital-eye-clinic]]** - data protection + medical device + ethics simultaneously.
+- **[[medical-documentation]]** - data protection + healthcare regulation + supervisory-authority engagement.
+- **[[inspection-robots]]** - EU AI Act + EU Machinery Regulation + ISO/IEC 42001 management standard.
+- **[[building-permits]]** - cantonal building law + federal data protection + EMBAG + automated-decision regulation.
 
 The pattern is so consistent that the booklet treats interdisciplinary legal analysis as the *default*, with isolated single-instrument compliance reviews as the exception [(Build & Share (Phase II overview report), p. 18)](../sources/00-overview-phase2-build-and-share.md).
 
@@ -49,10 +49,10 @@ The pattern is so consistent that the booklet treats interdisciplinary legal ana
 
 1. **Engage a mandated expert with breadth**, not just depth in one instrument. [[itsl-uzh]] is the corpus's default for this reason.
 2. **Map the regulation interaction surface** explicitly: which instruments apply, how they interact, what each requires.
-3. **Pre-engage supervisory authorities** with overlapping remits — see [[regulatory-roundtable-is-high-leverage]].
+3. **Pre-engage supervisory authorities** with overlapping remits - see [[regulatory-roundtable-is-high-leverage]].
 
 ## See also
 
-- [[itsl-uzh]] — the institutional default for cross-instrument legal analysis.
-- [[integrate-regulation-early]] — the companion lesson on timing.
-- [[continuous-regulatory-learning-beats-rigid-approval]] — the companion lesson on regulatory dynamics.
+- [[itsl-uzh]] - the institutional default for cross-instrument legal analysis.
+- [[integrate-regulation-early]] - the companion lesson on timing.
+- [[continuous-regulatory-learning-beats-rigid-approval]] - the companion lesson on regulatory dynamics.

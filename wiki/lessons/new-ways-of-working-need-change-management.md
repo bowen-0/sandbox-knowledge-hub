@@ -29,17 +29,17 @@ From [[00-overview-phase2-build-and-share]] §04 Organisation:
 
 AI doesn't replace people 1:1. It changes:
 
-- **What people do all day** — manual runway inspectors now interpret drone-flagged anomalies rather than walking the runway themselves.
-- **What skills matter** — pattern recognition, model calibration, exception handling.
-- **Who is accountable** — when a drone misses a defect, whose error is it?
+- **What people do all day** - manual runway inspectors now interpret drone-flagged anomalies rather than walking the runway themselves.
+- **What skills matter** - pattern recognition, model calibration, exception handling.
+- **Who is accountable** - when a drone misses a defect, whose error is it?
 
 These shifts feel threatening if introduced without communication, training, and visible involvement.
 
 ## Evidence base
 
-- **[[infrastructure-maintenance]]** — the booklet's explicit example: drone inspection as a *complement* to manual inspection, not a replacement. Acceptance hinged on framing the AI as augmentation [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md).
-- **[[digital-eye-clinic]]** — clinical AI is highly sensitive to clinician acceptance; the project's evaluation framework includes practitioner-experience dimensions [(Digital Eye Clinic report, p. 22)](../sources/p2-digital-eye-clinic.md).
-- **[[building-permits]]** — officials' trust in AI pre-checks depends on controlled, reproducible configurations: generative AI's non-deterministic outputs otherwise erode trust in the systems [(Building Permits report, p. 22)](../sources/p2-building-permits.md).
+- **[[infrastructure-maintenance]]** - the booklet's explicit example: drone inspection as a *complement* to manual inspection, not a replacement. Acceptance hinged on framing the AI as augmentation [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md).
+- **[[digital-eye-clinic]]** - clinical AI is highly sensitive to clinician acceptance; the project's evaluation framework includes practitioner-experience dimensions [(Digital Eye Clinic report, p. 22)](../sources/p2-digital-eye-clinic.md).
+- **[[building-permits]]** - officials' trust in AI pre-checks depends on controlled, reproducible configurations: generative AI's non-deterministic outputs otherwise erode trust in the systems [(Building Permits report, p. 22)](../sources/p2-building-permits.md).
 
 ## How to apply
 
@@ -47,11 +47,11 @@ When planning an AI deployment that touches a workforce:
 
 1. **Frame the change in terms of the employee's value-add**, not in terms of automation savings.
 2. **Involve operational staff in the design**, not just the leadership signing the procurement.
-3. **Build training that goes beyond "how to use the UI"** to include "when not to trust the AI" — operational skepticism is a feature.
-4. **Make the AI's behaviour observable** — staff trust what they can see.
+3. **Build training that goes beyond "how to use the UI"** to include "when not to trust the AI" - operational skepticism is a feature.
+4. **Make the AI's behaviour observable** - staff trust what they can see.
 
 ## See also
 
 - [[integrate-regulation-early]] and [[strong-stakeholder-engagement-is-decisive]] sit in the same §04 cross-cutting set.
-- [[integration-matters-more-than-model-choice]] — companion lesson at the system layer.
-- [[ai-is-rarely-the-primary-challenge]] — broader scoping framing.
+- [[integration-matters-more-than-model-choice]] - companion lesson at the system layer.
+- [[ai-is-rarely-the-primary-challenge]] - broader scoping framing.

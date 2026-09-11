@@ -31,9 +31,9 @@ Pure technical excellence with no domain integration → impressive demos, opera
 
 ## Evidence base
 
-- **[[digital-eye-clinic]]** — required clinicians + AI engineers working together on the evaluation framework; the booklet names experienced ophthalmologists as the experts whose assessment the outputs needed [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Pure AI engineering would have shipped a model that radiologists wouldn't use; pure clinical work would have specified an evaluation that AI couldn't satisfy.
-- **[[building-permits]]** — required building-authority experts + AI engineers + legal scholars (Klingler from UniSG [(Building Permits report, p. 4)](../sources/p2-building-permits.md)) co-developing the prototype. The categorisation of project types into 8 buckets × 20 criteria was the domain layer [(Building Permits report, p. 17)](../sources/p2-building-permits.md); the AI was the technical layer; the legal framing was a third layer holding both honest.
-- **[[medical-documentation]]** — the regulatory roundtable format ([[regulatory-roundtable]]) is itself an instance of this principle: AI providers + supervisory authority + domain practitioners co-present.
+- **[[digital-eye-clinic]]** - required clinicians + AI engineers working together on the evaluation framework; the booklet names experienced ophthalmologists as the experts whose assessment the outputs needed [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Pure AI engineering would have shipped a model that radiologists wouldn't use; pure clinical work would have specified an evaluation that AI couldn't satisfy.
+- **[[building-permits]]** - required building-authority experts + AI engineers + legal scholars (Klingler from UniSG [(Building Permits report, p. 4)](../sources/p2-building-permits.md)) co-developing the prototype. The categorisation of project types into 8 buckets × 20 criteria was the domain layer [(Building Permits report, p. 17)](../sources/p2-building-permits.md); the AI was the technical layer; the legal framing was a third layer holding both honest.
+- **[[medical-documentation]]** - the regulatory roundtable format ([[regulatory-roundtable]]) is itself an instance of this principle: AI providers + supervisory authority + domain practitioners co-present.
 
 ## The translation-layer person
 
@@ -45,12 +45,12 @@ A specific role recurs: someone who is *fluent in both domain and technology* an
 ## How to apply
 
 1. **Identify the translation-layer person at intake.** Who is fluent in both?
-2. **If no one is**, plan for the translation cost — extra meetings, longer ramp-up, more rework.
+2. **If no one is**, plan for the translation cost - extra meetings, longer ramp-up, more rework.
 3. **Hire / staff for breadth** at the joint role even if depth-first roles look more impressive on a CV.
-4. **Co-locate (physically or in time) domain and technology work** — handoff-shaped collaboration loses the translation layer entirely.
+4. **Co-locate (physically or in time) domain and technology work** - handoff-shaped collaboration loses the translation layer entirely.
 
 ## See also
 
-- [[strong-stakeholder-engagement-is-decisive]] — companion lesson at the relationship layer.
-- [[integration-matters-more-than-model-choice]] — companion at the systems layer.
-- [[new-ways-of-working-need-change-management]] — companion at the people layer.
+- [[strong-stakeholder-engagement-is-decisive]] - companion lesson at the relationship layer.
+- [[integration-matters-more-than-model-choice]] - companion at the systems layer.
+- [[new-ways-of-working-need-change-management]] - companion at the people layer.

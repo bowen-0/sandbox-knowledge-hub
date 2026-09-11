@@ -46,6 +46,6 @@ When planning a sandbox project (or any public-sector AI engagement):
 
 ## See also
 
-- [[infrastructure-maintenance]] — canonical case.
-- [[ibm-research]] — the partner who executed the publishing.
-- [[data-access-is-the-most-powerful-lever]] — the broader lesson.
+- [[infrastructure-maintenance]] - canonical case.
+- [[ibm-research]] - the partner who executed the publishing.
+- [[data-access-is-the-most-powerful-lever]] - the broader lesson.

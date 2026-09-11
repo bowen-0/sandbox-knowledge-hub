@@ -20,7 +20,7 @@ The German project report lists Dr. Clara Guerra, Stabsstellenleiterin (head of 
 
 ## See also
 
-- [[inspection-robots]] — the project that engaged this office.
-- [[bundesnetzagentur-de]] — the other cross-border authority in the same engagement.
-- [[cross-border-collab-unlocks-eu-access]] — the lesson drawn from the collaboration.
-- [[eu-market-access-for-swiss-ai]] — the broader synthesis.
+- [[inspection-robots]] - the project that engaged this office.
+- [[bundesnetzagentur-de]] - the other cross-border authority in the same engagement.
+- [[cross-border-collab-unlocks-eu-access]] - the lesson drawn from the collaboration.
+- [[eu-market-access-for-swiss-ai]] - the broader synthesis.

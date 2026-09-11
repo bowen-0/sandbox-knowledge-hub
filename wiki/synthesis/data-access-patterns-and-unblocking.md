@@ -1,5 +1,5 @@
 ---
-title: How to unblock data access for your pilot — Patterns from the corpus
+title: How to unblock data access for your pilot - Patterns from the corpus
 type: synthesis
 insight_domain: ai-deployment
 question: "How do I unblock data access for my AI pilot?"
@@ -24,7 +24,7 @@ updated: 2026-06-11
 
 > **For:** AI providers, public-administration product owners, sandbox project leads who have hit a data-access wall.
 >
-> **TL;DR:** The booklet calls data access the *"most powerful lever"* [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md). The corpus's 10 projects each have a different blocker — but the unblocking patterns are surprisingly consistent.
+> **TL;DR:** The booklet calls data access the *"most powerful lever"* [(Build & Share (Phase II overview report), p. 17)](../sources/00-overview-phase2-build-and-share.md). The corpus's 10 projects each have a different blocker - but the unblocking patterns are surprisingly consistent.
 
 ---
 
@@ -110,13 +110,13 @@ Before you escalate to "we can't get the data":
 
 ## What to read next
 
-1. **[[data-access-is-the-most-powerful-lever]]** — the foundational lesson.
-2. **[[partner-bottleneck]]** — the cross-cutting concept this theme operationalises.
-3. **[[partner-pivot-is-normal]]** — what to do when access can't be unblocked.
-4. **[[pseudonymisation]]** + **[[data-minimisation]]** + **[[auftragsdatenbearbeitung]]** — the legal-technical pattern.
-5. **[[data-reuse-multiplies-pilot-impact]]** — the long-term play.
+1. **[[data-access-is-the-most-powerful-lever]]** - the foundational lesson.
+2. **[[partner-bottleneck]]** - the cross-cutting concept this theme operationalises.
+3. **[[partner-pivot-is-normal]]** - what to do when access can't be unblocked.
+4. **[[pseudonymisation]]** + **[[data-minimisation]]** + **[[auftragsdatenbearbeitung]]** - the legal-technical pattern.
+5. **[[data-reuse-multiplies-pilot-impact]]** - the long-term play.
 
 ## See also
 
-- [[scoping-is-ai-the-right-approach]] — broader scoping theme.
-- [[partner-roles-around-a-pilot]] — companion theme on partner-side success factors.
+- [[scoping-is-ai-the-right-approach]] - broader scoping theme.
+- [[partner-roles-around-a-pilot]] - companion theme on partner-side success factors.

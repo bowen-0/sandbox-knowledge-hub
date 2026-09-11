@@ -20,5 +20,5 @@ Project Lead AI (*Projektleiter KI*) at the Canton of Zurich, *Amt für Wirtscha
 
 ## See also
 
-- [[raphael-von-thiessen]] — programme-level counterpart.
-- [[00-overview-phase2-build-and-share]] — most recent publication co-authored.
+- [[raphael-von-thiessen]] - programme-level counterpart.
+- [[00-overview-phase2-build-and-share]] - most recent publication co-authored.

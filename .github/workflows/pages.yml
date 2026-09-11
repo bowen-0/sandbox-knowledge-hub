@@ -1,5 +1,5 @@
 # Builds the wiki into a browsable website with Quartz and deploys it
-# to GitHub Pages. Separate from deploy-mcp.yml — the MCP workers are
+# to GitHub Pages. Separate from deploy-mcp.yml - the MCP workers are
 # untouched by this workflow.
 #
 # Runs on every push to main that touches the wiki or the site build, so the

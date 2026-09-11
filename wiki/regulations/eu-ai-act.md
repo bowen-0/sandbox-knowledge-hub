@@ -17,16 +17,16 @@ The booklet glossary in [[00-overview-phase2-build-and-share]] defines the instr
 
 > *"EU regulation governing AI systems based on a risk-based approach. It defines requirements for high-risk AI systems, transparency obligations, and prohibitions of certain applications."* [(Build & Share (Phase II overview report), p. 26)](../sources/00-overview-phase2-build-and-share.md)
 
-The defining EU instrument of the Phase II regulatory landscape. Where Phase I was dominated by Swiss law, Phase II projects engaged the AI Act as their primary regulatory frame — most notably [[inspection-robots]], whose entire project objective was to **systematically clarify EU AI Act + [[machinery-regulation]] interaction** for autonomous-robotics market access [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
+The defining EU instrument of the Phase II regulatory landscape. Where Phase I was dominated by Swiss law, Phase II projects engaged the AI Act as their primary regulatory frame - most notably [[inspection-robots]], whose entire project objective was to **systematically clarify EU AI Act + [[machinery-regulation]] interaction** for autonomous-robotics market access [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
 
 ## Projects engaging the AI Act
 
 Four projects touched the Act, two of them substantively. The Act was never the whole regulatory picture: each project also engaged the sector law that sits alongside it (see *How the Act sits alongside other regimes* below).
 
-- [[inspection-robots]] (autonomous systems) — the central case. A structured risk-based classification of autonomous inspection systems, worked out against the EU [[machinery-regulation|Machinery Regulation 2023/1230]]; the interaction between the two instruments was the regulatory novelty, and [[iso-iec-42001]] was piloted as the management-system layer [(Inspection Robots report, p. 22)](../sources/p2-inspection-robots.md) [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
-- [[medical-documentation]] (healthcare) — medical AI *generally* counts as high-risk under the Act (the report's glossary: requirements for development, transparency, security and monitoring) [(Medical Documentation report, p. 39)](../sources/p2-medical-documentation.md); software classed MDR Class IIa+ / IVDR Class B+ is high-risk automatically [(Medical Documentation report, p. 19)](../sources/p2-medical-documentation.md). The report stacks the Act on top of the medical-device regime ([[medical-device-regulation|MedDO + EU MDR/IVDR]]) rather than in its place, including the Act's Art. 43(4) predetermined-change-control approach for continuously-learning systems [(Medical Documentation report, p. 35)](../sources/p2-medical-documentation.md). Von Thiessen's framing: *"AI needs new regulatory approaches – flexible, risk-based, and beyond rigid approvals."* [(Medical Documentation report, p. 38)](../sources/p2-medical-documentation.md)
-- [[digital-eye-clinic]] (healthcare) — AI that influences a treatment decision (diabetic-retinopathy screening) is medical-decision-influencing and so high-risk; the report classifies it as a medical device ([[medical-device-regulation|MDR Class IIa/IIb]]) and defers to the medical-documentation analysis for the detail [(Digital Eye Clinic report, p. 25)](../sources/p2-digital-eye-clinic.md).
-- [[building-permits]] (public administration) — peripheral engagement only; its regulatory analysis is framed in Swiss administrative and data-protection law, not the Act.
+- [[inspection-robots]] (autonomous systems) - the central case. A structured risk-based classification of autonomous inspection systems, worked out against the EU [[machinery-regulation|Machinery Regulation 2023/1230]]; the interaction between the two instruments was the regulatory novelty, and [[iso-iec-42001]] was piloted as the management-system layer [(Inspection Robots report, p. 22)](../sources/p2-inspection-robots.md) [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
+- [[medical-documentation]] (healthcare) - medical AI *generally* counts as high-risk under the Act (the report's glossary: requirements for development, transparency, security and monitoring) [(Medical Documentation report, p. 39)](../sources/p2-medical-documentation.md); software classed MDR Class IIa+ / IVDR Class B+ is high-risk automatically [(Medical Documentation report, p. 19)](../sources/p2-medical-documentation.md). The report stacks the Act on top of the medical-device regime ([[medical-device-regulation|MedDO + EU MDR/IVDR]]) rather than in its place, including the Act's Art. 43(4) predetermined-change-control approach for continuously-learning systems [(Medical Documentation report, p. 35)](../sources/p2-medical-documentation.md). Von Thiessen's framing: *"AI needs new regulatory approaches - flexible, risk-based, and beyond rigid approvals."* [(Medical Documentation report, p. 38)](../sources/p2-medical-documentation.md)
+- [[digital-eye-clinic]] (healthcare) - AI that influences a treatment decision (diabetic-retinopathy screening) is medical-decision-influencing and so high-risk; the report classifies it as a medical device ([[medical-device-regulation|MDR Class IIa/IIb]]) and defers to the medical-documentation analysis for the detail [(Digital Eye Clinic report, p. 25)](../sources/p2-digital-eye-clinic.md).
+- [[building-permits]] (public administration) - peripheral engagement only; its regulatory analysis is framed in Swiss administrative and data-protection law, not the Act.
 
 ## How the Act sits alongside other regimes
 
@@ -48,8 +48,8 @@ The booklet's §03 project chapter records that the [[inspection-robots]] projec
 
 ## See also
 
-- [[machinery-regulation]] — the regulation whose interaction with the AI Act is the central Phase II legal-analysis novelty.
-- [[medical-device-regulation]] — the MedDO + EU MDR/IVDR cluster the Act stacks onto for healthcare AI.
-- [[iso-iec-42001]] — AI management-system standard piloted alongside the AI Act analysis.
-- [[ai-convention-ch-implementation]] — Swiss-side implementation of the Council of Europe AI Convention; complements the AI Act in Swiss-EU AI deployments.
-- [[medical-documentation]] · [[digital-eye-clinic]] — the healthcare projects whose AI-Act / medical-device analysis this index draws on.
+- [[machinery-regulation]] - the regulation whose interaction with the AI Act is the central Phase II legal-analysis novelty.
+- [[medical-device-regulation]] - the MedDO + EU MDR/IVDR cluster the Act stacks onto for healthcare AI.
+- [[iso-iec-42001]] - AI management-system standard piloted alongside the AI Act analysis.
+- [[ai-convention-ch-implementation]] - Swiss-side implementation of the Council of Europe AI Convention; complements the AI Act in Swiss-EU AI deployments.
+- [[medical-documentation]] · [[digital-eye-clinic]] - the healthcare projects whose AI-Act / medical-device analysis this index draws on.

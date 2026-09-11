@@ -29,7 +29,7 @@ updated: 2026-06-10
 
 # Smart Parking
 
-Camera-based detection of free parking spaces using image recognition [(Smart Parking report, p. 4)](../sources/p1-smart-parking.md). The Phase I project that codified the operational playbook for computer vision in Swiss public-sector deployments — covering camera placement [(Smart Parking report, p. 5)](../sources/p1-smart-parking.md), image-handling under the Swiss legal stack [(Smart Parking report, p. 10)](../sources/p1-smart-parking.md), and the canonical **privacy-by-design vocabulary** (low resolution, masking, edge computing, instant deletion, data minimisation) that the rest of the Phase I corpus subsequently reuses [(Smart Parking report, p. 15)](../sources/p1-smart-parking.md).
+Camera-based detection of free parking spaces using image recognition [(Smart Parking report, p. 4)](../sources/p1-smart-parking.md). The Phase I project that codified the operational playbook for computer vision in Swiss public-sector deployments - covering camera placement [(Smart Parking report, p. 5)](../sources/p1-smart-parking.md), image-handling under the Swiss legal stack [(Smart Parking report, p. 10)](../sources/p1-smart-parking.md), and the canonical **privacy-by-design vocabulary** (low resolution, masking, edge computing, instant deletion, data minimisation) that the rest of the Phase I corpus subsequently reuses [(Smart Parking report, p. 15)](../sources/p1-smart-parking.md).
 
 ## Outcome
 
@@ -47,6 +47,6 @@ Productive deployment in **Frauenfeld**, with subsequent roll-out to additional 
 
 ## See also
 
-- [[p1-smart-parking]] — the source PDF.
-- [[infrastructure-maintenance]] — sibling Phase I computer-vision pilot.
-- [[building-permits]] — Phase II contrast (plan-document understanding vs. environment recognition).
+- [[p1-smart-parking]] - the source PDF.
+- [[infrastructure-maintenance]] - sibling Phase I computer-vision pilot.
+- [[building-permits]] - Phase II contrast (plan-document understanding vs. environment recognition).

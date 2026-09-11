@@ -30,9 +30,9 @@ Compare:
 
 | Project | Partner engagement intensity | Outcome |
 |---|---|---|
-| [[smart-parking]] (Frauenfeld) | Extensive — city resources, prolonged testing, post-pilot scaling | Production deployment, multi-canton roll-out |
-| [[building-permits]] (Stadt Kloten) | Extensive — real applications, expert validation, multi-vendor coordination | Working prototype + 3,336-eval benchmark, postulate input |
-| [[bridge-monitoring]] (SOB pivot) | Strong — physical access, train-traffic data, structural-engineering expertise | Successful real-world testing despite original-partner withdrawal |
+| [[smart-parking]] (Frauenfeld) | Extensive - city resources, prolonged testing, post-pilot scaling | Production deployment, multi-canton roll-out |
+| [[building-permits]] (Stadt Kloten) | Extensive - real applications, expert validation, multi-vendor coordination | Working prototype + 3,336-eval benchmark, postulate input |
+| [[bridge-monitoring]] (SOB pivot) | Strong - physical access, train-traffic data, structural-engineering expertise | Successful real-world testing despite original-partner withdrawal |
 | [[medical-documentation]] | Partner-data access blocked by regulation | Analysis-only outcome (still valuable) |
 | [[inspection-robots]] | No suitable test partner identified | Analysis-only outcome |
 
@@ -56,7 +56,7 @@ The two analysis-only projects pivoted *not* because the model was wrong, but be
 
 ## See also
 
-- [[partner-roles-around-a-pilot]] — the broader theme; the 5-role taxonomy.
-- [[partner-bottleneck]] — what fails when this lesson is ignored.
-- [[partner-pivot-is-normal]] – what a programme does when engagement collapses mid-project.
-- [[stadt-kloten]] / [[sob]] — canonical positive cases.
+- [[partner-roles-around-a-pilot]] - the broader theme; the 5-role taxonomy.
+- [[partner-bottleneck]] - what fails when this lesson is ignored.
+- [[partner-pivot-is-normal]] - what a programme does when engagement collapses mid-project.
+- [[stadt-kloten]] / [[sob]] - canonical positive cases.

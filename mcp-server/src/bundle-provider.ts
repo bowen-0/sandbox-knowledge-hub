@@ -9,7 +9,7 @@ export interface WikiBundle {
 /**
  * Serves pages from a prebuilt JSON bundle (scripts/build-bundle.ts).
  * Used by hosted deployments (e.g. Cloudflare Workers) where there is no
- * filesystem — the wiki travels inside the deploy artifact.
+ * filesystem - the wiki travels inside the deploy artifact.
  */
 export class BundleWikiProvider implements WikiProvider {
   constructor(private readonly bundle: WikiBundle) {}

@@ -8,7 +8,7 @@ const CACHE_TTL_MS = 10_000;
 
 /**
  * Frontmatter parser options that DISABLE gray-matter's executable engines.
- * gray-matter's default `javascript`/`js` engine `eval()`s a `---js` block —
+ * gray-matter's default `javascript`/`js` engine `eval()`s a `---js` block -
  * arbitrary code execution at build time on whatever content is in the repo.
  * Force YAML and make the JS engines throw, so no page content can ever reach
  * an eval, no matter how the file got into the repo.
@@ -25,7 +25,7 @@ const SAFE_MATTER_OPTIONS = {
  * Reads the wiki live from the filesystem. Used by the stdio server and the
  * node HTTP server, where the wiki folder sits next to the process.
  *
- * Pages are slug-addressed only — callers can never pass a path, so the
+ * Pages are slug-addressed only - callers can never pass a path, so the
  * provider cannot be walked out of the wiki root.
  */
 export class FsWikiProvider implements WikiProvider {
@@ -45,7 +45,7 @@ export class FsWikiProvider implements WikiProvider {
       try {
         entries = await readdir(dir);
       } catch {
-        continue; // folder absent — tolerate partial wikis
+        continue; // folder absent - tolerate partial wikis
       }
       for (const entry of entries) {
         if (!entry.endsWith(".md")) continue;

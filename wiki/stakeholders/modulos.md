@@ -11,16 +11,16 @@ updated: 2026-06-10
 
 # Modulos
 
-Swiss provider of an AI governance platform — software designed to operationalise AI-management-system requirements (notably [[iso-iec-42001]]). Engaged by [[inspection-robots]] to test the application of ISO/IEC 42001 to a concrete autonomous-robotics use case.
+Swiss provider of an AI governance platform - software designed to operationalise AI-management-system requirements (notably [[iso-iec-42001]]). Engaged by [[inspection-robots]] to test the application of ISO/IEC 42001 to a concrete autonomous-robotics use case.
 
 ## Role in the sandbox
 
 The Phase II overview booklet, [[00-overview-phase2-build-and-share]], records the engagement in one sentence: *"In addition, the project team, in collaboration with Modulos, tested the use of an AI governance platform and prepared the application of the ISO/IEC 42001 standard on an exemplary basis."* [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md)
 
-This makes Modulos the **only Phase II partner involved in operationalising an AI-governance standard on a concrete use case** — a position that maps directly to one of the booklet's Pillar III (SME adoption) ambitions in the [[zh-ai-ecosystem-strategy-2026-2029]].
+This makes Modulos the **only Phase II partner involved in operationalising an AI-governance standard on a concrete use case** - a position that maps directly to one of the booklet's Pillar III (SME adoption) ambitions in the [[zh-ai-ecosystem-strategy-2026-2029]].
 
 ## See also
 
-- [[iso-iec-42001]] — the standard piloted via this engagement.
-- [[inspection-robots]] — the project that engaged Modulos.
-- [[anybotics]] — co-partner on the same project.
+- [[iso-iec-42001]] - the standard piloted via this engagement.
+- [[inspection-robots]] - the project that engaged Modulos.
+- [[anybotics]] - co-partner on the same project.

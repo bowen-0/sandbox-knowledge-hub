@@ -1,4 +1,4 @@
-// Cloudflare Workers config for the WRITE (update) MCP endpoint — separate
+// Cloudflare Workers config for the WRITE (update) MCP endpoint - separate
 // worker from the public read endpoint (worker/wrangler.jsonc).
 // Deploy: (from mcp-server/) npm run bundle && npx wrangler deploy -c worker/wrangler-write.jsonc
 // Secrets (one-time): wrangler secret put WRITE_TOKEN / GITHUB_TOKEN  -c worker/wrangler-write.jsonc

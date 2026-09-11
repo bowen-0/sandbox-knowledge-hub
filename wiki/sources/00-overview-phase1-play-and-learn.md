@@ -1,7 +1,7 @@
 ---
-title: "Play & Learn — How to strengthen an AI hub with a sandbox (Phase I overview)"
+title: "Play & Learn - How to strengthen an AI hub with a sandbox (Phase I overview)"
 cite_as: "Play & Learn (Phase I overview report)"
-title_de: "Play & Learn — Eine Sandbox zur Stärkung des KI-Standorts"
+title_de: "Play & Learn - Eine Sandbox zur Stärkung des KI-Standorts"
 type: source
 source_type: pdf
 path: ../pdfs/de/00-overview-phase1-play-and-learn.pdf
@@ -14,11 +14,11 @@ created: 2026-05-28
 updated: 2026-06-11
 ---
 
-# Play & Learn — Phase I overview
+# Play & Learn - Phase I overview
 
 **Read the report:** [PDF (DE)](../pdfs/de/00-overview-phase1-play-and-learn.pdf) · [PDF (EN)](../pdfs/en/00-overview-phase1-play-and-learn.pdf)
 
-The Phase I final report of the AI Innovation Sandbox (2022–2024). Explains *why* the sandbox exists, the four organisational goals (regulatory learning, innovation, knowledge transfer, regulatory input), the **2-axis sandbox typology** (regulatory advice × data provision), the application/selection process, and the governance model. The single best entry point into the corpus — read this before any individual project report.
+The Phase I final report of the AI Innovation Sandbox (2022-2024). Explains *why* the sandbox exists, the four organisational goals (regulatory learning, innovation, knowledge transfer, regulatory input), the **2-axis sandbox typology** (regulatory advice × data provision), the application/selection process, and the governance model. The single best entry point into the corpus - read this before any individual project report.
 
 ## Provenance
 
@@ -32,12 +32,12 @@ How the report's findings were produced:
 
 - **Origin.** In 2021, institutions from public administration, the private sector and research formed a working group on AI at the Zürich economic location; once the vision of an AI test environment stood, the Amt für Wirtschaft des Kantons Zürich took the operational lead and the Verein Metropolitanraum Zürich provided funding (p. 7).
 - **Governance.** An interdisciplinary steering committee of the eight initiating institutions; the Amt für Wirtschaft acts as coordinator of the test environment, not as an AI regulator (p. 9).
-- **Two services, applied flexibly.** Regulatory consulting and data provisioning, combined per project depending on the use case; the programme is deliberately sector-independent (pp. 10–11).
+- **Two services, applied flexibly.** Regulatory consulting and data provisioning, combined per project depending on the use case; the programme is deliberately sector-independent (pp. 10-11).
 - **Within existing law.** No experimentation clauses or no-action letters; all sandbox activities comply with current legal requirements. Only five months passed between the formal start and the first project call (p. 9).
 - **International benchmarking.** Interviews with sandbox teams in other countries, including the UK and France, plus potential participants (AI start-ups, administrative units) shaped a pragmatic, low-threshold model (p. 10).
 - **Real-world testing.** Unlike mostly legal-review sandboxes abroad, the Zürich model integrates practical testing of AI in the real world, with data supplied per project by implementation partners ("data owners"); there is no central technical infrastructure (p. 10).
-- **Selection.** 45 use cases were submitted across the 2022 and 2024 calls, most from start-ups and only one from the financial sector (p. 11). Applications via a deliberately rough online sketch had to meet five requirements: own AI competence, no financial remuneration, willingness to publish findings (IP excepted), Swiss presence, one project per organisation (p. 12). The steering committee scored ten equally weighted criteria on a five-level scale after a 30-minute interview (pp. 12–13). The first call (March–June 2022) drew 21 proposals; 5 projects were selected and implemented (p. 13).
-- **Iterative implementation.** Projects were further specified with participants after acceptance and rolled out staggered; some took the full implementation phase of one and a half years (pp. 15–16). Two further initiated projects (CO2 emission modelling, semantic search in legal documents) never reached implementation because the committed implementation partner withdrew (p. 22).
+- **Selection.** 45 use cases were submitted across the 2022 and 2024 calls, most from start-ups and only one from the financial sector (p. 11). Applications via a deliberately rough online sketch had to meet five requirements: own AI competence, no financial remuneration, willingness to publish findings (IP excepted), Swiss presence, one project per organisation (p. 12). The steering committee scored ten equally weighted criteria on a five-level scale after a 30-minute interview (pp. 12-13). The first call (March-June 2022) drew 21 proposals; 5 projects were selected and implemented (p. 13).
+- **Iterative implementation.** Projects were further specified with participants after acceptance and rolled out staggered; some took the full implementation phase of one and a half years (pp. 15-16). Two further initiated projects (CO2 emission modelling, semantic search in legal documents) never reached implementation because the committed implementation partner withdrew (p. 22).
 - **Core team.** Since the start: a programme manager as generalist, a legal expert, a data scientist and a communications expert (p. 11).
 
 ## Notable quotes
@@ -65,5 +65,5 @@ For Phase II strategic framing, prefer [[00-overview-phase2-build-and-share]].
 
 ## See also
 
-- [[00-overview-phase2-build-and-share]] — its Phase II successor.
+- [[00-overview-phase2-build-and-share]] - its Phase II successor.
 - The five Phase I projects: [[smart-parking]] · [[autonomous-systems]] · [[infrastructure-maintenance]] · [[machine-translation]] · [[ai-in-education]]

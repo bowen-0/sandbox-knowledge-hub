@@ -68,7 +68,7 @@ describe("makeGitHubWriter", () => {
     });
     vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    const german = "Grüße «Bewilligung» — Datenqualität, klare Prozesse";
+    const german = "Grüße «Bewilligung» - Datenqualität, klare Prozesse";
     await makeGitHubWriter(cfg).putFile("wiki/lessons/x.md", german, "m");
     expect(Buffer.from(captured, "base64").toString("utf-8")).toBe(german);
   });

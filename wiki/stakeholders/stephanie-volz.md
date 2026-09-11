@@ -12,7 +12,7 @@ updated: 2026-06-10
 
 # Stephanie Volz
 
-Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Technology, Society, and Law), University of Zurich [(Building Permits report, p. 25)](../sources/p2-building-permits.md). The **constant legal anchor** of the sandbox — appears as legal author / co-author on every sandbox project report across both phases.
+Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Technology, Society, and Law), University of Zurich [(Building Permits report, p. 25)](../sources/p2-building-permits.md). The **constant legal anchor** of the sandbox - appears as legal author / co-author on every sandbox project report across both phases.
 
 ## Role
 
@@ -23,10 +23,10 @@ Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Techno
 ## Notable quotes in the corpus
 
 > *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"*
-> — Volz ([p2-building-permits p. 25](../sources/p2-building-permits.md))
+> - Volz ([p2-building-permits p. 25](../sources/p2-building-permits.md))
 
 ## See also
 
-- [[itsl-uzh]] — institutional home.
-- [[raphael-von-thiessen]] — recurring programme co-author.
-- [[dsg-fadp]] / [[idg-zh]] / [[fadp-art-21]] / [[bv-art-29]] — Volz's primary regulatory remit.
+- [[itsl-uzh]] - institutional home.
+- [[raphael-von-thiessen]] - recurring programme co-author.
+- [[dsg-fadp]] / [[idg-zh]] / [[fadp-art-21]] / [[bv-art-29]] - Volz's primary regulatory remit.

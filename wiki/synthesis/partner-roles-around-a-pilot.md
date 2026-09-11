@@ -1,5 +1,5 @@
 ---
-title: Partner roles around a sandbox pilot — Who do you actually need?
+title: Partner roles around a sandbox pilot - Who do you actually need?
 type: synthesis
 insight_domain: both
 question: "Who do I need around my AI pilot, and what do they each do?"
@@ -28,13 +28,13 @@ From the role diagram in [[00-overview-phase2-build-and-share]] §03 [(Build & S
 
 | Role | What they contribute | Example from corpus |
 |---|---|---|
-| **Test partner** (*Testpartner*) | Real-world application context, data, operational environment | [[stadt-kloten]] (Building Permits) — provided real building applications. [[sob]] (Bridge Monitoring) — provided the Reidholz railway bridge. |
+| **Test partner** (*Testpartner*) | Real-world application context, data, operational environment | [[stadt-kloten]] (Building Permits) - provided real building applications. [[sob]] (Bridge Monitoring) - provided the Reidholz railway bridge. |
 | **Technical implementation partner** (*Technische Umsetzungspartner*) | Prototype/model/infrastructure development; works closely with test partner | [[nokema]], [[byte-studio]], [[gossweiler-ingenieure]] (Building Permits). [[irmos-technologies]] (Bridge Monitoring). [[modulos]] (Inspection Robots). |
 | **Mandated expert** (*Mandatierte Experten*) | Regulatory or domain expertise under a formal mandate; delivers robust analyses | [[itsl-uzh]] (legal analysis on every project). [[stephanie-volz]] in personnel form. |
-| **Domain sparring partner** (*Fachliche Sparring-Partner*) | Informal expert exchange, validation, quality assurance — no formal mandate | The named specialist support people in [[building-permits]] (FHNW, HSG, Building Department experts). |
+| **Domain sparring partner** (*Fachliche Sparring-Partner*) | Informal expert exchange, validation, quality assurance - no formal mandate | The named specialist support people in [[building-permits]] (FHNW, HSG, Building Department experts). |
 | **Supervisory authority** (*Aufsichtsbehörden*) | Oversight-perspective feedback, regulatory clarification | [[swissmedic]] (health). [[bundesnetzagentur-de]] (Germany cross-border). The data-protection supervisory authority (medical documentation). |
 
-This is **the** taxonomy the wiki uses on every `wiki/stakeholders/` page — see the `partner_role:` frontmatter field.
+This is **the** taxonomy the wiki uses on every `wiki/stakeholders/` page - see the `partner_role:` frontmatter field.
 
 ---
 
@@ -50,7 +50,7 @@ The roles are *not* interchangeable:
 - A technical implementation partner cannot substitute for a mandated expert. (They build the prototype; they do not analyse the law.)
 - A domain sparring partner cannot substitute for a test partner. (They advise; they don't provide the operational environment.)
 
-Conflating roles is the most common mistake the corpus surfaces — and the most common root cause of pilot stalls (see [[partner-bottleneck]]).
+Conflating roles is the most common mistake the corpus surfaces - and the most common root cause of pilot stalls (see [[partner-bottleneck]]).
 
 > [!sandbox-operations]
 > The portfolio view: how the programme structures these roles across projects.
@@ -67,14 +67,14 @@ Conflating roles is the most common mistake the corpus surfaces — and the most
 > [!ai-deployment]
 > Staffing your own pilot: where each role typically comes from.
 >
-> **Test partner.** The hardest one. Often the binding constraint — see [[data-access-patterns-and-unblocking]]. Patterns:
+> **Test partner.** The hardest one. Often the binding constraint - see [[data-access-patterns-and-unblocking]]. Patterns:
 > - **Municipalities** ([[stadt-kloten]], [[stadt-frauenfeld]]) are willing test partners with bounded data.
 > - **Hospitals** require extensive data-sharing agreements (years of lead time if going public-sector hospital).
 > - **Infrastructure operators** (SOB, military) require physical access permissions.
 >
 > **Technical implementation partner.** Usually multiple. The corpus shows pilots often combine a *use-case-specific* implementation partner ([[nokema]] for building permits) with a *technical-platform* partner ([[byte-studio]]). For startup-scale teams, this distinction may collapse into one organisation.
 >
-> **Mandated expert.** For Swiss public-sector AI pilots, [[itsl-uzh]] is the standing default — they appear on every sandbox project. For non-sandbox engagements, look for university institutes with established public-administration relationships.
+> **Mandated expert.** For Swiss public-sector AI pilots, [[itsl-uzh]] is the standing default - they appear on every sandbox project. For non-sandbox engagements, look for university institutes with established public-administration relationships.
 >
 > **Domain sparring partner.** Lighter touch. Often individuals (named in project reports) rather than organisations. They cost less to engage but contribute less continuity. Useful for validation; not load-bearing.
 >
@@ -93,11 +93,11 @@ Conflating roles is the most common mistake the corpus surfaces — and the most
 > - [ ] **Domain sparring partner(s)**: who will validate informally?
 > - [ ] **Supervisory authority**: which supervisor has remit, and how will you engage them (bilateral / sandbox-mediated / roundtable)?
 >
-> If you can't name a credible candidate for the first two, the pilot is at high risk of [[partner-bottleneck]]-driven failure. Plan a pivot direction in advance — see [[partner-pivot-is-normal]].
+> If you can't name a credible candidate for the first two, the pilot is at high risk of [[partner-bottleneck]]-driven failure. Plan a pivot direction in advance - see [[partner-pivot-is-normal]].
 
 ---
 
-## When a role is missing — pivot directions
+## When a role is missing - pivot directions
 
 > [!ai-deployment]
 > If a role stays unfilled, the corpus documents these pivot directions:
@@ -111,12 +111,12 @@ Conflating roles is the most common mistake the corpus surfaces — and the most
 
 ## What to read next
 
-1. **[[partner-pivot-is-normal]]** — the lesson on handling partner gaps.
-2. **[[regulatory-roundtable-is-high-leverage]]** — how to scale supervisory access.
-3. **[[partner-bottleneck]]** — the concept this theme operationalises.
-4. **[[data-access-patterns-and-unblocking]]** — the companion theme on the test-partner-flavoured constraint.
+1. **[[partner-pivot-is-normal]]** - the lesson on handling partner gaps.
+2. **[[regulatory-roundtable-is-high-leverage]]** - how to scale supervisory access.
+3. **[[partner-bottleneck]]** - the concept this theme operationalises.
+4. **[[data-access-patterns-and-unblocking]]** - the companion theme on the test-partner-flavoured constraint.
 
 ## See also
 
-- [[00-overview-phase2-build-and-share]] — source of the 5-role taxonomy.
-- [[integration-matters-more-than-model-choice]] — partner alignment is one form of integration work.
+- [[00-overview-phase2-build-and-share]] - source of the 5-role taxonomy.
+- [[integration-matters-more-than-model-choice]] - partner alignment is one form of integration work.

@@ -79,7 +79,7 @@ function tokensMatch(a: string, b: string): boolean {
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    // CORS preflight carries no credentials — let the transport answer it.
+    // CORS preflight carries no credentials - let the transport answer it.
     if (request.method === "OPTIONS") return handler.fetch(request, env, ctx);
 
     // Gate ONLY the MCP endpoint. Everything else (notably the OAuth discovery
@@ -87,7 +87,7 @@ export default {
     // like the read worker: answering those probes with 401 reads as "this
     // server has a sign-in service", which sends OAuth-capable clients
     // (claude.ai) into a dynamic-client-registration flow that cannot succeed
-    // here — the only auth on this worker is the capability token on /mcp.
+    // here - the only auth on this worker is the capability token on /mcp.
     // (Observed 2026-07-16: "Couldn't register with …'s sign-in service".)
     const { pathname } = new URL(request.url);
     if (pathname !== "/mcp" && !pathname.startsWith("/mcp/")) {

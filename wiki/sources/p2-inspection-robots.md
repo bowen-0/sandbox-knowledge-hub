@@ -1,5 +1,5 @@
 ---
-title: "Autonomous Inspection Robots — Approaches to the AI Act and EU Machinery Legislation"
+title: "Autonomous Inspection Robots - Approaches to the AI Act and EU Machinery Legislation"
 cite_as: "Inspection Robots report"
 type: source
 source_type: pdf
@@ -17,7 +17,7 @@ updated: 2026-06-11
 
 **Read the report:** [PDF (DE)](../pdfs/de/p2-inspection-robots.pdf) · [PDF (EN)](../pdfs/en/p2-inspection-robots.pdf)
 
-Phase II `analysis-only` project report — a legal manual disguised as a project report. Examines how autonomous inspection robots ([[anybotics]] use case) can be classified in compliance with the **EU AI Act** and the **EU Machinery Regulation 2023/1230**. Project also tested an AI governance platform from [[modulos]] against the **ISO/IEC 42001** standard. No suitable test partner was available for real-world deployment, so the sandbox treated rigorous regulatory analysis as the successful output — including first-time cross-border collaboration with Germany's [[bundesnetzagentur-de|Bundesnetzagentur]] and Liechtenstein's [[li-digital-innovation|Office for Digital Innovation]].
+Phase II `analysis-only` project report - a legal manual disguised as a project report. Examines how autonomous inspection robots ([[anybotics]] use case) can be classified in compliance with the **EU AI Act** and the **EU Machinery Regulation 2023/1230**. Project also tested an AI governance platform from [[modulos]] against the **ISO/IEC 42001** standard. No suitable test partner was available for real-world deployment, so the sandbox treated rigorous regulatory analysis as the successful output - including first-time cross-border collaboration with Germany's [[bundesnetzagentur-de|Bundesnetzagentur]] and Liechtenstein's [[li-digital-innovation|Office for Digital Innovation]].
 
 ## Provenance
 
@@ -36,7 +36,7 @@ The report states its contents are not legally binding and represent no official
 
 ## Notable quotes
 
-- *"EU regulations often have a less drastic impact on companies than expected – those who make smart use of flexibilities and analyse risks pragmatically can develop a suitable strategy."* (Sven Kohlmeier, Specialist Attorney for IT Law (DE), Wicki Partners AG, [p2-inspection-robots p. 25](../sources/p2-inspection-robots.md))
+- *"EU regulations often have a less drastic impact on companies than expected - those who make smart use of flexibilities and analyse risks pragmatically can develop a suitable strategy."* (Sven Kohlmeier, Specialist Attorney for IT Law (DE), Wicki Partners AG, [p2-inspection-robots p. 25](../sources/p2-inspection-robots.md))
 - *"Those who systematically embed AI governance create security, reduce risks and secure long-term market access."* (Elena Maran, Global Head of Responsible AI, Modulos AG, [p2-inspection-robots p. 29](../sources/p2-inspection-robots.md))
 
 ## Stakeholders named in the report
@@ -56,8 +56,8 @@ Authoritative source for:
 
 ## See also
 
-- [[inspection-robots]] — project page.
-- [[autonomous-systems]] — Phase I predecessor (pre-EU-regulation Swiss framing).
+- [[inspection-robots]] - project page.
+- [[autonomous-systems]] - Phase I predecessor (pre-EU-regulation Swiss framing).
 - [[eu-ai-act]] / [[machinery-regulation]] / [[iso-iec-42001]].
-- [[eu-market-access-for-swiss-ai]] — synthesis built on this source.
-- [[cross-border-collab-unlocks-eu-access]] — lesson drawn from this source.
+- [[eu-market-access-for-swiss-ai]] - synthesis built on this source.
+- [[cross-border-collab-unlocks-eu-access]] - lesson drawn from this source.

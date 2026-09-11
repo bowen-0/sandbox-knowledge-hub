@@ -6,8 +6,8 @@ name: deploy-mcp
 # read/query endpoint serves the new content a minute or two later.
 #
 # Requires two repo secrets (Settings -> Secrets and variables -> Actions):
-#   CLOUDFLARE_API_TOKEN   — a Workers-deploy-scoped token
-#   CLOUDFLARE_ACCOUNT_ID  — the Cloudflare account id
+#   CLOUDFLARE_API_TOKEN - a Workers-deploy-scoped token
+#   CLOUDFLARE_ACCOUNT_ID - the Cloudflare account id
 # Without them the workflow fails harmlessly; redeploy manually with
 #   cd mcp-server/worker && npm run deploy:all
 
@@ -41,7 +41,7 @@ jobs:
         run: npm run bundle
       - name: Note when deploy is skipped
         if: env.CLOUDFLARE_API_TOKEN == ''
-        run: echo "::notice::CLOUDFLARE_API_TOKEN not set — skipping deploy. Set the repo secrets to enable auto-redeploy, or deploy manually (cd mcp-server/worker && npm run deploy:all)."
+        run: echo "::notice::CLOUDFLARE_API_TOKEN not set - skipping deploy. Set the repo secrets to enable auto-redeploy, or deploy manually (cd mcp-server/worker && npm run deploy:all)."
       - name: Deploy read worker
         if: env.CLOUDFLARE_API_TOKEN != ''
         working-directory: mcp-server/worker

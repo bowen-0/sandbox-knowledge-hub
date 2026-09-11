@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Wiki lint pass — the checks promised in wiki/CONVENTIONS.md §8.
+ * Wiki lint pass - the checks promised in wiki/CONVENTIONS.md §8.
  *
  * One-time setup:   cd mcp-server && npm install && npm run build
  * Run:              node scripts/lint.mjs            (from the repo root)
@@ -87,7 +87,7 @@ for (const p of content) {
   // 3. forbidden #para- anchors (dormant spec, CONVENTIONS §6)
   const paraHits = [...p.body.matchAll(/#para-[\w-]+/g), ...JSON.stringify(p.frontmatter).matchAll(/#para-[\w-]+/g)];
   if (paraHits.length > 0) {
-    errors.push(`${where}: ${paraHits.length} hand-written "#para-" anchor(s) — the paragraph pipeline is dormant; cite #page-N`);
+    errors.push(`${where}: ${paraHits.length} hand-written "#para-" anchor(s) - the paragraph pipeline is dormant; cite #page-N`);
   }
 
   // 4. insight_domain rules
@@ -103,7 +103,7 @@ for (const p of content) {
       }
     }
   } else if (domain !== undefined) {
-    warnings.push(`${where}: insight_domain set on type "${p.type}" — the field belongs on lessons and synthesis only`);
+    warnings.push(`${where}: insight_domain set on type "${p.type}" - the field belongs on lessons and synthesis only`);
   }
 
   // 5. broken wikilinks
@@ -125,7 +125,7 @@ for (const p of content) {
 
   // 7. orphans
   if ((incoming.get(p.slug) ?? 0) === 0) {
-    warnings.push(`${where}: orphan — no incoming wikilink or frontmatter edge from any page`);
+    warnings.push(`${where}: orphan - no incoming wikilink or frontmatter edge from any page`);
   }
 
   // 8. index coverage
@@ -139,7 +139,7 @@ for (const p of content) {
     const [y, m] = freshness.split("-").map(Number);
     const ageMonths = (new Date().getFullYear() - y) * 12 + (new Date().getMonth() + 1 - m);
     if (ageMonths > 18) {
-      warnings.push(`${where}: freshness ${freshness} is ${ageMonths} months old — review with > [!update-needed]`);
+      warnings.push(`${where}: freshness ${freshness} is ${ageMonths} months old - review with > [!update-needed]`);
     }
   }
 }

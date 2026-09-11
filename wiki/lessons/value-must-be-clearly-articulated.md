@@ -33,15 +33,15 @@ From [[00-overview-phase2-build-and-share]], §04 Organisation [(Build & Share (
 
 A clear AI value articulation has three properties:
 
-1. **Linked to a concrete decision** — what choice does the AI enable or improve? (Not "it analyses the data" but "it tells the maintenance team which span to inspect next.")
-2. **Quantified against the status quo** — how much better, cheaper, faster, or safer than the current process? (Not "it's an improvement" but "it reduces inspection time by 40%.")
-3. **Defensible to operational staff** — would the domain experts who do this work today agree the AI helps? (Not assumed from the modeller's perspective.)
+1. **Linked to a concrete decision** - what choice does the AI enable or improve? (Not "it analyses the data" but "it tells the maintenance team which span to inspect next.")
+2. **Quantified against the status quo** - how much better, cheaper, faster, or safer than the current process? (Not "it's an improvement" but "it reduces inspection time by 40%.")
+3. **Defensible to operational staff** - would the domain experts who do this work today agree the AI helps? (Not assumed from the modeller's perspective.)
 
 ## Evidence base
 
-- **[[bridge-monitoring]]** — the booklet's named example: sensor-based monitoring complements (rather than replaces) visual structural inspection [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Value = earlier signal on deteriorating components [(Bridge Monitoring report, p. 5)](../sources/p2-bridge-monitoring.md), not "replacing" engineers: *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* (Raphael von Thiessen, AI Sandbox Programme Manager, Canton of Zurich) [(Bridge Monitoring report, p. 6)](../sources/p2-bridge-monitoring.md).
-- **[[digital-eye-clinic]]** — value = throughput against rising patient volumes + shortages of skilled professionals, not "AI replaces ophthalmologists" [(Digital Eye Clinic report, p. 2)](../sources/p2-digital-eye-clinic.md).
-- **[[building-permits]]** — value = preliminary check costing under CHF 2/application [(Building Permits report, p. 13)](../sources/p2-building-permits.md) + catching formal deficiencies before formal proceedings [(Building Permits report, p. 8)](../sources/p2-building-permits.md), not "AI decides the permit" [(Building Permits report, p. 7)](../sources/p2-building-permits.md).
+- **[[bridge-monitoring]]** - the booklet's named example: sensor-based monitoring complements (rather than replaces) visual structural inspection [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Value = earlier signal on deteriorating components [(Bridge Monitoring report, p. 5)](../sources/p2-bridge-monitoring.md), not "replacing" engineers: *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* (Raphael von Thiessen, AI Sandbox Programme Manager, Canton of Zurich) [(Bridge Monitoring report, p. 6)](../sources/p2-bridge-monitoring.md).
+- **[[digital-eye-clinic]]** - value = throughput against rising patient volumes + shortages of skilled professionals, not "AI replaces ophthalmologists" [(Digital Eye Clinic report, p. 2)](../sources/p2-digital-eye-clinic.md).
+- **[[building-permits]]** - value = preliminary check costing under CHF 2/application [(Building Permits report, p. 13)](../sources/p2-building-permits.md) + catching formal deficiencies before formal proceedings [(Building Permits report, p. 8)](../sources/p2-building-permits.md), not "AI decides the permit" [(Building Permits report, p. 7)](../sources/p2-building-permits.md).
 
 Each of these articulations names a concrete operational benefit. None of them claims AI is *replacing* the human work.
 
@@ -55,6 +55,6 @@ For any AI use case scoping:
 
 ## See also
 
-- [[ai-is-rarely-the-primary-challenge]] — broader scoping framing.
-- [[new-ways-of-working-need-change-management]] — companion at the people layer.
-- [[scoping-is-ai-the-right-approach]] — broader theme.
+- [[ai-is-rarely-the-primary-challenge]] - broader scoping framing.
+- [[new-ways-of-working-need-change-management]] - companion at the people layer.
+- [[scoping-is-ai-the-right-approach]] - broader theme.

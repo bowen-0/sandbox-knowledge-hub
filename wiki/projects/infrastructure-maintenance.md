@@ -29,13 +29,13 @@ Drone inspections of military infrastructure with computer vision, executed with
 
 ## Outcome
 
-The project produced a **structured, annotated dataset for infrastructure inspection** that IBM Research subsequently published on **Hugging Face** as a public benchmark — cited in [[00-overview-phase2-build-and-share]] §01 as a canonical example of *sustainable data reuse beyond the sandbox engagement*. The booklet records it verbatim: *"...within the drone inspection project, IBM Research developed a structured, annotated dataset for infrastructure inspection, which serves as a benchmark for future AI models and is publicly accessible via scientific publications and platforms such as Hugging Face."* [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md)
+The project produced a **structured, annotated dataset for infrastructure inspection** that IBM Research subsequently published on **Hugging Face** as a public benchmark - cited in [[00-overview-phase2-build-and-share]] §01 as a canonical example of *sustainable data reuse beyond the sandbox engagement*. The booklet records it verbatim: *"...within the drone inspection project, IBM Research developed a structured, annotated dataset for infrastructure inspection, which serves as a benchmark for future AI models and is publicly accessible via scientific publications and platforms such as Hugging Face."* [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Key learnings
 
-- High-resolution drone imagery is a powerful but logistically-constrained data source — partner access (military base permissions) was the operational bottleneck. The report notes that access to high-resolution imagery of airport runways "is usually difficult to obtain" [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md), and the missions ran on a closed runway with flight altitude capped at 10 m [(Infrastructure Maintenance report, p. 6)](../sources/p1-infrastructure-maintenance.md).
+- High-resolution drone imagery is a powerful but logistically-constrained data source - partner access (military base permissions) was the operational bottleneck. The report notes that access to high-resolution imagery of airport runways "is usually difficult to obtain" [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md), and the missions ran on a closed runway with flight altitude capped at 10 m [(Infrastructure Maintenance report, p. 6)](../sources/p1-infrastructure-maintenance.md).
 - The "tiny dataset, large reuse" pattern: even apparently simple datasets generate outsized value when made publicly accessible. The Build & Share booklet states the principle as *"Data access is the most powerful lever"* and names this project's imagery as its example: *"e.g. high-resolution drone imagery of a runway"* ([[00-overview-phase2-build-and-share]] §04 Technology, [p. 17](../sources/00-overview-phase2-build-and-share.md)).
-- Direct lineage to [[bridge-monitoring]] in Phase II — same theme (sensor-/CV-based infrastructure monitoring), shifted from drone imagery to sensor data.
+- Direct lineage to [[bridge-monitoring]] in Phase II - same theme (sensor-/CV-based infrastructure monitoring), shifted from drone imagery to sensor data.
 
 > [!gap] Less detail in the corpus than other Phase I projects
 > No German edition of this report is in the corpus; it is the one EN-only source, so page-level citations on this page reference the English PDF rather than a German one. If a German edition is published on zh.ch, fetch it and re-anchor the citations.
@@ -46,6 +46,6 @@ The project produced a **structured, annotated dataset for infrastructure inspec
 
 ## See also
 
-- [[p1-infrastructure-maintenance]] — the source PDF.
-- [[bridge-monitoring]] — Phase II thematic successor.
-- [[smart-parking]] — fellow Phase I CV pilot.
+- [[p1-infrastructure-maintenance]] - the source PDF.
+- [[bridge-monitoring]] - Phase II thematic successor.
+- [[smart-parking]] - fellow Phase I CV pilot.

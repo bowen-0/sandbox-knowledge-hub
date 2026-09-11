@@ -1,5 +1,5 @@
 ---
-title: "Autonomous Systems — Guidelines for Regulatory Questions"
+title: "Autonomous Systems - Guidelines for Regulatory Questions"
 cite_as: "Autonomous Systems report"
 type: source
 source_type: pdf
@@ -13,7 +13,7 @@ created: 2026-05-28
 updated: 2026-06-11
 ---
 
-# Autonomous Systems — Guidelines for Regulatory Questions
+# Autonomous Systems - Guidelines for Regulatory Questions
 
 **Read the report:** [PDF (DE)](../pdfs/de/p1-autonomous-systems.pdf) · [PDF (EN)](../pdfs/en/p1-autonomous-systems.pdf)
 
@@ -45,10 +45,10 @@ Authoritative source for:
 
 ## See also
 
-- [[autonomous-systems]] — project page.
-- [[inspection-robots]] — Phase II successor; the EU-regulation-heavy version of this same domain.
-- [[machinery-regulation]] — the regulation that came into force after this report.
-- [[integrate-regulation-early]] – the lesson this report anchors.
-- [[00-overview-phase1-play-and-learn]] – Phase I overview; documents the project's course, including the Ronovatec bankruptcy (p. 18).
-- [[smart-parking]] – shares the privacy-by-design vocabulary (low resolution, masking, edge computing), applied to fixed cameras.
-- [[infrastructure-maintenance]] – airborne autonomous system, outside this guide's ground-contact scope.
+- [[autonomous-systems]] - project page.
+- [[inspection-robots]] - Phase II successor; the EU-regulation-heavy version of this same domain.
+- [[machinery-regulation]] - the regulation that came into force after this report.
+- [[integrate-regulation-early]] - the lesson this report anchors.
+- [[00-overview-phase1-play-and-learn]] - Phase I overview; documents the project's course, including the Ronovatec bankruptcy (p. 18).
+- [[smart-parking]] - shares the privacy-by-design vocabulary (low resolution, masking, edge computing), applied to fixed cameras.
+- [[infrastructure-maintenance]] - airborne autonomous system, outside this guide's ground-contact scope.

@@ -16,7 +16,7 @@ A derived concept (not in the booklet glossary, but the booklet's §04 Technolog
 
 ## The pattern across the corpus
 
-Data access is the chokepoint that recurs in **every project** — but the specific blocker differs:
+Data access is the chokepoint that recurs in **every project** - but the specific blocker differs:
 
 | Project | Data-access constraint |
 |---|---|
@@ -27,7 +27,7 @@ Data access is the chokepoint that recurs in **every project** — but the speci
 | [[medical-documentation]] | Patient-record protection blocked operational use. |
 | [[building-permits]] | Negotiated access to real applications via Stadt Kloten. |
 
-The booklet calls this out as the *"partner-bottleneck"* pattern more often than as a model-quality issue — see [[partner-bottleneck]].
+The booklet calls this out as the *"partner-bottleneck"* pattern more often than as a model-quality issue - see [[partner-bottleneck]].
 
 ## Productive responses
 

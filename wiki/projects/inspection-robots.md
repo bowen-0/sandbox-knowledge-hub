@@ -30,7 +30,7 @@ updated: 2026-06-10
 
 # Autonomous Inspection Robots
 
-`analysis-only` Phase II project — a structured regulatory pre-flight for **EU market access** of Swiss autonomous-robotics products. Anchored on the use case of [[anybotics]] (Swiss autonomous inspection robots in critical infrastructure) [(Inspection Robots report, p. 2)](../sources/p2-inspection-robots.md). No suitable test partner could be identified for operational deployment, so the project focused on **in-depth regulatory analysis** — which the sandbox treats as a successful outcome alongside [[medical-documentation]] [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md). The Build & Share booklet records the pivot verbatim: *"As no suitable test partner for operational deployment could be identified, the focus was placed on in-depth regulatory analysis."* [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md)
+`analysis-only` Phase II project - a structured regulatory pre-flight for **EU market access** of Swiss autonomous-robotics products. Anchored on the use case of [[anybotics]] (Swiss autonomous inspection robots in critical infrastructure) [(Inspection Robots report, p. 2)](../sources/p2-inspection-robots.md). No suitable test partner could be identified for operational deployment, so the project focused on **in-depth regulatory analysis** - which the sandbox treats as a successful outcome alongside [[medical-documentation]] [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md). The Build & Share booklet records the pivot verbatim: *"As no suitable test partner for operational deployment could be identified, the focus was placed on in-depth regulatory analysis."* [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md)
 
 ## Outcome
 
@@ -41,9 +41,9 @@ updated: 2026-06-10
 
 ## Key learnings
 
-- The interaction between the AI Act and the EU Machinery Regulation is dynamically evolving — single-instrument analysis is insufficient for multi-regulation AI products [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
+- The interaction between the AI Act and the EU Machinery Regulation is dynamically evolving - single-instrument analysis is insufficient for multi-regulation AI products [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md).
 - ISO/IEC 42001 is concretely operationalisable on a real use case, not only as a paper standard [(Inspection Robots report, p. 35)](../sources/p2-inspection-robots.md).
-- The "EU market access via Swiss sandbox" pattern is a viable model — relevant for the Phase III ecosystem strategy ([[00-overview-phase2-build-and-share]] §05, "international networking" [(Build & Share (Phase II overview report), p. 21)](../sources/00-overview-phase2-build-and-share.md)). The report states the ambition directly: *"The findings are intended to support further robotics companies and facilitate access to the EU market."* [(Inspection Robots report, p. 2)](../sources/p2-inspection-robots.md)
+- The "EU market access via Swiss sandbox" pattern is a viable model - relevant for the Phase III ecosystem strategy ([[00-overview-phase2-build-and-share]] §05, "international networking" [(Build & Share (Phase II overview report), p. 21)](../sources/00-overview-phase2-build-and-share.md)). The report states the ambition directly: *"The findings are intended to support further robotics companies and facilitate access to the EU market."* [(Inspection Robots report, p. 2)](../sources/p2-inspection-robots.md)
 
 ## Stakeholders
 
@@ -51,6 +51,6 @@ updated: 2026-06-10
 
 ## See also
 
-- [[p2-inspection-robots]] — the source PDF.
-- [[autonomous-systems]] — Phase I predecessor (pre-EU-regulation framing).
-- [[medical-documentation]] — fellow Phase II `analysis-only` project.
+- [[p2-inspection-robots]] - the source PDF.
+- [[autonomous-systems]] - Phase I predecessor (pre-EU-regulation framing).
+- [[medical-documentation]] - fellow Phase II `analysis-only` project.

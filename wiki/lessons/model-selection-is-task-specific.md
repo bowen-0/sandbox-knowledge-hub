@@ -1,5 +1,5 @@
 ---
-title: Model selection is task-specific — design model-agnostic architectures
+title: Model selection is task-specific - design model-agnostic architectures
 type: lesson
 phase: II
 insight_domain: ai-deployment
@@ -20,7 +20,7 @@ created: 2026-05-28
 updated: 2026-06-10
 ---
 
-# Model selection is task-specific — design model-agnostic architectures
+# Model selection is task-specific - design model-agnostic architectures
 
 From [[00-overview-phase2-build-and-share]] §04 Technology:
 

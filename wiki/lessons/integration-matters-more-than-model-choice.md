@@ -39,13 +39,13 @@ From [[00-overview-phase2-build-and-share]] §04 Organisation:
 When taking an AI pilot toward production:
 
 1. **Map the system integration surface** before optimising the model. Existing CMSs, databases, GIS layers, identity systems, audit logs.
-2. **Map the process integration** — where does the AI fit in the human workflow? Who reviews? Who escalates?
-3. **Map the governance integration** — who is accountable? What's the change-management plan? How do users learn the new affordance?
+2. **Map the process integration** - where does the AI fit in the human workflow? Who reviews? Who escalates?
+3. **Map the governance integration** - who is accountable? What's the change-management plan? How do users learn the new affordance?
 
 A 60% accurate model that integrates well beats a 90% accurate model that doesn't.
 
 ## See also
 
-- [[ai-is-rarely-the-primary-challenge]] — broader scoping framing.
-- [[building-permits]] / [[digital-eye-clinic]] — canonical cases.
-- [[new-ways-of-working-need-change-management]] — companion lesson at the people layer.
+- [[ai-is-rarely-the-primary-challenge]] - broader scoping framing.
+- [[building-permits]] / [[digital-eye-clinic]] - canonical cases.
+- [[new-ways-of-working-need-change-management]] - companion lesson at the people layer.

@@ -41,12 +41,12 @@ Three responses to the tension:
 
 1. **Constrain AI to non-binding pre-checks** (the [[building-permits]] approach). The AI suggests; a human decides. [[fadp-art-21]] requires this for individual decisions anyway [(Building Permits report, p. 26)](../sources/p2-building-permits.md).
 2. **Use rule-based logic for the determinative step** ([[rule-based-beats-generative-for-defined-logic]]) and reserve AI for unstructured input handling.
-3. **Increase reliability through ensembles or repeat-and-vote** — but this multiplies cost and doesn't fully resolve the principle.
+3. **Increase reliability through ensembles or repeat-and-vote** - but this multiplies cost and doesn't fully resolve the principle.
 
 There is no clean technical fix; the design choice is whether to accept the loss of determinism or to design the system so AI is never the deterministic actor.
 
 ## See also
 
-- [[building-permits]] — canonical case.
-- [[fadp-art-21]] — the legal framing for the human-in-the-loop response.
-- [[rule-based-beats-generative-for-defined-logic]] — the design pattern that resolves much of the tension.
+- [[building-permits]] - canonical case.
+- [[fadp-art-21]] - the legal framing for the human-in-the-loop response.
+- [[rule-based-beats-generative-for-defined-logic]] - the design pattern that resolves much of the tension.

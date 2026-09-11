@@ -47,11 +47,11 @@ When scaling regulatory clarity in an AI vertical:
 
 1. **Identify a regulator** with substantive remit over the use case.
 2. **Aggregate providers** in the same problem space (often there are 5-20 globally; fewer in Switzerland).
-3. **Pre-circulate a question agenda** — the roundtable should not re-discover what bilateral conversations could have established.
+3. **Pre-circulate a question agenda** - the roundtable should not re-discover what bilateral conversations could have established.
 4. **Document outcomes** in a shareable form (e.g. a guideline; see [[medical-documentation]]'s practice-oriented guideline, *praxisnaher Leitfaden* [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md)).
 
 ## See also
 
-- [[regulatory-roundtable]] — concept this lesson operationalises.
-- [[medical-documentation]] — canonical case.
-- [[swissmedic]] — sectoral authority engaged via this format.
+- [[regulatory-roundtable]] - concept this lesson operationalises.
+- [[medical-documentation]] - canonical case.
+- [[swissmedic]] - sectoral authority engaged via this format.

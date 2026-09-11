@@ -1,5 +1,5 @@
 ---
-title: "Machine Translation — Recommendations for Public Administration"
+title: "Machine Translation - Recommendations for Public Administration"
 cite_as: "Machine Translation report"
 type: source
 source_type: pdf
@@ -13,11 +13,11 @@ created: 2026-05-28
 updated: 2026-06-11
 ---
 
-# Machine Translation — Recommendations for Public Administration
+# Machine Translation - Recommendations for Public Administration
 
 **Read the report:** [PDF (DE)](../pdfs/de/p1-machine-translation.pdf) · [PDF (EN)](../pdfs/en/p1-machine-translation.pdf)
 
-Phase I project report. Recommendations for public-administration adoption of MT for official documents. Examines the Swiss legal stack (cantonal IDG / federal FADP / commissioned-data-processing) when administrative text data flows through a third-party MT service. Subsequent commercial-register-extracts MT solution was successfully rolled out, including scaling with Kanton Schwyz — cited in the Build & Share booklet ([[00-overview-phase2-build-and-share]]) as a Phase I roll-out success.
+Phase I project report. Recommendations for public-administration adoption of MT for official documents. Examines the Swiss legal stack (cantonal IDG / federal FADP / commissioned-data-processing) when administrative text data flows through a third-party MT service. Subsequent commercial-register-extracts MT solution was successfully rolled out, including scaling with Kanton Schwyz - cited in the Build & Share booklet ([[00-overview-phase2-build-and-share]]) as a Phase I roll-out success.
 
 ## Provenance
 
@@ -33,8 +33,8 @@ Authors: [[raphael-von-thiessen]] (head of the Innovation Sandbox for AI, Stando
 
 ## Notable quotes
 
-- *"Machine translation must be used responsibly and with a differentiated approach."* — [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-machine-translation p. 7](../sources/p1-machine-translation.md))
-- *"Machine translation can pose reputational and liability risks for public administration. A clear and transparent indication of the possibility of errors is thus an important requirement."* — [[stephanie-volz]], [[itsl-uzh]] ([p1-machine-translation p. 8](../sources/p1-machine-translation.md))
+- *"Machine translation must be used responsibly and with a differentiated approach."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-machine-translation p. 7](../sources/p1-machine-translation.md))
+- *"Machine translation can pose reputational and liability risks for public administration. A clear and transparent indication of the possibility of errors is thus an important requirement."* - [[stephanie-volz]], [[itsl-uzh]] ([p1-machine-translation p. 8](../sources/p1-machine-translation.md))
 
 ## Use as citation
 
@@ -45,7 +45,7 @@ Authoritative source for:
 
 ## See also
 
-- [[machine-translation]] — project page.
-- [[building-permits]] — fellow "AI in administrative procedures" report; shares FADP / BV framing.
-- [[medical-documentation]] — same "AI on administrative free-text in a sensitive language context" pattern, Phase II.
-- [[ai-in-education]] — shares the cantonal-directive vs federal-FADP framing.
+- [[machine-translation]] - project page.
+- [[building-permits]] - fellow "AI in administrative procedures" report; shares FADP / BV framing.
+- [[medical-documentation]] - same "AI on administrative free-text in a sensitive language context" pattern, Phase II.
+- [[ai-in-education]] - shares the cantonal-directive vs federal-FADP framing.

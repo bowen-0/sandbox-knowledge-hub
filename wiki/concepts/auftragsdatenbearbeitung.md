@@ -16,9 +16,9 @@ The Swiss legal-technical pattern for letting a third-party AI service touch pro
 
 Per the canonical Phase I framing (see [[machine-translation]] and [[smart-parking]] for canonical instances):
 
-1. **Cantonal IDG** ([[idg-zh]]) — when a public body is the data controller.
-2. **Federal FADP/DSG** ([[dsg-fadp]]) — when a private provider is the controller.
-3. **Auftragsdatenbearbeitung contracts** — when *either* controller engages a third-party AI tool.
+1. **Cantonal IDG** ([[idg-zh]]) - when a public body is the data controller.
+2. **Federal FADP/DSG** ([[dsg-fadp]]) - when a private provider is the controller.
+3. **Auftragsdatenbearbeitung contracts** - when *either* controller engages a third-party AI tool.
 
 This three-layer stack appears in every Phase I project report. It is the canonical pre-EU-AI-Act Swiss framing for AI deployments in administrative contexts.
 
@@ -37,6 +37,6 @@ Any time:
 
 ## See also
 
-- [[dsg-fadp]] / [[idg-zh]] — the underlying statutes.
-- [[machine-translation]] — canonical Phase I source for the legal stack.
-- [[pseudonymisation]] — frequently combined with Auftragsdatenbearbeitung to reduce the data-protection surface.
+- [[dsg-fadp]] / [[idg-zh]] - the underlying statutes.
+- [[machine-translation]] - canonical Phase I source for the legal stack.
+- [[pseudonymisation]] - frequently combined with Auftragsdatenbearbeitung to reduce the data-protection surface.

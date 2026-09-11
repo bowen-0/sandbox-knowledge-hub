@@ -12,7 +12,7 @@ updated: 2026-06-24
 
 # Medical Device Regulation (MedDO, EU MDR/IVDR)
 
-The regime that turns AI software into a regulated medical device the moment it influences a medical decision. It is the densest legal cluster in the corpus, worked out in the [[medical-documentation]] report and cross-referenced by [[digital-eye-clinic]]. The Swiss *Medizinprodukteverordnung* (MepV / MedDO) mirrors the EU **MDR (2017/745)** and **IVDR**. Since the EU's mutual recognition of Swiss medical-device certification lapsed in 2021, a Class IIa-or-higher device can no longer be certified in Switzerland — it needs an EU notified body, and Switzerland unilaterally recognises the EU approval (expert box, Dr. Atanas Todorov, CMO Arcondis) [(Medical Documentation report, p. 31)](../sources/p2-medical-documentation.md) [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md).
+The regime that turns AI software into a regulated medical device the moment it influences a medical decision. It is the densest legal cluster in the corpus, worked out in the [[medical-documentation]] report and cross-referenced by [[digital-eye-clinic]]. The Swiss *Medizinprodukteverordnung* (MepV / MedDO) mirrors the EU **MDR (2017/745)** and **IVDR**. Since the EU's mutual recognition of Swiss medical-device certification lapsed in 2021, a Class IIa-or-higher device can no longer be certified in Switzerland - it needs an EU notified body, and Switzerland unilaterally recognises the EU approval (expert box, Dr. Atanas Todorov, CMO Arcondis) [(Medical Documentation report, p. 31)](../sources/p2-medical-documentation.md) [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md).
 
 ## The "medical purpose" line decides everything
 
@@ -30,7 +30,7 @@ Classification follows **MDR Annex VIII, Rule 11**: software is Class I, IIa, II
 
 ## The in-house exception
 
-A healthcare institution that manufactures and uses a device internally gets relaxed requirements under **Art. 9 MepV / Art. 9 IvDV** — but only relaxed, not waived: the software counts as placed in service, and the essential safety and performance requirements still apply in full; only the *other* MepV/IvDV requirements fall away [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md). The institution must still notify the manufactured-and-used devices before commissioning (**Art. 18 MepV / Art. 10 IvDV**), with the MDCG 2023-1 guidance applying [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md). The report states the exception precisely:
+A healthcare institution that manufactures and uses a device internally gets relaxed requirements under **Art. 9 MepV / Art. 9 IvDV** - but only relaxed, not waived: the software counts as placed in service, and the essential safety and performance requirements still apply in full; only the *other* MepV/IvDV requirements fall away [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md). The institution must still notify the manufactured-and-used devices before commissioning (**Art. 18 MepV / Art. 10 IvDV**), with the MDCG 2023-1 guidance applying [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md). The report states the exception precisely:
 
 > *"Special and facilitated requirements apply to medical devices manufactured and used in healthcare facilities (Art. 9 MedDO and 9 IvDO) ... However, the other requirements of MedDO and IvDO do not apply."* [(Medical Documentation report, p. 32)](../sources/p2-medical-documentation.md)
 
@@ -38,9 +38,9 @@ The exception falls away once the tool's output drives a treatment decision; [[d
 
 ## How the EU AI Act stacks on top
 
-For medical AI the [[eu-ai-act|EU AI Act]] is an additional layer, not a substitute. Per the report's glossary, medical AI applications *generally* count as high-risk systems, with the Act setting requirements for development, transparency, security and monitoring [(Medical Documentation report, p. 39)](../sources/p2-medical-documentation.md); the precise trigger is conditional — software classed MDR Class IIa or higher (or IVDR Class B or higher) counts as high-risk automatically [(Medical Documentation report, p. 19)](../sources/p2-medical-documentation.md). For systems that keep learning, the report points to the Act's Art. 43(4) predetermined-change-control approach [(Medical Documentation report, p. 35)](../sources/p2-medical-documentation.md). The report argues this is exactly where rigid approval logic strains, and calls for adaptive regulation:
+For medical AI the [[eu-ai-act|EU AI Act]] is an additional layer, not a substitute. Per the report's glossary, medical AI applications *generally* count as high-risk systems, with the Act setting requirements for development, transparency, security and monitoring [(Medical Documentation report, p. 39)](../sources/p2-medical-documentation.md); the precise trigger is conditional - software classed MDR Class IIa or higher (or IVDR Class B or higher) counts as high-risk automatically [(Medical Documentation report, p. 19)](../sources/p2-medical-documentation.md). For systems that keep learning, the report points to the Act's Art. 43(4) predetermined-change-control approach [(Medical Documentation report, p. 35)](../sources/p2-medical-documentation.md). The report argues this is exactly where rigid approval logic strains, and calls for adaptive regulation:
 
-> *"AI needs new regulatory approaches – flexible, risk-based, and beyond rigid approvals."* — Raphael von Thiessen [(Medical Documentation report, p. 38)](../sources/p2-medical-documentation.md)
+> *"AI needs new regulatory approaches - flexible, risk-based, and beyond rigid approvals."* - Raphael von Thiessen [(Medical Documentation report, p. 38)](../sources/p2-medical-documentation.md)
 
 ## Human oversight and documentation
 
@@ -48,15 +48,15 @@ The recurring safeguards the report recommends are the deployment side of the sa
 
 ## Projects engaging this regime
 
-- [[medical-documentation]] — the reference analysis. The anchor SME ([[mpassist]]) could not be operationally tested because data-protection requirements blocked patient-data use, so the report is pure regulatory analysis: a data-protection FAQ, the eight-use-case classification, a 13-point best-practice list, and a [[regulatory-roundtable|roundtable]] with 10+ vendors and the cantonal supervisory authority.
-- [[digital-eye-clinic]] — AI diagnostics for diabetic retinopathy; a Class IIa/IIb device that defers to the medical-documentation report for the regulatory detail.
+- [[medical-documentation]] - the reference analysis. The anchor SME ([[mpassist]]) could not be operationally tested because data-protection requirements blocked patient-data use, so the report is pure regulatory analysis: a data-protection FAQ, the eight-use-case classification, a 13-point best-practice list, and a [[regulatory-roundtable|roundtable]] with 10+ vendors and the cantonal supervisory authority.
+- [[digital-eye-clinic]] - AI diagnostics for diabetic retinopathy; a Class IIa/IIb device that defers to the medical-documentation report for the regulatory detail.
 
 ## See also
 
-- [[eu-ai-act]] — the risk-classification layer that stacks on top of this regime for medical AI.
-- [[dsg-fadp]] · [[idg-zh]] — the data-protection regime that applies in parallel wherever patient data is processed.
-- [[iso-iec-42001]] — the AI management-system standard piloted in the autonomous-systems strand; the medical strand uses ISO 13485 instead.
-- [[swissmedic]] — the Swiss supervisory authority engaged through the medical-documentation roundtable.
+- [[eu-ai-act]] - the risk-classification layer that stacks on top of this regime for medical AI.
+- [[dsg-fadp]] · [[idg-zh]] - the data-protection regime that applies in parallel wherever patient data is processed.
+- [[iso-iec-42001]] - the AI management-system standard piloted in the autonomous-systems strand; the medical strand uses ISO 13485 instead.
+- [[swissmedic]] - the Swiss supervisory authority engaged through the medical-documentation roundtable.
 
 > [!note] Citations re-anchored to the English PDFs (2026-07-28)
 > Page numbers on this page now reference `pdfs/en/p2-medical-documentation.pdf` (43 pp.) and `pdfs/en/p2-digital-eye-clinic.pdf` (32 pp.), whose pagination sits one to two pages behind the German editions (DE p. 34 → EN p. 32). Each anchor was confirmed by locating the English text on the cited page during the English-only quote sweep.

@@ -1,5 +1,5 @@
 ---
-title: "AI for Building Permits — Use Cases, Prototypes and Practical Insights"
+title: "AI for Building Permits - Use Cases, Prototypes and Practical Insights"
 cite_as: "Building Permits report"
 type: source
 source_type: pdf
@@ -18,7 +18,7 @@ priority: high
 
 **Read the report:** [PDF (DE)](../pdfs/de/p2-building-permits.pdf) · [PDF (EN)](../pdfs/en/p2-building-permits.pdf)
 
-Phase II project report — **the most recent and most concrete** report in the corpus, and the only one with a working deployed prototype and a published evaluation pipeline. Two tracks: (1) a **3,336-evaluation benchmark** across 8 frontier LLMs (gpt-5-mini, gpt-5.1, o3, gemini-3-pro-preview, gemini-2.5-flash, gemini-2.5-flash-lite, claude-opus-4.5, claude-sonnet-4.5) scored via *LLM-as-a-Judge*, and (2) a working prototype for the **notification procedure** (Meldeverfahren) for solar panels, heat pumps, and charging stations — deployed with partners [[nokema]], [[byte-studio]], [[gossweiler-ingenieure]], and [[stadt-kloten]]. Headline finding: rule-based logic outperforms generative AI for clearly-defined administrative decisions; full preliminary check costs under CHF 2 per application.
+Phase II project report - **the most recent and most concrete** report in the corpus, and the only one with a working deployed prototype and a published evaluation pipeline. Two tracks: (1) a **3,336-evaluation benchmark** across 8 frontier LLMs (gpt-5-mini, gpt-5.1, o3, gemini-3-pro-preview, gemini-2.5-flash, gemini-2.5-flash-lite, claude-opus-4.5, claude-sonnet-4.5) scored via *LLM-as-a-Judge*, and (2) a working prototype for the **notification procedure** (Meldeverfahren) for solar panels, heat pumps, and charging stations - deployed with partners [[nokema]], [[byte-studio]], [[gossweiler-ingenieure]], and [[stadt-kloten]]. Headline finding: rule-based logic outperforms generative AI for clearly-defined administrative decisions; full preliminary check costs under CHF 2 per application.
 
 ## Provenance
 
@@ -36,8 +36,8 @@ Authors: [[stephanie-volz]] (managing director, [[itsl-uzh]], University of Zuri
 
 ## Notable quotes
 
-- *"The greatest leverage of AI currently lies in improving the quality and completeness of building applications before submission."* — [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zürich ([p2-building-permits p. 7](../sources/p2-building-permits.md))
-- *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"* — [[stephanie-volz]], managing director, [[itsl-uzh]] ([p2-building-permits p. 25](../sources/p2-building-permits.md))
+- *"The greatest leverage of AI currently lies in improving the quality and completeness of building applications before submission."* - [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zürich ([p2-building-permits p. 7](../sources/p2-building-permits.md))
+- *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"* - [[stephanie-volz]], managing director, [[itsl-uzh]] ([p2-building-permits p. 25](../sources/p2-building-permits.md))
 
 ## Use as citation
 
@@ -50,6 +50,6 @@ Authoritative source for:
 
 ## See also
 
-- [[building-permits]] — project page.
-- [[machine-translation]] — fellow "AI in administrative procedures" report.
-- [[llm-as-a-judge]] / [[frontier-models]] / [[llm-benchmarks]] — concepts from this source.
+- [[building-permits]] - project page.
+- [[machine-translation]] - fellow "AI in administrative procedures" report.
+- [[llm-as-a-judge]] / [[frontier-models]] / [[llm-benchmarks]] - concepts from this source.

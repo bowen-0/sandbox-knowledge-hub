@@ -28,7 +28,7 @@ function isBlockedHost(hostname: string): boolean {
   // IPv4 loopback / private / link-local
   if (/^127\./.test(h) || /^10\./.test(h) || /^192\.168\./.test(h) || /^169\.254\./.test(h)) return true;
   if (/^172\.(1[6-9]|2\d|3[01])\./.test(h)) return true;
-  // IPv6 link-local fe80::/10 (fe80–febf), unique-local fc00::/7 (fc/fd),
+  // IPv6 link-local fe80::/10 (fe80-febf), unique-local fc00::/7 (fc/fd),
   // IPv4-mapped ::ffff:a.b.c.d (could embed a private IPv4)
   if (/^fe[89ab]/.test(h) || /^f[cd]/.test(h) || h.startsWith("::ffff:")) return true;
   return false;

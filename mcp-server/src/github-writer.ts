@@ -51,7 +51,7 @@ function encodeRepoPath(p: string): string {
 
 /**
  * Defence in depth: the server validates the path before calling this, but the
- * writer is generic — reject traversal/empty segments here too so a future
+ * writer is generic - reject traversal/empty segments here too so a future
  * caller can never escape the repo. encodeURIComponent does NOT neutralise "..".
  */
 function assertSafeRepoPath(p: string): void {

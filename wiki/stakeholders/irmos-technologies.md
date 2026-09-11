@@ -11,7 +11,7 @@ updated: 2026-06-10
 
 # irmos technologies
 
-Swiss vendor of sensor-based structural-monitoring systems. Project-submission partner for the Phase II [[bridge-monitoring]] sandbox engagement — examined how data-driven monitoring with AI can improve decision-making for infrastructure operations, maintenance, and investment.
+Swiss vendor of sensor-based structural-monitoring systems. Project-submission partner for the Phase II [[bridge-monitoring]] sandbox engagement - examined how data-driven monitoring with AI can improve decision-making for infrastructure operations, maintenance, and investment.
 
 ## Role in the sandbox
 
@@ -21,6 +21,6 @@ After the originally planned municipal-footbridge implementation partner withdre
 
 ## See also
 
-- [[bridge-monitoring]] — the project.
-- [[sob]] — operational test partner after the original pivot.
-- [[partner-bottleneck]] — `bridge-monitoring` is the canonical instance of the partner-withdrawal-and-pivot pattern.
+- [[bridge-monitoring]] - the project.
+- [[sob]] - operational test partner after the original pivot.
+- [[partner-bottleneck]] - `bridge-monitoring` is the canonical instance of the partner-withdrawal-and-pivot pattern.
