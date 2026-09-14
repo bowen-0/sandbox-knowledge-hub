@@ -6,7 +6,7 @@ export interface WikiPage {
    * Page type: the folder it lives in, singular ("project", "concept",
    * "regulation", "stakeholder", "lesson", "source", "synthesis"),
    * or "meta" for the root files (index, README, QUERY, INGEST,
-   * CONVENTIONS, CONTRIBUTING).
+   * CONVENTIONS).
    */
   type: string;
   /** Path relative to the wiki root, e.g. "lessons/integrate-regulation-early.md". */
@@ -51,5 +51,4 @@ export const META_PAGES = [
   "QUERY",
   "INGEST",
   "CONVENTIONS",
-  "CONTRIBUTING",
 ] as const;

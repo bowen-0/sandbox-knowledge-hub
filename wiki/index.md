@@ -277,7 +277,7 @@ This is a heuristic for AI consumers, not a constraint on browsing - users navig
 
 ## Open areas (gaps the wiki currently doesn't cover)
 
-These are deliberate stubs - known places where the wiki can grow. Contributions welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+These are deliberate stubs - known places where the wiki can grow.
 
 - **Concepts** - `edge-computing`, `bias-audit`, additional sector-specific concepts from individual reports.
 - **Stakeholders** - remaining named partners + specialist support people: spross-stiftung, stadtspital-zuerich-augenklinik, gogymi, plus the FHNW/HSG specialist support people from [[building-permits]] (Walzer, Meyer, Klingler, Jost, Hüppin, Baldwin, Louis, Späti, Schneider, Arnold, Polach).

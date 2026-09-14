@@ -153,7 +153,7 @@ Quotation marks are reserved for character-exact EN-edition text; everything out
    - Every substantive claim in every new page traces to `<source-slug>#page-N` (frontmatter) / `p. N` (inline), page numbers verified against the official English edition
    - No `#para-N` anchors anywhere - the paragraph pipeline is dormant (CONVENTIONS §6)
 
-5. **Run the lint pass** - `node scripts/lint.mjs` from the repo root (see [`CONTRIBUTING.md`](CONTRIBUTING.md) for one-time setup). It checks broken wikilinks, orphans, missing required frontmatter, hand-written `#para-N` anchors, unfenced `both` pages, and index coverage. Fix what it flags before committing.
+5. **Run the lint pass** - `node scripts/lint.mjs` from the repo root (one-time setup: `cd mcp-server && npm install && npm run build`). It checks broken wikilinks, orphans, missing required frontmatter, hand-written `#para-N` anchors, unfenced `both` pages, and index coverage. Fix what it flags before committing.
 
 6. **Suggest a commit**. Per CLAUDE.md, commits are deliberate - `git add` specific paths, not `-A`. List the new and updated files; let the user pick the boundary. A typical sandbox-report ingest is one commit; a multi-source synthesis run is often two.
 
