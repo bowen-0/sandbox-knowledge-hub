@@ -16,7 +16,7 @@ connects:
   - open-source-as-procurement-alternative
   - phase-2-cross-cutting-principles
 created: 2026-06-25
-updated: 2026-06-25
+updated: 2026-09-29
 ---
 
 # Portfolio gaps and open questions - what the Sandbox has not (yet) resolved
@@ -33,7 +33,7 @@ Two distinctions govern how to read what follows. First, a gap can be a *topic t
 
 The corpus is strong on getting a system *to* deployment and weak on running it *after*. Every executed pilot was a test, not a sustained operation: [[digital-eye-clinic]], [[building-permits]] and [[bridge-monitoring]] reached real-world testing, but none was operated, monitored, updated and maintained over a service life within the Sandbox window. The pilot-to-production gap is named as an integration problem (*integration matters more than model choice*, [[integration-matters-more-than-model-choice]]) [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md), but what happens *past* go-live is barely surfaced.
 
-The closest the evidence comes is regulatory rather than operational. The [[medical-documentation]] report, analysing continuously-learning systems, recognises the need for ongoing post-deployment monitoring: *"Continuous learning systems therefore require particularly careful monitoring and clear designation of responsibilities during operation."* [(Medical Documentation report, p. 13)](../sources/p2-medical-documentation.md) That is a recognised obligation, not a documented practice; the [[eu-ai-act|EU AI Act]]'s predetermined-change-control expectation sits in the same place. How an administration actually monitors drift, schedules retraining, versions a model, or retires one is not worked out by any pilot.
+The closest the evidence comes is regulatory rather than operational. The [[medical-documentation]] report, analysing continuously-learning systems, recognises the need for ongoing post-deployment monitoring: *"Continuous learning systems therefore require particularly careful monitoring and clear designation of responsibilities during operation."* [(Medical Documentation report, p. 13)](../sources/p2-medical-documentation.md) That is a recognised obligation, not a documented practice; the [[eu-ai-act|EU AI Act]]'s predetermined-change-control expectation sits in the same place (wiki synthesis, not a statement in the reports). How an administration actually monitors drift, schedules retraining, versions a model, or retires one is not worked out by any pilot.
 
 > [!gap] Lifecycle is named as a requirement, not demonstrated
 > No pilot in the corpus documents the post-deployment phase - monitoring, model updating, maintenance, drift detection, decommissioning. The medical-documentation analysis flags the *need* for it; observed operational practice is absent. A reader planning for total cost of ownership or a maintenance regime will not find a worked example here.
@@ -48,7 +48,7 @@ The corpus treats data access richly *within* a single pilot's boundary - whose 
 
 ### Measuring real-world impact beyond technical performance
 
-Where pilots measured, they measured technical quality - accuracy, the thousands of test runs and [[building-permits|LLM-as-a-judge evaluation]] in building permits, expert ophthalmologist validation in the eye clinic [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Downstream real-world impact is largely unmeasured: realised efficiency or quality gains in service, effects on staff workload, user satisfaction over time, unintended consequences. Because the executed pilots stopped at testing rather than sustained operation, the data needed to measure operational impact was never generated.
+Where pilots measured, they measured technical quality - accuracy, the thousands of test runs and [[building-permits|LLM-as-a-judge evaluation]] in building permits, expert ophthalmologist validation in the eye clinic [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). Downstream real-world impact is largely unmeasured: realised efficiency or quality gains in service, effects on staff workload, user satisfaction over time, unintended consequences. Because the executed pilots stopped at testing rather than sustained operation, the data needed to measure operational impact was never generated. This reading of what went unmeasured, and why, is wiki synthesis, not a statement in the reports.
 
 ### Procurement, vendor selection, and avoiding provider dependency
 
@@ -61,7 +61,7 @@ That is a single procurement decision in one clinical context, not a transferabl
 
 ### Increasingly autonomous or agentic AI
 
-Phase I centred on computer vision; Phase II deliberately shifted to generative AI, but only after waiting out the first broad chatbot rollout so the work could be reflective - *"This expansion was deliberately timed after the initial widespread market introduction of chatbots, enabling a more reflective and practice-oriented application of the technology."* [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md) The portfolio's only "autonomous" strand is physical-robotic: [[inspection-robots]], analysed for the interaction of the EU AI Act with the [[machinery-regulation|Machinery Regulation]] for market access. Agentic AI in the current sense - systems that plan and act across steps with limited human intervention - is not a subject any pilot examines. The oversight and accountability questions specific to increasingly autonomous software agents are outside the evidence base.
+Phase I centred on computer vision; Phase II deliberately shifted to generative AI, but only after waiting out the first broad chatbot rollout so the work could be reflective - *"This expansion was deliberately timed after the initial widespread market introduction of chatbots, enabling a more reflective and practice-oriented application of the technology."* [(Build & Share (Phase II overview report), p. 5)](../sources/00-overview-phase2-build-and-share.md) The portfolio's only "autonomous" strand is physical-robotic: [[inspection-robots]], analysed for the interaction of the EU AI Act with the [[machinery-regulation|Machinery Regulation]] for market access. That reading of the portfolio is wiki synthesis, not a statement in the reports. Agentic AI in the current sense - systems that plan and act across steps with limited human intervention - is not a subject any pilot examines. The oversight and accountability questions specific to increasingly autonomous software agents are outside the evidence base.
 
 ### Resilience, continuity, and digital sovereignty
 
@@ -74,12 +74,12 @@ The Sandbox classifies submissions into seven sectors: mobility, autonomous syst
 - **Financial services** - the one partial case. A *«KI-basierter Finanzassistent»* (an AI-based financial assistant - translation ours; the entry appears only in the German edition's figure) appeared among the 24 submissions, but classified under "Other", not selected for execution [(Build & Share (Phase II overview report), p. 6)](../sources/00-overview-phase2-build-and-share.md). Finance is then named in the Phase II outlook as a future thematic-call priority: targeted calls aligned with prioritised thematic areas, *"such as the financial sector, which is of particular relevance to the Zurich economic region"* [(Build & Share (Phase II overview report), p. 23)](../sources/00-overview-phase2-build-and-share.md). So finance is recognised and on the roadmap, but the evidence base holds no finance pilot.
 - **Security and law enforcement** - absent.
 - **Justice and courts** - absent.
-- **Social services and welfare** - absent. (A submitted but unexecuted "Chatbot für Umwelt und Soziales" sits in public administration, not a welfare-decision use case.)
+- **Social services and welfare** - absent. (A submitted but unexecuted "chatbot for environment and social affairs" sits in public administration, not a welfare-decision use case [(Build & Share (Phase II overview report), p. 6)](../sources/00-overview-phase2-build-and-share.md).)
 - **HR and workforce management** - absent.
 - **Defence** - absent.
 
 > [!gap] Absent sectors are evidentiary blanks, not implicit judgements
-> The corpus says nothing about AI in finance, policing, courts, welfare, HR, or defence. Their absence reflects which use cases were submitted and selected, not a Sandbox finding that AI is unsuited to them. A reader in one of these sectors should treat the corpus as silent - neither encouraging nor discouraging - and should not transplant a construction or healthcare finding into, say, a rights-affecting justice or welfare decision without fresh analysis.
+> The corpus says nothing about AI in finance, policing, courts, welfare, HR, or defence. Their absence reflects which use cases were submitted and selected, not a Sandbox finding that AI is unsuited to them. A reader in one of these sectors should treat the corpus as silent - neither encouraging nor discouraging - and should not transplant a construction or healthcare finding into, say, a rights-affecting justice or welfare decision without fresh analysis. This reading of the absence, and the advice that follows from it, is wiki synthesis, not a statement in the reports.
 
 ## Where these gaps sit in the evidence
 

@@ -16,7 +16,7 @@ freshness: 2026-05
 applies_to_lifecycle_stage: [deployment]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-09-29
 ---
 
 # New ways of working with AI require active change management
@@ -26,6 +26,8 @@ From [[00-overview-phase2-build-and-share]] §04 Organisation:
 > *"New ways of working require active management: AI reshapes existing processes and roles. Acceptance is fostered through transparent communication, training, and the involvement of employees (e.g. drone inspections as a complement to manual runway inspections)."* [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md)
 
 ## What it means in practice
+
+What follows is wiki synthesis, not a statement in the reports.
 
 AI doesn't replace people 1:1. It changes:
 

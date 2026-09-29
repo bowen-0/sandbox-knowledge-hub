@@ -16,7 +16,7 @@ freshness: 2026-05
 applies_to_lifecycle_stage: [scoping, deployment]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-09-29
 ---
 
 # The interface between domain expertise and technology is critical
@@ -36,6 +36,8 @@ Pure technical excellence with no domain integration → impressive demos, opera
 - **[[medical-documentation]]** - the regulatory roundtable format ([[regulatory-roundtable]]) is itself an instance of this principle: AI providers + supervisory authority + domain practitioners co-present.
 
 ## The translation-layer person
+
+What follows is wiki synthesis, not a statement in the reports.
 
 A specific role recurs: someone who is *fluent in both domain and technology* and serves as the translation layer. Individual projects often have such a person on the partner side. Without this person, projects stall at translation friction.
 

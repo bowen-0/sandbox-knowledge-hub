@@ -14,7 +14,7 @@ freshness: 2026-05
 applies_to_lifecycle_stage: [scoping, procurement]
 cross_cutting: true
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-09-29
 ---
 
 # Combine frontier models and open-source solutions strategically
@@ -36,7 +36,7 @@ The booklet does **not** prescribe one-or-the-other. It prescribes *deliberate c
 | Auditability + modifiability required | Open-source |
 | Latency-sensitive at the edge | Open-source, edge-deployed |
 
-[[digital-eye-clinic]] is the canonical example - open-source platform because hospital data cannot leave the institution. [[building-permits]] is the inverse - frontier-model benchmark because the prototype tests the absolute capability ceiling. [[medical-documentation]] sits in the middle - providers will likely deploy hybrid configurations as the use case scales.
+[[digital-eye-clinic]] is the canonical example - open-source platform because hospital data cannot leave the institution. [[building-permits]] is the inverse - frontier-model benchmark because the prototype tests the absolute capability ceiling. [[medical-documentation]] sits in the middle - providers will likely deploy hybrid configurations as the use case scales. The table and these three readings are wiki synthesis, not a statement in the reports.
 
 ## How to apply
 

@@ -19,7 +19,7 @@ confidence: medium
 freshness: 2026-05
 applies_to_lifecycle_stage: [procurement, deployment]
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-09-29
 ---
 
 # Open-source AI is a viable procurement alternative when commercial doesn't fit
@@ -42,7 +42,7 @@ When evaluating commercial vs. open-source AI procurement, weigh:
 3. **Modifiability** - can you adapt the system as the use case evolves? (Critical for emerging or specialised domains.)
 4. **EMBAG obligations** - if you're a Swiss public administration, [[embag]] presumes open-source disclosure of administrative software [(Building Permits report, p. 24)](../sources/p2-building-permits.md).
 
-Open-source is not a default; it's a tool that wins under specific constraints. The [[digital-eye-clinic]] decision was forced, not preferred [(Digital Eye Clinic report, p. 18)](../sources/p2-digital-eye-clinic.md).
+Open-source is not a default; it's a tool that wins under specific constraints (wiki synthesis, not a statement in the reports). The [[digital-eye-clinic]] decision was forced, not preferred [(Digital Eye Clinic report, p. 18)](../sources/p2-digital-eye-clinic.md).
 
 ## See also
 
