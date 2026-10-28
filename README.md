@@ -4,7 +4,7 @@
 
 > **Status: feasibility study.** This repository demonstrates that the sandbox's published reports can be restructured into an AI-readable knowledge base - it is not a finished product. Answer quality has not been systematically assured and the system has not been red-teamed, so use is at your own risk: verify anything that matters against the cited report page. The primary goal is to share the insights gained while building it. Given significant interest, it could be developed into a fully supported resource at a later stage.
 
-The sandbox has run pilots across two phases: building permits, medical documentation, autonomous inspection robots, bridge monitoring, machine translation, and more. Each produced a detailed report. Those reports hold hard-won knowledge about deploying AI under Swiss and EU law - and about running a regulatory sandbox at all. This repository restructures that knowledge so it can be read by AI systems, not just people.
+Across its first two completed phases (2022-2026), the Canton of Zurich’s Innovation Sandbox for AI carried out ten projects, covering applications such as AI-assisted building permit checks, medical documentation, autonomous inspection robots, bridge monitoring and machine translation. Each project produced a public report documenting practical findings on technical, legal and organisational challenges, including Swiss and EU regulatory requirements where relevant. Two overarching reports also capture lessons on designing and operating the sandbox itself. This repository transforms these publications into a structured, AI-readable knowledge base, making their insights easier for AI assistants to retrieve, interpret and apply.
 
 ## Read it in the browser
 
@@ -13,6 +13,10 @@ The sandbox has run pilots across two phases: building permits, medical document
 The whole corpus as a browsable site: full-text search, every claim linked to the report page it came from, and a graph of how the pages connect. Nothing to install, and no AI assistant needed. This is the readable version; the rest of this page is for connecting it to your own systems.
 
 ![The Knowledge Hub as a browsable site: left-hand navigation, a page of prose with each claim citing its report and printed page, and a graph of linked pages on the right.](.github/site-preview.png)
+
+## Retrospective
+
+The sandbox team's [retrospective](RETROSPECTIVE.md) on this feasibility study: the approach, six lessons from building the wiki, and what the study does and does not show.
 
 ## Who this is for
 
