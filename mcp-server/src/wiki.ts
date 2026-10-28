@@ -243,6 +243,7 @@ export class WikiStore {
 
     const hits: SearchHit[] = [];
     for (const p of await this.pages()) {
+      if (p.slug === "index") continue; // returned in full by wiki_overview
       if (opts.type && p.type !== normalizeType(opts.type)) continue;
       if (opts.insight_domain && p.frontmatter.insight_domain !== opts.insight_domain) continue;
 

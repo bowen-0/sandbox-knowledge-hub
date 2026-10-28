@@ -76,6 +76,14 @@ describe("WikiStore on the real wiki", () => {
     expect(await store.search("of the und der")).toEqual([]);
   });
 
+  it("search leaves out the index page, which wiki_overview returns in full", async () => {
+    for (const q of ["AI pilot", "how do I start an AI pilot", "pilot reports"]) {
+      const hits = await store.search(q);
+      expect(hits.length).toBeGreaterThan(0);
+      expect(hits.map((h) => h.slug)).not.toContain("index");
+    }
+  });
+
   it("search matches short terms on word boundaries ('act' must not hit 'practice')", async () => {
     const hits = await store.search("act");
     for (const h of hits) {
