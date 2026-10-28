@@ -8,6 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      "Use with an AI assistant": "https://github.com/bowen-0/sandbox-knowledge-hub#use-it",
       "Code on GitHub": "https://github.com/bowen-0/sandbox-knowledge-hub",
       "Innovation Sandbox": "https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html",
     },

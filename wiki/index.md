@@ -6,6 +6,9 @@
 
 ---
 
+> [!info] About this site
+> This is the reading view of the Sandbox Knowledge Hub, a feasibility study built on the Canton of Zurich Innovation Sandbox's published reports. The pages are also built for AI assistants. Connected through the hub's MCP server, an assistant can answer questions across all the reports and cite the page each claim comes from. [How to connect one](https://github.com/bowen-0/sandbox-knowledge-hub#use-it)
+
 ## ★ Start here - Cross-cutting Phase II principles
 
 For general queries (*"what are the key lessons?"*, *"how do I scope an AI pilot?"*, *"what should I know before doing this?"*), the highest-priority entry point is:
