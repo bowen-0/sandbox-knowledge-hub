@@ -26,7 +26,7 @@ The corpus serves **two audiences**, and every lesson and synthesis page declare
 | [`concepts/`](concepts/)         | Reusable ideas / vocabulary (data-access, pseudonymisation, edge-computing, intrapreneurship…)                                                                                                                        | `type: concept`, `related[]`                                                     |
 | [`regulations/`](regulations/)   | Legal instruments (DSG, EU AI Act, FADP, EU Machinery Reg, ISO/IEC 42001…)                                                                                                                                            | `type: regulation`, `jurisdiction`, `domain[]`                                   |
 | [`stakeholders/`](stakeholders/) | People and organisations (DPO, ITSL-UZH, Stephanie Volz, MPAssist, ANYbotics…)                                                                                                                                        | `type: stakeholder`, `kind` (person / org), `partner_role[]`                     |
-| [`lessons/`](lessons/)           | Atomic, transferable lessons. The unit the future generator surfaces.                                                                                                                                                 | `type: lesson`, `project[]`, `concept[]`, `sources[]`, `confidence`, `freshness` |
+| [`lessons/`](lessons/)           | Atomic, transferable lessons.                                                                                                                                                 | `type: lesson`, `project[]`, `concept[]`, `sources[]`, `confidence`, `freshness` |
 | [`sources/`](sources/)           | One page per source artefact (PDF, URL, paper, video, transcript…). The citation backbone.                                                                                                                            | `type: source`, `source_type`, `path` *or* `url`, `language`, `year`             |
 | [`synthesis/`](synthesis/)       | Cross-cutting patterns. Pages that weave multiple primary entries together.                                                                                                                                           | `type: synthesis`, `connects[]`                                                  |
 | [`pdfs/`](pdfs/)                 | The original source PDFs themselves, organised by language (`pdfs/de/`, `pdfs/en/`). Static assets, not pages - linked from each `sources/<slug>.md` via `path:` / `en_path:` and an inline **Read the report** link. | (binary assets - no frontmatter)                                                 |
@@ -68,7 +68,6 @@ The canonical procedure lives in [`INGEST.md`](INGEST.md) - the four-phase READ 
 2. Create `concepts/<slug>.md` with `type: concept`, a one-paragraph definition, and `related[]` to nearby concepts.
 3. If the concept comes from the booklet glossary, mark `canonical_source:` to the relevant page in the booklet - these definitions are authoritative.
 
-If you're unsure which type a page should be, **open an issue** using the "Propose a new concept/tag" template (`.github/ISSUE_TEMPLATE/`). Patterns we haven't seen yet are the patterns worth talking about.
 
 ---
 

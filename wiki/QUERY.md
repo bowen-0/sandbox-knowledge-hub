@@ -85,13 +85,13 @@ If your synthesis surfaces a pattern that doesn't yet exist as a page but probab
 
 ## Answer principles - the quality bar
 
-The client supplied 13 principles for what makes a good answer (the full list is in the validation set). The procedure above carries some of them structurally; the rest live here, in the answering layer. Hold all of them when you compose. The ones that need active discipline:
+The sandbox team supplied 13 principles for what makes a good answer. The procedure above carries some of them structurally; the rest live here, in the answering layer. Hold all of them when you compose. The ones that need active discipline:
 
 **P1 - Contextualise before answering.** Open by framing what the answer draws on: one report or many, a single project or the portfolio, a direct answer or a partial one. *"The Sandbox has not addressed this directly, but three healthcare projects provide relevant evidence."* One sentence, up front.
 
 **P2 - Be transparent about coverage.** Sort every question into directly-addressed / partially-answerable / outside-the-evidence-base, and say which. It is correct to say *"The reports do not provide enough evidence to answer this conclusively."* Never present speculation as fact. If you bound the answer, say what you left out and why.
 
-**P5 - Stay neutral, and proportionate.** Explain what the corpus shows; do not promote, defend, or criticise the Sandbox (see Voice, below). For the advocacy-shaped questions - *what makes this different* and *the minister pitch* - present strengths **and** limitations proportionately. The pages [[what-makes-this-sandbox-different]] and [[economic-case-for-the-sandbox]] carry a standing limitations note for exactly this reason; keep it in the answer, don't strip it.
+**P5 - Stay neutral, and proportionate.** Explain what the corpus shows; do not promote, defend, or criticise the Sandbox (see Voice, below). For the advocacy-shaped questions - *what makes this different* and *the economic case* - present strengths **and** limitations proportionately. The pages [[what-makes-this-sandbox-different]] and [[economic-case-for-the-sandbox]] carry a standing limitations note for exactly this reason; keep it in the answer, don't strip it.
 
 **P7 - Preserve nuance and uncertainty.** Where the evidence is mixed or thin, say so; don't round to a binary. The structural signal for this is the `confidence:` field on lessons (`high` / `medium` / `low`) - a `low`-confidence lesson is a single-source or interpretive claim and should be presented as such. Differences across projects are signal, not noise: surface them.
 
@@ -105,13 +105,13 @@ The client supplied 13 principles for what makes a good answer (the full list is
 
 **P14 - Be temporally aware.** Findings are tied to a point in time; the technology and the regulation both move. Phase II evidence reflects 2024-2026 practice and later work may supersede it. Where a claim is time-bound, caveat it: *"This reflects the state of practice during Phase II and may evolve."* The `freshness:` field and `> [!update-needed]` callouts mark where this bites.
 
-P3 (link statements to sources), P4 (distinguish synthesis from evidence), P6 (stay in scope), P10 is skipped in the client's numbering, and P13 (surface disagreement / trade-offs) are already carried by the Procedure's citation, synthesis-labelling, scope, and `> [!tension]` conventions above.
+P3 (link statements to sources), P4 (distinguish synthesis from evidence), P6 (stay in scope), P10 is skipped in the original numbering, and P13 (surface disagreement / trade-offs) are already carried by the Procedure's citation, synthesis-labelling, scope, and `> [!tension]` conventions above.
 
 ---
 
 ## Voice - neutral knowledge-transfer, not recruitment
 
-The source corpus is published by the Canton of Zurich's sandbox programme, so many pages carry an implicit "here's what the sandbox can offer you" tone. **Neutralise this when synthesising.** The default voice is *explaining what the corpus shows*, not *recommending sandbox engagement*. Prefer:
+The source corpus is published by the Canton of Zurich's sandbox programme, so some passages read as an invitation to the programme. **Keep to a neutral voice when synthesising.** The default voice is *explaining what the corpus shows*, not *recommending sandbox engagement*. Prefer:
 
 - The finding itself, citation attached (*answer forward*, per Step 3) - or, where a frame is needed, *"The corpus shows…"* · *"The booklet found…"*. Source-as-subject (*"[[digital-eye-clinic]] established that…"*) is for when the source itself is the point.
 
@@ -201,5 +201,5 @@ The procedure is identical across all four. What differs is whether you can fetc
 ## What this file is not
 
 - Not a UI spec. The wiki is the substrate; UIs sit on top. This file tells consumers how to *use* the substrate, not how to *render* it.
-- Not enforcement. The lint pass (when it exists) checks structural conventions, not voice. Voice is upheld by readers and reviewers.
+- Not enforcement. The lint pass (`scripts/lint.mjs`) checks structural conventions, not voice. Voice is upheld by readers and reviewers.
 - Not exhaustive. New failure modes - when they recur - should be added to the *Don'ts* list. New citation patterns should be added to *Examples*. Keep the procedure to four steps.

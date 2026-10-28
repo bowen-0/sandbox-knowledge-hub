@@ -231,7 +231,7 @@ Our four top-level categories - **Technology & Data**, **Regulation**, **Organis
 - [[regulatory-learnings]] - what the Sandbox taught about AI regulation *(Q8)*.
 - [[what-makes-this-sandbox-different]] - vs. accelerator / regulatory sandbox *(Q9)*.
 - [[scaling-constraints]] - what limited scaling *(Q10)*.
-- [[economic-case-for-the-sandbox]] - the minister pitch *(Q11)*.
+- [[economic-case-for-the-sandbox]] - the economic case *(Q11)*.
 
 ---
 
@@ -285,4 +285,3 @@ These are deliberate stubs - known places where the wiki can grow.
 - **Regulations** - sector-specific instruments: ÖREB cadastre framework, sectoral healthcare law beyond the device regime. *(MDR / IVDR now covered in [[medical-device-regulation]].)*
 - **Synthesis** - additional themes: `healthcare-pilot-scoping`, `real-world-testing-vs-analysis-only` (sandbox outcome class chooser), `intrapreneurship-as-public-sector-procurement`. *(Maturity, anti-patterns, portfolio-gaps and the Q8-Q11 programme views are now built - see the spine navigation above.)*
 
-If you pick up one of these, link your PR to issue tag `wiki:expansion`.

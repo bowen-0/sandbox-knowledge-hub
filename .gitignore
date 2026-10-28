@@ -1,7 +1,7 @@
 .DS_Store
 .obsidian/
 
-# Internal engagement context - never publish
+# Local working notes
 internal/
 node_modules/
 dist/
