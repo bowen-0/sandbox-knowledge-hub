@@ -1,13 +1,17 @@
-# Wiki Index
-
-> Auto-navigable inventory of every page in the wiki. Organised by retrieval priority first, then by type, phase, and sector.
->
-> **Maintenance**: maintained by hand; `scripts/lint.mjs` warns when a page is missing from this index. There is no size limit on the wiki - if hand-maintenance ever becomes painful, the index can be regenerated from frontmatter.
-
+---
+title: AI pilot reports from the Canton of Zurich
+description: The Canton of Zurich Innovation Sandbox's AI pilot reports as a searchable knowledge base, with findings linked to the report page they come from.
+socialImage: og-home.png
 ---
 
 > [!info] About this site
-> This is the reading view of the Sandbox Knowledge Hub, a feasibility study built on the Canton of Zurich Innovation Sandbox's published reports. The pages are also built for AI assistants. Connected through the hub's MCP server, an assistant can answer questions across all the reports and cite the page each claim comes from. [How to connect one](https://github.com/bowen-0/sandbox-knowledge-hub#use-it)
+> Browse or search the published reports of the Canton of Zurich's Innovation Sandbox for AI, reorganised into connected pages. Findings link back to the report page they come from.
+>
+> You can also add this knowledge base to an AI assistant such as Claude or ChatGPT, then ask it questions across all the reports and get answers with the report pages cited. [How to connect it](https://github.com/bowen-0/sandbox-knowledge-hub#use-it)
+>
+> This is a feasibility study, not a finished product. Some notes further down are written for AI assistants rather than human readers.
+
+Below is every page in the knowledge base, with the most useful starting points first, then grouped by type, phase and sector.
 
 ## ★ Start here - Cross-cutting Phase II principles
 
@@ -288,3 +292,6 @@ These are deliberate stubs - known places where the wiki can grow.
 - **Regulations** - sector-specific instruments: ÖREB cadastre framework, sectoral healthcare law beyond the device regime. *(MDR / IVDR now covered in [[medical-device-regulation]].)*
 - **Synthesis** - additional themes: `healthcare-pilot-scoping`, `real-world-testing-vs-analysis-only` (sandbox outcome class chooser), `intrapreneurship-as-public-sector-procurement`. *(Maturity, anti-patterns, portfolio-gaps and the Q8-Q11 programme views are now built - see the spine navigation above.)*
 
+---
+
+**Maintenance**: maintained by hand; `scripts/lint.mjs` warns when a page is missing from this index. There is no size limit on the wiki - if hand-maintenance ever becomes painful, the index can be regenerated from frontmatter.

@@ -64,5 +64,5 @@ A technically functioning system is therefore not the same as an assured knowled
 
 An important objective of the project is to make the learning itself reusable. For this reason, both the current LLM Wiki and the approaches, conventions and processes developed while building it are publicly available on GitHub. This allows other public organisations, researchers and developers interested in making existing knowledge more accessible to AI systems to build on the experiment, test different approaches and hopefully avoid having to start from scratch.
 
-- **Read the knowledge base:** <https://bowen-0.github.io/sandbox-knowledge-hub>. A searchable website with every page, each claim linked to the report page it comes from. Nothing to install.
+- **Read the knowledge base:** <https://bowen-0.github.io/sandbox-knowledge-hub>. A searchable website with every page, and findings linked to the report page they come from. Nothing to install.
 - **Connect it to your AI assistant:** <https://github.com/bowen-0/sandbox-knowledge-hub#use-it>. Step-by-step instructions for adding it to Claude or ChatGPT, so the assistant can answer questions across all the reports and cite the page each answer comes from. The page also documents the approach and processes described above.

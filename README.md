@@ -3,7 +3,7 @@
 **The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published pilot reports, restructured into a navigable, citable, AI-ready wiki.
 
 <h3 align="center"><a href="https://bowen-0.github.io/sandbox-knowledge-hub">Browse the knowledge hub →</a></h3>
-<p align="center">Read it in your browser, with search and every claim linked to its report page.<br>Nothing to install, and no AI assistant needed.</p>
+<p align="center">Read it in your browser, with search and findings linked to the report page they come from.<br>Nothing to install, and no AI assistant needed.</p>
 
 > **Status: feasibility study.** This repository demonstrates that the sandbox's published reports can be restructured into an AI-readable knowledge base - it is not a finished product. Answer quality has not been systematically assured and the system has not been red-teamed, so use is at your own risk: verify anything that matters against the cited report page. The primary goal is to share the insights gained while building it. Given significant interest, it could be developed into a fully supported resource at a later stage.
 
@@ -13,7 +13,7 @@ Across its first two completed phases (2022-2026), the Canton of Zurich’s Inno
 
 [![The Knowledge Hub as a browsable site: left-hand navigation, a page of prose with each claim citing its report and printed page, and a graph of linked pages on the right.](.github/site-preview.png)](https://bowen-0.github.io/sandbox-knowledge-hub)
 
-**[Open the knowledge hub](https://bowen-0.github.io/sandbox-knowledge-hub)** at bowen-0.github.io/sandbox-knowledge-hub. The whole corpus as a browsable site: full-text search, every claim linked to the report page it came from, and a graph of how the pages connect. This is the readable version; the rest of this page is for connecting it to your own systems.
+**[Open the knowledge hub](https://bowen-0.github.io/sandbox-knowledge-hub)** at bowen-0.github.io/sandbox-knowledge-hub. The whole corpus as a browsable site: full-text search, findings linked to the report page they come from, and a graph of how the pages connect. This is the readable version; the rest of this page is for connecting it to your own systems.
 
 ## Retrospective
 
@@ -31,9 +31,7 @@ Technical experts: developers, AI engineers, and knowledge-base operators. The s
 
 ## Use it
 
-**Browse.** Start at [`wiki/index.md`](wiki/index.md) - the full inventory, organised by retrieval priority. Or open the `wiki/` folder in [Obsidian](https://obsidian.md) and use the graph view.
-
-**Integrate it into your own assistant (MCP).** The hosted MCP server is the integration point: it plugs the corpus into any MCP-capable assistant or agent with one URL. No install, no API key; it is read-only over reports that are already public:
+**Connect it to your AI assistant (MCP).** The hosted MCP server is the integration point: it plugs the corpus into any MCP-capable assistant or agent with one URL. No install, no API key; it is read-only over reports that are already public:
 
 ```
 https://sandbox-knowledge-hub-mcp.bowen-9cc.workers.dev/mcp
@@ -50,6 +48,8 @@ Add it as a **custom connector** (most assistants require a paid plan to add one
 Then ask a real question - e.g. *"We're considering AI to pre-check permit applications; what would we need before launching a pilot?"* - and the answer should come back grounded in the reports, with the source page cited. Spot-check the cited page: answer quality is not yet systematically assured (see the status note above).
 
 Six read-only tools (overview, list, read, search, graph connections, citation resolution), plus the answering procedure as a resource. To run it locally (stdio) or self-host instead: [`mcp-server/README.md`](mcp-server/README.md).
+
+**Browse.** Start at [`wiki/index.md`](wiki/index.md) - the full inventory, organised by retrieval priority. Or open the `wiki/` folder in [Obsidian](https://obsidian.md) and use the graph view.
 
 **Work on it with an AI agent.** Open this repo in Claude Code or Cowork: the `query` and `ingest` skills load automatically from `wiki/.claude/skills/`, so the corpus can be queried ("what does the corpus say about data access in healthcare?") and extended ("ingest this new report") from chat, with the wiki's citation discipline built in.
 
