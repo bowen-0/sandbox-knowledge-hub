@@ -38,10 +38,9 @@ jobs:
       - name: Validate server and worker compatibility
         working-directory: mcp-server
         run: |
-          npm run typecheck
+          npm run build
           npm run typecheck --workspace sandbox-knowledge-hub-mcp-worker
           npm test
-          npm run build
           npm run test:http
       - name: Note when deploy is skipped
         if: env.CLOUDFLARE_API_TOKEN == ''

@@ -102,9 +102,8 @@ Deploy both workers at once: `cd worker && npm run deploy:all`.
 
 ```bash
 npm test                  # vitest: unit + end-to-end over the real wiki
-npm run typecheck
-npm run typecheck --workspace sandbox-knowledge-hub-mcp-worker
 npm run build
+npm run typecheck --workspace sandbox-knowledge-hub-mcp-worker
 npm run test:http         # local Workers: modern + legacy, auth, citations
 npm run dev               # stdio server from TypeScript source (tsx)
 ```
