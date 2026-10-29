@@ -1,4 +1,4 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { McpServer } from "@modelcontextprotocol/server";
 import { z } from "zod";
 import { WikiStore } from "./wiki.js";
 import { validatePage } from "./validate.js";
@@ -8,7 +8,7 @@ import type { WikiWriter } from "./github-writer.js";
 
 const SERVER_INFO = {
   name: "sandbox-knowledge-hub",
-  version: "0.1.0",
+  version: "0.2.0",
 } as const;
 
 const WRITE_DISCIPLINE = `This connection can also UPDATE the Knowledge Repository (the read tools above plus write tools). To add or change a PAGE: (1) draft it to the conventions - read wiki_read_page "CONVENTIONS" for the schema and "INGEST" for the four-phase add-a-source procedure; (2) call wiki_validate_page to check path, structure, citations, and links; (3) SHOW the user the drafted page and the validation result and get explicit approval; (4) call wiki_write_page to commit. MAKE THE PUBLISH BOUNDARY UNMISTAKABLE: steps 1-3 are research - reading, drafting, validating - and write NOTHING; only wiki_write_page / wiki_add_source_pdf publish. Immediately before the first publishing call, say so in plain words: "Nothing has been written yet. The next tool call commits this publicly to the GitHub repository - approving it means publish." Never let a publish approval look like just another research approval, and never bundle the publish call into the same turn as exploratory tool calls. To add a NEW REPORT: first call wiki_add_source_pdf with the report's public PDF URL (it is fetched and committed server-side, so its citations resolve), then write the source page (give it a \`cite_as\` short display name in frontmatter that includes the document kind, e.g. \`cite_as: "Building Permits report"\`, so citations to it read cleanly and self-describe as a source document), its digest, and any lessons/syntheses as above. If the user ATTACHES a PDF instead of giving a URL, read it to draft the pages, but ask them for the report's public link (e.g. on the sandbox's own website) so wiki_add_source_pdf can store the file - its citations will not resolve until the PDF is in the repo. Every substantive claim must carry a page citation to a real source report - never invent a citation or a quote. When DRAFTING a page, author citations with the source SLUG - \`[(p2-building-permits p. 22)](../sources/p2-building-permits.md)\` - even though the read tools display a friendly source name; validation resolves the slug. wiki_write_page refuses to commit a draft with blocking validation errors. Commits go straight to the public repo's main branch; the live query endpoints refresh automatically a minute or two later.`;

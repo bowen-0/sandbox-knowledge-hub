@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { StdioServerTransport } from "@modelcontextprotocol/server/stdio";
 import { buildServer } from "./server.js";
 import { FsWikiProvider } from "./fs-provider.js";
 import { findWikiRoot } from "./wiki-root.js";

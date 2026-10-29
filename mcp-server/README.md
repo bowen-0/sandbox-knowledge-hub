@@ -15,8 +15,12 @@ Resources: `wiki://query-procedure`, `wiki://conventions`, `wiki://index`, `wiki
 
 ## Local (stdio)
 
+Requires Node.js 22.12 or newer. Run installation from `mcp-server/`: the server
+and Workers share one npm workspace and lockfile. Separate dependency installs
+can give the handler and tool factory different MCP SDK instances.
+
 ```bash
-npm install && npm run build
+npm ci && npm run build
 
 # Claude Code
 claude mcp add sandbox-hub -- node /absolute/path/to/mcp-server/dist/stdio.js
@@ -35,14 +39,26 @@ The server finds the wiki automatically when run from this repo. Elsewhere, pass
 npm run start:http        # stateless Streamable HTTP on :3920/mcp
 ```
 
-**Cloudflare Workers (free tier):** the `worker/` folder is a ready-to-deploy variant that bundles the wiki into the artifact (`npm run bundle` produces `dist/wiki-bundle.json`, ~340 KB - pages only, no PDFs):
+**Cloudflare Workers (free tier):** the `worker/` folder is a ready-to-deploy variant that bundles the wiki into the artifact (`npm run bundle` produces `dist/wiki-bundle.json` - pages only, no PDFs):
 
 ```bash
-cd worker && npm install
-npm run deploy            # wrangler deploy; endpoint: https://<worker>.workers.dev/mcp
+npm ci                    # from mcp-server/, includes the worker workspace
+npm run deploy --workspace sandbox-knowledge-hub-mcp-worker
 ```
 
 Remote clients connect with the URL - e.g. `claude mcp add --transport http sandbox-hub https://<worker>.workers.dev/mcp`.
+
+Both Workers support the stateless `2026-07-28` protocol and older clients using
+the SDK's initialization compatibility path. Every call gets a fresh server;
+tool behavior, citations and the write authentication gate are shared across
+both protocols. Legacy standalone notification streams and session deletion
+are not used by this service.
+
+The former Durable Object namespaces remain bound for rollback, but requests
+no longer use them. Do not add a `deleted_classes` migration as part of a
+routine deployment. Before a release, record each live version with
+`wrangler deployments status -c worker/wrangler.jsonc` (and the write config).
+An operational rollback uses `wrangler rollback <version-id> -c <config>`.
 
 ## Write endpoint (the update path)
 
@@ -70,6 +86,14 @@ npm run deploy:write
 ```
 Optional secrets: `GITHUB_OWNER` / `GITHUB_REPO` / `GITHUB_BRANCH` (default `bowen-0` / `sandbox-knowledge-hub` / `main`). For the auto-redeploy Action, also set the repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
 
+Use a fine-grained token restricted to `bowen-0/sandbox-knowledge-hub`, with
+Contents read/write and the automatically included Metadata read permission.
+The writer does not need Workflow or account-wide repository permissions.
+Replacing `GITHUB_TOKEN` does not change the client-facing `WRITE_TOKEN`.
+After replacement, verify a controlled write and its restoration through the
+deployed worker, including successful CI propagation. Reading back the secret
+name alone does not verify the credential.
+
 Then share with the team: `https://sandbox-knowledge-hub-write.<account>.workers.dev/mcp?key=<WRITE_TOKEN>`.
 
 Deploy both workers at once: `cd worker && npm run deploy:all`.
@@ -79,7 +103,14 @@ Deploy both workers at once: `cd worker && npm run deploy:all`.
 ```bash
 npm test                  # vitest: unit + end-to-end over the real wiki
 npm run typecheck
+npm run typecheck --workspace sandbox-knowledge-hub-mcp-worker
+npm run build
+npm run test:http         # local Workers: modern + legacy, auth, citations
 npm run dev               # stdio server from TypeScript source (tsx)
 ```
+
+`test:http` starts isolated local Workers with fake write credentials, rejects
+an invalid write, and shuts the processes down. It does not publish content.
+The deployment workflow runs these checks before deploying either Worker.
 
 `src/server.ts` is the single source of truth for tools; the stdio entry, the node HTTP server, and the Worker all build from it. Page access goes through a provider interface: `FsWikiProvider` (live filesystem) or `BundleWikiProvider` (prebuilt JSON for hosts without a filesystem).

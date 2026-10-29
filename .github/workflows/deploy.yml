@@ -35,10 +35,14 @@ jobs:
       - name: Install deps
         run: |
           npm ci --prefix mcp-server
-          npm ci --prefix mcp-server/worker
-      - name: Build wiki bundle
+      - name: Validate server and worker compatibility
         working-directory: mcp-server
-        run: npm run bundle
+        run: |
+          npm run typecheck
+          npm run typecheck --workspace sandbox-knowledge-hub-mcp-worker
+          npm test
+          npm run build
+          npm run test:http
       - name: Note when deploy is skipped
         if: env.CLOUDFLARE_API_TOKEN == ''
         run: echo "::notice::CLOUDFLARE_API_TOKEN not set - skipping deploy. Set the repo secrets to enable auto-redeploy, or deploy manually (cd mcp-server/worker && npm run deploy:all)."

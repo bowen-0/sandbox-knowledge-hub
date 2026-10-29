@@ -18,7 +18,8 @@
  * it as one and rotate (re-run `secret put WRITE_TOKEN`) if it leaks. Clients
  * that support it can send `Authorization: Bearer <token>` instead.
  */
-import { McpAgent } from "agents/mcp";
+import { DurableObject } from "cloudflare:workers";
+import { createMcpHandler } from "agents/mcp/server";
 import { buildServer } from "../src/server.js";
 import { BundleWikiProvider, type WikiBundle } from "../src/bundle-provider.js";
 import { makeGitHubWriter } from "../src/github-writer.js";
@@ -40,25 +41,22 @@ const bundle = bundleJson as unknown as WikiBundle;
 // querying via this write connector gives the same clickable page links.
 const READ_ORIGIN = "https://sandbox-knowledge-hub-mcp.bowen-9cc.workers.dev";
 
-export class KnowledgeHubWriteMCP extends McpAgent<Env> {
-  // Safe default so this.server is never undefined; init() upgrades it with the writer.
-  server = buildServer(new BundleWikiProvider(bundle), { citationBaseUrl: READ_ORIGIN });
+// Keep the namespace available to a rollback; new calls are stateless.
+export class KnowledgeHubWriteMCP extends DurableObject {}
 
-  async init() {
-    if (!this.env.GITHUB_TOKEN) return; // no token → stays read-only (fail-safe)
-    const writer = makeGitHubWriter({
-      token: this.env.GITHUB_TOKEN,
-      owner: this.env.GITHUB_OWNER ?? "bowen-0",
-      repo: this.env.GITHUB_REPO ?? "sandbox-knowledge-hub",
-      branch: this.env.GITHUB_BRANCH ?? "main",
+function handlerFor(env: Env) {
+  return createMcpHandler(() => {
+    const writer = env.GITHUB_TOKEN ? makeGitHubWriter({
+      token: env.GITHUB_TOKEN,
+      owner: env.GITHUB_OWNER ?? "bowen-0",
+      repo: env.GITHUB_REPO ?? "sandbox-knowledge-hub",
+      branch: env.GITHUB_BRANCH ?? "main",
       authorName: "Sandbox Knowledge Hub write-MCP",
       authorEmail: "knowledge-hub@users.noreply.github.com",
-    });
-    this.server = buildServer(new BundleWikiProvider(bundle), { writer, citationBaseUrl: READ_ORIGIN });
-  }
+    }) : undefined;
+    return buildServer(new BundleWikiProvider(bundle), { writer, citationBaseUrl: READ_ORIGIN });
+  });
 }
-
-const handler = KnowledgeHubWriteMCP.serve("/mcp", { binding: "MCP_OBJECT" });
 
 function presentedToken(request: Request): string {
   const url = new URL(request.url);
@@ -79,8 +77,9 @@ function tokensMatch(a: string, b: string): boolean {
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const handler = handlerFor(env);
     // CORS preflight carries no credentials - let the transport answer it.
-    if (request.method === "OPTIONS") return handler.fetch(request, env, ctx);
+    if (request.method === "OPTIONS") return handler(request, env, ctx);
 
     // Gate ONLY the MCP endpoint. Everything else (notably the OAuth discovery
     // probes at /.well-known/*) must fall through to the transport's plain 404,
@@ -91,7 +90,7 @@ export default {
     // (Observed 2026-07-16: "Couldn't register with …'s sign-in service".)
     const { pathname } = new URL(request.url);
     if (pathname !== "/mcp" && !pathname.startsWith("/mcp/")) {
-      return handler.fetch(request, env, ctx);
+      return handler(request, env, ctx);
     }
 
     if (!env.WRITE_TOKEN) {
@@ -100,6 +99,6 @@ export default {
     if (!tokensMatch(presentedToken(request), env.WRITE_TOKEN)) {
       return new Response("Unauthorized.", { status: 401 });
     }
-    return handler.fetch(request, env, ctx);
+    return handler(request, env, ctx);
   },
 };

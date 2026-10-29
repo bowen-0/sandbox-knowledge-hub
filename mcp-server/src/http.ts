@@ -1,5 +1,6 @@
 import { createServer as createHttpServer } from "node:http";
-import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
+import { createMcpHandler } from "@modelcontextprotocol/server";
+import { toNodeHandler } from "@modelcontextprotocol/node";
 import { buildServer } from "./server.js";
 import { FsWikiProvider } from "./fs-provider.js";
 import { findWikiRoot } from "./wiki-root.js";
@@ -13,6 +14,7 @@ async function main() {
   const wikiRoot = findWikiRoot();
   const provider = new FsWikiProvider(wikiRoot);
   const port = Number(process.env.PORT ?? 3920);
+  const handleMcp = toNodeHandler(createMcpHandler(() => buildServer(provider)));
 
   const httpServer = createHttpServer(async (req, res) => {
     const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
@@ -38,15 +40,7 @@ async function main() {
         return;
       }
       try {
-        const body = await readBody(req);
-        const server = buildServer(provider);
-        const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
-        res.on("close", () => {
-          transport.close();
-          server.close();
-        });
-        await server.connect(transport);
-        await transport.handleRequest(req, res, body);
+        await handleMcp(req, res);
       } catch (err) {
         if (!res.headersSent) {
           res.writeHead(500, { "content-type": "application/json" });
@@ -62,21 +56,6 @@ async function main() {
 
   httpServer.listen(port, () => {
     console.error(`sandbox-knowledge-hub MCP server on http://localhost:${port}/mcp (wiki: ${wikiRoot})`);
-  });
-}
-
-function readBody(req: import("node:http").IncomingMessage): Promise<unknown> {
-  return new Promise((resolve, reject) => {
-    let data = "";
-    req.on("data", (chunk) => (data += chunk));
-    req.on("end", () => {
-      try {
-        resolve(data ? JSON.parse(data) : undefined);
-      } catch (err) {
-        reject(err);
-      }
-    });
-    req.on("error", reject);
   });
 }
 

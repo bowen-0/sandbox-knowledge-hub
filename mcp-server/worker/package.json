@@ -6,13 +6,18 @@
     "deploy": "cd .. && npm run bundle && npx wrangler deploy -c worker/wrangler.jsonc",
     "deploy:write": "cd .. && npm run bundle && npx wrangler deploy -c worker/wrangler-write.jsonc",
     "deploy:all": "npm run deploy && npm run deploy:write",
-    "dev": "cd .. && npm run bundle && npx wrangler dev -c worker/wrangler.jsonc"
+    "dev": "cd .. && npm run bundle && npx wrangler dev -c worker/wrangler.jsonc",
+    "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "agents": "^0.2.0",
-    "ai": "^5.0.255"
+    "@modelcontextprotocol/client": "2.3.1",
+    "@modelcontextprotocol/server": "2.3.1",
+    "agents": "0.31.0",
+    "ai": "6.0.317",
+    "zod": "4.6.7"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "5.20261028.1",
     "wrangler": "^4.0.0"
   }
 }

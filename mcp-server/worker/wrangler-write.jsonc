@@ -2,6 +2,7 @@
 // worker from the public read endpoint (worker/wrangler.jsonc).
 // Deploy: (from mcp-server/) npm run bundle && npx wrangler deploy -c worker/wrangler-write.jsonc
 // Secrets (one-time): wrangler secret put WRITE_TOKEN / GITHUB_TOKEN  -c worker/wrangler-write.jsonc
+// Requests are stateless. Retain the old Durable Object namespace for rollback.
 {
   "name": "sandbox-knowledge-hub-write",
   "main": "write.ts",

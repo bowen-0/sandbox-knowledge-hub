@@ -4,6 +4,7 @@
 # Local working notes
 internal/
 node_modules/
+.wrangler/
 dist/
 *.log
 .env
