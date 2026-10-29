@@ -6,7 +6,7 @@ role: Technical development partner on building-permits
 partner_role: [technical-implementation]
 project: [building-permits]
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-10-29
 ---
 
 # Byte Studio GmbH
@@ -15,7 +15,7 @@ Technical development partner on the Phase II [[building-permits]] project. The 
 
 ## Role in the sandbox
 
-The report carries a pull quote from Rutishauser: *"In AI-based processing of building plans, the choice between LLM-based and rule-based approaches, as well as their continuous evaluation, is critical."* (Rutishauser, [p2-building-permits p. 13](../sources/p2-building-permits.md)). The prototype reflects that stance: procedure determination runs on deliberately non-generative if-then logic over the process matrix, with GIS data queried automatically via API [(Building Permits report, p. 20)](../sources/p2-building-permits.md).
+The report carries a pull quote from Rutishauser: *"In AI-based processing of building plans, the choice between LLM-based and rule-based approaches, as well as their continuous evaluation, is critical."* (Rutishauser, [(p2-building-permits p. 13)](../sources/p2-building-permits.md)). The prototype reflects that stance: procedure determination runs on deliberately non-generative if-then logic over the process matrix, with GIS data queried automatically via API [(Building Permits report, p. 20)](../sources/p2-building-permits.md).
 
 ## See also
 

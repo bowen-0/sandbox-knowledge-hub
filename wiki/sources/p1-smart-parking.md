@@ -10,7 +10,7 @@ year: 2024
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-10-29
 ---
 
 # Smart Parking - Best Practices for Image Recognition
@@ -31,8 +31,8 @@ Authors: [[raphael-von-thiessen]] (head of the Innovation Sandbox for AI, Stando
 
 ## Notable quotes
 
-- *"Our goal is to realise an efficient parking management based on intelligent technologies."* - Peter Koch, [[stadt-frauenfeld]] ([p1-smart-parking p. 5](../sources/p1-smart-parking.md))
-- *"Image recognition in public can be responsibly implemented through technical and organisational measures."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-smart-parking p. 14](../sources/p1-smart-parking.md))
+- *"Our goal is to realise an efficient parking management based on intelligent technologies."* - Peter Koch, [[stadt-frauenfeld]] [(p1-smart-parking p. 5)](../sources/p1-smart-parking.md)
+- *"Image recognition in public can be responsibly implemented through technical and organisational measures."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI [(p1-smart-parking p. 14)](../sources/p1-smart-parking.md)
 
 ## Use as citation
 

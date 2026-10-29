@@ -15,7 +15,7 @@ societal_acceptance: high
 technological_feasibility: high
 process_change: moderate
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-10-29
 ---
 
 # Sensor-based Bridge Monitoring
@@ -28,7 +28,7 @@ Sensors captured **real loads from train traffic for the first time**, providing
 
 ## Key learnings
 
-- **Data-driven complements standards-based**: AI-supported monitoring does not replace human structural-engineering expertise - the booklet repeats this framing across multiple Phase II projects [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). The report itself puts it as: *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* (von Thiessen, [p2-bridge-monitoring p. 6](../sources/p2-bridge-monitoring.md)).
+- **Data-driven complements standards-based**: AI-supported monitoring does not replace human structural-engineering expertise - the booklet repeats this framing across multiple Phase II projects [(Build & Share (Phase II overview report), p. 19)](../sources/00-overview-phase2-build-and-share.md). The report itself puts it as: *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* (von Thiessen, [(p2-bridge-monitoring p. 6)](../sources/p2-bridge-monitoring.md)).
 - **Partner withdrawal → pivot** is a legitimate sandbox execution pattern: the project preserved value by rerouting to a different partner rather than aborting [(Build & Share (Phase II overview report), p. 13)](../sources/00-overview-phase2-build-and-share.md) [(Build & Share (Phase II overview report), p. 15)](../sources/00-overview-phase2-build-and-share.md).
 - Liability and data-protection regime for sensor-based monitoring systems was clarified [(Bridge Monitoring report, p. 12)](../sources/p2-bridge-monitoring.md) [(Bridge Monitoring report, p. 13)](../sources/p2-bridge-monitoring.md) - direct legal carry-over from [[infrastructure-maintenance]] (Phase I) but with a different physical modality (sensor vs. drone imagery).
 
@@ -39,6 +39,6 @@ Sensors captured **real loads from train traffic for the first time**, providing
 ## See also
 
 - [[p2-bridge-monitoring]] - the source PDF.
-- [[00-overview-phase2-build-and-share]] - Phase II booklet, source of the pivot narrative ([p. 13](../sources/00-overview-phase2-build-and-share.md)).
+- [[00-overview-phase2-build-and-share]] - Phase II booklet, source of the pivot narrative [(00-overview-phase2-build-and-share p. 13)](../sources/00-overview-phase2-build-and-share.md).
 - [[infrastructure-maintenance]] - Phase I predecessor.
 - [[building-permits]] - shares the "AI + data doesn't replace human expertise" framing.

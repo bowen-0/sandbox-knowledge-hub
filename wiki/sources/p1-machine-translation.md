@@ -10,7 +10,7 @@ year: 2024
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # Machine Translation - Recommendations for Public Administration
@@ -33,8 +33,8 @@ Authors: [[raphael-von-thiessen]] (head of the Innovation Sandbox for AI, Stando
 
 ## Notable quotes
 
-- *"Machine translation must be used responsibly and with a differentiated approach."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-machine-translation p. 7](../sources/p1-machine-translation.md))
-- *"Machine translation can pose reputational and liability risks for public administration. A clear and transparent indication of the possibility of errors is thus an important requirement."* - [[stephanie-volz]], [[itsl-uzh]] ([p1-machine-translation p. 8](../sources/p1-machine-translation.md))
+- *"Machine translation must be used responsibly and with a differentiated approach."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI [(p1-machine-translation p. 7)](../sources/p1-machine-translation.md)
+- *"Machine translation can pose reputational and liability risks for public administration. A clear and transparent indication of the possibility of errors is thus an important requirement."* - [[stephanie-volz]], [[itsl-uzh]] [(p1-machine-translation p. 8)](../sources/p1-machine-translation.md)
 
 ## Use as citation
 

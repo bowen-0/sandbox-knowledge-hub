@@ -20,7 +20,7 @@ societal_acceptance: high
 technological_feasibility: high
 process_change: moderate
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-10-29
 ---
 
 # Automated Infrastructure Maintenance
@@ -34,7 +34,7 @@ The project produced a **structured, annotated dataset for infrastructure inspec
 ## Key learnings
 
 - High-resolution drone imagery is a powerful but logistically-constrained data source - partner access (military base permissions) was the operational bottleneck. The report notes that access to high-resolution imagery of airport runways "is usually difficult to obtain" [(Infrastructure Maintenance report, p. 14)](../sources/p1-infrastructure-maintenance.md), and the missions ran on a closed runway with flight altitude capped at 10 m [(Infrastructure Maintenance report, p. 6)](../sources/p1-infrastructure-maintenance.md).
-- The "tiny dataset, large reuse" pattern: even apparently simple datasets generate outsized value when made publicly accessible. The Build & Share booklet states the principle as *"Data access is the most powerful lever"* and names this project's imagery as its example: *"e.g. high-resolution drone imagery of a runway"* ([[00-overview-phase2-build-and-share]] §04 Technology, [p. 17](../sources/00-overview-phase2-build-and-share.md)).
+- The "tiny dataset, large reuse" pattern: even apparently simple datasets generate outsized value when made publicly accessible. The Build & Share booklet states the principle as *"Data access is the most powerful lever"* and names this project's imagery as its example: *"e.g. high-resolution drone imagery of a runway"* ([[00-overview-phase2-build-and-share]] §04 Technology, [(00-overview-phase2-build-and-share p. 17)](../sources/00-overview-phase2-build-and-share.md)).
 - Direct lineage to [[bridge-monitoring]] in Phase II - same theme (sensor-/CV-based infrastructure monitoring), shifted from drone imagery to sensor data.
 
 > [!gap] Less detail in the corpus than other Phase I projects

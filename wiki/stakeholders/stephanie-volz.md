@@ -7,7 +7,7 @@ affiliation: itsl-uzh
 partner_role: [mandated-expert]
 project: [smart-parking, autonomous-systems, infrastructure-maintenance, machine-translation, ai-in-education, bridge-monitoring, digital-eye-clinic, inspection-robots, medical-documentation, building-permits]
 created: 2026-05-28
-updated: 2026-06-10
+updated: 2026-10-29
 ---
 
 # Stephanie Volz
@@ -23,7 +23,7 @@ Managing Director (*Geschäftsführerin*) at ITSL (Center for Information Techno
 ## Notable quotes in the corpus
 
 > *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"*
-> - Volz ([p2-building-permits p. 25](../sources/p2-building-permits.md))
+> - Volz [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
 
 ## See also
 

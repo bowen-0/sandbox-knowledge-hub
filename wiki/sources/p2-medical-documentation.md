@@ -10,7 +10,7 @@ year: 2025
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # AI in Medical Documentation - Legal Frameworks and Recommendations
@@ -35,10 +35,10 @@ Ten named experts supported the work: Dr. André Baumgart (VZK, Verband Zürcher
 
 ## Notable quotes
 
-- *"LLMs fit into existing regulatory frameworks - provided their function is clearly defined and documentation is thorough."* (Atanas Todorov, Chief Medical Officer, Arcondis, [p2-medical-documentation p. 32](../sources/p2-medical-documentation.md))
-- *"AI needs new regulatory approaches - flexible, risk-based, and beyond rigid approvals."* ([[raphael-von-thiessen]], Programme Lead AI Sandbox, Canton of Zurich, [p2-medical-documentation p. 38](../sources/p2-medical-documentation.md))
-- *"Legally compliant anonymisation of medical reports is practically unfeasible."* ([[stephanie-volz]], Managing Director ITSL, University of Zurich, [p2-medical-documentation p. 9](../sources/p2-medical-documentation.md))
-- *"The benefits of AI in documentation are significant - but only if clear rules for data protection, responsibility, and transparency are in place."* (Corinne Spirig, Chief Operating Officer, digital health center bülach, [p2-medical-documentation p. 15](../sources/p2-medical-documentation.md))
+- *"LLMs fit into existing regulatory frameworks - provided their function is clearly defined and documentation is thorough."* (Atanas Todorov, Chief Medical Officer, Arcondis, [(p2-medical-documentation p. 32)](../sources/p2-medical-documentation.md))
+- *"AI needs new regulatory approaches - flexible, risk-based, and beyond rigid approvals."* ([[raphael-von-thiessen]], Programme Lead AI Sandbox, Canton of Zurich, [(p2-medical-documentation p. 38)](../sources/p2-medical-documentation.md))
+- *"Legally compliant anonymisation of medical reports is practically unfeasible."* ([[stephanie-volz]], Managing Director ITSL, University of Zurich, [(p2-medical-documentation p. 9)](../sources/p2-medical-documentation.md))
+- *"The benefits of AI in documentation are significant - but only if clear rules for data protection, responsibility, and transparency are in place."* (Corinne Spirig, Chief Operating Officer, digital health center bülach, [(p2-medical-documentation p. 15)](../sources/p2-medical-documentation.md))
 
 ## Provenance
 

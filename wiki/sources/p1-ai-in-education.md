@@ -10,7 +10,7 @@ year: 2023
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # Artificial Intelligence in Education - Legal Best Practices
@@ -31,9 +31,9 @@ Authors: [[stephanie-volz]] (legal expert of the sandbox, managing director [[it
 
 ## Notable quotes
 
-- *"Due to the legal complexity of AI projects in schools, a holistic approach is recommended."* - [[stephanie-volz]], [[itsl-uzh]] ([p1-ai-in-education p. 4](../sources/p1-ai-in-education.md))
-- *"The collection of personal data that is not strictly necessary for an AI application significantly increases legal complexity."* - [[stephanie-volz]], [[itsl-uzh]] ([p1-ai-in-education p. 8](../sources/p1-ai-in-education.md))
-- *"The integration of Large Language Models offers great opportunities for solution providers, but also leads to legal risks that are difficult to control."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI ([p1-ai-in-education p. 12](../sources/p1-ai-in-education.md))
+- *"Due to the legal complexity of AI projects in schools, a holistic approach is recommended."* - [[stephanie-volz]], [[itsl-uzh]] [(p1-ai-in-education p. 4)](../sources/p1-ai-in-education.md)
+- *"The collection of personal data that is not strictly necessary for an AI application significantly increases legal complexity."* - [[stephanie-volz]], [[itsl-uzh]] [(p1-ai-in-education p. 8)](../sources/p1-ai-in-education.md)
+- *"The integration of Large Language Models offers great opportunities for solution providers, but also leads to legal risks that are difficult to control."* - [[raphael-von-thiessen]], head of the Innovation Sandbox for AI [(p1-ai-in-education p. 12)](../sources/p1-ai-in-education.md)
 
 ## Use as citation
 

@@ -10,7 +10,7 @@ year: 2025
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # Digital Eye Clinic
@@ -33,9 +33,9 @@ Project team: Prof. Dr. med. Matthias Becker (chief physician of the eye clinic,
 
 ## Notable quotes
 
-- *"Machine learning in ophthalmology paves the way for safe, accurate, and accessible ocular disease prediction."* Dávid Isztl, machine learning engineer, Augenklinik Stadtspital Zürich ([p2-digital-eye-clinic p. 22](../sources/p2-digital-eye-clinic.md))
-- *"Only a holistic, well-structured vendor assessment can reveal if an AI diagnostic tool is fit for clinical use and institutional adoption."* [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zurich ([p2-digital-eye-clinic p. 17](../sources/p2-digital-eye-clinic.md))
-- *"By developing and deploying an in-house DR detection model, we can uphold the highest levels of data privacy and compliancy."* Dr. Rui Santos, AI translation officer, Augenklinik Stadtspital Zürich ([p2-digital-eye-clinic p. 19](../sources/p2-digital-eye-clinic.md))
+- *"Machine learning in ophthalmology paves the way for safe, accurate, and accessible ocular disease prediction."* Dávid Isztl, machine learning engineer, Augenklinik Stadtspital Zürich [(p2-digital-eye-clinic p. 22)](../sources/p2-digital-eye-clinic.md)
+- *"Only a holistic, well-structured vendor assessment can reveal if an AI diagnostic tool is fit for clinical use and institutional adoption."* [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zurich [(p2-digital-eye-clinic p. 17)](../sources/p2-digital-eye-clinic.md)
+- *"By developing and deploying an in-house DR detection model, we can uphold the highest levels of data privacy and compliancy."* Dr. Rui Santos, AI translation officer, Augenklinik Stadtspital Zürich [(p2-digital-eye-clinic p. 19)](../sources/p2-digital-eye-clinic.md)
 
 ## Use as citation
 

@@ -10,7 +10,7 @@ year: 2023
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # Autonomous Systems - Guidelines for Regulatory Questions
@@ -29,8 +29,8 @@ Authors: Dr. iur. [[stephanie-volz]], legal expert of the sandbox and managing d
 
 ## Notable quotes
 
-- *"The regulatory frameworks and standards will continually change in the future. Manufacturers must closely monitor these developments."* (David Schaltegger, SNV, [p1-autonomous-systems p. 8](../sources/p1-autonomous-systems.md))
-- *"In many cases, manufacturers can avoid the generation of personal data."* (Stephanie Volz, ITSL UZH, [p1-autonomous-systems p. 15](../sources/p1-autonomous-systems.md))
+- *"The regulatory frameworks and standards will continually change in the future. Manufacturers must closely monitor these developments."* (David Schaltegger, SNV, [(p1-autonomous-systems p. 8)](../sources/p1-autonomous-systems.md))
+- *"In many cases, manufacturers can avoid the generation of personal data."* (Stephanie Volz, ITSL UZH, [(p1-autonomous-systems p. 15)](../sources/p1-autonomous-systems.md))
 
 ## Provenance
 

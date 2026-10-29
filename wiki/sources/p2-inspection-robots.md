@@ -10,7 +10,7 @@ year: 2025
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # Autonomous Inspection Robots
@@ -36,8 +36,8 @@ The report states its contents are not legally binding and represent no official
 
 ## Notable quotes
 
-- *"EU regulations often have a less drastic impact on companies than expected - those who make smart use of flexibilities and analyse risks pragmatically can develop a suitable strategy."* (Sven Kohlmeier, Specialist Attorney for IT Law (DE), Wicki Partners AG, [p2-inspection-robots p. 25](../sources/p2-inspection-robots.md))
-- *"Those who systematically embed AI governance create security, reduce risks and secure long-term market access."* (Elena Maran, Global Head of Responsible AI, Modulos AG, [p2-inspection-robots p. 29](../sources/p2-inspection-robots.md))
+- *"EU regulations often have a less drastic impact on companies than expected - those who make smart use of flexibilities and analyse risks pragmatically can develop a suitable strategy."* (Sven Kohlmeier, Specialist Attorney for IT Law (DE), Wicki Partners AG, [(p2-inspection-robots p. 25)](../sources/p2-inspection-robots.md))
+- *"Those who systematically embed AI governance create security, reduce risks and secure long-term market access."* (Elena Maran, Global Head of Responsible AI, Modulos AG, [(p2-inspection-robots p. 29)](../sources/p2-inspection-robots.md))
 
 ## Stakeholders named in the report
 

@@ -10,7 +10,7 @@ year: 2026
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 ---
 
 # Sensor-based Bridge Monitoring
@@ -33,8 +33,8 @@ In parallel, the sandbox team examined the legal framework conditions of data-ba
 
 ## Notable quotes
 
-- *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* - [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zurich ([p2-bridge-monitoring p. 6](../sources/p2-bridge-monitoring.md))
-- *"Data-driven monitoring systems support operations, but they do not shift the responsibility for safety-related decisions from the operator to the technology."* - [[stephanie-volz]], [[itsl-uzh]] ([p2-bridge-monitoring p. 13](../sources/p2-bridge-monitoring.md))
+- *"Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations"* - [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zurich [(p2-bridge-monitoring p. 6)](../sources/p2-bridge-monitoring.md)
+- *"Data-driven monitoring systems support operations, but they do not shift the responsibility for safety-related decisions from the operator to the technology."* - [[stephanie-volz]], [[itsl-uzh]] [(p2-bridge-monitoring p. 13)](../sources/p2-bridge-monitoring.md)
 
 ## Use as citation
 

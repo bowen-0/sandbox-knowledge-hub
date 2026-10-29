@@ -10,7 +10,7 @@ year: 2026
 publisher: Standortförderung Kanton Zürich
 authors: [raphael-von-thiessen, stephanie-volz]
 created: 2026-05-28
-updated: 2026-06-11
+updated: 2026-10-29
 priority: high
 ---
 
@@ -36,8 +36,8 @@ Authors: [[stephanie-volz]] (managing director, [[itsl-uzh]], University of Zuri
 
 ## Notable quotes
 
-- *"The greatest leverage of AI currently lies in improving the quality and completeness of building applications before submission."* - [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zürich ([p2-building-permits p. 7](../sources/p2-building-permits.md))
-- *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"* - [[stephanie-volz]], managing director, [[itsl-uzh]] ([p2-building-permits p. 25](../sources/p2-building-permits.md))
+- *"The greatest leverage of AI currently lies in improving the quality and completeness of building applications before submission."* - [[raphael-von-thiessen]], programme lead of the AI sandbox, Canton of Zürich [(p2-building-permits p. 7)](../sources/p2-building-permits.md)
+- *"AI can support building authorities, but the justification and responsibility for decisions remain with humans"* - [[stephanie-volz]], managing director, [[itsl-uzh]] [(p2-building-permits p. 25)](../sources/p2-building-permits.md)
 
 ## Use as citation
 
