@@ -2,9 +2,11 @@
 
 **The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published pilot reports, restructured into a navigable, citable, AI-ready wiki.
 
-[![Watch the one-minute demo: an AI assistant answers a question with report citations, followed by browsing and searching the knowledge hub.](quartz/quartz/static/demo/sandbox-knowledge-hub-poster.jpg)](https://bowen-0.github.io/sandbox-knowledge-hub/static/demo/sandbox-knowledge-hub.mp4)
+**One-minute demo**
 
-**[Watch the one-minute demo](https://bowen-0.github.io/sandbox-knowledge-hub/static/demo/sandbox-knowledge-hub.mp4)** · See how an AI assistant uses the reports, then browse and search the hub.
+https://github.com/user-attachments/assets/2eb71f84-3548-498e-9a9d-896f7b763a1e
+
+See how an AI assistant uses the reports, then browse and search the hub.
 
 <h3 align="center"><a href="https://bowen-0.github.io/sandbox-knowledge-hub">Browse the knowledge hub →</a></h3>
 <p align="center">Read it in your browser, with search and findings linked to the report page they come from.<br>Nothing to install, and no AI assistant needed.</p>
