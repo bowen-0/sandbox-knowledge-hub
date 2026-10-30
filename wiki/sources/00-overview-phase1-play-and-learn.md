@@ -57,7 +57,7 @@ How the report's findings were produced:
 
 Authoritative source for any claim about:
 - The structural purpose of the sandbox.
-- The Phase I project portfolio (5 implemented pilots).
+- The Phase I project portfolio (5 implemented projects).
 - The application + selection process.
 - The 2-axis typology used to position sandbox engagements.
 

@@ -48,4 +48,4 @@ The project produced a **structured, annotated dataset for infrastructure inspec
 
 - [[p1-infrastructure-maintenance]] - the source PDF.
 - [[bridge-monitoring]] - Phase II thematic successor.
-- [[smart-parking]] - fellow Phase I CV pilot.
+- [[smart-parking]] - fellow Phase I CV project.

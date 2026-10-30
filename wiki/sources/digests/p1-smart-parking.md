@@ -7,10 +7,10 @@
 **Length**: ~22 pages
 
 ## Problem & context
-Swiss cities lack reliable data on outdoor public parking occupancy, fuelling unproductive debate between de-paving advocates and parking-retention groups, and producing traffic from drivers hunting free spaces. Frauenfeld has 14 public car parks (~500 spaces in the pilot scope); the city wanted occupancy data without installing one in-ground sensor per space.
+Swiss cities lack reliable data on outdoor public parking occupancy, fuelling unproductive debate between de-paving advocates and parking-retention groups, and producing traffic from drivers hunting free spaces. Frauenfeld has 14 public car parks (~500 spaces in the test scope); the city wanted occupancy data without installing one in-ground sensor per space.
 
 ## Approach & methodology
-ETH spin-off Parquery AG submitted a proposal in spring 2022; the Innovation Sandbox paired it with the city of Frauenfeld as data/site partner. Cameras at 5 car parks captured a still image every 2 minutes (not video); images were converted to numerical occupancy data and deleted immediately. The pilot ran from August 2022; the production system has been live since November 2023, integrated into Frauenfeld's "Regio" app and exposed via the Parkopedia interface to car navigation systems. Live data also flows to an open-data dashboard.
+ETH spin-off Parquery AG submitted a proposal in spring 2022; the Innovation Sandbox paired it with the city of Frauenfeld as data/site partner. Cameras at 5 car parks captured a still image every 2 minutes (not video); images were converted to numerical occupancy data and deleted immediately. Testing ran from August 2022; the production system has been live since November 2023, integrated into Frauenfeld's "Regio" app and exposed via the Parkopedia interface to car navigation systems. Live data also flows to an open-data dashboard.
 
 ## Key findings & recommendations
 - Cameras beat in-ground sensors for cost-per-space at outdoor sites - one camera covers many spaces and supports analyses (vehicle type, duration) sensors cannot.

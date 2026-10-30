@@ -63,4 +63,4 @@ Authoritative source for:
 
 - [[infrastructure-maintenance]] - project page.
 - [[bridge-monitoring]] - Phase II thematic successor (sensor + AI on infrastructure).
-- [[smart-parking]] - fellow Phase I computer-vision pilot.
+- [[smart-parking]] - fellow Phase I computer-vision project.

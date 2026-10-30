@@ -3,7 +3,7 @@ title: Phase II cross-cutting principles - the booklet's 17 general lessons
 type: synthesis
 insight_domain: ai-deployment
 priority: high
-question: "What are the general principles the sandbox has learned across all its pilots?"
+question: "What are the general principles the sandbox has learned across all its projects?"
 audience: [administrative-staff-scoping-a-pilot, ai-providers-pre-rfp, policymakers, anyone-querying-the-wiki-for-general-guidance]
 connects:
   - 00-overview-phase2-build-and-share
@@ -32,7 +32,7 @@ updated: 2026-06-10
 
 > **The booklet's 17 general lessons**, organised by Technology / Legal / Organisation as the booklet presents them ([[00-overview-phase2-build-and-share]] §04, pp. 17-19).
 >
-> **Why this page exists:** these are the principles the sandbox programme itself synthesised across all 10 pilots. They generalise beyond any single case study - which is precisely what makes them useful for *new* projects asking *new* questions. Start here for general guidance; the case-study-specific findings live one layer deeper, in the project pages ([[smart-parking]], [[building-permits]], etc.) and the individual lesson pages.
+> **Why this page exists:** these are the principles the sandbox programme itself synthesised across all 10 projects. They generalise beyond any single case study - which is precisely what makes them useful for *new* projects asking *new* questions. Start here for general guidance; the case-study-specific findings live one layer deeper, in the project pages ([[smart-parking]], [[building-permits]], etc.) and the individual lesson pages.
 >
 > The principles are deployment-facing (`insight_domain: ai-deployment`): they advise teams deploying, procuring, or regulating an AI system. Where a principle also carries programme-operating experience, the entry says so.
 
@@ -40,7 +40,7 @@ updated: 2026-06-10
 
 ## Technology principles (7) - §04 Technology, p. 17
 
-These come from cross-analysing the 10 pilots' technical layer.
+These come from cross-analysing the 10 projects' technical layer.
 
 1. **[[ai-is-rarely-the-primary-challenge]]** - *"In many cases, the deployed AI technologies are already available and mature… the more significant challenges lie in infrastructure, data access, integration, governance, and adoption."*
 
@@ -60,7 +60,7 @@ These come from cross-analysing the 10 pilots' technical layer.
 
 ## Legal principles (5) - §04 Legal, p. 18
 
-These come from cross-analysing the 10 pilots' regulatory engagement.
+These come from cross-analysing the 10 projects' regulatory engagement.
 
 1. **[[integrate-regulation-early]]** - *"If regulatory requirements are addressed too late, flawed assumptions may arise in the business model. Early clarification is essential."*
 
@@ -76,7 +76,7 @@ These come from cross-analysing the 10 pilots' regulatory engagement.
 
 ## Organisation principles (6) - §04 Organisation, p. 19
 
-These come from cross-analysing the 10 pilots' organisational layer.
+These come from cross-analysing the 10 projects' organisational layer.
 
 1. **[[strong-stakeholder-engagement-is-decisive]]** - *"Successful projects are characterised by committed implementation partners who contribute time, resources, networks, and domain expertise."*
 

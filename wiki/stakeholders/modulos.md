@@ -21,6 +21,6 @@ This makes Modulos the **only Phase II partner involved in operationalising an A
 
 ## See also
 
-- [[iso-iec-42001]] - the standard piloted via this engagement.
+- [[iso-iec-42001]] - the standard tested via this engagement.
 - [[inspection-robots]] - the project that engaged Modulos.
 - [[anybotics]] - co-partner on the same project.

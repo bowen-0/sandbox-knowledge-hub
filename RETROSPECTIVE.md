@@ -1,6 +1,6 @@
 # Retrospective: Building an LLM Wiki for the Innovation Sandbox for AI
 
-Over the past 5 years, the Innovation Sandbox for AI of the Canton of Zurich has generated a growing body of knowledge through its pilot projects and published reports. While these reports work well as individual publications, much of their potential value lies across them: recurring challenges, transferable lessons, connections between legal, technical and organisational questions, and patterns that may only become visible when the projects are considered together.
+Over the past 5 years, the Innovation Sandbox for AI of the Canton of Zurich has generated a growing body of knowledge through its test projects and published reports. While these reports work well as individual publications, much of their potential value lies across them: recurring challenges, transferable lessons, connections between legal, technical and organisational questions, and patterns that may only become visible when the projects are considered together.
 
 We therefore explored whether this knowledge could be restructured in a way that makes it easier for AI systems to understand, retrieve and connect. The objective was not simply to make the reports searchable, but to test whether an LLM-readable knowledge layer could make the accumulated knowledge more accessible and potentially enable AI systems to identify relationships and patterns across projects.
 

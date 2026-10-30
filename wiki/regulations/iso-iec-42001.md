@@ -21,10 +21,10 @@ ISO/IEC 42001 is the first international AI-management-system standard. Publishe
 
 ## Phase II usage in the sandbox
 
-The standard was piloted concretely in [[inspection-robots]] - the project (in collaboration with [[modulos]]) tested the application of ISO/IEC 42001 on an exemplary basis as part of the autonomous-robot regulatory analysis [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md). This makes ISO/IEC 42001 the **only AI-governance standard operationalised on a concrete Phase II use case**.
+The standard was tested concretely in [[inspection-robots]] - the project (in collaboration with [[modulos]]) tested the application of ISO/IEC 42001 on an exemplary basis as part of the autonomous-robot regulatory analysis [(Build & Share (Phase II overview report), p. 14)](../sources/00-overview-phase2-build-and-share.md). This makes ISO/IEC 42001 the **only AI-governance standard operationalised on a concrete Phase II use case**.
 
 ## See also
 
-- [[inspection-robots]] - the project that piloted this standard.
+- [[inspection-robots]] - the project that tested this standard.
 - [[modulos]] - the AI governance platform partner.
 - [[eu-ai-act]] - operates at a regulatory layer above the standard; ISO/IEC 42001 is a route to compliance.

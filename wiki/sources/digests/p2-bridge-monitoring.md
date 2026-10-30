@@ -46,13 +46,13 @@ Schweizerische Südostbahn AG (SOB) and irmos technologies instrumented the 5-me
 
 ## Cross-references
 - [Automated Infrastructure Maintenance, Phase I] - direct predecessor; that project used drone+CV for visual inspection, while this one adds *sensor-based dynamic monitoring*. The two methods are explicitly framed as complementary (visual vs. continuous structural).
-- [Smart Parking, Phase I] - another image-recognition-on-infrastructure pilot; same operator-vs-provider liability framing applies.
-- [Build & Share overview, Phase II] - names this as one of three "real-world testing" pilots.
+- [Smart Parking, Phase I] - another image-recognition-on-infrastructure project; same operator-vs-provider liability framing applies.
+- [Build & Share overview, Phase II] - names this as one of three "real-world testing" projects.
 - [Autonomous Inspection Robots, Phase II] - another infrastructure-inspection automation use case but with much heavier EU regulatory framing.
 - [AI in Building Permits, Phase II] - shares the "rule-based assessment vs. data-driven model" tension.
 
 ## Why someone planning a new AI pilot would read this specifically
-This is the cleanest case study in the corpus for "how to introduce continuous-monitoring AI into a safety-critical legacy domain without displacing existing engineering judgement" - and the only Phase II pilot where Swiss Code of Obligations liability framing is worked through in detail.
+This is the cleanest case study in the corpus for "how to introduce continuous-monitoring AI into a safety-critical legacy domain without displacing existing engineering judgement" - and the only Phase II project where Swiss Code of Obligations liability framing is worked through in detail.
 
 ## Notable quotes
 - "Data-driven monitoring does not replace existing evidence, but complements it with measurement data from live operations." - Raphael von Thiessen, p. 6.

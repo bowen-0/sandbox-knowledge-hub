@@ -27,7 +27,7 @@ Phase II followed a portfolio approach: 8 projects initiated, 5 implemented in p
 ## Legal & regulatory points
 - **EU AI Act** - central to the Autonomous Inspection Robots project; risk-based classification, high-risk obligations, transparency duties.
 - **EU Machinery Regulation 2023/1230** (*EU-Maschinenverordnung*) - examined jointly with the AI Act for inspection-robot market access; the dynamic interdependence between the two regulations was a particular challenge.
-- **ISO/IEC 42001** - AI management system standard; piloted with Modulos as an AI governance platform for the inspection-robot use case.
+- **ISO/IEC 42001** - AI management system standard; tested with Modulos as an AI governance platform for the inspection-robot use case.
 - **Swiss implementation of the Council of Europe AI Convention** - flagged as expanding the existing legal framework, especially where AI touches fundamental rights.
 - **Swiss FADP/DSG** - central blocker in Medical Documentation (data processing of patient records).
 - **Federal Council decision on AI testing environments** (*KI-Testumgebungen*) - sandboxes were specifically named as innovation-promotion instrument.
@@ -46,8 +46,8 @@ The overview itself is non-technical, but it names: **MPAssist** (medical docume
 - [Automated Infrastructure Maintenance, Phase I] - IBM Research dataset legacy, now publicly available; explicit lineage with Phase II Bridge Monitoring.
 - [Autonomous Systems, Phase I] - its example of agricultural vehicles needing full re-certification when retrofitted is reused here as the canonical "integrate regulation early" lesson.
 - [Sensor-based Bridge Monitoring, Phase II] - pivoted to SOB rail bridge after the original municipal footbridge partner withdrew.
-- [Digital Eye Clinic, Phase II] - flagship health-sector pilot; modular open-source diagnostics platform.
-- [Autonomous Inspection Robots, Phase II] - flagship EU market-access pilot; cross-border collaboration with Bundesnetzagentur (DE) and Liechtenstein.
+- [Digital Eye Clinic, Phase II] - flagship health-sector project; modular open-source diagnostics platform.
+- [Autonomous Inspection Robots, Phase II] - flagship EU market-access project; cross-border collaboration with Bundesnetzagentur (DE) and Liechtenstein.
 - [AI in Medical Documentation, Phase II] - pure regulatory analysis (no real-world testing possible).
 - [AI in Building Permits, Phase II] - flagship working prototype; fed directly into a Cantonal Parliament postulate.
 

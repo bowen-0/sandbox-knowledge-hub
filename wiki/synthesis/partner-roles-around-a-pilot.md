@@ -1,5 +1,5 @@
 ---
-title: Partner roles around a sandbox pilot - Who do you actually need?
+title: Partner roles around a sandbox project - Who do you actually need?
 type: synthesis
 insight_domain: both
 question: "Who do I need around my AI pilot, and what do they each do?"
@@ -14,11 +14,11 @@ created: 2026-05-28
 updated: 2026-06-11
 ---
 
-# Partner roles around a sandbox pilot
+# Partner roles around a sandbox project
 
 > **For:** anyone scoping a sandbox-style AI pilot, an AI provider preparing a sandbox application, or a public-sector lead wondering "who needs to be at the table."
 >
-> **TL;DR:** The Phase II booklet codifies a **5-role taxonomy** for partners around a pilot. Getting all five filled (or deliberately deciding to skip one) is what distinguishes successful pilots from stalled ones.
+> **TL;DR:** The Phase II booklet codifies a **5-role taxonomy** for partners around a project. Getting all five filled (or deliberately deciding to skip one) is what distinguishes successful projects from stalled ones.
 
 ---
 
@@ -50,13 +50,13 @@ The roles are *not* interchangeable:
 - A technical implementation partner cannot substitute for a mandated expert. (They build the prototype; they do not analyse the law.)
 - A domain sparring partner cannot substitute for a test partner. (They advise; they don't provide the operational environment.)
 
-Conflating roles is the most common mistake the corpus surfaces - and the most common root cause of pilot stalls (see [[partner-bottleneck]]).
+Conflating roles is the most common mistake the corpus surfaces - and the most common root cause of project stalls (see [[partner-bottleneck]]).
 
 > [!sandbox-operations]
 > The portfolio view: how the programme structures these roles across projects.
 >
-> - **Roles are assigned per project, with tasks defined by role and expertise.** Each pilot gets its own constellation of the five roles [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md).
-> - **One standing mandated expert serves the whole portfolio.** [[itsl-uzh]] appears on every sandbox project, which gives the programme continuity of legal analysis across heterogeneous pilots.
+> - **Roles are assigned per project, with tasks defined by role and expertise.** Each project gets its own constellation of the five roles [(Build & Share (Phase II overview report), p. 8)](../sources/00-overview-phase2-build-and-share.md).
+> - **One standing mandated expert serves the whole portfolio.** [[itsl-uzh]] appears on every sandbox project, which gives the programme continuity of legal analysis across heterogeneous projects.
 > - **Supervisor access is programme-mediated.** The programme facilitates contact with supervisory authorities and uses the [[regulatory-roundtable]] format to aggregate demand from multiple providers, so a supervisor can respond at scale (see [[regulatory-roundtable-is-high-leverage]]).
 > - **A project with an unfillable role is pivoted, not cancelled.** When no suitable test partner was found for [[inspection-robots]], the project moved to a regulatory-analysis-only scope and still delivered substantial value [(Build & Share (Phase II overview report), p. 9)](../sources/00-overview-phase2-build-and-share.md).
 
@@ -72,7 +72,7 @@ Conflating roles is the most common mistake the corpus surfaces - and the most c
 > - **Hospitals** require data-sharing agreements that can take considerable lead time - [[medical-documentation]] could not clear them inside its window [(Build & Share (Phase II overview report), p. 10)](../sources/00-overview-phase2-build-and-share.md).
 > - **Infrastructure operators** (SOB, military) require physical access permissions.
 >
-> **Technical implementation partner.** Usually multiple. The corpus shows pilots often combine a *use-case-specific* implementation partner ([[nokema]] for building permits) with a *technical-platform* partner ([[byte-studio]]). For startup-scale teams, this distinction may collapse into one organisation.
+> **Technical implementation partner.** Usually multiple. The corpus shows projects often combine a *use-case-specific* implementation partner ([[nokema]] for building permits) with a *technical-platform* partner ([[byte-studio]]). For startup-scale teams, this distinction may collapse into one organisation.
 >
 > **Mandated expert.** For Swiss public-sector AI pilots, [[itsl-uzh]] is the standing default - they appear on every sandbox project. For non-sandbox engagements, look for university institutes with established public-administration relationships.
 >

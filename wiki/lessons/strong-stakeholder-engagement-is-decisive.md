@@ -30,7 +30,7 @@ Compare:
 
 | Project | Partner engagement intensity | Outcome |
 |---|---|---|
-| [[smart-parking]] (Frauenfeld) | Extensive - city resources, prolonged testing, post-pilot scaling | Production deployment in Frauenfeld, since further expanded |
+| [[smart-parking]] (Frauenfeld) | Extensive - city resources, prolonged testing, post-test scaling | Production deployment in Frauenfeld, since further expanded |
 | [[building-permits]] (Stadt Kloten) | Extensive - real applications, expert validation, multi-vendor coordination | Working prototype + 3,336-eval benchmark, postulate input |
 | [[bridge-monitoring]] (SOB pivot) | Strong - physical access, train-traffic data, structural-engineering expertise | Successful real-world testing despite original-partner withdrawal |
 | [[medical-documentation]] | Partner-data access blocked by regulation | Analysis-only outcome (still valuable) |

@@ -40,7 +40,7 @@ priority: high                    # optional. Set only on the handful of pages a
 
 ### Per-type fields
 
-#### `projects/` - one page per sandbox pilot
+#### `projects/` - one page per sandbox project
 
 ```yaml
 type: project
@@ -52,7 +52,7 @@ sources: [p2-building-permits]    # slugs from wiki/sources/
 stakeholder: [stephanie-volz, raphael-von-thiessen, byte-studio]
 regulation: [dsg-art-22, eu-ai-act]
 concept: [data-access, llm-as-a-judge]
-related_projects: [smart-parking] # other pilots this one references or extends
+related_projects: [smart-parking] # other projects this one references or extends
 
 # Use-case assessment facets - the "metadata to highlight" dimensions from the kickoff.
 # They live on the use case (project); insights (lessons/synthesis) are sliceable along
@@ -80,7 +80,7 @@ jurisdiction: ch-federal | ch-canton-zh | ch-canton-other | eu | international
 instrument: act | ordinance | standard | postulate | court-ruling | convention
 domain: [data-protection, machinery-safety, medical-devices, ai-governance]
 year: 2024                        # year of entry into force (or most recent revision)
-project: [p2-building-permits]    # pilots where this regulation is operative
+project: [p2-building-permits]    # projects where this regulation is operative
 ```
 
 #### `stakeholders/` - people and organisations
@@ -106,7 +106,7 @@ insight_domain: ai-deployment | sandbox-operations | both             # required
                                                                       # domains the lesson belongs to. "both" is only
                                                                       # allowed when the body separates the two
                                                                       # audiences with the §3 domain callouts.
-project: [p2-building-permits]                                        # which pilot(s) the lesson is drawn from
+project: [p2-building-permits]                                        # which project(s) the lesson is drawn from
 concept: [data-access, pseudonymisation, partner-bottleneck]
 regulation: [dsg-art-22, eu-ai-act-art-9]
 stakeholder: [data-protection-officer, baudirektion-zh]
@@ -118,7 +118,7 @@ freshness: 2026-04                                                    # source p
 applies_to_lifecycle_stage: [scoping, procurement, deployment]        # optional, helps the generator filter
 cross_cutting: true | false                                           # optional. Set true when the lesson is a general
                                                                       # principle the booklet states across multiple
-                                                                      # pilots (e.g. anything in [[00-overview-phase2-build-and-share]]
+                                                                      # projects (e.g. anything in [[00-overview-phase2-build-and-share]]
                                                                       # §04 Technology/Legal/Organisation). Consumers
                                                                       # should weight these higher for general queries
                                                                       # vs. case-study-specific ones.
@@ -217,7 +217,7 @@ The sandbox's insights split into two domains that often *sound* similar but add
 
 | Slug | Level | What it covers | Audience |
 |---|---|---|---|
-| `ai-deployment` | Material | Deploying, procuring, or regulating an AI system: technical, legal, organisational lessons from the pilots. | Startups, SMEs, innovation labs, government units deploying AI, policymakers regulating it. |
+| `ai-deployment` | Material | Deploying, procuring, or regulating an AI system: technical, legal, organisational lessons from the projects. | Startups, SMEs, innovation labs, government units deploying AI, policymakers regulating it. |
 | `sandbox-operations` | Meta | Running an innovation-sandbox-style programme: pilot intake, partner management, pivots, convening formats, programme strategy. | Government units - Swiss or abroad - designing or operating their own sandbox. |
 | `both` | - | Genuinely dual lessons. Only valid when the body separates the two audiences with the §3 domain callouts. | - |
 
@@ -233,7 +233,7 @@ The four "metadata to highlight" dimensions named at the kickoff, so the portfol
 
 | Facet | Values | Meaning |
 |---|---|---|
-| `data_sources` | soft list of slugs, e.g. `building-applications`, `sensor-data`, `retinal-images`, `patient-records`, `drone-imagery`, `camera-images`, `register-documents`, `none-regulatory-analysis` | the data the use case relies on. Use `none-regulatory-analysis` for analysis-only pilots with no operational data. |
+| `data_sources` | soft list of slugs, e.g. `building-applications`, `sensor-data`, `retinal-images`, `patient-records`, `drone-imagery`, `camera-images`, `register-documents`, `none-regulatory-analysis` | the data the use case relies on. Use `none-regulatory-analysis` for analysis-only projects with no operational data. |
 | `societal_acceptance` | `high` · `moderate` · `sensitive` · `contested` | how socially accepted or sensitive the use case is. `high` = uncontroversial efficiency/support; `moderate` = some privacy or public-surveillance considerations; `sensitive` = touches health, minors, or personal data; `contested` = autonomy or safety-critical decisions affecting rights or safety. |
 | `technological_feasibility` | `high` · `moderate` · `emerging` | maturity of the technology for this use case. `high` = proven, deployable now; `emerging` = autonomy / safety-critical or otherwise not yet deployment-ready. |
 | `process_change` | `low` · `moderate` · `high` | how far the technology reshapes the existing process. `low` = drop-in inside an existing workflow; `high` = restructures roles or replaces a process step. |

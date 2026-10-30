@@ -73,7 +73,7 @@ The corpus has six projects where partner-relationship work was the load-bearing
 **How to apply (deployment teams):** identify the partner-access dependency before development starts, not when it bites. Treat partner management as a first-class workstream, not a contingency.
 
 > [!sandbox-operations]
-> The original framing of this pattern is a programme construct: the sandbox team identifies the partner-access dependency at pilot intake, not during execution, and pre-defines acceptable pivot directions if access slips, so a single partner's withdrawal does not strand the engagement. See [[partner-pivot-is-normal]] for how this plays out across the portfolio.
+> The original framing of this pattern is a programme construct: the sandbox team identifies the partner-access dependency at project intake, not during execution, and pre-defines acceptable pivot directions if access slips, so a single partner's withdrawal does not strand the engagement. See [[partner-pivot-is-normal]] for how this plays out across the portfolio.
 
 ### 3. Pivot to analysis-only (when access cannot be unblocked)
 
@@ -84,7 +84,7 @@ The booklet treats this as a legitimate outcome class. 2 of 5 Phase II projects 
 **How to apply (deployment teams):** the key is recognising early, before the team has spent its budget chasing inaccessible data, that the regulatory groundwork can be a deliverable in its own right. A clarified legal basis is a usable result even when the system cannot be tested.
 
 > [!sandbox-operations]
-> "Pivot to analysis-only" as a formal outcome class is a sandbox-programme construct: the programme reframes a blocked pilot as a regulatory analysis instead of closing it. See [[partner-pivot-is-normal]] for the playbook.
+> "Pivot to analysis-only" as a formal outcome class is a sandbox-programme construct: the programme reframes a blocked project as a regulatory analysis instead of closing it. See [[partner-pivot-is-normal]] for the playbook.
 
 ### 4. Publishing derived datasets (so the next pilot doesn't hit the same wall)
 

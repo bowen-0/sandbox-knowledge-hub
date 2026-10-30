@@ -1,6 +1,6 @@
 ---
-title: AI pilot reports from the Canton of Zurich
-description: The Canton of Zurich Innovation Sandbox's AI pilot reports as a searchable knowledge base, with findings linked to the report page they come from.
+title: AI test reports from the Canton of Zurich
+description: The Canton of Zurich Innovation Sandbox's AI test reports as a searchable knowledge base, with findings linked to the report page they come from.
 socialImage: og-home.png
 ---
 
@@ -81,7 +81,7 @@ Our four top-level categories - **Technology & Data**, **Regulation**, **Organis
 - [[eu-market-access-for-swiss-ai]] - the EU market-access pathway for a Swiss AI product
 
 **Organisation** - `ai-deployment`
-- [[implementation-anti-patterns]] - the recurring implementation mistakes, ranked by pilot evidence *(Q4)*
+- [[implementation-anti-patterns]] - the recurring implementation mistakes, ranked by project evidence *(Q4)*
 - [[portfolio-gaps-and-open-questions]] - what the portfolio has not yet resolved + absent sectors *(Q7)*
 - [[data-access-patterns-and-unblocking]] - how to unblock data access for a pilot
 - [[partner-roles-around-a-pilot]] - the five roles around a pilot
@@ -99,7 +99,7 @@ Our four top-level categories - **Technology & Data**, **Regulation**, **Organis
 
 ## By type
 
-### Projects (10) - one per sandbox pilot
+### Projects (10) - one per sandbox project
 
 > Project slugs drop the `p1-`/`p2-` prefix (phase is frontmatter, not filename). Source slugs *keep* the prefix to match PDF filenames. So `[[smart-parking]]` = the project page; `[[p1-smart-parking]]` = its source PDF page.
 
@@ -183,7 +183,7 @@ Our four top-level categories - **Technology & Data**, **Regulation**, **Organis
 #### Supervisory authorities + roles
 - [[swissmedic]] - Swiss medical-products supervisor.
 - [[bundesnetzagentur-de]] - German federal network agency; cross-border inspection-robots collaboration.
-- [[data-protection-officer]] - the DPO function as it appears across pilots.
+- [[data-protection-officer]] - the DPO function as it appears across projects.
 
 ### Lessons (14 cross-cutting + 7 case-study-specific)
 

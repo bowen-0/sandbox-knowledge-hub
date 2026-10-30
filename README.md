@@ -1,6 +1,6 @@
 # Sandbox Knowledge Hub
 
-**The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published pilot reports, restructured into a navigable, citable, AI-ready wiki.
+**The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published test reports, restructured into a navigable, citable, AI-ready wiki.
 
 **One-minute demo**
 
@@ -63,7 +63,7 @@ Six read-only tools (overview, list, read, search, graph connections, citation r
 
 ```
 wiki/
-├── projects/      10 pilot pages (one per sandbox project)
+├── projects/      10 project pages (one per sandbox project)
 ├── lessons/       21 atomic, transferable lessons - the highest-value layer
 ├── synthesis/     16 cross-cutting guides + validation views (scoping, data access, EU market access …)
 ├── concepts/      16 reusable ideas and vocabulary

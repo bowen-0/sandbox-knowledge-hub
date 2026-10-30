@@ -19,7 +19,7 @@ updated: 2026-06-10
 
 # Interdisciplinary legal issues are the norm
 
-The booklet states this as a general legal finding across the pilots, in [[00-overview-phase2-build-and-share]] §04:
+The booklet states this as a general legal finding across the projects, in [[00-overview-phase2-build-and-share]] §04:
 
 > *"Interdisciplinary legal issues are the norm: AI applications typically span multiple areas of law (e.g. data protection and medical device regulation in the digital eye clinic). Isolated assessments are insufficient. AI providers require a holistic legal evaluation across the entire use case, rather than isolated compliance assessments of individual components."* [(Build & Share (Phase II overview report), p. 18)](../sources/00-overview-phase2-build-and-share.md)
 

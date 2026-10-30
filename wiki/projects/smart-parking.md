@@ -48,5 +48,5 @@ Productive deployment in **Frauenfeld**, with subsequent roll-out to additional 
 ## See also
 
 - [[p1-smart-parking]] - the source PDF.
-- [[infrastructure-maintenance]] - sibling Phase I computer-vision pilot.
+- [[infrastructure-maintenance]] - sibling Phase I computer-vision project.
 - [[building-permits]] - Phase II contrast (plan-document understanding vs. environment recognition).

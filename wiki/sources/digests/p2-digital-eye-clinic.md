@@ -40,7 +40,7 @@ Two parallel tracks. **(1) Vendor assessment**: structured market scan of five c
 **Project lead**: Prof. Matthias Becker MD (Head of Ophthalmology, Stadtspital Zürich). **Authors / project team**: Raphael von Thiessen (Programme Manager, AI Sandbox), Dávid Isztl (Machine Learning Engineer, Department of Ophthalmology + Spross Research Institute), Rui Santos PhD, Gábor Márk Somfai MD/PhD, Tahm Spitznagel MD, Florian Lüchinger (Foresite AG). **Legal**: Stephanie Volz (Managing Director ITSL, University of Zurich). **Additional clinical/MBA support**: Amr Saad MD/MBA; Stephanie Volz also coordinated the cross-report regulatory analysis. **Test partner**: **Stadtspital Zürich + Werner H. Spross Foundation**. **Project Steering**: Office for Economy (Zürich + Schwyz), Statistical Office Zürich, Department for Digital Administration Zürich, ETH AI Center, ITSL UZH, ZHAW entrepreneurship.
 
 ## Cross-references
-- [Build & Share overview, Phase II] - flagship health-sector pilot; modular open-source diagnostics platform.
+- [Build & Share overview, Phase II] - flagship health-sector project; modular open-source diagnostics platform.
 - [Medical Documentation, Phase II] - explicit footnote cross-reference (footnote 9, p. 25); medical-device classification and data-protection detail live there.
 - [Inspection Robots, Phase II] - adjacent "safety-critical AI under notified-body conformity assessment" framing, but under MDR rather than EU Machinery Regulation.
 - [Building Permits, Phase II] - shared ITSL legal-analysis backbone; opposite end of the regulatory complexity spectrum.

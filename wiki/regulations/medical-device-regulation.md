@@ -55,7 +55,7 @@ The recurring safeguards the report recommends are the deployment side of the sa
 
 - [[eu-ai-act]] - the risk-classification layer that stacks on top of this regime for medical AI.
 - [[dsg-fadp]] · [[idg-zh]] - the data-protection regime that applies in parallel wherever patient data is processed.
-- [[iso-iec-42001]] - the AI management-system standard piloted in the autonomous-systems strand; the medical strand uses ISO 13485 instead.
+- [[iso-iec-42001]] - the AI management-system standard tested in the autonomous-systems strand; the medical strand uses ISO 13485 instead.
 - [[swissmedic]] - the Swiss supervisory authority engaged through the medical-documentation roundtable.
 
 > [!note] Citations re-anchored to the English PDFs (2026-07-28)
