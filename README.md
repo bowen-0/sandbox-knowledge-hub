@@ -1,6 +1,6 @@
 # Sandbox Knowledge Hub
 
-**The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published test reports, restructured into a navigable, citable, AI-ready wiki.
+**The knowledge layer of the [Innovation Sandbox for Artificial Intelligence](https://www.zh.ch/de/wirtschaft-arbeit/wirtschaftsstandort/innovation-sandbox.html), Canton of Zurich** - the sandbox's published reports documenting its AI tests, restructured into a navigable, citable, AI-ready wiki.
 
 **One-minute demo**
 

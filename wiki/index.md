@@ -1,6 +1,6 @@
 ---
 title: AI test reports from the Canton of Zurich
-description: The Canton of Zurich Innovation Sandbox's AI test reports as a searchable knowledge base, with findings linked to the report page they come from.
+description: Published project reports documenting the Canton of Zurich Innovation Sandbox's AI tests, with findings linked to the report page they come from.
 socialImage: og-home.png
 ---
 
@@ -13,7 +13,7 @@ socialImage: og-home.png
 >
 > [Open or download the video](static/demo/sandbox-knowledge-hub.mp4)
 >
-> Browse or search the published reports of the Canton of Zurich's Innovation Sandbox for AI, reorganised into connected pages. Findings link back to the report page they come from.
+> Browse or search ten published project reports and two synthesis reports from the Canton of Zurich's Innovation Sandbox for AI, reorganised into connected pages. The project reports document findings from the Sandbox's AI tests. Findings link back to the report page they come from.
 >
 > You can also add this knowledge base to an AI assistant such as Claude or ChatGPT, then ask it questions across all the reports and get answers with the report pages cited. [How to connect it](https://github.com/bowen-0/sandbox-knowledge-hub#use-it)
 >
