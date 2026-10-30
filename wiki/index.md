@@ -5,6 +5,14 @@ socialImage: og-home.png
 ---
 
 > [!info] About this site
+> **Watch the one-minute demo**
+>
+> <video controls playsinline preload="none" poster="static/demo/sandbox-knowledge-hub-poster.jpg" aria-label="Sandbox Knowledge Hub demo" style="width: 100%; aspect-ratio: 16 / 9;" src="static/demo/sandbox-knowledge-hub.mp4">
+> <a href="static/demo/sandbox-knowledge-hub.mp4">Watch or download the demo</a>.
+> </video>
+>
+> [Open or download the video](static/demo/sandbox-knowledge-hub.mp4)
+>
 > Browse or search the published reports of the Canton of Zurich's Innovation Sandbox for AI, reorganised into connected pages. Findings link back to the report page they come from.
 >
 > You can also add this knowledge base to an AI assistant such as Claude or ChatGPT, then ask it questions across all the reports and get answers with the report pages cited. [How to connect it](https://github.com/bowen-0/sandbox-knowledge-hub#use-it)
